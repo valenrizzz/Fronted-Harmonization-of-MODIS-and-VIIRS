@@ -1,0 +1,18 @@
+# Despliegues desde la CLI (vercel deploy desde la raíz del repo)
+/data
+/audits
+/tests
+/src
+/.pytest_cache
+.venv
+**/.venv
+**/node_modules
+**/__pycache__
+**/.cache
+frontend/dist
+frontend/fronteo del armony
+backend/data_bundle
+backend/tests
+.env
+.env.local
+**/.env

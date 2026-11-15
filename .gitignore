@@ -14,3 +14,7 @@ dist/
 
 # Secretos
 .env
+.vercel
+.env*
+!.env.example
+!.env.vercel.example

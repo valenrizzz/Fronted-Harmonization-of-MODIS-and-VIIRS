@@ -1,6 +1,7 @@
 {
   "$schema": "https://openapi.vercel.sh/vercel.json",
-  "buildCommand": "rm -rf data_bundle && cp -r ../Datos_Para_La_Web data_bundle && rm -f data_bundle/README.md",
+  "buildCommand": "rm -rf data_bundle && cp -r ../Datos_Para_La_Web data_bundle && rm -f data_bundle/README.md && mkdir -p public && printf 'User-agent: *\\nDisallow:\\n' > public/robots.txt",
+  "outputDirectory": "public",
   "functions": {
     "api/index.py": {
       "includeFiles": "{app/**,data_bundle/**}",
