@@ -1,110 +1,73 @@
 import { useEffect, useRef, useState, useCallback } from 'react';
-import {
-  ChevronDown, ChevronUp, Layers, Search, Check, MapPin, ArrowDown,
-} from 'lucide-react';
+import { ChevronDown, ChevronUp, Layers, Search, Check, MapPin, ArrowDown, Loader2 } from 'lucide-react';
+import { regionName } from '../data/constants';
+import { useHexLayer } from './useHexLayer';
 
 const TILE_SATELLITE = 'https://server.arcgisonline.com/ArcGIS/rest/services/World_Imagery/MapServer/tile/{z}/{y}/{x}';
 const TILE_STREET = 'https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png';
 const ATTR_SAT = '© Esri, Maxar, Earthstar, USDA, USGS, AeroGRID';
 const ATTR_STREET = '© OpenStreetMap contributors';
 
-// Simplified country centroids for click-to-select
-const COUNTRY_MAP = {
-  'Argentina': [-34, -64],
-  'Brasil - Amazonia Sur': [-8, -55],
-  'Chile': [-35, -71],
-  'California - EE.UU.': [37, -120],
-  'Australia': [-28, 134],
-};
-
-export default function WorldMapHero({
-  region, setRegion, regionKeys,
-  province, setProvince,
-  city, setCity,
-  scrollToCalendar,
-  hotspots,
-}) {
+export default function WorldMapHero({ regions, region, setRegion, regionInfo, year, scrollToCalendar }) {
   const mapRef = useRef(null);
-  const mapInstance = useRef(null);
+  const [map, setMap] = useState(null);
   const tileRef = useRef(null);
   const [isSatellite, setIsSatellite] = useState(true);
   const [panelOpen, setPanelOpen] = useState(true);
   const [search, setSearch] = useState('');
-  const [mapReady, setMapReady] = useState(false);
 
-  // Init map
+  // Inicializar Leaflet
   useEffect(() => {
     let cancelled = false;
-    async function init() {
+    let instance = null;
+    (async () => {
       const L = (await import('leaflet')).default;
-      if (cancelled || !mapRef.current || mapInstance.current) return;
-
-      const map = L.map(mapRef.current, {
-        center: [20, 0],
-        zoom: 2,
-        zoomControl: false,
-        scrollWheelZoom: false,
-        attributionControl: true,
+      if (cancelled || !mapRef.current) return;
+      instance = L.map(mapRef.current, {
+        center: [-20, -60], zoom: 3, zoomControl: false, scrollWheelZoom: false,
       });
-
-      map.on('click', () => { map.scrollWheelZoom.enable(); });
-      map.on('mouseout', () => { map.scrollWheelZoom.disable(); });
-
-      L.control.zoom({ position: 'bottomright' }).addTo(map);
-
-      tileRef.current = L.tileLayer(TILE_SATELLITE, {
-        attribution: ATTR_SAT,
-        maxZoom: 18,
-      }).addTo(map);
-
-      // Hotspot markers
-      if (hotspots?.length) {
-        hotspots.forEach(([lat, lng]) => {
-          L.circleMarker([lat, lng], {
-            radius: 5, color: '#EA580C', fillColor: '#FBBF24',
-            fillOpacity: 0.7, weight: 1.5,
-          }).addTo(map);
-        });
-      }
-
-      mapInstance.current = map;
-      setMapReady(true);
-    }
-    init();
-    return () => { cancelled = true; if (mapInstance.current) { mapInstance.current.remove(); mapInstance.current = null; } };
+      instance.on('click', () => instance.scrollWheelZoom.enable());
+      instance.on('mouseout', () => instance.scrollWheelZoom.disable());
+      L.control.zoom({ position: 'bottomright' }).addTo(instance);
+      tileRef.current = L.tileLayer(TILE_SATELLITE, { attribution: ATTR_SAT, maxZoom: 18 }).addTo(instance);
+      setMap(instance);
+    })();
+    return () => { cancelled = true; instance?.remove(); };
   }, []);
 
-  // Update hotspots on region change
+  // Encuadrar la región: sin animación la primera vez, con vuelo al cambiar de región
+  const framedOnce = useRef(false);
   useEffect(() => {
-    if (!mapInstance.current || !mapReady) return;
-    const coords = COUNTRY_MAP[region];
-    if (coords) mapInstance.current.flyTo(coords, 5, { duration: 1.2 });
-    else mapInstance.current.flyTo([20, 0], 2, { duration: 1.2 });
-  }, [region, mapReady]);
+    if (!map || !regionInfo) return;
+    const [w, s, e, n] = regionInfo.bbox;
+    const bounds = [[s, w], [n, e]];
+    const reduceMotion = window.matchMedia?.('(prefers-reduced-motion: reduce)').matches;
+    if (!framedOnce.current || reduceMotion) map.fitBounds(bounds, { padding: [20, 20], animate: false });
+    else map.flyToBounds(bounds, { duration: 1.2, padding: [20, 20] });
+    framedOnce.current = true;
+  }, [map, regionInfo]);
 
-  // Toggle tile layer
+  const hex = useHexLayer(map, region, year);
+
   const toggleTile = useCallback(async () => {
     const L = (await import('leaflet')).default;
-    if (!mapInstance.current || !tileRef.current) return;
-    mapInstance.current.removeLayer(tileRef.current);
-    const next = isSatellite
+    if (!map || !tileRef.current) return;
+    map.removeLayer(tileRef.current);
+    tileRef.current = (isSatellite
       ? L.tileLayer(TILE_STREET, { attribution: ATTR_STREET, maxZoom: 18 })
-      : L.tileLayer(TILE_SATELLITE, { attribution: ATTR_SAT, maxZoom: 18 });
-    next.addTo(mapInstance.current);
-    tileRef.current = next;
+      : L.tileLayer(TILE_SATELLITE, { attribution: ATTR_SAT, maxZoom: 18 })
+    ).addTo(map);
+    tileRef.current.bringToBack();
     setIsSatellite(!isSatellite);
-  }, [isSatellite]);
+  }, [map, isSatellite]);
 
-  const filtered = regionKeys.filter((r) =>
-    r.toLowerCase().includes(search.toLowerCase()),
-  );
+  const filtered = regions.filter((r) =>
+    `${regionName(r.region)} ${r.region}`.toLowerCase().includes(search.toLowerCase()));
 
   return (
     <section className="relative w-full" style={{ height: '72vh', minHeight: 480 }}>
-      {/* Map */}
       <div ref={mapRef} className="absolute inset-0 z-0 rounded-b-2xl overflow-hidden" />
 
-      {/* Tile toggle */}
       <button
         onClick={toggleTile}
         className="absolute top-3 right-3 z-20 flex items-center gap-1.5 px-3 py-1.5 rounded-lg bg-white/90 backdrop-blur border border-stone-200 text-xs font-medium text-stone-600 hover:bg-white shadow-sm transition-colors"
@@ -113,10 +76,26 @@ export default function WorldMapHero({
         {isSatellite ? 'Mapa Callejero' : 'Vista Satelital'}
       </button>
 
-      {/* Floating left panel */}
+      {/* Leyenda del mapa */}
+      {year && (
+        <div className="absolute bottom-3 left-3 z-20 px-3 py-2 rounded-xl bg-white/90 backdrop-blur border border-stone-200 shadow-sm text-[11px] text-stone-600">
+          <div className="font-semibold text-stone-700 flex items-center gap-1.5">
+            Actividad armonizada {year}
+            {hex.loading && <Loader2 className="w-3 h-3 animate-spin text-orange-500" />}
+          </div>
+          {hex.meta && (
+            <div className="text-stone-400">
+              {hex.meta.n_cells.toLocaleString('es-AR')} hexágonos H3 res {hex.meta.res}
+              {hex.meta.truncated && ' (los de mayor actividad)'}
+            </div>
+          )}
+          {hex.error && <div className="text-orange-600">{hex.error}</div>}
+        </div>
+      )}
+
+      {/* Panel flotante */}
       <div className="absolute top-3 left-3 z-20 w-72">
         <div className="bg-white/95 backdrop-blur-md rounded-2xl shadow-lg border border-stone-200 overflow-hidden">
-          {/* Panel header */}
           <button
             onClick={() => setPanelOpen(!panelOpen)}
             className="w-full flex items-center justify-between px-4 py-3 text-sm font-semibold text-stone-700"
@@ -130,7 +109,6 @@ export default function WorldMapHero({
 
           {panelOpen && (
             <div className="px-4 pb-4 space-y-3">
-              {/* Country search */}
               <div>
                 <label className="text-[10px] font-semibold text-stone-400 uppercase tracking-wider">País / Región</label>
                 <div className="relative mt-1">
@@ -145,20 +123,23 @@ export default function WorldMapHero({
                 <div className="mt-1 max-h-36 overflow-y-auto space-y-0.5">
                   {filtered.map((r) => (
                     <button
-                      key={r}
-                      onClick={() => { setRegion(r); setSearch(''); }}
+                      key={r.region}
+                      onClick={() => { setRegion(r.region); setSearch(''); }}
                       className={`w-full text-left px-2 py-1.5 rounded-lg text-xs transition-colors flex items-center gap-1.5 ${
-                        region === r ? 'bg-orange-50 text-orange-700 font-medium' : 'text-stone-600 hover:bg-stone-50'
+                        region === r.region ? 'bg-orange-50 text-orange-700 font-medium' : 'text-stone-600 hover:bg-stone-50'
                       }`}
                     >
-                      {region === r && <Check className="w-3 h-3 text-orange-500" />}
-                      <span className={region === r ? '' : 'ml-[18px]'}>{r}</span>
+                      {region === r.region && <Check className="w-3 h-3 text-orange-500" />}
+                      <span className={region === r.region ? '' : 'ml-[18px]'}>{regionName(r.region)}</span>
+                      <span className="ml-auto text-[10px] text-stone-400">
+                        {r.period.start.slice(0, 4)}–{r.period.end.slice(0, 4)}
+                      </span>
                     </button>
                   ))}
+                  {!regions.length && <p className="text-xs text-stone-400 px-2 py-1">Cargando regiones…</p>}
                 </div>
               </div>
 
-              {/* Scroll down CTA */}
               <button
                 onClick={scrollToCalendar}
                 className="w-full flex items-center justify-center gap-2 px-3 py-2 rounded-xl bg-gradient-to-r from-amber-500 to-orange-500 text-white text-xs font-semibold shadow-md shadow-orange-200/50 hover:from-amber-400 hover:to-orange-400 transition-all active:scale-[0.97]"

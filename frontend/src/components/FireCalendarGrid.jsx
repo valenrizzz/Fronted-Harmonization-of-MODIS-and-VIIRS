@@ -1,6 +1,6 @@
 import { useMemo, useState } from 'react';
 import { Flame } from 'lucide-react';
-import { MONTH_NAMES } from '../data/mockFireService';
+import { MONTH_NAMES } from '../data/constants';
 import DayCell from './DayCell';
 import YearPills from './YearPills';
 import ColorLegend from './ColorLegend';

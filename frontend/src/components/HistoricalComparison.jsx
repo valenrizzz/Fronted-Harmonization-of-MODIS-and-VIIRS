@@ -3,7 +3,7 @@ import {
   TrendingUp, TrendingDown, BarChart3, Flame, Calendar,
   ToggleLeft, ToggleRight,
 } from 'lucide-react';
-import { MONTH_NAMES } from '../data/mockFireService';
+import { MONTH_NAMES } from '../data/constants';
 
 const GRANULARITIES = ['Años', 'Meses', 'Semanas', 'Días'];
 const METRICS = ['Total de focos', 'Puntos críticos'];
