@@ -1,0 +1,870 @@
+[
+  {
+    "source_file": "Data_MODIS__2000__modis_2000_Argentina",
+    "path": "/home/franco_quiroga/Proyecto_NASA/Data_MODIS/2000/modis_2000_Argentina.csv",
+    "product": "MODIS",
+    "kind": "country",
+    "level": "SP",
+    "coverage": [
+      "2000-01-01",
+      "2000-12-31"
+    ],
+    "n_rows": 7247,
+    "n_in_bbox": 7247,
+    "sha256": "46e8a305afc510c74ba061c283db731bbfa0cb2d5cb169035618c290e4cd3718"
+  },
+  {
+    "source_file": "Data_MODIS__2001__modis_2001_Argentina",
+    "path": "/home/franco_quiroga/Proyecto_NASA/Data_MODIS/2001/modis_2001_Argentina.csv",
+    "product": "MODIS",
+    "kind": "country",
+    "level": "SP",
+    "coverage": [
+      "2001-01-01",
+      "2001-12-31"
+    ],
+    "n_rows": 31835,
+    "n_in_bbox": 31835,
+    "sha256": "2047af87f695fed3c318e9155a0755aa2fe443357dca4e47940a779d6912fa77"
+  },
+  {
+    "source_file": "Data_MODIS__2002__modis_2002_Argentina",
+    "path": "/home/franco_quiroga/Proyecto_NASA/Data_MODIS/2002/modis_2002_Argentina.csv",
+    "product": "MODIS",
+    "kind": "country",
+    "level": "SP",
+    "coverage": [
+      "2002-01-01",
+      "2002-12-31"
+    ],
+    "n_rows": 60361,
+    "n_in_bbox": 60361,
+    "sha256": "d5369096f3dc0f3114dfa251a0690db3104244b30e5def56db44becda68e4b23"
+  },
+  {
+    "source_file": "Data_MODIS__2003__modis_2003_Argentina",
+    "path": "/home/franco_quiroga/Proyecto_NASA/Data_MODIS/2003/modis_2003_Argentina.csv",
+    "product": "MODIS",
+    "kind": "country",
+    "level": "SP",
+    "coverage": [
+      "2003-01-01",
+      "2003-12-31"
+    ],
+    "n_rows": 117090,
+    "n_in_bbox": 117090,
+    "sha256": "98ef63553ccbab41cfd093654267dd66a00345c18a497c8c5ec0f8394fa361f1"
+  },
+  {
+    "source_file": "Data_MODIS__2004__modis_2004_Argentina",
+    "path": "/home/franco_quiroga/Proyecto_NASA/Data_MODIS/2004/modis_2004_Argentina.csv",
+    "product": "MODIS",
+    "kind": "country",
+    "level": "SP",
+    "coverage": [
+      "2004-01-01",
+      "2004-12-31"
+    ],
+    "n_rows": 99956,
+    "n_in_bbox": 99956,
+    "sha256": "aca0e9343579ccb152dbb9bd01625ec6414324f8c78bddeec0508067ac565862"
+  },
+  {
+    "source_file": "Data_MODIS__2005__modis_2005_Argentina",
+    "path": "/home/franco_quiroga/Proyecto_NASA/Data_MODIS/2005/modis_2005_Argentina.csv",
+    "product": "MODIS",
+    "kind": "country",
+    "level": "SP",
+    "coverage": [
+      "2005-01-01",
+      "2005-12-31"
+    ],
+    "n_rows": 71179,
+    "n_in_bbox": 71179,
+    "sha256": "2805b62fad32df221877704098633863c6e82a28830adaa279352ed91c4f1bf8"
+  },
+  {
+    "source_file": "Data_MODIS__2006__modis_2006_Argentina",
+    "path": "/home/franco_quiroga/Proyecto_NASA/Data_MODIS/2006/modis_2006_Argentina.csv",
+    "product": "MODIS",
+    "kind": "country",
+    "level": "SP",
+    "coverage": [
+      "2006-01-01",
+      "2006-12-31"
+    ],
+    "n_rows": 84646,
+    "n_in_bbox": 84646,
+    "sha256": "eca42247cd7ef2d0fde65605693e378722dac8274d46bf70c01e9bffccc13218"
+  },
+  {
+    "source_file": "Data_MODIS__2007__modis_2007_Argentina",
+    "path": "/home/franco_quiroga/Proyecto_NASA/Data_MODIS/2007/modis_2007_Argentina.csv",
+    "product": "MODIS",
+    "kind": "country",
+    "level": "SP",
+    "coverage": [
+      "2007-01-01",
+      "2007-12-31"
+    ],
+    "n_rows": 78065,
+    "n_in_bbox": 78065,
+    "sha256": "abdeb916b85147e82148ea8e3db76546c61e6d28f29079f0725f15bd850f8c88"
+  },
+  {
+    "source_file": "Data_MODIS__2008__modis_2008_Argentina",
+    "path": "/home/franco_quiroga/Proyecto_NASA/Data_MODIS/2008/modis_2008_Argentina.csv",
+    "product": "MODIS",
+    "kind": "country",
+    "level": "SP",
+    "coverage": [
+      "2008-01-01",
+      "2008-12-31"
+    ],
+    "n_rows": 104699,
+    "n_in_bbox": 104699,
+    "sha256": "a8ab1f53ddebafe7b792da3411ff0ebf29abbb9bf7946927c5f1dfccab358051"
+  },
+  {
+    "source_file": "Data_MODIS__2009__modis_2009_Argentina",
+    "path": "/home/franco_quiroga/Proyecto_NASA/Data_MODIS/2009/modis_2009_Argentina.csv",
+    "product": "MODIS",
+    "kind": "country",
+    "level": "SP",
+    "coverage": [
+      "2009-01-01",
+      "2009-12-31"
+    ],
+    "n_rows": 82012,
+    "n_in_bbox": 82012,
+    "sha256": "e1ecc9e75a1b110923eac84a3c7b454a1c4213cf5e840cf0d657b45057190819"
+  },
+  {
+    "source_file": "Data_MODIS__2010__modis_2010_Argentina",
+    "path": "/home/franco_quiroga/Proyecto_NASA/Data_MODIS/2010/modis_2010_Argentina.csv",
+    "product": "MODIS",
+    "kind": "country",
+    "level": "SP",
+    "coverage": [
+      "2010-01-01",
+      "2010-12-31"
+    ],
+    "n_rows": 62709,
+    "n_in_bbox": 62709,
+    "sha256": "57dcc45ca47f899d1773ad1b89a49effddb4da08de0811e043202ac720f3423b"
+  },
+  {
+    "source_file": "Data_MODIS__2011__modis_2011_Argentina",
+    "path": "/home/franco_quiroga/Proyecto_NASA/Data_MODIS/2011/modis_2011_Argentina.csv",
+    "product": "MODIS",
+    "kind": "country",
+    "level": "SP",
+    "coverage": [
+      "2011-01-01",
+      "2011-12-31"
+    ],
+    "n_rows": 76429,
+    "n_in_bbox": 76429,
+    "sha256": "f900a5efefd2b1ea9680cc2eb4fdcf728ff841ceedae2308a832f0960bbe83d8"
+  },
+  {
+    "source_file": "Data_MODIS__2012__modis_2012_Argentina",
+    "path": "/home/franco_quiroga/Proyecto_NASA/Data_MODIS/2012/modis_2012_Argentina.csv",
+    "product": "MODIS",
+    "kind": "country",
+    "level": "SP",
+    "coverage": [
+      "2012-01-01",
+      "2012-12-31"
+    ],
+    "n_rows": 61883,
+    "n_in_bbox": 61883,
+    "sha256": "d2d0c9a8af8aedebfc6dddbd813072be81e879291ba70990d931e91c1195a5f3"
+  },
+  {
+    "source_file": "Data_MODIS__2013__modis_2013_Argentina",
+    "path": "/home/franco_quiroga/Proyecto_NASA/Data_MODIS/2013/modis_2013_Argentina.csv",
+    "product": "MODIS",
+    "kind": "country",
+    "level": "SP",
+    "coverage": [
+      "2013-01-01",
+      "2013-12-31"
+    ],
+    "n_rows": 66549,
+    "n_in_bbox": 66549,
+    "sha256": "ce5650fc3939a750ea5c4ce1a00a0b8f76878743bc0fe6818154a3805b90df0c"
+  },
+  {
+    "source_file": "Data_MODIS__2014__modis_2014_Argentina",
+    "path": "/home/franco_quiroga/Proyecto_NASA/Data_MODIS/2014/modis_2014_Argentina.csv",
+    "product": "MODIS",
+    "kind": "country",
+    "level": "SP",
+    "coverage": [
+      "2014-01-01",
+      "2014-12-31"
+    ],
+    "n_rows": 36816,
+    "n_in_bbox": 36816,
+    "sha256": "2ae44f8ccee2d7206a32b4088d4fc5b799c7896b30226939d8405e64655d16cf"
+  },
+  {
+    "source_file": "Data_MODIS__2015__modis_2015_Argentina",
+    "path": "/home/franco_quiroga/Proyecto_NASA/Data_MODIS/2015/modis_2015_Argentina.csv",
+    "product": "MODIS",
+    "kind": "country",
+    "level": "SP",
+    "coverage": [
+      "2015-01-01",
+      "2015-12-31"
+    ],
+    "n_rows": 45133,
+    "n_in_bbox": 45133,
+    "sha256": "cc3f70d1834553afa533ada41dbda6b5c94c2827fd00b78b150c52140171f320"
+  },
+  {
+    "source_file": "Data_MODIS__2016__modis_2016_Argentina",
+    "path": "/home/franco_quiroga/Proyecto_NASA/Data_MODIS/2016/modis_2016_Argentina.csv",
+    "product": "MODIS",
+    "kind": "country",
+    "level": "SP",
+    "coverage": [
+      "2016-01-01",
+      "2016-12-31"
+    ],
+    "n_rows": 55402,
+    "n_in_bbox": 55402,
+    "sha256": "3fffbd2eeb8a1888d8770ea6fac05a608bb3a51cf128126659797d256cf9a580"
+  },
+  {
+    "source_file": "Data_MODIS__2017__modis_2017_Argentina",
+    "path": "/home/franco_quiroga/Proyecto_NASA/Data_MODIS/2017/modis_2017_Argentina.csv",
+    "product": "MODIS",
+    "kind": "country",
+    "level": "SP",
+    "coverage": [
+      "2017-01-01",
+      "2017-12-31"
+    ],
+    "n_rows": 60280,
+    "n_in_bbox": 60280,
+    "sha256": "5240365806bb8161b9afa5421c5020f492c8602973ff1db3d84726f8341375d0"
+  },
+  {
+    "source_file": "Data_MODIS__2018__modis_2018_Argentina",
+    "path": "/home/franco_quiroga/Proyecto_NASA/Data_MODIS/2018/modis_2018_Argentina.csv",
+    "product": "MODIS",
+    "kind": "country",
+    "level": "SP",
+    "coverage": [
+      "2018-01-01",
+      "2018-12-31"
+    ],
+    "n_rows": 55399,
+    "n_in_bbox": 55399,
+    "sha256": "d0dd7be6b8b323854d7540499c6089937d086e113d98407b4901967a52ab45ff"
+  },
+  {
+    "source_file": "Data_MODIS__2019__modis_2019_Argentina",
+    "path": "/home/franco_quiroga/Proyecto_NASA/Data_MODIS/2019/modis_2019_Argentina.csv",
+    "product": "MODIS",
+    "kind": "country",
+    "level": "SP",
+    "coverage": [
+      "2019-01-01",
+      "2019-12-31"
+    ],
+    "n_rows": 50370,
+    "n_in_bbox": 50370,
+    "sha256": "bcb2bf07943e312f6d61ccd69008a40a09e22216ede34867d59ce88dc56d11d2"
+  },
+  {
+    "source_file": "Data_MODIS__2020__modis_2020_Argentina",
+    "path": "/home/franco_quiroga/Proyecto_NASA/Data_MODIS/2020/modis_2020_Argentina.csv",
+    "product": "MODIS",
+    "kind": "country",
+    "level": "SP",
+    "coverage": [
+      "2020-01-01",
+      "2020-12-31"
+    ],
+    "n_rows": 124094,
+    "n_in_bbox": 124094,
+    "sha256": "59d485a2c6a4acc088d90c481d71d34901d1e2b3a5a16d57689865c76aa3a1cf"
+  },
+  {
+    "source_file": "Data_MODIS__2021__modis_2021_Argentina",
+    "path": "/home/franco_quiroga/Proyecto_NASA/Data_MODIS/2021/modis_2021_Argentina.csv",
+    "product": "MODIS",
+    "kind": "country",
+    "level": "SP",
+    "coverage": [
+      "2021-01-01",
+      "2021-12-31"
+    ],
+    "n_rows": 56867,
+    "n_in_bbox": 56867,
+    "sha256": "04cc5b10dfacea4775c1b8bc0a9d1fa7721a21a84c3d396dfca0ac0608d1d857"
+  },
+  {
+    "source_file": "Data_MODIS__2022__modis_2022_Argentina",
+    "path": "/home/franco_quiroga/Proyecto_NASA/Data_MODIS/2022/modis_2022_Argentina.csv",
+    "product": "MODIS",
+    "kind": "country",
+    "level": "SP",
+    "coverage": [
+      "2022-01-01",
+      "2022-12-31"
+    ],
+    "n_rows": 77521,
+    "n_in_bbox": 77521,
+    "sha256": "6c5ad252fda14943060fd37f04358bd482b6f107940981cdb1d6bd9be63c4627"
+  },
+  {
+    "source_file": "Data_MODIS__2023__modis_2023_Argentina",
+    "path": "/home/franco_quiroga/Proyecto_NASA/Data_MODIS/2023/modis_2023_Argentina.csv",
+    "product": "MODIS",
+    "kind": "country",
+    "level": "SP",
+    "coverage": [
+      "2023-01-01",
+      "2023-12-31"
+    ],
+    "n_rows": 47910,
+    "n_in_bbox": 47910,
+    "sha256": "45152ac1c0569bfd4e0d77127b4a489ea96c1f49a2137536992118dc4440f47f"
+  },
+  {
+    "source_file": "Data_MODIS__2024__modis_2024_Argentina",
+    "path": "/home/franco_quiroga/Proyecto_NASA/Data_MODIS/2024/modis_2024_Argentina.csv",
+    "product": "MODIS",
+    "kind": "country",
+    "level": "SP",
+    "coverage": [
+      "2024-01-01",
+      "2024-12-31"
+    ],
+    "n_rows": 49843,
+    "n_in_bbox": 49843,
+    "sha256": "3bdedb8b223b7e3cf472108101ab64e4cefd4a2e41d11d9895d237c1c330c360"
+  },
+  {
+    "source_file": "Data_MODIS__2025__modis_2025_Argentina",
+    "path": "/home/franco_quiroga/Proyecto_NASA/Data_MODIS/2025/modis_2025_Argentina.csv",
+    "product": "MODIS",
+    "kind": "country",
+    "level": "SP",
+    "coverage": [
+      "2025-01-01",
+      "2025-12-31"
+    ],
+    "n_rows": 48121,
+    "n_in_bbox": 48121,
+    "sha256": "edece169ce64789efba831e1c8b535536e974f8fd775e309f40b1a53eac25439"
+  },
+  {
+    "source_file": "Data_MODIS__2026__fire_archive_M-C61_848537",
+    "path": "/home/franco_quiroga/Proyecto_NASA/Data_MODIS/2026/fire_archive_M-C61_848537.csv",
+    "product": "MODIS",
+    "kind": "global",
+    "level": "SP",
+    "coverage": [
+      "2026-04-02",
+      "2026-08-31"
+    ],
+    "n_rows": 1578990,
+    "n_in_bbox": 12932,
+    "sha256": "983ed36bd56fb7baa66ea4c541f8af0f949ae1d891fdd2359a9148ceb32594ae"
+  },
+  {
+    "source_file": "Data_MODIS__2026__fire_nrt_M-C61_848537",
+    "path": "/home/franco_quiroga/Proyecto_NASA/Data_MODIS/2026/fire_nrt_M-C61_848537.csv",
+    "product": "MODIS",
+    "kind": "global",
+    "level": "NRT",
+    "coverage": [
+      "2026-09-01",
+      "2026-11-14"
+    ],
+    "n_rows": 799469,
+    "n_in_bbox": 15666,
+    "sha256": "a13d996818617fa323bb2906a15584bf8e55a997b6e3ef85908bc1846564225d"
+  },
+  {
+    "source_file": "Data_MODIS__DL_FIRE_M-C61_848528__fire_archive_M-C61_848528",
+    "path": "/home/franco_quiroga/Proyecto_NASA/Data_MODIS/DL_FIRE_M-C61_848528/fire_archive_M-C61_848528.csv",
+    "product": "MODIS",
+    "kind": "global",
+    "level": "SP",
+    "coverage": [
+      "2025-04-01",
+      "2026-04-01"
+    ],
+    "n_rows": 3537277,
+    "n_in_bbox": 65468,
+    "sha256": "fbf10948e90646458ec0488732d096fb9a02d89c3df95450748c0f90b7d7d346"
+  },
+  {
+    "source_file": "Data_VIIRS__2012__viirs-snpp_2012_Argentina",
+    "path": "/home/franco_quiroga/Proyecto_NASA/Data_VIIRS/2012/viirs-snpp_2012_Argentina.csv",
+    "product": "SNPP",
+    "kind": "country",
+    "level": "SP",
+    "coverage": [
+      "2012-01-01",
+      "2012-12-31"
+    ],
+    "n_rows": 189787,
+    "n_in_bbox": 189787,
+    "sha256": "d685afc4b16b4fd654d504c1ce103be4494e64a07e522ca0d0ece68671e0707d"
+  },
+  {
+    "source_file": "Data_VIIRS__2013__viirs-snpp_2013_Argentina",
+    "path": "/home/franco_quiroga/Proyecto_NASA/Data_VIIRS/2013/viirs-snpp_2013_Argentina.csv",
+    "product": "SNPP",
+    "kind": "country",
+    "level": "SP",
+    "coverage": [
+      "2013-01-01",
+      "2013-12-31"
+    ],
+    "n_rows": 237553,
+    "n_in_bbox": 237553,
+    "sha256": "a45be3200412b4bbd7e6f78db57a1f4c2f81b7c55a2d0db1aeefd797a93dad68"
+  },
+  {
+    "source_file": "Data_VIIRS__2014__viirs-snpp_2014_Argentina",
+    "path": "/home/franco_quiroga/Proyecto_NASA/Data_VIIRS/2014/viirs-snpp_2014_Argentina.csv",
+    "product": "SNPP",
+    "kind": "country",
+    "level": "SP",
+    "coverage": [
+      "2014-01-01",
+      "2014-12-31"
+    ],
+    "n_rows": 126346,
+    "n_in_bbox": 126346,
+    "sha256": "9caaa6cf0e690cad118511dfef83b50e2c73ddeeb1c3294960968f14488fdba3"
+  },
+  {
+    "source_file": "Data_VIIRS__2015__viirs-snpp_2015_Argentina",
+    "path": "/home/franco_quiroga/Proyecto_NASA/Data_VIIRS/2015/viirs-snpp_2015_Argentina.csv",
+    "product": "SNPP",
+    "kind": "country",
+    "level": "SP",
+    "coverage": [
+      "2015-01-01",
+      "2015-12-31"
+    ],
+    "n_rows": 151071,
+    "n_in_bbox": 151071,
+    "sha256": "ba4514b7188785c6fb805a3263115ae6e704a0edaaa2f7960c2427dd94902a68"
+  },
+  {
+    "source_file": "Data_VIIRS__2016__viirs-snpp_2016_Argentina",
+    "path": "/home/franco_quiroga/Proyecto_NASA/Data_VIIRS/2016/viirs-snpp_2016_Argentina.csv",
+    "product": "SNPP",
+    "kind": "country",
+    "level": "SP",
+    "coverage": [
+      "2016-01-01",
+      "2016-12-31"
+    ],
+    "n_rows": 181421,
+    "n_in_bbox": 181421,
+    "sha256": "85c3d5f233762ba3f6b26d956d3b48590292e619fe0bce57cc514ff62a417515"
+  },
+  {
+    "source_file": "Data_VIIRS__2017__viirs-snpp_2017_Argentina",
+    "path": "/home/franco_quiroga/Proyecto_NASA/Data_VIIRS/2017/viirs-snpp_2017_Argentina.csv",
+    "product": "SNPP",
+    "kind": "country",
+    "level": "SP",
+    "coverage": [
+      "2017-01-01",
+      "2017-12-31"
+    ],
+    "n_rows": 201664,
+    "n_in_bbox": 201664,
+    "sha256": "192ce79b159d9c0110ea97916ea339571301b3f12108ec7784ff70a599b03cfc"
+  },
+  {
+    "source_file": "Data_VIIRS__2018__viirs-snpp_2018_Argentina",
+    "path": "/home/franco_quiroga/Proyecto_NASA/Data_VIIRS/2018/viirs-snpp_2018_Argentina.csv",
+    "product": "SNPP",
+    "kind": "country",
+    "level": "SP",
+    "coverage": [
+      "2018-01-01",
+      "2018-12-31"
+    ],
+    "n_rows": 184924,
+    "n_in_bbox": 184924,
+    "sha256": "9c236f96a58d65f11c7364d89e3c705a6812649aaf9f73080078ab0b76294e9e"
+  },
+  {
+    "source_file": "Data_VIIRS__2019__viirs-snpp_2019_Argentina",
+    "path": "/home/franco_quiroga/Proyecto_NASA/Data_VIIRS/2019/viirs-snpp_2019_Argentina.csv",
+    "product": "SNPP",
+    "kind": "country",
+    "level": "SP",
+    "coverage": [
+      "2019-01-01",
+      "2019-12-31"
+    ],
+    "n_rows": 161688,
+    "n_in_bbox": 161688,
+    "sha256": "b32417ae0437c0de9d5cca73c1214921fcd03e0575869bea6466d8056de9b26a"
+  },
+  {
+    "source_file": "Data_VIIRS__2020__viirs-snpp_2020_Argentina",
+    "path": "/home/franco_quiroga/Proyecto_NASA/Data_VIIRS/2020/viirs-snpp_2020_Argentina.csv",
+    "product": "SNPP",
+    "kind": "country",
+    "level": "SP",
+    "coverage": [
+      "2020-01-01",
+      "2020-12-31"
+    ],
+    "n_rows": 448313,
+    "n_in_bbox": 448313,
+    "sha256": "48ca3db0721d41aa6f0457fc649ef5bf69141b13da964dac73ee1b708cf466f4"
+  },
+  {
+    "source_file": "Data_VIIRS__2021__viirs-snpp_2021_Argentina",
+    "path": "/home/franco_quiroga/Proyecto_NASA/Data_VIIRS/2021/viirs-snpp_2021_Argentina.csv",
+    "product": "SNPP",
+    "kind": "country",
+    "level": "SP",
+    "coverage": [
+      "2021-01-01",
+      "2021-12-31"
+    ],
+    "n_rows": 198060,
+    "n_in_bbox": 198060,
+    "sha256": "915bcb6794ab0c11663d9a3c71f4d9ff53bd5700d00ed4deda05ee101938a37c"
+  },
+  {
+    "source_file": "Data_VIIRS__2022__viirs-snpp_2022_Argentina",
+    "path": "/home/franco_quiroga/Proyecto_NASA/Data_VIIRS/2022/viirs-snpp_2022_Argentina.csv",
+    "product": "SNPP",
+    "kind": "country",
+    "level": "SP",
+    "coverage": [
+      "2022-01-01",
+      "2022-12-31"
+    ],
+    "n_rows": 312925,
+    "n_in_bbox": 312925,
+    "sha256": "c441a07213b84debd04623dde97cc38ac7ebc7286c864f236a0140a6ede7911c"
+  },
+  {
+    "source_file": "Data_VIIRS__2023__viirs-snpp_2023_Argentina",
+    "path": "/home/franco_quiroga/Proyecto_NASA/Data_VIIRS/2023/viirs-snpp_2023_Argentina.csv",
+    "product": "SNPP",
+    "kind": "country",
+    "level": "SP",
+    "coverage": [
+      "2023-01-01",
+      "2023-12-31"
+    ],
+    "n_rows": 171695,
+    "n_in_bbox": 171695,
+    "sha256": "ca895e71b8e5d878e0c971e643dacb8a018893c237d0ff567c41c921081c1eac"
+  },
+  {
+    "source_file": "Data_VIIRS__2024__viirs-snpp_2024_Argentina",
+    "path": "/home/franco_quiroga/Proyecto_NASA/Data_VIIRS/2024/viirs-snpp_2024_Argentina.csv",
+    "product": "SNPP",
+    "kind": "country",
+    "level": "SP",
+    "coverage": [
+      "2024-01-01",
+      "2024-12-31"
+    ],
+    "n_rows": 152971,
+    "n_in_bbox": 152971,
+    "sha256": "27d3c8e6d27b448e101b127decd4c721a20f664298a9475d1698104aa3dd8683"
+  },
+  {
+    "source_file": "Data_VIIRS__2025__viirs-snpp_2025_Argentina",
+    "path": "/home/franco_quiroga/Proyecto_NASA/Data_VIIRS/2025/viirs-snpp_2025_Argentina.csv",
+    "product": "SNPP",
+    "kind": "country",
+    "level": "SP",
+    "coverage": [
+      "2025-01-01",
+      "2025-12-31"
+    ],
+    "n_rows": 170674,
+    "n_in_bbox": 170674,
+    "sha256": "a6709295263f33166546c7029e823e4ad4716571ca1738a0ebc931d34c373f26"
+  },
+  {
+    "source_file": "Data_VIIRS__DL_FIRE_SV-C2_848530__fire_archive_SV-C2_848530",
+    "path": "/home/franco_quiroga/Proyecto_NASA/Data_VIIRS/DL_FIRE_SV-C2_848530/fire_archive_SV-C2_848530.csv",
+    "product": "SNPP",
+    "kind": "global",
+    "level": "SP",
+    "coverage": [
+      "2025-04-01",
+      "2026-04-01"
+    ],
+    "n_rows": 17804613,
+    "n_in_bbox": 229164,
+    "sha256": "d88c3075ea500082b35cf7ad9a305c434b0b5e054fd69eae4fd857fbdef6037a"
+  },
+  {
+    "source_file": "Data_VIIRS__DL_FIRE_SV-C2_848539__fire_archive_SV-C2_848539",
+    "path": "/home/franco_quiroga/Proyecto_NASA/Data_VIIRS/DL_FIRE_SV-C2_848539/fire_archive_SV-C2_848539.csv",
+    "product": "SNPP",
+    "kind": "global",
+    "level": "SP",
+    "coverage": [
+      "2026-04-02",
+      "2026-07-31"
+    ],
+    "n_rows": 4907282,
+    "n_in_bbox": 36849,
+    "sha256": "33ff439170178ce8a89946f70afb3ef91789a38fdd8fc6a47bcfbb6908a91258"
+  },
+  {
+    "source_file": "Data_VIIRS__DL_FIRE_SV-C2_848539__fire_nrt_SV-C2_848539",
+    "path": "/home/franco_quiroga/Proyecto_NASA/Data_VIIRS/DL_FIRE_SV-C2_848539/fire_nrt_SV-C2_848539.csv",
+    "product": "SNPP",
+    "kind": "global",
+    "level": "NRT",
+    "coverage": [
+      "2026-08-01",
+      "2026-11-02"
+    ],
+    "n_rows": 6602259,
+    "n_in_bbox": 63660,
+    "sha256": "4c4f39c2da02e19cfa9c54b7126104dbcbf98c409fc36bbd2a73f214542f5f65"
+  },
+  {
+    "source_file": "Data_VIIRS_NOAA-20__2018__viirs-jpss1_2018_Argentina",
+    "path": "/home/franco_quiroga/Proyecto_NASA/Data_VIIRS_NOAA-20/2018/viirs-jpss1_2018_Argentina.csv",
+    "product": "NOAA20",
+    "kind": "country",
+    "level": "SP",
+    "coverage": [
+      "2018-01-01",
+      "2018-12-31"
+    ],
+    "n_rows": 130089,
+    "n_in_bbox": 130089,
+    "sha256": "57a59b01925e7354fa657e752b4cae8102d21e73dedd282b330599d5d1a4ed3f"
+  },
+  {
+    "source_file": "Data_VIIRS_NOAA-20__2019__viirs-jpss1_2019_Argentina",
+    "path": "/home/franco_quiroga/Proyecto_NASA/Data_VIIRS_NOAA-20/2019/viirs-jpss1_2019_Argentina.csv",
+    "product": "NOAA20",
+    "kind": "country",
+    "level": "SP",
+    "coverage": [
+      "2019-01-01",
+      "2019-12-31"
+    ],
+    "n_rows": 160664,
+    "n_in_bbox": 160664,
+    "sha256": "9e5781a47a8b532084d57febdf803b33dca0f5db0b0a23a03a644c80910e44fb"
+  },
+  {
+    "source_file": "Data_VIIRS_NOAA-20__2020__viirs-jpss1_2020_Argentina",
+    "path": "/home/franco_quiroga/Proyecto_NASA/Data_VIIRS_NOAA-20/2020/viirs-jpss1_2020_Argentina.csv",
+    "product": "NOAA20",
+    "kind": "country",
+    "level": "SP",
+    "coverage": [
+      "2020-01-01",
+      "2020-12-31"
+    ],
+    "n_rows": 434775,
+    "n_in_bbox": 434775,
+    "sha256": "e7eed9444abba6dfe8aa9452f3e9a56967215014e3235ba53dce896d3ca663cc"
+  },
+  {
+    "source_file": "Data_VIIRS_NOAA-20__2021__viirs-jpss1_2021_Argentina",
+    "path": "/home/franco_quiroga/Proyecto_NASA/Data_VIIRS_NOAA-20/2021/viirs-jpss1_2021_Argentina.csv",
+    "product": "NOAA20",
+    "kind": "country",
+    "level": "SP",
+    "coverage": [
+      "2021-01-01",
+      "2021-12-31"
+    ],
+    "n_rows": 198976,
+    "n_in_bbox": 198976,
+    "sha256": "8a2960d54581dce5927709c30db248eb31c30e712ec6e961455859336ada800b"
+  },
+  {
+    "source_file": "Data_VIIRS_NOAA-20__2022__viirs-jpss1_2022_Argentina",
+    "path": "/home/franco_quiroga/Proyecto_NASA/Data_VIIRS_NOAA-20/2022/viirs-jpss1_2022_Argentina.csv",
+    "product": "NOAA20",
+    "kind": "country",
+    "level": "SP",
+    "coverage": [
+      "2022-01-01",
+      "2022-12-31"
+    ],
+    "n_rows": 312448,
+    "n_in_bbox": 312448,
+    "sha256": "6bcc3e3be9461ecc92d8a2bb87950d97ef7620e7c2ec68f317692ea1a3d35e98"
+  },
+  {
+    "source_file": "Data_VIIRS_NOAA-20__2023__viirs-jpss1_2023_Argentina",
+    "path": "/home/franco_quiroga/Proyecto_NASA/Data_VIIRS_NOAA-20/2023/viirs-jpss1_2023_Argentina.csv",
+    "product": "NOAA20",
+    "kind": "country",
+    "level": "SP",
+    "coverage": [
+      "2023-01-01",
+      "2023-12-31"
+    ],
+    "n_rows": 163741,
+    "n_in_bbox": 163741,
+    "sha256": "4dde502dc54871c40d3517ce59da9aa566b85582348c7d13c1dd91e655f1e84f"
+  },
+  {
+    "source_file": "Data_VIIRS_NOAA-20__2024__viirs-jpss1_2024_Argentina",
+    "path": "/home/franco_quiroga/Proyecto_NASA/Data_VIIRS_NOAA-20/2024/viirs-jpss1_2024_Argentina.csv",
+    "product": "NOAA20",
+    "kind": "country",
+    "level": "SP",
+    "coverage": [
+      "2024-01-01",
+      "2024-12-31"
+    ],
+    "n_rows": 157781,
+    "n_in_bbox": 157781,
+    "sha256": "f5d22dd92fedb44d7077e1296e8f0d29196a7fdd0ca078c9e1ed27f776fc6a26"
+  },
+  {
+    "source_file": "Data_VIIRS_NOAA-20__2025__viirs-jpss1_2025_Argentina",
+    "path": "/home/franco_quiroga/Proyecto_NASA/Data_VIIRS_NOAA-20/2025/viirs-jpss1_2025_Argentina.csv",
+    "product": "NOAA20",
+    "kind": "country",
+    "level": "SP",
+    "coverage": [
+      "2025-01-01",
+      "2025-12-31"
+    ],
+    "n_rows": 170323,
+    "n_in_bbox": 170323,
+    "sha256": "900032595f151b69b796535967dc814b84e65179802d0877c84905c3f46725f7"
+  },
+  {
+    "source_file": "Data_VIIRS_NOAA-20__DL_FIRE_J1V-C2_848529__fire_archive_J1V-C2_848529",
+    "path": "/home/franco_quiroga/Proyecto_NASA/Data_VIIRS_NOAA-20/DL_FIRE_J1V-C2_848529/fire_archive_J1V-C2_848529.csv",
+    "product": "NOAA20",
+    "kind": "global",
+    "level": "SP",
+    "coverage": [
+      "2025-04-01",
+      "2026-04-01"
+    ],
+    "n_rows": 17913797,
+    "n_in_bbox": 229464,
+    "sha256": "fd32502af54f037280ca5f941a72b493345694ff9a35cb8215c9384ff9b6fd1b"
+  },
+  {
+    "source_file": "Data_VIIRS_NOAA-20__DL_FIRE_J1V-C2_848538__fire_archive_J1V-C2_848538",
+    "path": "/home/franco_quiroga/Proyecto_NASA/Data_VIIRS_NOAA-20/DL_FIRE_J1V-C2_848538/fire_archive_J1V-C2_848538.csv",
+    "product": "NOAA20",
+    "kind": "global",
+    "level": "SP",
+    "coverage": [
+      "2026-04-02",
+      "2026-07-31"
+    ],
+    "n_rows": 5492001,
+    "n_in_bbox": 43611,
+    "sha256": "e2dd8b00d7f4d1f9b8b5650ece9c62839e9d95873d8bd87266967b619d302df7"
+  },
+  {
+    "source_file": "Data_VIIRS_NOAA-20__DL_FIRE_J1V-C2_848538__fire_nrt_J1V-C2_848538",
+    "path": "/home/franco_quiroga/Proyecto_NASA/Data_VIIRS_NOAA-20/DL_FIRE_J1V-C2_848538/fire_nrt_J1V-C2_848538.csv",
+    "product": "NOAA20",
+    "kind": "global",
+    "level": "NRT",
+    "coverage": [
+      "2026-08-01",
+      "2026-11-14"
+    ],
+    "n_rows": 7478189,
+    "n_in_bbox": 70894,
+    "sha256": "f4dacb40305cf61780b90b4c00468a5f419b32a2c63729122dfb9c365ab259de"
+  },
+  {
+    "source_file": "Data_VIIRS_NOAA-21__DL_FIRE_J2V-C2_848545__fire_archive_J2V-C2_848545",
+    "path": "/home/franco_quiroga/Proyecto_NASA/Data_VIIRS_NOAA-21/DL_FIRE_J2V-C2_848545/fire_archive_J2V-C2_848545.csv",
+    "product": "NOAA21",
+    "kind": "global",
+    "level": "SP",
+    "coverage": [
+      "2023-03-01",
+      "2024-03-01"
+    ],
+    "n_rows": 21164104,
+    "n_in_bbox": 262311,
+    "sha256": "997a72dd486a4abde936db28d98cd882597c9c20cb410b731d9b9b5c048873a4"
+  },
+  {
+    "source_file": "Data_VIIRS_NOAA-21__DL_FIRE_J2V-C2_848546__fire_archive_J2V-C2_848546",
+    "path": "/home/franco_quiroga/Proyecto_NASA/Data_VIIRS_NOAA-21/DL_FIRE_J2V-C2_848546/fire_archive_J2V-C2_848546.csv",
+    "product": "NOAA21",
+    "kind": "global",
+    "level": "SP",
+    "coverage": [
+      "2024-03-02",
+      "2025-03-02"
+    ],
+    "n_rows": 21723833,
+    "n_in_bbox": 325270,
+    "sha256": "9e3e4ea33c3f25f63afc84bb574875477666f70ac6e01a61145d243da82604e1"
+  },
+  {
+    "source_file": "Data_VIIRS_NOAA-21__DL_FIRE_J2V-C2_848551__fire_archive_J2V-C2_848551",
+    "path": "/home/franco_quiroga/Proyecto_NASA/Data_VIIRS_NOAA-21/DL_FIRE_J2V-C2_848551/fire_archive_J2V-C2_848551.csv",
+    "product": "NOAA21",
+    "kind": "global",
+    "level": "SP",
+    "coverage": [
+      "2025-03-03",
+      "2026-03-03"
+    ],
+    "n_rows": 17324856,
+    "n_in_bbox": 234614,
+    "sha256": "191afd35d92296d1d5fa069464d09abddc94247ea39d8e9bc2cff6c601c08464"
+  },
+  {
+    "source_file": "Data_VIIRS_NOAA-21__DL_FIRE_J2V-C2_848553__fire_archive_J2V-C2_848553",
+    "path": "/home/franco_quiroga/Proyecto_NASA/Data_VIIRS_NOAA-21/DL_FIRE_J2V-C2_848553/fire_archive_J2V-C2_848553.csv",
+    "product": "NOAA21",
+    "kind": "global",
+    "level": "SP",
+    "coverage": [
+      "2026-03-04",
+      "2026-07-31"
+    ],
+    "n_rows": 6461112,
+    "n_in_bbox": 55455,
+    "sha256": "ceb6ca54b40eeb69bd5e6dfebdcb27754189195baac4fe6695ad007318b1af64"
+  },
+  {
+    "source_file": "Data_VIIRS_NOAA-21__DL_FIRE_J2V-C2_848553__fire_nrt_J2V-C2_848553",
+    "path": "/home/franco_quiroga/Proyecto_NASA/Data_VIIRS_NOAA-21/DL_FIRE_J2V-C2_848553/fire_nrt_J2V-C2_848553.csv",
+    "product": "NOAA21",
+    "kind": "global",
+    "level": "NRT",
+    "coverage": [
+      "2026-08-01",
+      "2026-11-14"
+    ],
+    "n_rows": 7186305,
+    "n_in_bbox": 66470,
+    "sha256": "7444767108491400bdbeba74ae296dedf772904e5255a6a5c9d90497517f616d"
+  }
+]

@@ -1,0 +1,2200 @@
+{
+  "results": [
+    {
+      "axis": "1",
+      "check": "Nulos en eventos",
+      "status": "PASS",
+      "evidence": "35 columnas, nulos no justificados=0; FRP nulo con frp_quality='missing': 129"
+    },
+    {
+      "axis": "1",
+      "check": "NaN/inf en columnas float",
+      "status": "PASS",
+      "evidence": "['cell_lat', 'cell_lon', 'harmonized_weight', 'weight_ci_low', 'weight_ci_high', 'frp_max', 'frp_mean'] -> 0"
+    },
+    {
+      "axis": "1",
+      "check": "Pesos negativos / incoherentes",
+      "status": "PASS",
+      "evidence": "negativos=0, cero con in_series=0, >0 sin in_series=0, fuera de IC=0"
+    },
+    {
+      "axis": "1",
+      "check": "Pesos = 0 (eventos solo confianza baja)",
+      "status": "WARN",
+      "evidence": "133,955 eventos (5.14%) con peso 0 = exactamente los !in_series (133,955); por diseño, pero la web debe saberlo"
+    },
+    {
+      "axis": "1",
+      "check": "Rango de pesos",
+      "status": "WARN",
+      "evidence": "min=1.000, max=26.782 (Terra may-jun)"
+    },
+    {
+      "axis": "1",
+      "check": "FRP extremos/absurdos",
+      "status": "PASS",
+      "evidence": "min=0.01, p99.9=1572, max=13294 MW; ≤0: 0; >5000 MW: 84 (sin marcar 'extreme': 0); mean>max: 0; frp_quality: [('ok', 2606401), ('partial', 974), ('missing', 129), ('extreme', 84)]"
+    },
+    {
+      "axis": "1",
+      "check": "Coordenadas y fechas en rango",
+      "status": "PASS",
+      "evidence": "lat [-54.892,-21.820] lon [-73.200,-53.652] fechas 2000-11-01→2026-11-14; partición year≠fecha: 0, month_of_year≠fecha: 0, last<first: 0, |utc−solar|>1d: 0"
+    },
+    {
+      "axis": "1",
+      "check": "Trazabilidad (versión, calidad, capa)",
+      "status": "PASS",
+      "evidence": "versiones=1 (ARG-cal-d0dcb9cdf578), calidad inválida=0, capa inválida=0, SP>corte=0, NRT≤corte=0, SP provisorio=0"
+    },
+    {
+      "axis": "1",
+      "check": "Columna de confiabilidad `reliability_tier`",
+      "status": "PASS",
+      "evidence": "presente=True; valores=[('high', 1377762), ('low', 92069), ('medium', 1137757)]"
+    },
+    {
+      "axis": "1",
+      "check": "Eventos NRT con detecciones SP",
+      "status": "WARN",
+      "evidence": "2,654 eventos en layer=NRT no son 100% provisorios (mezclan MODIS SP de ago-2026 + VIIRS NRT). Ej.: [('Aqua', 917), ('Aqua+SNPP+NOAA20+NOAA21', 239), ('SNPP', 204), ('NOAA20', 194)]"
+    },
+    {
+      "axis": "1",
+      "check": "Peso == K(constelación, día del año) de la tabla diaria",
+      "status": "PASS",
+      "evidence": "discrepancias=0"
+    },
+    {
+      "axis": "2",
+      "check": "Detecciones crudas fuera del polígono",
+      "status": "PASS",
+      "evidence": "0 de 6,755,777"
+    },
+    {
+      "axis": "2",
+      "check": "Centroides de celda fuera del polígono",
+      "status": "WARN",
+      "evidence": "600 celdas (0.21%), 3,314 eventos; detección adentro pero centroide H3 afuera (borde/costa). Distancia p50=0.47 km, max=1.27 km; 132 centroides sobre el mar"
+    },
+    {
+      "axis": "2",
+      "check": "Unicidad celda H3 × día",
+      "status": "PASS",
+      "evidence": "duplicados=0, celda-día en ambas capas=0"
+    },
+    {
+      "axis": "2",
+      "check": "Web == data/processed",
+      "status": "PASS",
+      "evidence": "filas 2,607,588 vs 2,607,588; Σpeso 5221931.313339 vs 5221931.313339 (dif. relativa 5.4e-14, orden de suma)"
+    },
+    {
+      "axis": "2",
+      "check": "Celdas >150 días/año (posible fuente fija)",
+      "status": "PASS",
+      "evidence": "0 celda-año; máx días/año=112; >100 d: 1; >60 d: 3"
+    },
+    {
+      "axis": "2",
+      "check": "Recurrencia alta (>60 días/año)",
+      "status": "WARN",
+      "evidence": "3 celdas distintas con algún año >60 días; ver top 5"
+    },
+    {
+      "axis": "3",
+      "check": "Salto estacional en 2008-04-12 → Terra (informativo, z=medio)",
+      "status": "WARN",
+      "evidence": "obs ×1.623, armonizado ×1.81 vs esperado estacional ×0.892 (z=1.53, percentil 96.0 de 26 años)"
+    },
+    {
+      "axis": "3",
+      "check": "Salto estacional en 2008-04-13 → Terra+Aqua (informativo, z=medio)",
+      "status": "WARN",
+      "evidence": "obs ×1.722, armonizado ×1.874 vs esperado estacional ×0.966 (z=1.54, percentil 100.0 de 26 años)"
+    },
+    {
+      "axis": "3",
+      "check": "Salto estacional en 2009-11-15 → Aqua (informativo, z=medio)",
+      "status": "WARN",
+      "evidence": "obs ×0.204, armonizado ×0.215 vs esperado estacional ×0.605 (z=-2.26, percentil 0.0 de 26 años)"
+    },
+    {
+      "axis": "3",
+      "check": "Salto estacional en 2009-11-16 → Terra+Aqua (informativo, z=medio)",
+      "status": "WARN",
+      "evidence": "obs ×0.209, armonizado ×0.219 vs esperado estacional ×0.607 (z=-2.13, percentil 0.0 de 26 años)"
+    },
+    {
+      "axis": "3",
+      "check": "Salto estacional en 2020-08-28 → Terra+SNPP+NOAA20 (informativo, z=medio)",
+      "status": "WARN",
+      "evidence": "obs ×0.505, armonizado ×0.5 vs esperado estacional ×0.908 (z=-1.69, percentil 4.0 de 26 años)"
+    },
+    {
+      "axis": "3",
+      "check": "Salto estacional en 2022-08-11 → Terra+Aqua+SNPP+NOAA20 (informativo, z=medio)",
+      "status": "WARN",
+      "evidence": "obs ×3.625, armonizado ×3.029 vs esperado estacional ×1.537 (z=1.92, percentil 100.0 de 26 años)"
+    },
+    {
+      "axis": "3",
+      "check": "Salto estacional en 2022-10-23 → Terra+Aqua+SNPP+NOAA20 (informativo, z=medio)",
+      "status": "WARN",
+      "evidence": "obs ×1.167, armonizado ×1.152 vs esperado estacional ×0.489 (z=1.63, percentil 92.0 de 26 años)"
+    },
+    {
+      "axis": "3",
+      "check": "Salto estacional en 2024-01-15 → Terra+Aqua+SNPP+NOAA20+NOAA21 (informativo, z=medio)",
+      "status": "WARN",
+      "evidence": "obs ×2.316, armonizado ×2.344 vs esperado estacional ×0.985 (z=1.51, percentil 100.0 de 26 años)"
+    },
+    {
+      "axis": "3",
+      "check": "Salto estacional en 2026-04-28 → Terra+Aqua+NOAA20+NOAA21 (informativo, z=medio)",
+      "status": "WARN",
+      "evidence": "obs ×2.156, armonizado ×2.315 vs esperado estacional ×0.908 (z=1.84, percentil 100.0 de 26 años)"
+    },
+    {
+      "axis": "3",
+      "check": "Salto estacional en 2026-05-01 → Terra+Aqua+SNPP+NOAA20+NOAA21 (informativo, z=medio)",
+      "status": "WARN",
+      "evidence": "obs ×2.294, armonizado ×2.188 vs esperado estacional ×0.914 (z=1.92, percentil 96.0 de 26 años)"
+    },
+    {
+      "axis": "3",
+      "check": "Salto estacional en 2026-05-03 → Terra+SNPP+NOAA20+NOAA21 (informativo, z=medio)",
+      "status": "WARN",
+      "evidence": "obs ×2.356, armonizado ×2.243 vs esperado estacional ×0.943 (z=1.8, percentil 92.0 de 26 años)"
+    },
+    {
+      "axis": "3",
+      "check": "Salto estacional en 2026-05-04 → Terra+Aqua+SNPP+NOAA20+NOAA21 (informativo, z=medio)",
+      "status": "WARN",
+      "evidence": "obs ×2.304, armonizado ×2.188 vs esperado estacional ×0.943 (z=1.77, percentil 96.0 de 26 años)"
+    },
+    {
+      "axis": "3",
+      "check": "Salto estacional en 2026-07-17 → Terra+Aqua+SNPP+NOAA20+NOAA21 (informativo, z=alto)",
+      "status": "WARN",
+      "evidence": "obs ×0.898, armonizado ×0.839 vs esperado estacional ×2.569 (z=-3.47, percentil 0.0 de 26 años)"
+    },
+    {
+      "axis": "3",
+      "check": "Salto estacional en 2026-08-04 → Terra+Aqua+SNPP+NOAA20+NOAA21 (informativo, z=medio)",
+      "status": "WARN",
+      "evidence": "obs ×0.873, armonizado ×0.825 vs esperado estacional ×2.167 (z=-1.85, percentil 0.0 de 26 años)"
+    },
+    {
+      "axis": "3",
+      "check": "Transiciones: salto vs estacionalidad de otros años (informativo)",
+      "status": "WARN",
+      "evidence": "115 transiciones: {'PASS': 101, 'WARN': 13, 'FAIL': 1}. No separa error de calibración de un año atípico; ver test de consistencia local"
+    },
+    {
+      "axis": "3",
+      "check": "Transiciones: salto artificial local a 90 días (armonizado grande vs chica simulada)",
+      "status": "WARN",
+      "evidence": "115 transiciones evaluables (113 con ventana ≥60 d, máx |R−1|=0.179); todas: |R−1| mediana=0.013, p90=0.087, máx=0.267; >10%: 10, >20%: 1; peores: 2002-07-30 R=1.2671 (26d); 2007-02-17 R=0.8207 (90d); 2009-11-16 R=1.1684 (90d); 2002-09-12 R=1.1503 (61d); 2002-07-04 R=1.1357 (79d)"
+    },
+    {
+      "axis": "3",
+      "check": "Escalón del factor K al cambiar de mes",
+      "status": "PASS",
+      "evidence": "Terra: ×0.987…×1.012; Terra+Aqua: ×0.995…×1.004; Terra+Aqua+SNPP: ×0.998…×1.002; Terra+Aqua+SNPP+NOAA20: ×0.999…×1.001; Terra+SNPP+NOAA20: ×1.001…×1.001; Terra+Aqua+SNPP+NOAA20+NOAA21: ×1.000…×1.000; Terra+Aqua+NOAA20+NOAA21: ×1.000…×1.000; Terra+Aqua+NOAA20: ×0.998…×0.998"
+    },
+    {
+      "axis": "3",
+      "check": "Satélite detectado fuera de su época",
+      "status": "PASS",
+      "evidence": "0 eventos"
+    },
+    {
+      "axis": "3",
+      "check": "S-NPP ausente tras 2026-11-02",
+      "status": "PASS",
+      "evidence": "0 detecciones S-NPP posteriores"
+    },
+    {
+      "axis": "3",
+      "check": "Caídas silenciosas de satélites",
+      "status": "WARN",
+      "evidence": "Terra: 54 días (ej. ['2015-06-02', '2016-06-11', '2016-06-18']); Aqua: 9 días (ej. ['2018-12-02', '2024-03-02', '2024-04-21']); SNPP: 1 días (ej. ['2026-03-12'])"
+    },
+    {
+      "axis": "3",
+      "check": "Corte SP/NRT sin solape ni hueco",
+      "status": "PASS",
+      "evidence": "último SP=2026-07-30, primer NRT=2026-07-31, corte manifest=2026-07-30, días duplicados=0, huecos de calendario=0"
+    },
+    {
+      "axis": "3",
+      "check": "Días con 0 eventos",
+      "status": "WARN",
+      "evidence": "por año: [(2001, 16), (2002, 21), (2003, 1), (2004, 1), (2005, 3), (2007, 1), (2008, 1), (2009, 1), (2010, 1), (2011, 2)]"
+    },
+    {
+      "axis": "3",
+      "check": "Bloques ≥5 días seguidos con 0 eventos",
+      "status": "WARN",
+      "evidence": "2002-04-11→2002-04-15 (5 d); 2002-05-15→2002-05-20 (6 d) — días en rachas ≥3 sin marcar 'suspect_zero': 0; nulos 'no_satellite': 33"
+    },
+    {
+      "axis": "3",
+      "check": "Salto en el corte SP→NRT",
+      "status": "WARN",
+      "evidence": "30 d después/antes = ×0.98; esperado estacional (mediana otros años) ×2.25 [rango 0.99–4.34]"
+    },
+    {
+      "axis": "4",
+      "check": "Σ pesos (eventos) vs timeseries_daily",
+      "status": "PASS",
+      "evidence": "9510 días; max |dif|=3.774e-10; días con dif ≠ 0 exacta: 7219 (orden de suma en coma flotante); conteo observado distinto: 0; conteo todas las confianzas distinto: 0; IC: max dif 6.06e-10"
+    },
+    {
+      "axis": "4",
+      "check": "Σ pesos (eventos) vs timeseries_monthly",
+      "status": "PASS",
+      "evidence": "313 meses; max |dif| eventos=5.908e-09, diaria→mensual=0.000e+00; conteo distinto: 0"
+    },
+    {
+      "axis": "4",
+      "check": "IC mensual vs Σ IC de eventos",
+      "status": "WARN",
+      "evidence": "no son aditivos por diseño: Σ weight_ci_low − ci_low_mensual hasta +0.05% y Σ weight_ci_high − ci_high_mensual hasta -0.04% del total (Σ de cuantiles ≠ cuantil de la Σ); IC que no contiene la estimación: 0"
+    },
+    {
+      "axis": "4",
+      "check": "Total histórico",
+      "status": "PASS",
+      "evidence": "eventos=5221931.313339, diaria=5221931.313338, mensual=5221931.313338"
+    }
+  ],
+  "top5": [
+    {
+      "h3_index": "87b249613ffffff",
+      "h3_cell": 611122401438072831,
+      "lat": -32.821413861338854,
+      "lon": -61.40213016908028,
+      "dias_total": 386,
+      "max_dias_año": 28,
+      "años_activos": 21,
+      "detecciones": 457,
+      "frac_noche": 0.0,
+      "frp_mediana": 8.5,
+      "satélites": 3,
+      "desde": "2000-11-14",
+      "hasta": "2026-11-05",
+      "rechazos_type_≈3km": 193
+    },
+    {
+      "h3_index": "87b254925ffffff",
+      "h3_cell": 611123170539208703,
+      "lat": -29.289132777614604,
+      "lon": -66.72857899772988,
+      "dias_total": 252,
+      "max_dias_año": 31,
+      "años_activos": 19,
+      "detecciones": 398,
+      "frac_noche": 0.402,
+      "frp_mediana": 3.28,
+      "satélites": 5,
+      "desde": "2003-11-11",
+      "hasta": "2026-11-13",
+      "rechazos_type_≈3km": 43
+    },
+    {
+      "h3_index": "87b243776ffffff",
+      "h3_cell": 611121995077124095,
+      "lat": -31.447475944759105,
+      "lon": -64.11442622943596,
+      "dias_total": 211,
+      "max_dias_año": 15,
+      "años_activos": 27,
+      "detecciones": 265,
+      "frac_noche": 0.0,
+      "frp_mediana": 4.9,
+      "satélites": 5,
+      "desde": "2000-11-14",
+      "hasta": "2026-09-26",
+      "rechazos_type_≈3km": 77
+    },
+    {
+      "h3_index": "87a9716ecffffff",
+      "h3_cell": 610966824183398399,
+      "lat": -28.029193476250388,
+      "lon": -56.00806374891899,
+      "dias_total": 200,
+      "max_dias_año": 27,
+      "años_activos": 24,
+      "detecciones": 298,
+      "frac_noche": 0.507,
+      "frp_mediana": 2.76,
+      "satélites": 5,
+      "desde": "2001-07-30",
+      "hasta": "2026-07-17",
+      "rechazos_type_≈3km": 28
+    },
+    {
+      "h3_index": "87b24cb5effffff",
+      "h3_cell": 611122630329630719,
+      "lat": -30.93839357005912,
+      "lon": -61.55911067656316,
+      "dias_total": 193,
+      "max_dias_año": 20,
+      "años_activos": 19,
+      "detecciones": 222,
+      "frac_noche": 0.0,
+      "frp_mediana": 6.5,
+      "satélites": 3,
+      "desde": "2000-11-16",
+      "hasta": "2025-07-10",
+      "rechazos_type_≈3km": 29
+    }
+  ],
+  "transitions": [
+    {
+      "transición": "2002-07-04 → Terra+Aqua",
+      "ventana_d": 28,
+      "obs_después/antes": 16.242,
+      "arm_después/antes": 3.12,
+      "esperado_estacional(med)": 2.141,
+      "z": 0.49,
+      "percentil": 80.0
+    },
+    {
+      "transición": "2002-07-30 → Terra",
+      "ventana_d": 28,
+      "obs_después/antes": 2.164,
+      "arm_después/antes": 2.159,
+      "esperado_estacional(med)": 2.137,
+      "z": 0.26,
+      "percentil": 56.0
+    },
+    {
+      "transición": "2002-08-08 → Terra+Aqua",
+      "ventana_d": 28,
+      "obs_después/antes": 3.534,
+      "arm_después/antes": 2.42,
+      "esperado_estacional(med)": 1.664,
+      "z": 1.29,
+      "percentil": 88.0
+    },
+    {
+      "transición": "2002-09-12 → Terra",
+      "ventana_d": 28,
+      "obs_después/antes": 0.667,
+      "arm_después/antes": 0.67,
+      "esperado_estacional(med)": 0.67,
+      "z": -0.12,
+      "percentil": 52.0
+    },
+    {
+      "transición": "2002-09-14 → Terra+Aqua",
+      "ventana_d": 28,
+      "obs_después/antes": 0.688,
+      "arm_después/antes": 0.663,
+      "esperado_estacional(med)": 0.675,
+      "z": -0.07,
+      "percentil": 44.0
+    },
+    {
+      "transición": "2002-11-15 → Terra",
+      "ventana_d": 28,
+      "obs_después/antes": 0.868,
+      "arm_después/antes": 0.923,
+      "esperado_estacional(med)": 0.604,
+      "z": 0.6,
+      "percentil": 80.0
+    },
+    {
+      "transición": "2002-11-16 → Terra+Aqua",
+      "ventana_d": 28,
+      "obs_después/antes": 0.884,
+      "arm_después/antes": 0.904,
+      "esperado_estacional(med)": 0.575,
+      "z": 0.57,
+      "percentil": 80.0
+    },
+    {
+      "transición": "2003-05-12 → Terra",
+      "ventana_d": 28,
+      "obs_después/antes": 1.34,
+      "arm_después/antes": 1.434,
+      "esperado_estacional(med)": 1.19,
+      "z": 0.66,
+      "percentil": 80.0
+    },
+    {
+      "transición": "2003-05-13 → Terra+Aqua",
+      "ventana_d": 28,
+      "obs_después/antes": 1.545,
+      "arm_después/antes": 1.567,
+      "esperado_estacional(med)": 1.16,
+      "z": 0.82,
+      "percentil": 88.0
+    },
+    {
+      "transición": "2003-12-16 → Aqua",
+      "ventana_d": 28,
+      "obs_después/antes": 0.476,
+      "arm_después/antes": 0.625,
+      "esperado_estacional(med)": 0.749,
+      "z": -0.8,
+      "percentil": 16.0
+    },
+    {
+      "transición": "2003-12-24 → Terra+Aqua",
+      "ventana_d": 28,
+      "obs_después/antes": 0.774,
+      "arm_después/antes": 0.624,
+      "esperado_estacional(med)": 1.049,
+      "z": -1.11,
+      "percentil": 12.0
+    },
+    {
+      "transición": "2004-02-18 → Aqua",
+      "ventana_d": 28,
+      "obs_después/antes": 1.238,
+      "arm_después/antes": 1.285,
+      "esperado_estacional(med)": 0.884,
+      "z": 0.76,
+      "percentil": 80.0
+    },
+    {
+      "transición": "2004-02-19 → Terra+Aqua",
+      "ventana_d": 28,
+      "obs_después/antes": 1.265,
+      "arm_después/antes": 1.3,
+      "esperado_estacional(med)": 0.9,
+      "z": 0.81,
+      "percentil": 84.0
+    },
+    {
+      "transición": "2004-04-30 → Aqua",
+      "ventana_d": 28,
+      "obs_después/antes": 1.004,
+      "arm_después/antes": 1.143,
+      "esperado_estacional(med)": 0.886,
+      "z": 0.4,
+      "percentil": 68.0
+    },
+    {
+      "transición": "2004-05-01 → Terra+Aqua",
+      "ventana_d": 28,
+      "obs_después/antes": 1.074,
+      "arm_después/antes": 1.18,
+      "esperado_estacional(med)": 0.914,
+      "z": 0.5,
+      "percentil": 72.0
+    },
+    {
+      "transición": "2004-05-03 → Terra",
+      "ventana_d": 28,
+      "obs_después/antes": 1.152,
+      "arm_después/antes": 1.258,
+      "esperado_estacional(med)": 0.943,
+      "z": 0.54,
+      "percentil": 72.0
+    },
+    {
+      "transición": "2004-05-05 → Terra+Aqua",
+      "ventana_d": 28,
+      "obs_después/antes": 1.413,
+      "arm_después/antes": 1.452,
+      "esperado_estacional(med)": 0.899,
+      "z": 0.88,
+      "percentil": 80.0
+    },
+    {
+      "transición": "2004-05-16 → Aqua",
+      "ventana_d": 28,
+      "obs_después/antes": 2.193,
+      "arm_después/antes": 2.149,
+      "esperado_estacional(med)": 1.1,
+      "z": 1.38,
+      "percentil": 92.0
+    },
+    {
+      "transición": "2004-05-17 → Terra+Aqua",
+      "ventana_d": 28,
+      "obs_después/antes": 2.215,
+      "arm_después/antes": 2.112,
+      "esperado_estacional(med)": 1.09,
+      "z": 1.24,
+      "percentil": 88.0
+    },
+    {
+      "transición": "2005-05-19 → Aqua",
+      "ventana_d": 28,
+      "obs_después/antes": 1.12,
+      "arm_después/antes": 1.175,
+      "esperado_estacional(med)": 1.145,
+      "z": -0.06,
+      "percentil": 56.0
+    },
+    {
+      "transición": "2005-05-20 → Terra+Aqua",
+      "ventana_d": 28,
+      "obs_después/antes": 1.031,
+      "arm_después/antes": 1.045,
+      "esperado_estacional(med)": 1.178,
+      "z": -0.31,
+      "percentil": 36.0
+    },
+    {
+      "transición": "2005-06-15 → Terra",
+      "ventana_d": 28,
+      "obs_después/antes": 0.951,
+      "arm_después/antes": 0.84,
+      "esperado_estacional(med)": 1.556,
+      "z": -1.44,
+      "percentil": 4.0
+    },
+    {
+      "transición": "2005-06-18 → Terra+Aqua",
+      "ventana_d": 28,
+      "obs_después/antes": 1.532,
+      "arm_después/antes": 1.329,
+      "esperado_estacional(med)": 1.829,
+      "z": -0.66,
+      "percentil": 32.0
+    },
+    {
+      "transición": "2006-06-21 → Aqua",
+      "ventana_d": 28,
+      "obs_después/antes": 1.673,
+      "arm_después/antes": 1.511,
+      "esperado_estacional(med)": 1.831,
+      "z": -0.48,
+      "percentil": 36.0
+    },
+    {
+      "transición": "2006-06-22 → Terra+Aqua",
+      "ventana_d": 28,
+      "obs_después/antes": 1.764,
+      "arm_después/antes": 1.555,
+      "esperado_estacional(med)": 2.113,
+      "z": -0.5,
+      "percentil": 36.0
+    },
+    {
+      "transición": "2007-02-17 → Terra",
+      "ventana_d": 28,
+      "obs_después/antes": 0.941,
+      "arm_después/antes": 0.981,
+      "esperado_estacional(med)": 0.906,
+      "z": 0.19,
+      "percentil": 60.0
+    },
+    {
+      "transición": "2007-02-18 → Terra+Aqua",
+      "ventana_d": 28,
+      "obs_después/antes": 0.956,
+      "arm_después/antes": 0.977,
+      "esperado_estacional(med)": 0.884,
+      "z": 0.17,
+      "percentil": 60.0
+    },
+    {
+      "transición": "2007-04-06 → Terra",
+      "ventana_d": 28,
+      "obs_después/antes": 1.048,
+      "arm_después/antes": 1.171,
+      "esperado_estacional(med)": 0.869,
+      "z": 0.65,
+      "percentil": 76.0
+    },
+    {
+      "transición": "2007-04-07 → Terra+Aqua",
+      "ventana_d": 28,
+      "obs_después/antes": 1.194,
+      "arm_después/antes": 1.336,
+      "esperado_estacional(med)": 0.894,
+      "z": 0.86,
+      "percentil": 76.0
+    },
+    {
+      "transición": "2008-04-12 → Terra",
+      "ventana_d": 28,
+      "obs_después/antes": 1.623,
+      "arm_después/antes": 1.81,
+      "esperado_estacional(med)": 0.892,
+      "z": 1.53,
+      "percentil": 96.0
+    },
+    {
+      "transición": "2008-04-13 → Terra+Aqua",
+      "ventana_d": 28,
+      "obs_después/antes": 1.722,
+      "arm_después/antes": 1.874,
+      "esperado_estacional(med)": 0.966,
+      "z": 1.54,
+      "percentil": 100.0
+    },
+    {
+      "transición": "2008-06-21 → Aqua",
+      "ventana_d": 28,
+      "obs_después/antes": 2.478,
+      "arm_después/antes": 2.186,
+      "esperado_estacional(med)": 1.76,
+      "z": 0.22,
+      "percentil": 64.0
+    },
+    {
+      "transición": "2008-06-22 → Terra+Aqua",
+      "ventana_d": 28,
+      "obs_después/antes": 2.581,
+      "arm_después/antes": 2.264,
+      "esperado_estacional(med)": 1.9,
+      "z": 0.22,
+      "percentil": 56.0
+    },
+    {
+      "transición": "2008-12-20 → Aqua",
+      "ventana_d": 28,
+      "obs_después/antes": 0.629,
+      "arm_después/antes": 0.656,
+      "esperado_estacional(med)": 0.82,
+      "z": -0.81,
+      "percentil": 8.0
+    },
+    {
+      "transición": "2008-12-23 → Terra+Aqua",
+      "ventana_d": 28,
+      "obs_después/antes": 0.772,
+      "arm_después/antes": 0.744,
+      "esperado_estacional(med)": 1.026,
+      "z": -0.73,
+      "percentil": 20.0
+    },
+    {
+      "transición": "2009-04-26 → Aqua",
+      "ventana_d": 28,
+      "obs_después/antes": 0.754,
+      "arm_después/antes": 0.827,
+      "esperado_estacional(med)": 0.926,
+      "z": -0.31,
+      "percentil": 44.0
+    },
+    {
+      "transición": "2009-04-27 → Terra+Aqua",
+      "ventana_d": 28,
+      "obs_después/antes": 0.757,
+      "arm_después/antes": 0.819,
+      "esperado_estacional(med)": 0.936,
+      "z": -0.36,
+      "percentil": 36.0
+    },
+    {
+      "transición": "2009-11-15 → Aqua",
+      "ventana_d": 28,
+      "obs_después/antes": 0.204,
+      "arm_después/antes": 0.215,
+      "esperado_estacional(med)": 0.605,
+      "z": -2.26,
+      "percentil": 0.0
+    },
+    {
+      "transición": "2009-11-16 → Terra+Aqua",
+      "ventana_d": 28,
+      "obs_después/antes": 0.209,
+      "arm_después/antes": 0.219,
+      "esperado_estacional(med)": 0.607,
+      "z": -2.13,
+      "percentil": 0.0
+    },
+    {
+      "transición": "2010-07-15 → Aqua",
+      "ventana_d": 28,
+      "obs_después/antes": 2.353,
+      "arm_después/antes": 2.057,
+      "esperado_estacional(med)": 2.664,
+      "z": -0.49,
+      "percentil": 28.0
+    },
+    {
+      "transición": "2010-07-16 → Terra+Aqua",
+      "ventana_d": 28,
+      "obs_después/antes": 2.387,
+      "arm_después/antes": 2.045,
+      "esperado_estacional(med)": 2.556,
+      "z": -0.48,
+      "percentil": 28.0
+    },
+    {
+      "transición": "2011-02-06 → Aqua",
+      "ventana_d": 28,
+      "obs_después/antes": 0.616,
+      "arm_después/antes": 0.634,
+      "esperado_estacional(med)": 0.878,
+      "z": -0.75,
+      "percentil": 32.0
+    },
+    {
+      "transición": "2011-02-07 → Terra+Aqua",
+      "ventana_d": 28,
+      "obs_después/antes": 0.63,
+      "arm_después/antes": 0.637,
+      "esperado_estacional(med)": 0.885,
+      "z": -0.69,
+      "percentil": 28.0
+    },
+    {
+      "transición": "2012-01-20 → Terra+Aqua+SNPP",
+      "ventana_d": 28,
+      "obs_después/antes": 1.59,
+      "arm_después/antes": 0.594,
+      "esperado_estacional(med)": 1.089,
+      "z": -1.36,
+      "percentil": 8.0
+    },
+    {
+      "transición": "2012-03-25 → Terra+Aqua",
+      "ventana_d": 28,
+      "obs_después/antes": 0.719,
+      "arm_después/antes": 0.764,
+      "esperado_estacional(med)": 0.743,
+      "z": 0.02,
+      "percentil": 56.0
+    },
+    {
+      "transición": "2012-03-26 → Terra+Aqua+SNPP",
+      "ventana_d": 28,
+      "obs_después/antes": 0.719,
+      "arm_después/antes": 0.734,
+      "esperado_estacional(med)": 0.753,
+      "z": -0.05,
+      "percentil": 44.0
+    },
+    {
+      "transición": "2013-07-18 → Aqua+SNPP",
+      "ventana_d": 28,
+      "obs_después/antes": 3.687,
+      "arm_después/antes": 3.476,
+      "esperado_estacional(med)": 2.328,
+      "z": 0.99,
+      "percentil": 88.0
+    },
+    {
+      "transición": "2013-07-19 → Terra+Aqua+SNPP",
+      "ventana_d": 28,
+      "obs_después/antes": 3.932,
+      "arm_después/antes": 3.691,
+      "esperado_estacional(med)": 2.43,
+      "z": 1.13,
+      "percentil": 92.0
+    },
+    {
+      "transición": "2015-04-22 → Aqua+SNPP",
+      "ventana_d": 28,
+      "obs_después/antes": 1.069,
+      "arm_después/antes": 1.136,
+      "esperado_estacional(med)": 1.018,
+      "z": 0.42,
+      "percentil": 64.0
+    },
+    {
+      "transición": "2015-04-23 → Terra+Aqua+SNPP",
+      "ventana_d": 28,
+      "obs_después/antes": 0.979,
+      "arm_después/antes": 1.028,
+      "esperado_estacional(med)": 0.968,
+      "z": 0.19,
+      "percentil": 52.0
+    },
+    {
+      "transición": "2016-02-16 → Terra+SNPP",
+      "ventana_d": 28,
+      "obs_después/antes": 0.586,
+      "arm_después/antes": 0.602,
+      "esperado_estacional(med)": 0.917,
+      "z": -0.86,
+      "percentil": 20.0
+    },
+    {
+      "transición": "2016-02-17 → Terra+Aqua+SNPP",
+      "ventana_d": 28,
+      "obs_después/antes": 0.672,
+      "arm_después/antes": 0.687,
+      "esperado_estacional(med)": 0.909,
+      "z": -0.58,
+      "percentil": 28.0
+    },
+    {
+      "transición": "2016-02-19 → Aqua+SNPP",
+      "ventana_d": 28,
+      "obs_después/antes": 0.903,
+      "arm_después/antes": 0.923,
+      "esperado_estacional(med)": 0.9,
+      "z": 0.08,
+      "percentil": 60.0
+    },
+    {
+      "transición": "2016-02-28 → Terra+Aqua+SNPP",
+      "ventana_d": 28,
+      "obs_después/antes": 1.508,
+      "arm_después/antes": 1.466,
+      "esperado_estacional(med)": 0.826,
+      "z": 0.93,
+      "percentil": 84.0
+    },
+    {
+      "transición": "2018-04-01 → Terra+Aqua+SNPP+NOAA20",
+      "ventana_d": 28,
+      "obs_después/antes": 1.255,
+      "arm_después/antes": 0.916,
+      "esperado_estacional(med)": 0.714,
+      "z": 0.36,
+      "percentil": 68.0
+    },
+    {
+      "transición": "2020-08-28 → Terra+SNPP+NOAA20",
+      "ventana_d": 28,
+      "obs_después/antes": 0.505,
+      "arm_después/antes": 0.5,
+      "esperado_estacional(med)": 0.908,
+      "z": -1.69,
+      "percentil": 4.0
+    },
+    {
+      "transición": "2020-08-29 → Terra+Aqua+SNPP+NOAA20",
+      "ventana_d": 28,
+      "obs_después/antes": 0.53,
+      "arm_después/antes": 0.522,
+      "esperado_estacional(med)": 0.867,
+      "z": -1.43,
+      "percentil": 4.0
+    },
+    {
+      "transición": "2020-09-02 → Terra+SNPP+NOAA20",
+      "ventana_d": 28,
+      "obs_después/antes": 0.72,
+      "arm_después/antes": 0.711,
+      "esperado_estacional(med)": 0.866,
+      "z": -0.35,
+      "percentil": 36.0
+    },
+    {
+      "transición": "2020-09-03 → Terra+Aqua+SNPP+NOAA20",
+      "ventana_d": 28,
+      "obs_después/antes": 0.851,
+      "arm_después/antes": 0.84,
+      "esperado_estacional(med)": 0.905,
+      "z": 0.1,
+      "percentil": 44.0
+    },
+    {
+      "transición": "2021-09-23 → Terra+SNPP+NOAA20",
+      "ventana_d": 28,
+      "obs_después/antes": 0.547,
+      "arm_después/antes": 0.548,
+      "esperado_estacional(med)": 0.524,
+      "z": 0.01,
+      "percentil": 52.0
+    },
+    {
+      "transición": "2021-09-24 → Terra+Aqua+SNPP+NOAA20",
+      "ventana_d": 28,
+      "obs_después/antes": 0.587,
+      "arm_después/antes": 0.585,
+      "esperado_estacional(med)": 0.53,
+      "z": 0.21,
+      "percentil": 56.0
+    },
+    {
+      "transición": "2022-03-31 → Terra+SNPP+NOAA20",
+      "ventana_d": 28,
+      "obs_después/antes": 0.803,
+      "arm_después/antes": 0.832,
+      "esperado_estacional(med)": 0.705,
+      "z": 0.19,
+      "percentil": 64.0
+    },
+    {
+      "transición": "2022-04-17 → Terra+Aqua+SNPP+NOAA20",
+      "ventana_d": 28,
+      "obs_después/antes": 1.114,
+      "arm_después/antes": 1.1,
+      "esperado_estacional(med)": 1.052,
+      "z": 0.23,
+      "percentil": 56.0
+    },
+    {
+      "transición": "2022-05-16 → Terra+SNPP+NOAA20",
+      "ventana_d": 28,
+      "obs_después/antes": 1.318,
+      "arm_después/antes": 1.336,
+      "esperado_estacional(med)": 1.1,
+      "z": 0.36,
+      "percentil": 68.0
+    },
+    {
+      "transición": "2022-05-17 → Terra+Aqua+SNPP+NOAA20",
+      "ventana_d": 28,
+      "obs_después/antes": 1.426,
+      "arm_después/antes": 1.438,
+      "esperado_estacional(med)": 1.09,
+      "z": 0.42,
+      "percentil": 68.0
+    },
+    {
+      "transición": "2022-07-27 → Terra+Aqua+NOAA20",
+      "ventana_d": 28,
+      "obs_después/antes": 1.869,
+      "arm_después/antes": 1.993,
+      "esperado_estacional(med)": 2.157,
+      "z": 0.01,
+      "percentil": 44.0
+    },
+    {
+      "transición": "2022-08-11 → Terra+Aqua+SNPP+NOAA20",
+      "ventana_d": 28,
+      "obs_después/antes": 3.625,
+      "arm_después/antes": 3.029,
+      "esperado_estacional(med)": 1.537,
+      "z": 1.92,
+      "percentil": 100.0
+    },
+    {
+      "transición": "2022-10-10 → Aqua+SNPP+NOAA20",
+      "ventana_d": 28,
+      "obs_después/antes": 0.66,
+      "arm_después/antes": 0.681,
+      "esperado_estacional(med)": 0.434,
+      "z": 0.85,
+      "percentil": 80.0
+    },
+    {
+      "transición": "2022-10-23 → Terra+Aqua+SNPP+NOAA20",
+      "ventana_d": 28,
+      "obs_después/antes": 1.167,
+      "arm_después/antes": 1.152,
+      "esperado_estacional(med)": 0.489,
+      "z": 1.63,
+      "percentil": 92.0
+    },
+    {
+      "transición": "2023-01-01 → Aqua+SNPP+NOAA20",
+      "ventana_d": 28,
+      "obs_después/antes": 0.986,
+      "arm_después/antes": 0.985,
+      "esperado_estacional(med)": 1.216,
+      "z": -0.46,
+      "percentil": 32.0
+    },
+    {
+      "transición": "2023-01-02 → Terra+Aqua+SNPP+NOAA20",
+      "ventana_d": 28,
+      "obs_después/antes": 0.998,
+      "arm_después/antes": 0.994,
+      "esperado_estacional(med)": 1.245,
+      "z": -0.48,
+      "percentil": 32.0
+    },
+    {
+      "transición": "2023-03-01 → Terra+Aqua+SNPP+NOAA20+NOAA21",
+      "ventana_d": 28,
+      "obs_después/antes": 0.799,
+      "arm_después/antes": 0.676,
+      "esperado_estacional(med)": 0.846,
+      "z": -0.59,
+      "percentil": 20.0
+    },
+    {
+      "transición": "2023-07-19 → Terra+Aqua+SNPP+NOAA21",
+      "ventana_d": 28,
+      "obs_después/antes": 3.05,
+      "arm_después/antes": 3.134,
+      "esperado_estacional(med)": 2.43,
+      "z": 0.74,
+      "percentil": 84.0
+    },
+    {
+      "transición": "2023-07-23 → Terra+Aqua+SNPP+NOAA20+NOAA21",
+      "ventana_d": 28,
+      "obs_después/antes": 2.677,
+      "arm_después/antes": 2.542,
+      "esperado_estacional(med)": 2.42,
+      "z": 0.44,
+      "percentil": 60.0
+    },
+    {
+      "transición": "2023-07-26 → Terra+Aqua+NOAA20+NOAA21",
+      "ventana_d": 12,
+      "obs_después/antes": 2.505,
+      "arm_después/antes": 2.272,
+      "esperado_estacional(med)": 1.369,
+      "z": 0.91,
+      "percentil": 84.0
+    },
+    {
+      "transición": "2023-07-28 → Terra+Aqua+SNPP+NOAA20+NOAA21",
+      "ventana_d": 28,
+      "obs_después/antes": 3.007,
+      "arm_después/antes": 2.815,
+      "esperado_estacional(med)": 2.011,
+      "z": 0.82,
+      "percentil": 72.0
+    },
+    {
+      "transición": "2023-09-30 → Terra+Aqua+SNPP+NOAA21",
+      "ventana_d": 28,
+      "obs_después/antes": 0.95,
+      "arm_después/antes": 0.955,
+      "esperado_estacional(med)": 0.502,
+      "z": 1.35,
+      "percentil": 92.0
+    },
+    {
+      "transición": "2023-10-01 → Terra+Aqua+SNPP+NOAA20+NOAA21",
+      "ventana_d": 28,
+      "obs_después/antes": 0.928,
+      "arm_después/antes": 0.923,
+      "esperado_estacional(med)": 0.518,
+      "z": 1.3,
+      "percentil": 92.0
+    },
+    {
+      "transición": "2024-01-14 → Terra+SNPP+NOAA20+NOAA21",
+      "ventana_d": 28,
+      "obs_después/antes": 2.226,
+      "arm_después/antes": 2.257,
+      "esperado_estacional(med)": 1.006,
+      "z": 1.45,
+      "percentil": 96.0
+    },
+    {
+      "transición": "2024-01-15 → Terra+Aqua+SNPP+NOAA20+NOAA21",
+      "ventana_d": 28,
+      "obs_después/antes": 2.316,
+      "arm_después/antes": 2.344,
+      "esperado_estacional(med)": 0.985,
+      "z": 1.51,
+      "percentil": 100.0
+    },
+    {
+      "transición": "2024-02-04 → Terra+Aqua+SNPP+NOAA21",
+      "ventana_d": 28,
+      "obs_después/antes": 0.797,
+      "arm_después/antes": 0.814,
+      "esperado_estacional(med)": 0.956,
+      "z": -0.21,
+      "percentil": 44.0
+    },
+    {
+      "transición": "2024-02-06 → Terra+Aqua+SNPP+NOAA20+NOAA21",
+      "ventana_d": 28,
+      "obs_después/antes": 0.716,
+      "arm_después/antes": 0.708,
+      "esperado_estacional(med)": 0.878,
+      "z": -0.49,
+      "percentil": 36.0
+    },
+    {
+      "transición": "2024-02-27 → Terra+Aqua+SNPP+NOAA20",
+      "ventana_d": 28,
+      "obs_después/antes": 0.997,
+      "arm_después/antes": 0.986,
+      "esperado_estacional(med)": 0.793,
+      "z": 0.14,
+      "percentil": 56.0
+    },
+    {
+      "transición": "2024-02-29 → Terra+Aqua+SNPP+NOAA20+NOAA21",
+      "ventana_d": 28,
+      "obs_después/antes": 1.269,
+      "arm_después/antes": 1.246,
+      "esperado_estacional(med)": 1.351,
+      "z": -0.5,
+      "percentil": 20.0
+    },
+    {
+      "transición": "2024-05-30 → Terra+Aqua+NOAA20+NOAA21",
+      "ventana_d": 12,
+      "obs_después/antes": 2.654,
+      "arm_después/antes": 2.832,
+      "esperado_estacional(med)": 1.443,
+      "z": 1.31,
+      "percentil": 96.0
+    },
+    {
+      "transición": "2024-06-04 → Terra+Aqua+SNPP+NOAA20+NOAA21",
+      "ventana_d": 28,
+      "obs_después/antes": 2.539,
+      "arm_después/antes": 2.389,
+      "esperado_estacional(med)": 1.6,
+      "z": 0.75,
+      "percentil": 80.0
+    },
+    {
+      "transición": "2024-06-08 → Terra+SNPP+NOAA20+NOAA21",
+      "ventana_d": 28,
+      "obs_después/antes": 2.034,
+      "arm_después/antes": 1.942,
+      "esperado_estacional(med)": 1.799,
+      "z": 0.31,
+      "percentil": 60.0
+    },
+    {
+      "transición": "2024-06-09 → Terra+Aqua+SNPP+NOAA20+NOAA21",
+      "ventana_d": 28,
+      "obs_después/antes": 1.916,
+      "arm_después/antes": 1.825,
+      "esperado_estacional(med)": 1.728,
+      "z": 0.19,
+      "percentil": 52.0
+    },
+    {
+      "transición": "2024-06-23 → Terra+SNPP+NOAA20+NOAA21",
+      "ventana_d": 28,
+      "obs_después/antes": 1.406,
+      "arm_después/antes": 1.412,
+      "esperado_estacional(med)": 2.189,
+      "z": -0.76,
+      "percentil": 28.0
+    },
+    {
+      "transición": "2024-06-24 → Terra+Aqua+SNPP+NOAA20+NOAA21",
+      "ventana_d": 28,
+      "obs_después/antes": 1.416,
+      "arm_después/antes": 1.421,
+      "esperado_estacional(med)": 2.261,
+      "z": -0.81,
+      "percentil": 32.0
+    },
+    {
+      "transición": "2024-07-10 → Terra+Aqua+NOAA20+NOAA21",
+      "ventana_d": 12,
+      "obs_después/antes": 1.356,
+      "arm_después/antes": 1.441,
+      "esperado_estacional(med)": 1.887,
+      "z": -0.26,
+      "percentil": 44.0
+    },
+    {
+      "transición": "2024-07-16 → Terra+Aqua+SNPP+NOAA20+NOAA21",
+      "ventana_d": 28,
+      "obs_después/antes": 2.918,
+      "arm_después/antes": 2.872,
+      "esperado_estacional(med)": 2.54,
+      "z": 0.58,
+      "percentil": 72.0
+    },
+    {
+      "transición": "2024-07-24 → Terra+Aqua+NOAA20+NOAA21",
+      "ventana_d": 12,
+      "obs_después/antes": 1.753,
+      "arm_después/antes": 1.794,
+      "esperado_estacional(med)": 1.317,
+      "z": 0.51,
+      "percentil": 72.0
+    },
+    {
+      "transición": "2024-07-29 → Terra+Aqua+SNPP+NOAA20+NOAA21",
+      "ventana_d": 28,
+      "obs_después/antes": 1.671,
+      "arm_después/antes": 1.556,
+      "esperado_estacional(med)": 2.172,
+      "z": -0.48,
+      "percentil": 28.0
+    },
+    {
+      "transición": "2024-09-26 → Terra+Aqua+NOAA20+NOAA21",
+      "ventana_d": 12,
+      "obs_después/antes": 0.717,
+      "arm_después/antes": 0.721,
+      "esperado_estacional(med)": 0.762,
+      "z": 0.02,
+      "percentil": 44.0
+    },
+    {
+      "transición": "2024-09-27 → Terra+Aqua+SNPP+NOAA20+NOAA21",
+      "ventana_d": 28,
+      "obs_después/antes": 0.474,
+      "arm_después/antes": 0.473,
+      "esperado_estacional(med)": 0.542,
+      "z": -0.28,
+      "percentil": 32.0
+    },
+    {
+      "transición": "2024-11-03 → Terra+Aqua+NOAA20+NOAA21",
+      "ventana_d": 12,
+      "obs_después/antes": 0.615,
+      "arm_después/antes": 0.625,
+      "esperado_estacional(med)": 1.061,
+      "z": -0.56,
+      "percentil": 26.9
+    },
+    {
+      "transición": "2024-11-06 → Terra+Aqua+SNPP+NOAA20+NOAA21",
+      "ventana_d": 28,
+      "obs_después/antes": 0.707,
+      "arm_después/antes": 0.703,
+      "esperado_estacional(med)": 0.631,
+      "z": 0.0,
+      "percentil": 57.7
+    },
+    {
+      "transición": "2025-03-23 → Terra+SNPP+NOAA20+NOAA21",
+      "ventana_d": 28,
+      "obs_después/antes": 0.379,
+      "arm_después/antes": 0.38,
+      "esperado_estacional(med)": 0.769,
+      "z": -1.13,
+      "percentil": 12.0
+    },
+    {
+      "transición": "2025-03-24 → Terra+Aqua+SNPP+NOAA20+NOAA21",
+      "ventana_d": 28,
+      "obs_después/antes": 0.394,
+      "arm_después/antes": 0.394,
+      "esperado_estacional(med)": 0.756,
+      "z": -1.12,
+      "percentil": 12.0
+    },
+    {
+      "transición": "2026-03-10 → Terra+Aqua+NOAA20+NOAA21",
+      "ventana_d": 12,
+      "obs_después/antes": 0.937,
+      "arm_después/antes": 0.955,
+      "esperado_estacional(med)": 1.085,
+      "z": -0.08,
+      "percentil": 40.0
+    },
+    {
+      "transición": "2026-03-12 → Terra+Aqua+SNPP+NOAA20+NOAA21",
+      "ventana_d": 28,
+      "obs_después/antes": 0.875,
+      "arm_después/antes": 0.866,
+      "esperado_estacional(med)": 0.809,
+      "z": 0.07,
+      "percentil": 56.0
+    },
+    {
+      "transición": "2026-04-28 → Terra+Aqua+NOAA20+NOAA21",
+      "ventana_d": 12,
+      "obs_después/antes": 2.156,
+      "arm_después/antes": 2.315,
+      "esperado_estacional(med)": 0.908,
+      "z": 1.84,
+      "percentil": 100.0
+    },
+    {
+      "transición": "2026-05-01 → Terra+Aqua+SNPP+NOAA20+NOAA21",
+      "ventana_d": 28,
+      "obs_después/antes": 2.294,
+      "arm_después/antes": 2.188,
+      "esperado_estacional(med)": 0.914,
+      "z": 1.92,
+      "percentil": 96.0
+    },
+    {
+      "transición": "2026-05-03 → Terra+SNPP+NOAA20+NOAA21",
+      "ventana_d": 28,
+      "obs_después/antes": 2.356,
+      "arm_después/antes": 2.243,
+      "esperado_estacional(med)": 0.943,
+      "z": 1.8,
+      "percentil": 92.0
+    },
+    {
+      "transición": "2026-05-04 → Terra+Aqua+SNPP+NOAA20+NOAA21",
+      "ventana_d": 28,
+      "obs_después/antes": 2.304,
+      "arm_después/antes": 2.188,
+      "esperado_estacional(med)": 0.943,
+      "z": 1.77,
+      "percentil": 96.0
+    },
+    {
+      "transición": "2026-06-01 → Terra+Aqua+NOAA20+NOAA21",
+      "ventana_d": 12,
+      "obs_después/antes": 0.7,
+      "arm_después/antes": 0.725,
+      "esperado_estacional(med)": 1.593,
+      "z": -1.14,
+      "percentil": 20.0
+    },
+    {
+      "transición": "2026-06-03 → Terra+Aqua+SNPP+NOAA20+NOAA21",
+      "ventana_d": 28,
+      "obs_después/antes": 0.852,
+      "arm_después/antes": 0.849,
+      "esperado_estacional(med)": 1.637,
+      "z": -1.08,
+      "percentil": 16.0
+    },
+    {
+      "transición": "2026-06-26 → Terra+SNPP+NOAA20+NOAA21",
+      "ventana_d": 28,
+      "obs_después/antes": 2.59,
+      "arm_después/antes": 2.723,
+      "esperado_estacional(med)": 2.209,
+      "z": 0.54,
+      "percentil": 64.0
+    },
+    {
+      "transición": "2026-06-27 → Terra+Aqua+SNPP+NOAA20+NOAA21",
+      "ventana_d": 28,
+      "obs_después/antes": 2.252,
+      "arm_después/antes": 2.35,
+      "esperado_estacional(med)": 2.4,
+      "z": 0.17,
+      "percentil": 48.0
+    },
+    {
+      "transición": "2026-07-11 → Terra+Aqua+NOAA20+NOAA21",
+      "ventana_d": 12,
+      "obs_después/antes": 1.67,
+      "arm_después/antes": 1.854,
+      "esperado_estacional(med)": 1.504,
+      "z": 0.15,
+      "percentil": 56.0
+    },
+    {
+      "transición": "2026-07-17 → Terra+Aqua+SNPP+NOAA20+NOAA21",
+      "ventana_d": 28,
+      "obs_después/antes": 0.898,
+      "arm_después/antes": 0.839,
+      "esperado_estacional(med)": 2.569,
+      "z": -3.47,
+      "percentil": 0.0
+    },
+    {
+      "transición": "2026-08-03 → Terra+Aqua+NOAA20+NOAA21",
+      "ventana_d": 12,
+      "obs_después/antes": 0.651,
+      "arm_después/antes": 0.656,
+      "esperado_estacional(med)": 1.203,
+      "z": -1.45,
+      "percentil": 4.0
+    },
+    {
+      "transición": "2026-08-04 → Terra+Aqua+SNPP+NOAA20+NOAA21",
+      "ventana_d": 28,
+      "obs_después/antes": 0.873,
+      "arm_después/antes": 0.825,
+      "esperado_estacional(med)": 2.167,
+      "z": -1.85,
+      "percentil": 0.0
+    },
+    {
+      "transición": "2026-11-03 → Terra+Aqua+NOAA20+NOAA21",
+      "ventana_d": 12,
+      "obs_después/antes": 1.739,
+      "arm_después/antes": 2.038,
+      "esperado_estacional(med)": 0.974,
+      "z": 1.36,
+      "percentil": 92.3
+    }
+  ],
+  "transitions_local": [
+    {
+      "fecha": "2002-07-04",
+      "grande": 3,
+      "chica": 1,
+      "dias": 79,
+      "R": 1.1357
+    },
+    {
+      "fecha": "2002-07-30",
+      "grande": 3,
+      "chica": 1,
+      "dias": 26,
+      "R": 1.2671
+    },
+    {
+      "fecha": "2002-08-08",
+      "grande": 3,
+      "chica": 1,
+      "dias": 88,
+      "R": 1.092
+    },
+    {
+      "fecha": "2002-09-12",
+      "grande": 3,
+      "chica": 1,
+      "dias": 61,
+      "R": 1.1503
+    },
+    {
+      "fecha": "2002-09-14",
+      "grande": 3,
+      "chica": 1,
+      "dias": 89,
+      "R": 1.0167
+    },
+    {
+      "fecha": "2002-11-15",
+      "grande": 3,
+      "chica": 1,
+      "dias": 88,
+      "R": 1.0632
+    },
+    {
+      "fecha": "2002-11-16",
+      "grande": 3,
+      "chica": 1,
+      "dias": 90,
+      "R": 0.9724
+    },
+    {
+      "fecha": "2003-05-12",
+      "grande": 3,
+      "chica": 1,
+      "dias": 90,
+      "R": 0.9865
+    },
+    {
+      "fecha": "2003-05-13",
+      "grande": 3,
+      "chica": 1,
+      "dias": 90,
+      "R": 1.0501
+    },
+    {
+      "fecha": "2003-12-16",
+      "grande": 3,
+      "chica": 2,
+      "dias": 90,
+      "R": 0.9804
+    },
+    {
+      "fecha": "2003-12-24",
+      "grande": 3,
+      "chica": 2,
+      "dias": 89,
+      "R": 0.9481
+    },
+    {
+      "fecha": "2004-02-18",
+      "grande": 3,
+      "chica": 2,
+      "dias": 82,
+      "R": 0.9673
+    },
+    {
+      "fecha": "2004-02-19",
+      "grande": 3,
+      "chica": 2,
+      "dias": 86,
+      "R": 0.9492
+    },
+    {
+      "fecha": "2004-04-30",
+      "grande": 3,
+      "chica": 2,
+      "dias": 89,
+      "R": 0.9454
+    },
+    {
+      "fecha": "2004-05-01",
+      "grande": 3,
+      "chica": 2,
+      "dias": 87,
+      "R": 1.0194
+    },
+    {
+      "fecha": "2004-05-03",
+      "grande": 3,
+      "chica": 1,
+      "dias": 88,
+      "R": 1.0104
+    },
+    {
+      "fecha": "2004-05-05",
+      "grande": 3,
+      "chica": 1,
+      "dias": 89,
+      "R": 0.8857
+    },
+    {
+      "fecha": "2004-05-16",
+      "grande": 3,
+      "chica": 2,
+      "dias": 86,
+      "R": 0.9467
+    },
+    {
+      "fecha": "2004-05-17",
+      "grande": 3,
+      "chica": 2,
+      "dias": 90,
+      "R": 1.0218
+    },
+    {
+      "fecha": "2005-05-19",
+      "grande": 3,
+      "chica": 2,
+      "dias": 90,
+      "R": 0.9686
+    },
+    {
+      "fecha": "2005-05-20",
+      "grande": 3,
+      "chica": 2,
+      "dias": 87,
+      "R": 1.0082
+    },
+    {
+      "fecha": "2005-06-15",
+      "grande": 3,
+      "chica": 1,
+      "dias": 89,
+      "R": 0.8916
+    },
+    {
+      "fecha": "2005-06-18",
+      "grande": 3,
+      "chica": 1,
+      "dias": 90,
+      "R": 0.8775
+    },
+    {
+      "fecha": "2006-06-21",
+      "grande": 3,
+      "chica": 2,
+      "dias": 90,
+      "R": 0.9795
+    },
+    {
+      "fecha": "2006-06-22",
+      "grande": 3,
+      "chica": 2,
+      "dias": 90,
+      "R": 0.9864
+    },
+    {
+      "fecha": "2007-02-17",
+      "grande": 3,
+      "chica": 1,
+      "dias": 90,
+      "R": 0.8207
+    },
+    {
+      "fecha": "2007-02-18",
+      "grande": 3,
+      "chica": 1,
+      "dias": 89,
+      "R": 0.9364
+    },
+    {
+      "fecha": "2007-04-06",
+      "grande": 3,
+      "chica": 1,
+      "dias": 89,
+      "R": 0.9071
+    },
+    {
+      "fecha": "2007-04-07",
+      "grande": 3,
+      "chica": 1,
+      "dias": 90,
+      "R": 0.8645
+    },
+    {
+      "fecha": "2008-04-12",
+      "grande": 3,
+      "chica": 1,
+      "dias": 90,
+      "R": 0.9212
+    },
+    {
+      "fecha": "2008-04-13",
+      "grande": 3,
+      "chica": 1,
+      "dias": 89,
+      "R": 0.8647
+    },
+    {
+      "fecha": "2008-06-21",
+      "grande": 3,
+      "chica": 2,
+      "dias": 89,
+      "R": 0.9925
+    },
+    {
+      "fecha": "2008-06-22",
+      "grande": 3,
+      "chica": 2,
+      "dias": 90,
+      "R": 1.0202
+    },
+    {
+      "fecha": "2008-12-20",
+      "grande": 3,
+      "chica": 2,
+      "dias": 90,
+      "R": 1.0097
+    },
+    {
+      "fecha": "2008-12-23",
+      "grande": 3,
+      "chica": 2,
+      "dias": 90,
+      "R": 1.007
+    },
+    {
+      "fecha": "2009-04-26",
+      "grande": 3,
+      "chica": 2,
+      "dias": 90,
+      "R": 1.029
+    },
+    {
+      "fecha": "2009-04-27",
+      "grande": 3,
+      "chica": 2,
+      "dias": 90,
+      "R": 1.0597
+    },
+    {
+      "fecha": "2009-11-15",
+      "grande": 3,
+      "chica": 2,
+      "dias": 90,
+      "R": 0.9553
+    },
+    {
+      "fecha": "2009-11-16",
+      "grande": 3,
+      "chica": 2,
+      "dias": 90,
+      "R": 1.1684
+    },
+    {
+      "fecha": "2010-07-15",
+      "grande": 3,
+      "chica": 2,
+      "dias": 90,
+      "R": 1.0027
+    },
+    {
+      "fecha": "2010-07-16",
+      "grande": 3,
+      "chica": 2,
+      "dias": 90,
+      "R": 0.9953
+    },
+    {
+      "fecha": "2011-02-06",
+      "grande": 3,
+      "chica": 2,
+      "dias": 90,
+      "R": 1.0259
+    },
+    {
+      "fecha": "2011-02-07",
+      "grande": 3,
+      "chica": 2,
+      "dias": 90,
+      "R": 1.0381
+    },
+    {
+      "fecha": "2012-01-20",
+      "grande": 7,
+      "chica": 3,
+      "dias": 89,
+      "R": 1.0167
+    },
+    {
+      "fecha": "2012-03-25",
+      "grande": 7,
+      "chica": 3,
+      "dias": 65,
+      "R": 1.0408
+    },
+    {
+      "fecha": "2012-03-26",
+      "grande": 7,
+      "chica": 3,
+      "dias": 90,
+      "R": 0.9926
+    },
+    {
+      "fecha": "2013-07-18",
+      "grande": 7,
+      "chica": 6,
+      "dias": 90,
+      "R": 1.0128
+    },
+    {
+      "fecha": "2013-07-19",
+      "grande": 7,
+      "chica": 6,
+      "dias": 90,
+      "R": 0.9979
+    },
+    {
+      "fecha": "2015-04-22",
+      "grande": 7,
+      "chica": 6,
+      "dias": 90,
+      "R": 0.9884
+    },
+    {
+      "fecha": "2015-04-23",
+      "grande": 7,
+      "chica": 6,
+      "dias": 90,
+      "R": 0.9852
+    },
+    {
+      "fecha": "2016-02-16",
+      "grande": 7,
+      "chica": 5,
+      "dias": 90,
+      "R": 1.0233
+    },
+    {
+      "fecha": "2016-02-17",
+      "grande": 7,
+      "chica": 5,
+      "dias": 81,
+      "R": 1.001
+    },
+    {
+      "fecha": "2016-02-19",
+      "grande": 7,
+      "chica": 6,
+      "dias": 89,
+      "R": 1.0085
+    },
+    {
+      "fecha": "2016-02-28",
+      "grande": 7,
+      "chica": 6,
+      "dias": 90,
+      "R": 0.9869
+    },
+    {
+      "fecha": "2018-04-01",
+      "grande": 15,
+      "chica": 7,
+      "dias": 90,
+      "R": 0.9954
+    },
+    {
+      "fecha": "2020-08-28",
+      "grande": 15,
+      "chica": 13,
+      "dias": 90,
+      "R": 0.9962
+    },
+    {
+      "fecha": "2020-08-29",
+      "grande": 15,
+      "chica": 13,
+      "dias": 89,
+      "R": 1.0021
+    },
+    {
+      "fecha": "2020-09-02",
+      "grande": 15,
+      "chica": 13,
+      "dias": 89,
+      "R": 0.996
+    },
+    {
+      "fecha": "2020-09-03",
+      "grande": 15,
+      "chica": 13,
+      "dias": 90,
+      "R": 1.002
+    },
+    {
+      "fecha": "2021-09-23",
+      "grande": 15,
+      "chica": 13,
+      "dias": 90,
+      "R": 0.9992
+    },
+    {
+      "fecha": "2021-09-24",
+      "grande": 15,
+      "chica": 13,
+      "dias": 90,
+      "R": 0.998
+    },
+    {
+      "fecha": "2022-03-31",
+      "grande": 15,
+      "chica": 13,
+      "dias": 90,
+      "R": 1.0003
+    },
+    {
+      "fecha": "2022-04-17",
+      "grande": 15,
+      "chica": 13,
+      "dias": 89,
+      "R": 1.006
+    },
+    {
+      "fecha": "2022-05-16",
+      "grande": 15,
+      "chica": 13,
+      "dias": 73,
+      "R": 0.9966
+    },
+    {
+      "fecha": "2022-05-17",
+      "grande": 15,
+      "chica": 13,
+      "dias": 75,
+      "R": 1.0112
+    },
+    {
+      "fecha": "2022-07-27",
+      "grande": 15,
+      "chica": 11,
+      "dias": 89,
+      "R": 0.982
+    },
+    {
+      "fecha": "2022-08-11",
+      "grande": 15,
+      "chica": 11,
+      "dias": 77,
+      "R": 1.01
+    },
+    {
+      "fecha": "2022-10-10",
+      "grande": 15,
+      "chica": 14,
+      "dias": 75,
+      "R": 0.9957
+    },
+    {
+      "fecha": "2022-10-23",
+      "grande": 15,
+      "chica": 14,
+      "dias": 89,
+      "R": 0.9922
+    },
+    {
+      "fecha": "2023-01-01",
+      "grande": 15,
+      "chica": 14,
+      "dias": 77,
+      "R": 0.9921
+    },
+    {
+      "fecha": "2023-01-02",
+      "grande": 15,
+      "chica": 14,
+      "dias": 58,
+      "R": 1.0008
+    },
+    {
+      "fecha": "2023-03-01",
+      "grande": 31,
+      "chica": 15,
+      "dias": 90,
+      "R": 0.9956
+    },
+    {
+      "fecha": "2023-07-19",
+      "grande": 31,
+      "chica": 23,
+      "dias": 90,
+      "R": 1.0003
+    },
+    {
+      "fecha": "2023-07-23",
+      "grande": 31,
+      "chica": 23,
+      "dias": 87,
+      "R": 1.0002
+    },
+    {
+      "fecha": "2023-07-26",
+      "grande": 31,
+      "chica": 27,
+      "dias": 86,
+      "R": 1.0352
+    },
+    {
+      "fecha": "2023-07-28",
+      "grande": 31,
+      "chica": 27,
+      "dias": 89,
+      "R": 1.0185
+    },
+    {
+      "fecha": "2023-09-30",
+      "grande": 31,
+      "chica": 23,
+      "dias": 84,
+      "R": 0.9994
+    },
+    {
+      "fecha": "2023-10-01",
+      "grande": 31,
+      "chica": 23,
+      "dias": 90,
+      "R": 0.9986
+    },
+    {
+      "fecha": "2024-01-14",
+      "grande": 31,
+      "chica": 29,
+      "dias": 90,
+      "R": 0.9888
+    },
+    {
+      "fecha": "2024-01-15",
+      "grande": 31,
+      "chica": 29,
+      "dias": 86,
+      "R": 0.9918
+    },
+    {
+      "fecha": "2024-02-04",
+      "grande": 31,
+      "chica": 23,
+      "dias": 89,
+      "R": 0.9971
+    },
+    {
+      "fecha": "2024-02-06",
+      "grande": 31,
+      "chica": 23,
+      "dias": 88,
+      "R": 1.0104
+    },
+    {
+      "fecha": "2024-02-27",
+      "grande": 31,
+      "chica": 15,
+      "dias": 87,
+      "R": 1.0089
+    },
+    {
+      "fecha": "2024-02-29",
+      "grande": 31,
+      "chica": 15,
+      "dias": 90,
+      "R": 1.0087
+    },
+    {
+      "fecha": "2024-05-30",
+      "grande": 31,
+      "chica": 27,
+      "dias": 90,
+      "R": 1.0089
+    },
+    {
+      "fecha": "2024-06-04",
+      "grande": 31,
+      "chica": 27,
+      "dias": 77,
+      "R": 0.9832
+    },
+    {
+      "fecha": "2024-06-08",
+      "grande": 31,
+      "chica": 29,
+      "dias": 85,
+      "R": 0.9917
+    },
+    {
+      "fecha": "2024-06-09",
+      "grande": 31,
+      "chica": 29,
+      "dias": 78,
+      "R": 0.9952
+    },
+    {
+      "fecha": "2024-06-23",
+      "grande": 31,
+      "chica": 29,
+      "dias": 84,
+      "R": 0.9977
+    },
+    {
+      "fecha": "2024-06-24",
+      "grande": 31,
+      "chica": 29,
+      "dias": 79,
+      "R": 0.9938
+    },
+    {
+      "fecha": "2024-07-10",
+      "grande": 31,
+      "chica": 27,
+      "dias": 83,
+      "R": 0.9967
+    },
+    {
+      "fecha": "2024-07-16",
+      "grande": 31,
+      "chica": 27,
+      "dias": 84,
+      "R": 0.9786
+    },
+    {
+      "fecha": "2024-07-24",
+      "grande": 31,
+      "chica": 27,
+      "dias": 77,
+      "R": 0.9903
+    },
+    {
+      "fecha": "2024-07-29",
+      "grande": 31,
+      "chica": 27,
+      "dias": 89,
+      "R": 0.9795
+    },
+    {
+      "fecha": "2024-09-26",
+      "grande": 31,
+      "chica": 27,
+      "dias": 79,
+      "R": 0.9821
+    },
+    {
+      "fecha": "2024-09-27",
+      "grande": 31,
+      "chica": 27,
+      "dias": 87,
+      "R": 0.9814
+    },
+    {
+      "fecha": "2024-11-03",
+      "grande": 31,
+      "chica": 27,
+      "dias": 89,
+      "R": 0.9806
+    },
+    {
+      "fecha": "2024-11-06",
+      "grande": 31,
+      "chica": 27,
+      "dias": 90,
+      "R": 0.9966
+    },
+    {
+      "fecha": "2025-03-23",
+      "grande": 31,
+      "chica": 29,
+      "dias": 90,
+      "R": 0.9955
+    },
+    {
+      "fecha": "2025-03-24",
+      "grande": 31,
+      "chica": 29,
+      "dias": 90,
+      "R": 1.0145
+    },
+    {
+      "fecha": "2026-03-10",
+      "grande": 31,
+      "chica": 27,
+      "dias": 90,
+      "R": 0.9952
+    },
+    {
+      "fecha": "2026-03-12",
+      "grande": 31,
+      "chica": 27,
+      "dias": 84,
+      "R": 0.9967
+    },
+    {
+      "fecha": "2026-04-28",
+      "grande": 31,
+      "chica": 27,
+      "dias": 88,
+      "R": 1.0006
+    },
+    {
+      "fecha": "2026-05-01",
+      "grande": 31,
+      "chica": 27,
+      "dias": 80,
+      "R": 1.0007
+    },
+    {
+      "fecha": "2026-05-03",
+      "grande": 31,
+      "chica": 29,
+      "dias": 85,
+      "R": 1.029
+    },
+    {
+      "fecha": "2026-05-04",
+      "grande": 31,
+      "chica": 29,
+      "dias": 81,
+      "R": 1.0018
+    },
+    {
+      "fecha": "2026-06-01",
+      "grande": 31,
+      "chica": 27,
+      "dias": 84,
+      "R": 1.0012
+    },
+    {
+      "fecha": "2026-06-03",
+      "grande": 31,
+      "chica": 27,
+      "dias": 82,
+      "R": 1.023
+    },
+    {
+      "fecha": "2026-06-26",
+      "grande": 31,
+      "chica": 29,
+      "dias": 84,
+      "R": 1.0152
+    },
+    {
+      "fecha": "2026-06-27",
+      "grande": 31,
+      "chica": 29,
+      "dias": 83,
+      "R": 1.0075
+    },
+    {
+      "fecha": "2026-07-11",
+      "grande": 31,
+      "chica": 27,
+      "dias": 83,
+      "R": 0.9987
+    },
+    {
+      "fecha": "2026-07-17",
+      "grande": 31,
+      "chica": 27,
+      "dias": 89,
+      "R": 1.0303
+    },
+    {
+      "fecha": "2026-08-03",
+      "grande": 31,
+      "chica": 27,
+      "dias": 81,
+      "R": 1.0038
+    },
+    {
+      "fecha": "2026-08-04",
+      "grande": 31,
+      "chica": 27,
+      "dias": 90,
+      "R": 1.0324
+    },
+    {
+      "fecha": "2026-11-03",
+      "grande": 31,
+      "chica": 27,
+      "dias": 90,
+      "R": 1.0317
+    }
+  ]
+}

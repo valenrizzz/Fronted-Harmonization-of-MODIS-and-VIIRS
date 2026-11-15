@@ -1,0 +1,234 @@
+{
+  "generated_utc": "2026-11-15T16:50:21+00:00",
+  "python": "3.12.3",
+  "libraries": {
+    "polars": "2.1.0",
+    "duckdb": "2.0.0",
+    "h3": "4.5.0",
+    "shapely": "2.2.0",
+    "scipy": "1.18.1",
+    "pyarrow": "26.0.1"
+  },
+  "config": {
+    "paths": {
+      "local_sources": [
+        "/home/franco_quiroga/Proyecto_NASA/Data_MODIS",
+        "/home/franco_quiroga/Proyecto_NASA/Data_VIIRS",
+        "/home/franco_quiroga/Proyecto_NASA/Data_VIIRS_NOAA-20",
+        "/home/franco_quiroga/Proyecto_NASA/Data_VIIRS_NOAA-21"
+      ],
+      "data_dir": "data"
+    },
+    "period": {
+      "start": "2000-11-01",
+      "end": null
+    },
+    "satellites": {
+      "Terra": {
+        "instrument": "MODIS",
+        "product": "MODIS",
+        "bit": 1,
+        "start": "2000-11-01",
+        "end": null
+      },
+      "Aqua": {
+        "instrument": "MODIS",
+        "product": "MODIS",
+        "bit": 2,
+        "start": "2002-07-04",
+        "end": null
+      },
+      "SNPP": {
+        "instrument": "VIIRS",
+        "product": "SNPP",
+        "bit": 4,
+        "start": "2012-01-20",
+        "end": null
+      },
+      "NOAA20": {
+        "instrument": "VIIRS",
+        "product": "NOAA20",
+        "bit": 8,
+        "start": "2018-04-01",
+        "end": null
+      },
+      "NOAA21": {
+        "instrument": "VIIRS",
+        "product": "NOAA21",
+        "bit": 16,
+        "start": "2023-03-01",
+        "end": null
+      }
+    },
+    "filters": {
+      "keep_types": [
+        0
+      ],
+      "static_sources": {
+        "enabled": true,
+        "persistent": {
+          "min_days_per_year": 30,
+          "min_years": 2,
+          "min_night_frac": 0.5
+        },
+        "flare": {
+          "min_days_in_a_year": 60,
+          "min_night_frac": 0.6,
+          "max_median_frp_mw": 3.0
+        },
+        "typed": {
+          "min_nonveg_detections": 10,
+          "min_nonveg_share": 0.25
+        },
+        "chronic": {
+          "min_active_years": 8,
+          "min_days_per_active_year": 5,
+          "min_night_frac": 0.6,
+          "max_median_frp_mw": 3.0
+        },
+        "modis_only": {
+          "min_modis_days_viirs_era": 5,
+          "min_modis_years": 5,
+          "max_viirs_detections": 0
+        }
+      },
+      "frp": {
+        "extreme_mw": 5000.0
+      }
+    },
+    "availability": {
+      "detect_outages": true,
+      "min_expected_detections": 20.0,
+      "min_expected_run": 100.0,
+      "suspect_zero_min_run": 3,
+      "ratio_window_days": 30,
+      "climatology_window_days": 15
+    },
+    "confidence": {
+      "modis_thresholds": {
+        "nominal": 30,
+        "high": 80
+      },
+      "series_min_level": "nominal"
+    },
+    "grid": {
+      "h3_resolution": 7,
+      "day_start_solar_hour": 0.0
+    },
+    "calibration": {
+      "reference": "auto",
+      "window": "adjacent",
+      "min_window_days": 60,
+      "proximity_years": 2.0,
+      "factor_scope": "month_of_year",
+      "daily_interpolation": true,
+      "smoothing": {
+        "method": "harmonic",
+        "harmonics": 2,
+        "window": 3
+      },
+      "bootstrap": {
+        "n": 1000,
+        "seed": 20261115,
+        "ci": 0.95
+      }
+    },
+    "api": {
+      "enabled": true,
+      "area_url": "https://firms.modaps.eosdis.nasa.gov/api/area/csv",
+      "availability_url": "https://firms.modaps.eosdis.nasa.gov/api/data_availability/csv",
+      "map_key_env": "FIRMS_MAP_KEY",
+      "day_range": 5,
+      "timeout_s": 120,
+      "max_retries": 4,
+      "products": {
+        "MODIS": {
+          "sp": "MODIS_SP",
+          "nrt": "MODIS_NRT"
+        },
+        "SNPP": {
+          "sp": "VIIRS_SNPP_SP",
+          "nrt": "VIIRS_SNPP_NRT"
+        },
+        "NOAA20": {
+          "sp": "VIIRS_NOAA20_SP",
+          "nrt": "VIIRS_NOAA20_NRT"
+        },
+        "NOAA21": {
+          "sp": "VIIRS_NOAA21_SP",
+          "nrt": "VIIRS_NOAA21_NRT"
+        }
+      }
+    },
+    "export": {
+      "csv": true,
+      "web": {
+        "dir": "Datos_Para_La_Web",
+        "row_group_size": 100000,
+        "h3_coarse_res": 3,
+        "h3_map_res": 5,
+        "quality": {
+          "high": {
+            "max_k": 1.5,
+            "max_rel_ci": 0.05
+          },
+          "medium": {
+            "max_k": 5.0,
+            "max_rel_ci": 0.1
+          }
+        }
+      }
+    }
+  },
+  "summary": {
+    "region": "ARG",
+    "region_provenance": {
+      "kind": "country",
+      "source": "https://raw.githubusercontent.com/nvkelso/natural-earth-vector/v5.1.2/geojson/ne_10m_admin_0_countries.geojson",
+      "file": "ne_10m_admin_0_countries_v5.1.2.geojson",
+      "sha256": "239eec57ac17f100a11e2536cffc56752c318b50ae765b0918ff7aab4ce8f255",
+      "feature_name": "Argentina",
+      "polygon_buffer_deg": 0.0
+    },
+    "bbox": [
+      -73.57274,
+      -55.052016,
+      -53.661552,
+      -21.786938
+    ],
+    "period": [
+      "2000-11-01",
+      "2026-11-14"
+    ],
+    "n_source_files": 62,
+    "unrecognized_csv": [],
+    "n_detections_kept": 6755777,
+    "n_events": 2607588,
+    "n_events_in_series": 2473633,
+    "n_static_source_cells": 761,
+    "n_satellite_outage_days": 189,
+    "n_days_without_any_satellite": 33,
+    "rejections": {
+      "type_2_non_vegetation": 195282,
+      "type_1_non_vegetation": 4,
+      "static_source_cell": 113645,
+      "duplicate_record": 267103,
+      "satellite_inactive_on_day": 22,
+      "outside_region_bbox": 138262259,
+      "type_3_non_vegetation": 15814,
+      "outside_region_polygon": 694486
+    },
+    "api": {
+      "downloaded": [],
+      "unavailable_at_source": [
+        {
+          "family": "SNPP",
+          "start": "2026-11-03",
+          "end": "2026-11-14"
+        }
+      ],
+      "skipped": null
+    },
+    "elapsed_s": 24.5
+  }
+}

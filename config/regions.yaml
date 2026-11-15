@@ -1,0 +1,31 @@
+# =============================================================================
+# Regiones. NO hace falta un YAML por país: cualquier código ISO3 (ADM0_A3 de
+# Natural Earth) se resuelve automáticamente con el catálogo de límites.
+# Aquí solo se declaran:
+#   - overrides de países (p.ej. nombre del archivo por país de FIRMS si difiere)
+#   - regiones a medida (bbox o GeoJSON propio)
+# =============================================================================
+
+boundaries:
+  # Natural Earth 1:10m Admin-0 (versión fijada para reproducibilidad).
+  url: https://raw.githubusercontent.com/nvkelso/natural-earth-vector/v5.1.2/geojson/ne_10m_admin_0_countries.geojson
+  file: reference/ne_10m_admin_0_countries_v5.1.2.geojson   # relativo a data_dir
+  id_field: ADM0_A3
+
+regions:
+  ARG:
+    kind: country
+    iso_a3: ARG
+    firms_country_files: [Argentina]   # nombre en modis_YYYY_<Nombre>.csv
+    polygon_buffer_deg: 0.0
+
+  # Ejemplo de región a medida (no se usa por defecto):
+  # PATAGONIA:
+  #   kind: bbox
+  #   bbox: [-73.6, -55.1, -62.0, -39.0]   # [lon_min, lat_min, lon_max, lat_max]
+  #   firms_country_files: [Argentina, Chile]
+  #
+  # MI_POLIGONO:
+  #   kind: geojson
+  #   file: reference/mi_region.geojson
+  #   firms_country_files: []

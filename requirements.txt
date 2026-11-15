@@ -1,0 +1,10 @@
+duckdb==2.0.0
+h3==4.5.0
+polars==2.1.0
+pyarrow==26.0.1
+pydantic==2.14.3
+pytest==9.2.0
+PyYAML==6.0.3
+requests==2.34.2
+scipy==1.18.1
+shapely==2.2.0

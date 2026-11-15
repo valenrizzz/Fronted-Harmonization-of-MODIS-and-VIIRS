@@ -1,0 +1,5420 @@
+{
+  "method": "constellation_subset_chain (ratio of totals)",
+  "factor_scope": "month_of_year",
+  "smoothing": {
+    "method": "harmonic",
+    "harmonics": 2,
+    "window": 3
+  },
+  "reference_constellation": "Terra+Aqua+SNPP+NOAA20+NOAA21",
+  "series_min_confidence": "nominal",
+  "bootstrap": {
+    "n": 1000,
+    "seed": 20261115,
+    "ci": 0.95
+  },
+  "window_rule": "adjacent",
+  "min_window_days": 60,
+  "epochs": [
+    {
+      "epoch_id": "Terra",
+      "active_mask": 1,
+      "start": "2000-11-01",
+      "end": "2001-03-24",
+      "n_days": 144
+    },
+    {
+      "epoch_id": "Terra",
+      "active_mask": 1,
+      "start": "2001-03-26",
+      "end": "2001-06-14",
+      "n_days": 81
+    },
+    {
+      "epoch_id": "Terra",
+      "active_mask": 1,
+      "start": "2001-07-03",
+      "end": "2001-09-26",
+      "n_days": 86
+    },
+    {
+      "epoch_id": "Terra",
+      "active_mask": 1,
+      "start": "2001-09-28",
+      "end": "2001-10-28",
+      "n_days": 31
+    },
+    {
+      "epoch_id": "Terra",
+      "active_mask": 1,
+      "start": "2001-10-30",
+      "end": "2001-12-01",
+      "n_days": 33
+    },
+    {
+      "epoch_id": "Terra",
+      "active_mask": 1,
+      "start": "2001-12-03",
+      "end": "2002-03-18",
+      "n_days": 106
+    },
+    {
+      "epoch_id": "Terra",
+      "active_mask": 1,
+      "start": "2002-03-29",
+      "end": "2002-03-30",
+      "n_days": 2
+    },
+    {
+      "epoch_id": "Terra",
+      "active_mask": 1,
+      "start": "2002-04-01",
+      "end": "2002-07-03",
+      "n_days": 94
+    },
+    {
+      "epoch_id": "Terra+Aqua",
+      "active_mask": 3,
+      "start": "2002-07-04",
+      "end": "2002-07-29",
+      "n_days": 26
+    },
+    {
+      "epoch_id": "Terra",
+      "active_mask": 1,
+      "start": "2002-07-30",
+      "end": "2002-08-07",
+      "n_days": 9
+    },
+    {
+      "epoch_id": "Terra+Aqua",
+      "active_mask": 3,
+      "start": "2002-08-08",
+      "end": "2002-09-11",
+      "n_days": 35
+    },
+    {
+      "epoch_id": "Terra",
+      "active_mask": 1,
+      "start": "2002-09-12",
+      "end": "2002-09-13",
+      "n_days": 2
+    },
+    {
+      "epoch_id": "Terra+Aqua",
+      "active_mask": 3,
+      "start": "2002-09-14",
+      "end": "2002-11-14",
+      "n_days": 62
+    },
+    {
+      "epoch_id": "Terra",
+      "active_mask": 1,
+      "start": "2002-11-15",
+      "end": "2002-11-15",
+      "n_days": 1
+    },
+    {
+      "epoch_id": "Terra+Aqua",
+      "active_mask": 3,
+      "start": "2002-11-16",
+      "end": "2003-05-11",
+      "n_days": 177
+    },
+    {
+      "epoch_id": "Terra",
+      "active_mask": 1,
+      "start": "2003-05-12",
+      "end": "2003-05-12",
+      "n_days": 1
+    },
+    {
+      "epoch_id": "Terra+Aqua",
+      "active_mask": 3,
+      "start": "2003-05-13",
+      "end": "2003-12-15",
+      "n_days": 217
+    },
+    {
+      "epoch_id": "Aqua",
+      "active_mask": 2,
+      "start": "2003-12-16",
+      "end": "2003-12-23",
+      "n_days": 8
+    },
+    {
+      "epoch_id": "Terra+Aqua",
+      "active_mask": 3,
+      "start": "2003-12-24",
+      "end": "2004-02-17",
+      "n_days": 56
+    },
+    {
+      "epoch_id": "Aqua",
+      "active_mask": 2,
+      "start": "2004-02-18",
+      "end": "2004-02-18",
+      "n_days": 1
+    },
+    {
+      "epoch_id": "Terra+Aqua",
+      "active_mask": 3,
+      "start": "2004-02-19",
+      "end": "2004-04-29",
+      "n_days": 71
+    },
+    {
+      "epoch_id": "Aqua",
+      "active_mask": 2,
+      "start": "2004-04-30",
+      "end": "2004-04-30",
+      "n_days": 1
+    },
+    {
+      "epoch_id": "Terra+Aqua",
+      "active_mask": 3,
+      "start": "2004-05-01",
+      "end": "2004-05-02",
+      "n_days": 2
+    },
+    {
+      "epoch_id": "Terra",
+      "active_mask": 1,
+      "start": "2004-05-03",
+      "end": "2004-05-04",
+      "n_days": 2
+    },
+    {
+      "epoch_id": "Terra+Aqua",
+      "active_mask": 3,
+      "start": "2004-05-05",
+      "end": "2004-05-15",
+      "n_days": 11
+    },
+    {
+      "epoch_id": "Aqua",
+      "active_mask": 2,
+      "start": "2004-05-16",
+      "end": "2004-05-16",
+      "n_days": 1
+    },
+    {
+      "epoch_id": "Terra+Aqua",
+      "active_mask": 3,
+      "start": "2004-05-17",
+      "end": "2005-05-18",
+      "n_days": 367
+    },
+    {
+      "epoch_id": "Aqua",
+      "active_mask": 2,
+      "start": "2005-05-19",
+      "end": "2005-05-19",
+      "n_days": 1
+    },
+    {
+      "epoch_id": "Terra+Aqua",
+      "active_mask": 3,
+      "start": "2005-05-20",
+      "end": "2005-06-14",
+      "n_days": 26
+    },
+    {
+      "epoch_id": "Terra",
+      "active_mask": 1,
+      "start": "2005-06-15",
+      "end": "2005-06-17",
+      "n_days": 3
+    },
+    {
+      "epoch_id": "Terra+Aqua",
+      "active_mask": 3,
+      "start": "2005-06-18",
+      "end": "2006-06-20",
+      "n_days": 368
+    },
+    {
+      "epoch_id": "Aqua",
+      "active_mask": 2,
+      "start": "2006-06-21",
+      "end": "2006-06-21",
+      "n_days": 1
+    },
+    {
+      "epoch_id": "Terra+Aqua",
+      "active_mask": 3,
+      "start": "2006-06-22",
+      "end": "2007-02-16",
+      "n_days": 240
+    },
+    {
+      "epoch_id": "Terra",
+      "active_mask": 1,
+      "start": "2007-02-17",
+      "end": "2007-02-17",
+      "n_days": 1
+    },
+    {
+      "epoch_id": "Terra+Aqua",
+      "active_mask": 3,
+      "start": "2007-02-18",
+      "end": "2007-04-05",
+      "n_days": 47
+    },
+    {
+      "epoch_id": "Terra",
+      "active_mask": 1,
+      "start": "2007-04-06",
+      "end": "2007-04-06",
+      "n_days": 1
+    },
+    {
+      "epoch_id": "Terra+Aqua",
+      "active_mask": 3,
+      "start": "2007-04-07",
+      "end": "2008-04-11",
+      "n_days": 371
+    },
+    {
+      "epoch_id": "Terra",
+      "active_mask": 1,
+      "start": "2008-04-12",
+      "end": "2008-04-12",
+      "n_days": 1
+    },
+    {
+      "epoch_id": "Terra+Aqua",
+      "active_mask": 3,
+      "start": "2008-04-13",
+      "end": "2008-06-20",
+      "n_days": 69
+    },
+    {
+      "epoch_id": "Aqua",
+      "active_mask": 2,
+      "start": "2008-06-21",
+      "end": "2008-06-21",
+      "n_days": 1
+    },
+    {
+      "epoch_id": "Terra+Aqua",
+      "active_mask": 3,
+      "start": "2008-06-22",
+      "end": "2008-12-19",
+      "n_days": 181
+    },
+    {
+      "epoch_id": "Aqua",
+      "active_mask": 2,
+      "start": "2008-12-20",
+      "end": "2008-12-22",
+      "n_days": 3
+    },
+    {
+      "epoch_id": "Terra+Aqua",
+      "active_mask": 3,
+      "start": "2008-12-23",
+      "end": "2009-04-25",
+      "n_days": 124
+    },
+    {
+      "epoch_id": "Aqua",
+      "active_mask": 2,
+      "start": "2009-04-26",
+      "end": "2009-04-26",
+      "n_days": 1
+    },
+    {
+      "epoch_id": "Terra+Aqua",
+      "active_mask": 3,
+      "start": "2009-04-27",
+      "end": "2009-11-14",
+      "n_days": 202
+    },
+    {
+      "epoch_id": "Aqua",
+      "active_mask": 2,
+      "start": "2009-11-15",
+      "end": "2009-11-15",
+      "n_days": 1
+    },
+    {
+      "epoch_id": "Terra+Aqua",
+      "active_mask": 3,
+      "start": "2009-11-16",
+      "end": "2010-07-14",
+      "n_days": 241
+    },
+    {
+      "epoch_id": "Aqua",
+      "active_mask": 2,
+      "start": "2010-07-15",
+      "end": "2010-07-15",
+      "n_days": 1
+    },
+    {
+      "epoch_id": "Terra+Aqua",
+      "active_mask": 3,
+      "start": "2010-07-16",
+      "end": "2011-02-05",
+      "n_days": 205
+    },
+    {
+      "epoch_id": "Aqua",
+      "active_mask": 2,
+      "start": "2011-02-06",
+      "end": "2011-02-06",
+      "n_days": 1
+    },
+    {
+      "epoch_id": "Terra+Aqua",
+      "active_mask": 3,
+      "start": "2011-02-07",
+      "end": "2012-01-19",
+      "n_days": 347
+    },
+    {
+      "epoch_id": "Terra+Aqua+SNPP",
+      "active_mask": 7,
+      "start": "2012-01-20",
+      "end": "2012-03-24",
+      "n_days": 65
+    },
+    {
+      "epoch_id": "Terra+Aqua",
+      "active_mask": 3,
+      "start": "2012-03-25",
+      "end": "2012-03-25",
+      "n_days": 1
+    },
+    {
+      "epoch_id": "Terra+Aqua+SNPP",
+      "active_mask": 7,
+      "start": "2012-03-26",
+      "end": "2013-07-17",
+      "n_days": 479
+    },
+    {
+      "epoch_id": "Aqua+SNPP",
+      "active_mask": 6,
+      "start": "2013-07-18",
+      "end": "2013-07-18",
+      "n_days": 1
+    },
+    {
+      "epoch_id": "Terra+Aqua+SNPP",
+      "active_mask": 7,
+      "start": "2013-07-19",
+      "end": "2015-04-21",
+      "n_days": 642
+    },
+    {
+      "epoch_id": "Aqua+SNPP",
+      "active_mask": 6,
+      "start": "2015-04-22",
+      "end": "2015-04-22",
+      "n_days": 1
+    },
+    {
+      "epoch_id": "Terra+Aqua+SNPP",
+      "active_mask": 7,
+      "start": "2015-04-23",
+      "end": "2016-02-15",
+      "n_days": 299
+    },
+    {
+      "epoch_id": "Terra+SNPP",
+      "active_mask": 5,
+      "start": "2016-02-16",
+      "end": "2016-02-16",
+      "n_days": 1
+    },
+    {
+      "epoch_id": "Terra+Aqua+SNPP",
+      "active_mask": 7,
+      "start": "2016-02-17",
+      "end": "2016-02-18",
+      "n_days": 2
+    },
+    {
+      "epoch_id": "Aqua+SNPP",
+      "active_mask": 6,
+      "start": "2016-02-19",
+      "end": "2016-02-27",
+      "n_days": 9
+    },
+    {
+      "epoch_id": "Terra+Aqua+SNPP",
+      "active_mask": 7,
+      "start": "2016-02-28",
+      "end": "2018-03-31",
+      "n_days": 763
+    },
+    {
+      "epoch_id": "Terra+Aqua+SNPP+NOAA20",
+      "active_mask": 15,
+      "start": "2018-04-01",
+      "end": "2020-08-27",
+      "n_days": 880
+    },
+    {
+      "epoch_id": "Terra+SNPP+NOAA20",
+      "active_mask": 13,
+      "start": "2020-08-28",
+      "end": "2020-08-28",
+      "n_days": 1
+    },
+    {
+      "epoch_id": "Terra+Aqua+SNPP+NOAA20",
+      "active_mask": 15,
+      "start": "2020-08-29",
+      "end": "2020-09-01",
+      "n_days": 4
+    },
+    {
+      "epoch_id": "Terra+SNPP+NOAA20",
+      "active_mask": 13,
+      "start": "2020-09-02",
+      "end": "2020-09-02",
+      "n_days": 1
+    },
+    {
+      "epoch_id": "Terra+Aqua+SNPP+NOAA20",
+      "active_mask": 15,
+      "start": "2020-09-03",
+      "end": "2021-09-22",
+      "n_days": 385
+    },
+    {
+      "epoch_id": "Terra+SNPP+NOAA20",
+      "active_mask": 13,
+      "start": "2021-09-23",
+      "end": "2021-09-23",
+      "n_days": 1
+    },
+    {
+      "epoch_id": "Terra+Aqua+SNPP+NOAA20",
+      "active_mask": 15,
+      "start": "2021-09-24",
+      "end": "2022-03-30",
+      "n_days": 188
+    },
+    {
+      "epoch_id": "Terra+SNPP+NOAA20",
+      "active_mask": 13,
+      "start": "2022-03-31",
+      "end": "2022-04-16",
+      "n_days": 17
+    },
+    {
+      "epoch_id": "Terra+Aqua+SNPP+NOAA20",
+      "active_mask": 15,
+      "start": "2022-04-17",
+      "end": "2022-05-15",
+      "n_days": 29
+    },
+    {
+      "epoch_id": "Terra+SNPP+NOAA20",
+      "active_mask": 13,
+      "start": "2022-05-16",
+      "end": "2022-05-16",
+      "n_days": 1
+    },
+    {
+      "epoch_id": "Terra+Aqua+SNPP+NOAA20",
+      "active_mask": 15,
+      "start": "2022-05-17",
+      "end": "2022-07-26",
+      "n_days": 71
+    },
+    {
+      "epoch_id": "Terra+Aqua+NOAA20",
+      "active_mask": 11,
+      "start": "2022-07-27",
+      "end": "2022-08-10",
+      "n_days": 15
+    },
+    {
+      "epoch_id": "Terra+Aqua+SNPP+NOAA20",
+      "active_mask": 15,
+      "start": "2022-08-11",
+      "end": "2022-10-09",
+      "n_days": 60
+    },
+    {
+      "epoch_id": "Aqua+SNPP+NOAA20",
+      "active_mask": 14,
+      "start": "2022-10-10",
+      "end": "2022-10-22",
+      "n_days": 13
+    },
+    {
+      "epoch_id": "Terra+Aqua+SNPP+NOAA20",
+      "active_mask": 15,
+      "start": "2022-10-23",
+      "end": "2022-12-31",
+      "n_days": 70
+    },
+    {
+      "epoch_id": "Aqua+SNPP+NOAA20",
+      "active_mask": 14,
+      "start": "2023-01-01",
+      "end": "2023-01-01",
+      "n_days": 1
+    },
+    {
+      "epoch_id": "Terra+Aqua+SNPP+NOAA20",
+      "active_mask": 15,
+      "start": "2023-01-02",
+      "end": "2023-02-28",
+      "n_days": 58
+    },
+    {
+      "epoch_id": "Terra+Aqua+SNPP+NOAA20+NOAA21",
+      "active_mask": 31,
+      "start": "2023-03-01",
+      "end": "2023-07-18",
+      "n_days": 140
+    },
+    {
+      "epoch_id": "Terra+Aqua+SNPP+NOAA21",
+      "active_mask": 23,
+      "start": "2023-07-19",
+      "end": "2023-07-22",
+      "n_days": 4
+    },
+    {
+      "epoch_id": "Terra+Aqua+SNPP+NOAA20+NOAA21",
+      "active_mask": 31,
+      "start": "2023-07-23",
+      "end": "2023-07-25",
+      "n_days": 3
+    },
+    {
+      "epoch_id": "Terra+Aqua+NOAA20+NOAA21",
+      "active_mask": 27,
+      "start": "2023-07-26",
+      "end": "2023-07-27",
+      "n_days": 2
+    },
+    {
+      "epoch_id": "Terra+Aqua+SNPP+NOAA20+NOAA21",
+      "active_mask": 31,
+      "start": "2023-07-28",
+      "end": "2023-09-29",
+      "n_days": 64
+    },
+    {
+      "epoch_id": "Terra+Aqua+SNPP+NOAA21",
+      "active_mask": 23,
+      "start": "2023-09-30",
+      "end": "2023-09-30",
+      "n_days": 1
+    },
+    {
+      "epoch_id": "Terra+Aqua+SNPP+NOAA20+NOAA21",
+      "active_mask": 31,
+      "start": "2023-10-01",
+      "end": "2024-01-13",
+      "n_days": 105
+    },
+    {
+      "epoch_id": "Terra+SNPP+NOAA20+NOAA21",
+      "active_mask": 29,
+      "start": "2024-01-14",
+      "end": "2024-01-14",
+      "n_days": 1
+    },
+    {
+      "epoch_id": "Terra+Aqua+SNPP+NOAA20+NOAA21",
+      "active_mask": 31,
+      "start": "2024-01-15",
+      "end": "2024-02-03",
+      "n_days": 20
+    },
+    {
+      "epoch_id": "Terra+Aqua+SNPP+NOAA21",
+      "active_mask": 23,
+      "start": "2024-02-04",
+      "end": "2024-02-05",
+      "n_days": 2
+    },
+    {
+      "epoch_id": "Terra+Aqua+SNPP+NOAA20+NOAA21",
+      "active_mask": 31,
+      "start": "2024-02-06",
+      "end": "2024-02-26",
+      "n_days": 21
+    },
+    {
+      "epoch_id": "Terra+Aqua+SNPP+NOAA20",
+      "active_mask": 15,
+      "start": "2024-02-27",
+      "end": "2024-02-28",
+      "n_days": 2
+    },
+    {
+      "epoch_id": "Terra+Aqua+SNPP+NOAA20+NOAA21",
+      "active_mask": 31,
+      "start": "2024-02-29",
+      "end": "2024-05-29",
+      "n_days": 91
+    },
+    {
+      "epoch_id": "Terra+Aqua+NOAA20+NOAA21",
+      "active_mask": 27,
+      "start": "2024-05-30",
+      "end": "2024-06-03",
+      "n_days": 5
+    },
+    {
+      "epoch_id": "Terra+Aqua+SNPP+NOAA20+NOAA21",
+      "active_mask": 31,
+      "start": "2024-06-04",
+      "end": "2024-06-07",
+      "n_days": 4
+    },
+    {
+      "epoch_id": "Terra+SNPP+NOAA20+NOAA21",
+      "active_mask": 29,
+      "start": "2024-06-08",
+      "end": "2024-06-08",
+      "n_days": 1
+    },
+    {
+      "epoch_id": "Terra+Aqua+SNPP+NOAA20+NOAA21",
+      "active_mask": 31,
+      "start": "2024-06-09",
+      "end": "2024-06-22",
+      "n_days": 14
+    },
+    {
+      "epoch_id": "Terra+SNPP+NOAA20+NOAA21",
+      "active_mask": 29,
+      "start": "2024-06-23",
+      "end": "2024-06-23",
+      "n_days": 1
+    },
+    {
+      "epoch_id": "Terra+Aqua+SNPP+NOAA20+NOAA21",
+      "active_mask": 31,
+      "start": "2024-06-24",
+      "end": "2024-07-09",
+      "n_days": 16
+    },
+    {
+      "epoch_id": "Terra+Aqua+NOAA20+NOAA21",
+      "active_mask": 27,
+      "start": "2024-07-10",
+      "end": "2024-07-15",
+      "n_days": 6
+    },
+    {
+      "epoch_id": "Terra+Aqua+SNPP+NOAA20+NOAA21",
+      "active_mask": 31,
+      "start": "2024-07-16",
+      "end": "2024-07-23",
+      "n_days": 8
+    },
+    {
+      "epoch_id": "Terra+Aqua+NOAA20+NOAA21",
+      "active_mask": 27,
+      "start": "2024-07-24",
+      "end": "2024-07-28",
+      "n_days": 5
+    },
+    {
+      "epoch_id": "Terra+Aqua+SNPP+NOAA20+NOAA21",
+      "active_mask": 31,
+      "start": "2024-07-29",
+      "end": "2024-09-25",
+      "n_days": 59
+    },
+    {
+      "epoch_id": "Terra+Aqua+NOAA20+NOAA21",
+      "active_mask": 27,
+      "start": "2024-09-26",
+      "end": "2024-09-26",
+      "n_days": 1
+    },
+    {
+      "epoch_id": "Terra+Aqua+SNPP+NOAA20+NOAA21",
+      "active_mask": 31,
+      "start": "2024-09-27",
+      "end": "2024-11-02",
+      "n_days": 37
+    },
+    {
+      "epoch_id": "Terra+Aqua+NOAA20+NOAA21",
+      "active_mask": 27,
+      "start": "2024-11-03",
+      "end": "2024-11-05",
+      "n_days": 3
+    },
+    {
+      "epoch_id": "Terra+Aqua+SNPP+NOAA20+NOAA21",
+      "active_mask": 31,
+      "start": "2024-11-06",
+      "end": "2025-03-22",
+      "n_days": 137
+    },
+    {
+      "epoch_id": "Terra+SNPP+NOAA20+NOAA21",
+      "active_mask": 29,
+      "start": "2025-03-23",
+      "end": "2025-03-23",
+      "n_days": 1
+    },
+    {
+      "epoch_id": "Terra+Aqua+SNPP+NOAA20+NOAA21",
+      "active_mask": 31,
+      "start": "2025-03-24",
+      "end": "2026-03-09",
+      "n_days": 351
+    },
+    {
+      "epoch_id": "Terra+Aqua+NOAA20+NOAA21",
+      "active_mask": 27,
+      "start": "2026-03-10",
+      "end": "2026-03-11",
+      "n_days": 2
+    },
+    {
+      "epoch_id": "Terra+Aqua+SNPP+NOAA20+NOAA21",
+      "active_mask": 31,
+      "start": "2026-03-12",
+      "end": "2026-04-27",
+      "n_days": 47
+    },
+    {
+      "epoch_id": "Terra+Aqua+NOAA20+NOAA21",
+      "active_mask": 27,
+      "start": "2026-04-28",
+      "end": "2026-04-30",
+      "n_days": 3
+    },
+    {
+      "epoch_id": "Terra+Aqua+SNPP+NOAA20+NOAA21",
+      "active_mask": 31,
+      "start": "2026-05-01",
+      "end": "2026-05-02",
+      "n_days": 2
+    },
+    {
+      "epoch_id": "Terra+SNPP+NOAA20+NOAA21",
+      "active_mask": 29,
+      "start": "2026-05-03",
+      "end": "2026-05-03",
+      "n_days": 1
+    },
+    {
+      "epoch_id": "Terra+Aqua+SNPP+NOAA20+NOAA21",
+      "active_mask": 31,
+      "start": "2026-05-04",
+      "end": "2026-05-31",
+      "n_days": 28
+    },
+    {
+      "epoch_id": "Terra+Aqua+NOAA20+NOAA21",
+      "active_mask": 27,
+      "start": "2026-06-01",
+      "end": "2026-06-02",
+      "n_days": 2
+    },
+    {
+      "epoch_id": "Terra+Aqua+SNPP+NOAA20+NOAA21",
+      "active_mask": 31,
+      "start": "2026-06-03",
+      "end": "2026-06-25",
+      "n_days": 23
+    },
+    {
+      "epoch_id": "Terra+SNPP+NOAA20+NOAA21",
+      "active_mask": 29,
+      "start": "2026-06-26",
+      "end": "2026-06-26",
+      "n_days": 1
+    },
+    {
+      "epoch_id": "Terra+Aqua+SNPP+NOAA20+NOAA21",
+      "active_mask": 31,
+      "start": "2026-06-27",
+      "end": "2026-07-10",
+      "n_days": 14
+    },
+    {
+      "epoch_id": "Terra+Aqua+NOAA20+NOAA21",
+      "active_mask": 27,
+      "start": "2026-07-11",
+      "end": "2026-07-16",
+      "n_days": 6
+    },
+    {
+      "epoch_id": "Terra+Aqua+SNPP+NOAA20+NOAA21",
+      "active_mask": 31,
+      "start": "2026-07-17",
+      "end": "2026-08-02",
+      "n_days": 17
+    },
+    {
+      "epoch_id": "Terra+Aqua+NOAA20+NOAA21",
+      "active_mask": 27,
+      "start": "2026-08-03",
+      "end": "2026-08-03",
+      "n_days": 1
+    },
+    {
+      "epoch_id": "Terra+Aqua+SNPP+NOAA20+NOAA21",
+      "active_mask": 31,
+      "start": "2026-08-04",
+      "end": "2026-11-02",
+      "n_days": 91
+    },
+    {
+      "epoch_id": "Terra+Aqua+NOAA20+NOAA21",
+      "active_mask": 27,
+      "start": "2026-11-03",
+      "end": "2026-11-14",
+      "n_days": 12
+    }
+  ],
+  "edges": [
+    {
+      "from": "Terra",
+      "to": "Terra+Aqua",
+      "ratio_total": 2.81893,
+      "ratio_fitted_by_month": [
+        2.0928,
+        2.2411,
+        2.6115,
+        3.334,
+        4.2868,
+        4.8555,
+        4.4667,
+        3.4775,
+        2.6188,
+        2.159,
+        2.0141,
+        2.0264
+      ],
+      "ratio_ci_by_month": [
+        [
+          1.997,
+          2.1904
+        ],
+        [
+          2.1199,
+          2.3446
+        ],
+        [
+          2.3814,
+          2.7834
+        ],
+        [
+          2.9954,
+          3.5714
+        ],
+        [
+          3.7896,
+          4.6135
+        ],
+        [
+          4.2114,
+          5.2312
+        ],
+        [
+          4.0026,
+          4.806
+        ],
+        [
+          3.2703,
+          3.8514
+        ],
+        [
+          2.4735,
+          2.8998
+        ],
+        [
+          2.0449,
+          2.3265
+        ],
+        [
+          1.9157,
+          2.0948
+        ],
+        [
+          1.9112,
+          2.1261
+        ]
+      ],
+      "n_months": 25,
+      "sum_x": 46723,
+      "sum_y": 131709,
+      "selected_method": "month_of_year/harmonic",
+      "cross_validation": {
+        "global": {
+          "monthly_mape_pct": 26.64,
+          "monthly_wape_pct": 23.31,
+          "total_bias_pct": 2.54,
+          "n_test_months": 13
+        },
+        "month_of_year/none": {
+          "monthly_mape_pct": 16.66,
+          "monthly_wape_pct": 13.19,
+          "total_bias_pct": 7.66,
+          "n_test_months": 13
+        },
+        "month_of_year/moving_average": {
+          "monthly_mape_pct": 12.32,
+          "monthly_wape_pct": 14.88,
+          "total_bias_pct": 6.24,
+          "n_test_months": 13
+        },
+        "month_of_year/harmonic": {
+          "monthly_mape_pct": 11.53,
+          "monthly_wape_pct": 12.9,
+          "total_bias_pct": 7.38,
+          "n_test_months": 13
+        }
+      },
+      "yearly": [
+        {
+          "year": 2002,
+          "x": 11637,
+          "y": 34075,
+          "ratio": 2.9282
+        },
+        {
+          "year": 2003,
+          "x": 28622,
+          "y": 79117,
+          "ratio": 2.7642
+        },
+        {
+          "year": 2004,
+          "x": 6464,
+          "y": 18517,
+          "ratio": 2.8646
+        }
+      ],
+      "month_of_year": [
+        {
+          "month_of_year": 1,
+          "x": 2912,
+          "y": 6275,
+          "ratio_raw": 2.1549,
+          "ratio_fitted": 2.0928
+        },
+        {
+          "month_of_year": 2,
+          "x": 3093,
+          "y": 6884,
+          "ratio_raw": 2.2257,
+          "ratio_fitted": 2.2411
+        },
+        {
+          "month_of_year": 3,
+          "x": 2409,
+          "y": 6332,
+          "ratio_raw": 2.6285,
+          "ratio_fitted": 2.6115
+        },
+        {
+          "month_of_year": 4,
+          "x": 911,
+          "y": 2958,
+          "ratio_raw": 3.247,
+          "ratio_fitted": 3.334
+        },
+        {
+          "month_of_year": 5,
+          "x": 764,
+          "y": 3305,
+          "ratio_raw": 4.3259,
+          "ratio_fitted": 4.2868
+        },
+        {
+          "month_of_year": 6,
+          "x": 1595,
+          "y": 6956,
+          "ratio_raw": 4.3611,
+          "ratio_fitted": 4.8555
+        },
+        {
+          "month_of_year": 7,
+          "x": 2593,
+          "y": 13746,
+          "ratio_raw": 5.3012,
+          "ratio_fitted": 4.4667
+        },
+        {
+          "month_of_year": 8,
+          "x": 9474,
+          "y": 31150,
+          "ratio_raw": 3.2879,
+          "ratio_fitted": 3.4775
+        },
+        {
+          "month_of_year": 9,
+          "x": 11087,
+          "y": 29585,
+          "ratio_raw": 2.6684,
+          "ratio_fitted": 2.6188
+        },
+        {
+          "month_of_year": 10,
+          "x": 5635,
+          "y": 12141,
+          "ratio_raw": 2.1546,
+          "ratio_fitted": 2.159
+        },
+        {
+          "month_of_year": 11,
+          "x": 4722,
+          "y": 9553,
+          "ratio_raw": 2.0231,
+          "ratio_fitted": 2.0141
+        },
+        {
+          "month_of_year": 12,
+          "x": 1528,
+          "y": 2824,
+          "ratio_raw": 1.8482,
+          "ratio_fitted": 2.0264
+        }
+      ],
+      "window_days": 704,
+      "window_start": "2002-07-04",
+      "window_end": "2004-07-02"
+    },
+    {
+      "from": "Aqua",
+      "to": "Terra+Aqua",
+      "ratio_total": 1.45166,
+      "ratio_fitted_by_month": [
+        1.7772,
+        1.7065,
+        1.5711,
+        1.4136,
+        1.2891,
+        1.2349,
+        1.2608,
+        1.3533,
+        1.4819,
+        1.611,
+        1.7139,
+        1.7747
+      ],
+      "ratio_ci_by_month": [
+        [
+          1.727,
+          1.8393
+        ],
+        [
+          1.6602,
+          1.7639
+        ],
+        [
+          1.5277,
+          1.6216
+        ],
+        [
+          1.3771,
+          1.4549
+        ],
+        [
+          1.2614,
+          1.3186
+        ],
+        [
+          1.2112,
+          1.2591
+        ],
+        [
+          1.2413,
+          1.2808
+        ],
+        [
+          1.3377,
+          1.3692
+        ],
+        [
+          1.4594,
+          1.5013
+        ],
+        [
+          1.5792,
+          1.6421
+        ],
+        [
+          1.675,
+          1.7594
+        ],
+        [
+          1.7272,
+          1.8311
+        ]
+      ],
+      "n_months": 116,
+      "sum_x": 388683,
+      "sum_y": 564236,
+      "selected_method": "month_of_year/harmonic",
+      "cross_validation": {
+        "global": {
+          "monthly_mape_pct": 13.33,
+          "monthly_wape_pct": 9.93,
+          "total_bias_pct": 0.08,
+          "n_test_months": 58
+        },
+        "month_of_year/none": {
+          "monthly_mape_pct": 6.06,
+          "monthly_wape_pct": 3.66,
+          "total_bias_pct": -0.76,
+          "n_test_months": 58
+        },
+        "month_of_year/moving_average": {
+          "monthly_mape_pct": 5.97,
+          "monthly_wape_pct": 4.2,
+          "total_bias_pct": -0.71,
+          "n_test_months": 58
+        },
+        "month_of_year/harmonic": {
+          "monthly_mape_pct": 5.53,
+          "monthly_wape_pct": 3.44,
+          "total_bias_pct": -0.94,
+          "n_test_months": 58
+        }
+      },
+      "yearly": [
+        {
+          "year": 2002,
+          "x": 24608,
+          "y": 34075,
+          "ratio": 1.3847
+        },
+        {
+          "year": 2003,
+          "x": 55313,
+          "y": 79117,
+          "ratio": 1.4304
+        },
+        {
+          "year": 2004,
+          "x": 47272,
+          "y": 69035,
+          "ratio": 1.4604
+        },
+        {
+          "year": 2005,
+          "x": 32589,
+          "y": 48745,
+          "ratio": 1.4958
+        },
+        {
+          "year": 2006,
+          "x": 39936,
+          "y": 58461,
+          "ratio": 1.4639
+        },
+        {
+          "year": 2007,
+          "x": 37208,
+          "y": 52960,
+          "ratio": 1.4233
+        },
+        {
+          "year": 2008,
+          "x": 49314,
+          "y": 71185,
+          "ratio": 1.4435
+        },
+        {
+          "year": 2009,
+          "x": 37132,
+          "y": 53571,
+          "ratio": 1.4427
+        },
+        {
+          "year": 2010,
+          "x": 28524,
+          "y": 42245,
+          "ratio": 1.481
+        },
+        {
+          "year": 2011,
+          "x": 34926,
+          "y": 51768,
+          "ratio": 1.4822
+        },
+        {
+          "year": 2012,
+          "x": 1861,
+          "y": 3074,
+          "ratio": 1.6518
+        }
+      ],
+      "month_of_year": [
+        {
+          "month_of_year": 1,
+          "x": 12609,
+          "y": 22141,
+          "ratio_raw": 1.756,
+          "ratio_fitted": 1.7772
+        },
+        {
+          "month_of_year": 2,
+          "x": 11012,
+          "y": 18870,
+          "ratio_raw": 1.7136,
+          "ratio_fitted": 1.7065
+        },
+        {
+          "month_of_year": 3,
+          "x": 12470,
+          "y": 19644,
+          "ratio_raw": 1.5753,
+          "ratio_fitted": 1.5711
+        },
+        {
+          "month_of_year": 4,
+          "x": 12019,
+          "y": 16599,
+          "ratio_raw": 1.3811,
+          "ratio_fitted": 1.4136
+        },
+        {
+          "month_of_year": 5,
+          "x": 12405,
+          "y": 16291,
+          "ratio_raw": 1.3133,
+          "ratio_fitted": 1.2891
+        },
+        {
+          "month_of_year": 6,
+          "x": 16751,
+          "y": 20931,
+          "ratio_raw": 1.2495,
+          "ratio_fitted": 1.2349
+        },
+        {
+          "month_of_year": 7,
+          "x": 52664,
+          "y": 66126,
+          "ratio_raw": 1.2556,
+          "ratio_fitted": 1.2608
+        },
+        {
+          "month_of_year": 8,
+          "x": 101585,
+          "y": 136814,
+          "ratio_raw": 1.3468,
+          "ratio_fitted": 1.3533
+        },
+        {
+          "month_of_year": 9,
+          "x": 87024,
+          "y": 130309,
+          "ratio_raw": 1.4974,
+          "ratio_fitted": 1.4819
+        },
+        {
+          "month_of_year": 10,
+          "x": 37574,
+          "y": 59914,
+          "ratio_raw": 1.5946,
+          "ratio_fitted": 1.611
+        },
+        {
+          "month_of_year": 11,
+          "x": 22896,
+          "y": 38610,
+          "ratio_raw": 1.6863,
+          "ratio_fitted": 1.7139
+        },
+        {
+          "month_of_year": 12,
+          "x": 9674,
+          "y": 17987,
+          "ratio_raw": 1.8593,
+          "ratio_fitted": 1.7747
+        }
+      ],
+      "window_days": 3446,
+      "window_start": "2002-07-04",
+      "window_end": "2012-03-25"
+    },
+    {
+      "from": "Terra+Aqua",
+      "to": "Terra+Aqua+SNPP",
+      "ratio_total": 2.55649,
+      "ratio_fitted_by_month": [
+        2.6233,
+        2.6884,
+        2.8501,
+        3.0337,
+        3.0792,
+        2.9082,
+        2.6327,
+        2.4291,
+        2.3825,
+        2.4615,
+        2.5647,
+        2.6115
+      ],
+      "ratio_ci_by_month": [
+        [
+          2.4203,
+          2.7915
+        ],
+        [
+          2.5288,
+          2.8102
+        ],
+        [
+          2.7751,
+          2.9487
+        ],
+        [
+          2.95,
+          3.1396
+        ],
+        [
+          2.9801,
+          3.2103
+        ],
+        [
+          2.8091,
+          3.0409
+        ],
+        [
+          2.5651,
+          2.7293
+        ],
+        [
+          2.3692,
+          2.5118
+        ],
+        [
+          2.2999,
+          2.4948
+        ],
+        [
+          2.3639,
+          2.5649
+        ],
+        [
+          2.4601,
+          2.6727
+        ],
+        [
+          2.4376,
+          2.7708
+        ]
+      ],
+      "n_months": 25,
+      "sum_x": 85488,
+      "sum_y": 218549,
+      "selected_method": "month_of_year/harmonic",
+      "cross_validation": {
+        "global": {
+          "monthly_mape_pct": 9.51,
+          "monthly_wape_pct": 9.61,
+          "total_bias_pct": 3.91,
+          "n_test_months": 13
+        },
+        "month_of_year/none": {
+          "monthly_mape_pct": 9.22,
+          "monthly_wape_pct": 7.9,
+          "total_bias_pct": 3.93,
+          "n_test_months": 13
+        },
+        "month_of_year/moving_average": {
+          "monthly_mape_pct": 6.49,
+          "monthly_wape_pct": 6.58,
+          "total_bias_pct": 3.11,
+          "n_test_months": 13
+        },
+        "month_of_year/harmonic": {
+          "monthly_mape_pct": 6.1,
+          "monthly_wape_pct": 5.75,
+          "total_bias_pct": 2.6,
+          "n_test_months": 13
+        }
+      },
+      "yearly": [
+        {
+          "year": 2012,
+          "x": 39243,
+          "y": 102409,
+          "ratio": 2.6096
+        },
+        {
+          "year": 2013,
+          "x": 44754,
+          "y": 112895,
+          "ratio": 2.5226
+        },
+        {
+          "year": 2014,
+          "x": 1491,
+          "y": 3245,
+          "ratio": 2.1764
+        }
+      ],
+      "month_of_year": [
+        {
+          "month_of_year": 1,
+          "x": 4019,
+          "y": 10517,
+          "ratio_raw": 2.6168,
+          "ratio_fitted": 2.6233
+        },
+        {
+          "month_of_year": 2,
+          "x": 3770,
+          "y": 10799,
+          "ratio_raw": 2.8645,
+          "ratio_fitted": 2.6884
+        },
+        {
+          "month_of_year": 3,
+          "x": 3798,
+          "y": 10275,
+          "ratio_raw": 2.7054,
+          "ratio_fitted": 2.8501
+        },
+        {
+          "month_of_year": 4,
+          "x": 2278,
+          "y": 6983,
+          "ratio_raw": 3.0654,
+          "ratio_fitted": 3.0337
+        },
+        {
+          "month_of_year": 5,
+          "x": 2515,
+          "y": 7935,
+          "ratio_raw": 3.1551,
+          "ratio_fitted": 3.0792
+        },
+        {
+          "month_of_year": 6,
+          "x": 4026,
+          "y": 11456,
+          "ratio_raw": 2.8455,
+          "ratio_fitted": 2.9082
+        },
+        {
+          "month_of_year": 7,
+          "x": 10724,
+          "y": 28390,
+          "ratio_raw": 2.6473,
+          "ratio_fitted": 2.6327
+        },
+        {
+          "month_of_year": 8,
+          "x": 19273,
+          "y": 47055,
+          "ratio_raw": 2.4415,
+          "ratio_fitted": 2.4291
+        },
+        {
+          "month_of_year": 9,
+          "x": 19325,
+          "y": 45308,
+          "ratio_raw": 2.3445,
+          "ratio_fitted": 2.3825
+        },
+        {
+          "month_of_year": 10,
+          "x": 9286,
+          "y": 23426,
+          "ratio_raw": 2.5227,
+          "ratio_fitted": 2.4615
+        },
+        {
+          "month_of_year": 11,
+          "x": 3699,
+          "y": 9695,
+          "ratio_raw": 2.621,
+          "ratio_fitted": 2.5647
+        },
+        {
+          "month_of_year": 12,
+          "x": 2775,
+          "y": 6710,
+          "ratio_raw": 2.418,
+          "ratio_fitted": 2.6115
+        }
+      ],
+      "window_days": 728,
+      "window_start": "2012-01-20",
+      "window_end": "2014-01-18"
+    },
+    {
+      "from": "Terra+SNPP",
+      "to": "Terra+Aqua+SNPP",
+      "ratio_total": 1.13826,
+      "ratio_fitted_by_month": [
+        1.0903,
+        1.094,
+        1.1025,
+        1.1205,
+        1.1473,
+        1.1728,
+        1.1827,
+        1.1698,
+        1.1414,
+        1.1128,
+        1.0951,
+        1.0894
+      ],
+      "ratio_ci_by_month": [
+        [
+          1.0847,
+          1.0994
+        ],
+        [
+          1.0879,
+          1.1024
+        ],
+        [
+          1.0959,
+          1.1091
+        ],
+        [
+          1.1131,
+          1.1274
+        ],
+        [
+          1.1378,
+          1.1555
+        ],
+        [
+          1.1633,
+          1.1805
+        ],
+        [
+          1.1737,
+          1.1891
+        ],
+        [
+          1.1599,
+          1.1778
+        ],
+        [
+          1.1315,
+          1.1496
+        ],
+        [
+          1.1054,
+          1.1191
+        ],
+        [
+          1.0891,
+          1.1014
+        ],
+        [
+          1.0838,
+          1.0975
+        ]
+      ],
+      "n_months": 49,
+      "sum_x": 296317,
+      "sum_y": 337286,
+      "selected_method": "month_of_year/harmonic",
+      "cross_validation": {
+        "global": {
+          "monthly_mape_pct": 3.52,
+          "monthly_wape_pct": 3.48,
+          "total_bias_pct": -0.67,
+          "n_test_months": 25
+        },
+        "month_of_year/none": {
+          "monthly_mape_pct": 1.49,
+          "monthly_wape_pct": 1.7,
+          "total_bias_pct": -0.73,
+          "n_test_months": 25
+        },
+        "month_of_year/moving_average": {
+          "monthly_mape_pct": 1.7,
+          "monthly_wape_pct": 1.88,
+          "total_bias_pct": -0.77,
+          "n_test_months": 25
+        },
+        "month_of_year/harmonic": {
+          "monthly_mape_pct": 1.53,
+          "monthly_wape_pct": 1.62,
+          "total_bias_pct": -0.69,
+          "n_test_months": 25
+        }
+      },
+      "yearly": [
+        {
+          "year": 2014,
+          "x": 48303,
+          "y": 54703,
+          "ratio": 1.1325
+        },
+        {
+          "year": 2015,
+          "x": 73217,
+          "y": 83099,
+          "ratio": 1.135
+        },
+        {
+          "year": 2016,
+          "x": 79981,
+          "y": 91869,
+          "ratio": 1.1486
+        },
+        {
+          "year": 2017,
+          "x": 83966,
+          "y": 95853,
+          "ratio": 1.1416
+        },
+        {
+          "year": 2018,
+          "x": 10850,
+          "y": 11762,
+          "ratio": 1.0841
+        }
+      ],
+      "month_of_year": [
+        {
+          "month_of_year": 1,
+          "x": 20990,
+          "y": 23027,
+          "ratio_raw": 1.097,
+          "ratio_fitted": 1.0903
+        },
+        {
+          "month_of_year": 2,
+          "x": 10061,
+          "y": 11013,
+          "ratio_raw": 1.0946,
+          "ratio_fitted": 1.094
+        },
+        {
+          "month_of_year": 3,
+          "x": 11477,
+          "y": 12626,
+          "ratio_raw": 1.1001,
+          "ratio_fitted": 1.1025
+        },
+        {
+          "month_of_year": 4,
+          "x": 7975,
+          "y": 8857,
+          "ratio_raw": 1.1106,
+          "ratio_fitted": 1.1205
+        },
+        {
+          "month_of_year": 5,
+          "x": 5028,
+          "y": 5825,
+          "ratio_raw": 1.1585,
+          "ratio_fitted": 1.1473
+        },
+        {
+          "month_of_year": 6,
+          "x": 13388,
+          "y": 15797,
+          "ratio_raw": 1.1799,
+          "ratio_fitted": 1.1728
+        },
+        {
+          "month_of_year": 7,
+          "x": 35202,
+          "y": 41532,
+          "ratio_raw": 1.1798,
+          "ratio_fitted": 1.1827
+        },
+        {
+          "month_of_year": 8,
+          "x": 69336,
+          "y": 81065,
+          "ratio_raw": 1.1692,
+          "ratio_fitted": 1.1698
+        },
+        {
+          "month_of_year": 9,
+          "x": 56769,
+          "y": 64858,
+          "ratio_raw": 1.1425,
+          "ratio_fitted": 1.1414
+        },
+        {
+          "month_of_year": 10,
+          "x": 29600,
+          "y": 32975,
+          "ratio_raw": 1.114,
+          "ratio_fitted": 1.1128
+        },
+        {
+          "month_of_year": 11,
+          "x": 18222,
+          "y": 19959,
+          "ratio_raw": 1.0953,
+          "ratio_fitted": 1.0951
+        },
+        {
+          "month_of_year": 12,
+          "x": 18269,
+          "y": 19752,
+          "ratio_raw": 1.0812,
+          "ratio_fitted": 1.0894
+        }
+      ],
+      "window_days": 1450,
+      "window_start": "2014-02-16",
+      "window_end": "2018-02-15"
+    },
+    {
+      "from": "Aqua+SNPP",
+      "to": "Terra+Aqua+SNPP",
+      "ratio_total": 1.10154,
+      "ratio_fitted_by_month": [
+        1.1657,
+        1.1422,
+        1.1014,
+        1.0626,
+        1.0426,
+        1.0455,
+        1.0638,
+        1.0858,
+        1.1056,
+        1.1252,
+        1.1468,
+        1.1646
+      ],
+      "ratio_ci_by_month": [
+        [
+          1.1528,
+          1.1786
+        ],
+        [
+          1.1315,
+          1.1543
+        ],
+        [
+          1.0924,
+          1.1115
+        ],
+        [
+          1.0539,
+          1.0709
+        ],
+        [
+          1.0344,
+          1.05
+        ],
+        [
+          1.0385,
+          1.0516
+        ],
+        [
+          1.0585,
+          1.0689
+        ],
+        [
+          1.0815,
+          1.0903
+        ],
+        [
+          1.1002,
+          1.1112
+        ],
+        [
+          1.1188,
+          1.1323
+        ],
+        [
+          1.1379,
+          1.156
+        ],
+        [
+          1.1528,
+          1.1766
+        ]
+      ],
+      "n_months": 74,
+      "sum_x": 512099,
+      "sum_y": 564098,
+      "selected_method": "month_of_year/harmonic",
+      "cross_validation": {
+        "global": {
+          "monthly_mape_pct": 3.85,
+          "monthly_wape_pct": 2.91,
+          "total_bias_pct": -0.52,
+          "n_test_months": 37
+        },
+        "month_of_year/none": {
+          "monthly_mape_pct": 1.6,
+          "monthly_wape_pct": 1.31,
+          "total_bias_pct": -0.37,
+          "n_test_months": 37
+        },
+        "month_of_year/moving_average": {
+          "monthly_mape_pct": 1.86,
+          "monthly_wape_pct": 1.55,
+          "total_bias_pct": -0.45,
+          "n_test_months": 37
+        },
+        "month_of_year/harmonic": {
+          "monthly_mape_pct": 1.52,
+          "monthly_wape_pct": 1.39,
+          "total_bias_pct": -0.48,
+          "n_test_months": 37
+        }
+      },
+      "yearly": [
+        {
+          "year": 2012,
+          "x": 93818,
+          "y": 102409,
+          "ratio": 1.0916
+        },
+        {
+          "year": 2013,
+          "x": 102854,
+          "y": 112895,
+          "ratio": 1.0976
+        },
+        {
+          "year": 2014,
+          "x": 57686,
+          "y": 63833,
+          "ratio": 1.1066
+        },
+        {
+          "year": 2015,
+          "x": 75814,
+          "y": 83099,
+          "ratio": 1.0961
+        },
+        {
+          "year": 2016,
+          "x": 83422,
+          "y": 91869,
+          "ratio": 1.1013
+        },
+        {
+          "year": 2017,
+          "x": 86330,
+          "y": 95853,
+          "ratio": 1.1103
+        },
+        {
+          "year": 2018,
+          "x": 12175,
+          "y": 14140,
+          "ratio": 1.1614
+        }
+      ],
+      "month_of_year": [
+        {
+          "month_of_year": 1,
+          "x": 30637,
+          "y": 35843,
+          "ratio_raw": 1.1699,
+          "ratio_fitted": 1.1657
+        },
+        {
+          "month_of_year": 2,
+          "x": 24617,
+          "y": 27776,
+          "ratio_raw": 1.1283,
+          "ratio_fitted": 1.1422
+        },
+        {
+          "month_of_year": 3,
+          "x": 20945,
+          "y": 22901,
+          "ratio_raw": 1.0934,
+          "ratio_fitted": 1.1014
+        },
+        {
+          "month_of_year": 4,
+          "x": 14745,
+          "y": 15840,
+          "ratio_raw": 1.0743,
+          "ratio_fitted": 1.0626
+        },
+        {
+          "month_of_year": 5,
+          "x": 12937,
+          "y": 13760,
+          "ratio_raw": 1.0636,
+          "ratio_fitted": 1.0426
+        },
+        {
+          "month_of_year": 6,
+          "x": 26056,
+          "y": 27253,
+          "ratio_raw": 1.0459,
+          "ratio_fitted": 1.0455
+        },
+        {
+          "month_of_year": 7,
+          "x": 66452,
+          "y": 69922,
+          "ratio_raw": 1.0522,
+          "ratio_fitted": 1.0638
+        },
+        {
+          "month_of_year": 8,
+          "x": 117507,
+          "y": 128120,
+          "ratio_raw": 1.0903,
+          "ratio_fitted": 1.0858
+        },
+        {
+          "month_of_year": 9,
+          "x": 99151,
+          "y": 110166,
+          "ratio_raw": 1.1111,
+          "ratio_fitted": 1.1056
+        },
+        {
+          "month_of_year": 10,
+          "x": 50740,
+          "y": 56401,
+          "ratio_raw": 1.1116,
+          "ratio_fitted": 1.1252
+        },
+        {
+          "month_of_year": 11,
+          "x": 26086,
+          "y": 29654,
+          "ratio_raw": 1.1368,
+          "ratio_fitted": 1.1468
+        },
+        {
+          "month_of_year": 12,
+          "x": 22226,
+          "y": 26462,
+          "ratio_raw": 1.1906,
+          "ratio_fitted": 1.1646
+        }
+      ],
+      "window_days": 2217,
+      "window_start": "2012-01-20",
+      "window_end": "2018-02-26"
+    },
+    {
+      "from": "Terra+Aqua+SNPP",
+      "to": "Terra+Aqua+SNPP+NOAA20",
+      "ratio_total": 1.41163,
+      "ratio_fitted_by_month": [
+        1.379,
+        1.362,
+        1.3854,
+        1.4525,
+        1.5229,
+        1.5411,
+        1.4926,
+        1.4203,
+        1.3763,
+        1.3771,
+        1.3977,
+        1.4011
+      ],
+      "ratio_ci_by_month": [
+        [
+          1.3571,
+          1.3992
+        ],
+        [
+          1.3371,
+          1.396
+        ],
+        [
+          1.3625,
+          1.4329
+        ],
+        [
+          1.4295,
+          1.5007
+        ],
+        [
+          1.5005,
+          1.5547
+        ],
+        [
+          1.523,
+          1.5623
+        ],
+        [
+          1.4752,
+          1.5114
+        ],
+        [
+          1.4083,
+          1.4331
+        ],
+        [
+          1.3638,
+          1.3904
+        ],
+        [
+          1.3594,
+          1.4028
+        ],
+        [
+          1.3736,
+          1.4269
+        ],
+        [
+          1.3785,
+          1.4255
+        ]
+      ],
+      "n_months": 24,
+      "sum_x": 186216,
+      "sum_y": 262869,
+      "selected_method": "month_of_year/harmonic",
+      "cross_validation": {
+        "global": {
+          "monthly_mape_pct": 4.3,
+          "monthly_wape_pct": 3.23,
+          "total_bias_pct": 0.86,
+          "n_test_months": 12
+        },
+        "month_of_year/none": {
+          "monthly_mape_pct": 3.35,
+          "monthly_wape_pct": 3.2,
+          "total_bias_pct": 0.67,
+          "n_test_months": 12
+        },
+        "month_of_year/moving_average": {
+          "monthly_mape_pct": 2.71,
+          "monthly_wape_pct": 2.48,
+          "total_bias_pct": 0.37,
+          "n_test_months": 12
+        },
+        "month_of_year/harmonic": {
+          "monthly_mape_pct": 2.14,
+          "monthly_wape_pct": 1.98,
+          "total_bias_pct": 0.11,
+          "n_test_months": 12
+        }
+      },
+      "yearly": [
+        {
+          "year": 2018,
+          "x": 75973,
+          "y": 107994,
+          "ratio": 1.4215
+        },
+        {
+          "year": 2019,
+          "x": 86614,
+          "y": 122469,
+          "ratio": 1.414
+        },
+        {
+          "year": 2020,
+          "x": 23629,
+          "y": 32406,
+          "ratio": 1.3715
+        }
+      ],
+      "month_of_year": [
+        {
+          "month_of_year": 1,
+          "x": 5742,
+          "y": 7834,
+          "ratio_raw": 1.3643,
+          "ratio_fitted": 1.379
+        },
+        {
+          "month_of_year": 2,
+          "x": 9780,
+          "y": 13506,
+          "ratio_raw": 1.381,
+          "ratio_fitted": 1.362
+        },
+        {
+          "month_of_year": 3,
+          "x": 16783,
+          "y": 23123,
+          "ratio_raw": 1.3778,
+          "ratio_fitted": 1.3854
+        },
+        {
+          "month_of_year": 4,
+          "x": 7075,
+          "y": 10247,
+          "ratio_raw": 1.4483,
+          "ratio_fitted": 1.4525
+        },
+        {
+          "month_of_year": 5,
+          "x": 3293,
+          "y": 5139,
+          "ratio_raw": 1.5606,
+          "ratio_fitted": 1.5229
+        },
+        {
+          "month_of_year": 6,
+          "x": 6973,
+          "y": 10699,
+          "ratio_raw": 1.5343,
+          "ratio_fitted": 1.5411
+        },
+        {
+          "month_of_year": 7,
+          "x": 14490,
+          "y": 21534,
+          "ratio_raw": 1.4861,
+          "ratio_fitted": 1.4926
+        },
+        {
+          "month_of_year": 8,
+          "x": 53928,
+          "y": 76723,
+          "ratio_raw": 1.4227,
+          "ratio_fitted": 1.4203
+        },
+        {
+          "month_of_year": 9,
+          "x": 40175,
+          "y": 55251,
+          "ratio_raw": 1.3753,
+          "ratio_fitted": 1.3763
+        },
+        {
+          "month_of_year": 10,
+          "x": 14589,
+          "y": 19998,
+          "ratio_raw": 1.3708,
+          "ratio_fitted": 1.3771
+        },
+        {
+          "month_of_year": 11,
+          "x": 6279,
+          "y": 8933,
+          "ratio_raw": 1.4227,
+          "ratio_fitted": 1.3977
+        },
+        {
+          "month_of_year": 12,
+          "x": 7109,
+          "y": 9882,
+          "ratio_raw": 1.3901,
+          "ratio_fitted": 1.4011
+        }
+      ],
+      "window_days": 730,
+      "window_start": "2018-04-01",
+      "window_end": "2020-03-30"
+    },
+    {
+      "from": "Terra+Aqua+NOAA20",
+      "to": "Terra+Aqua+SNPP+NOAA20",
+      "ratio_total": 1.34125,
+      "ratio_fitted_by_month": [
+        1.3221,
+        1.3311,
+        1.3753,
+        1.4334,
+        1.4628,
+        1.4388,
+        1.3815,
+        1.3338,
+        1.3206,
+        1.3334,
+        1.3442,
+        1.3359
+      ],
+      "ratio_ci_by_month": [
+        [
+          1.2998,
+          1.3719
+        ],
+        [
+          1.3085,
+          1.388
+        ],
+        [
+          1.3523,
+          1.4196
+        ],
+        [
+          1.4037,
+          1.4659
+        ],
+        [
+          1.426,
+          1.4951
+        ],
+        [
+          1.4041,
+          1.4688
+        ],
+        [
+          1.358,
+          1.4041
+        ],
+        [
+          1.3175,
+          1.3573
+        ],
+        [
+          1.3023,
+          1.3455
+        ],
+        [
+          1.3162,
+          1.3515
+        ],
+        [
+          1.3304,
+          1.3627
+        ],
+        [
+          1.317,
+          1.3655
+        ]
+      ],
+      "n_months": 33,
+      "sum_x": 364942,
+      "sum_y": 489477,
+      "selected_method": "month_of_year/harmonic",
+      "cross_validation": {
+        "global": {
+          "monthly_mape_pct": 3.7,
+          "monthly_wape_pct": 2.23,
+          "total_bias_pct": -0.0,
+          "n_test_months": 17
+        },
+        "month_of_year/none": {
+          "monthly_mape_pct": 3.99,
+          "monthly_wape_pct": 3.88,
+          "total_bias_pct": 1.98,
+          "n_test_months": 17
+        },
+        "month_of_year/moving_average": {
+          "monthly_mape_pct": 3.26,
+          "monthly_wape_pct": 3.15,
+          "total_bias_pct": 1.59,
+          "n_test_months": 17
+        },
+        "month_of_year/harmonic": {
+          "monthly_mape_pct": 2.98,
+          "monthly_wape_pct": 2.86,
+          "total_bias_pct": 1.3,
+          "n_test_months": 17
+        }
+      },
+      "yearly": [
+        {
+          "year": 2020,
+          "x": 130607,
+          "y": 171902,
+          "ratio": 1.3162
+        },
+        {
+          "year": 2021,
+          "x": 101516,
+          "y": 139772,
+          "ratio": 1.3768
+        },
+        {
+          "year": 2022,
+          "x": 119635,
+          "y": 159992,
+          "ratio": 1.3373
+        },
+        {
+          "year": 2023,
+          "x": 13131,
+          "y": 17729,
+          "ratio": 1.3502
+        },
+        {
+          "year": 2024,
+          "x": 53,
+          "y": 82,
+          "ratio": 1.5472
+        }
+      ],
+      "month_of_year": [
+        {
+          "month_of_year": 1,
+          "x": 29668,
+          "y": 39153,
+          "ratio_raw": 1.3197,
+          "ratio_fitted": 1.3221
+        },
+        {
+          "month_of_year": 2,
+          "x": 22876,
+          "y": 30136,
+          "ratio_raw": 1.3174,
+          "ratio_fitted": 1.3311
+        },
+        {
+          "month_of_year": 3,
+          "x": 6783,
+          "y": 9630,
+          "ratio_raw": 1.4197,
+          "ratio_fitted": 1.3753
+        },
+        {
+          "month_of_year": 4,
+          "x": 4091,
+          "y": 5882,
+          "ratio_raw": 1.4378,
+          "ratio_fitted": 1.4334
+        },
+        {
+          "month_of_year": 5,
+          "x": 6560,
+          "y": 9442,
+          "ratio_raw": 1.4393,
+          "ratio_fitted": 1.4628
+        },
+        {
+          "month_of_year": 6,
+          "x": 7312,
+          "y": 10559,
+          "ratio_raw": 1.4441,
+          "ratio_fitted": 1.4388
+        },
+        {
+          "month_of_year": 7,
+          "x": 29954,
+          "y": 41476,
+          "ratio_raw": 1.3847,
+          "ratio_fitted": 1.3815
+        },
+        {
+          "month_of_year": 8,
+          "x": 95469,
+          "y": 127097,
+          "ratio_raw": 1.3313,
+          "ratio_fitted": 1.3338
+        },
+        {
+          "month_of_year": 9,
+          "x": 70375,
+          "y": 93322,
+          "ratio_raw": 1.3261,
+          "ratio_fitted": 1.3206
+        },
+        {
+          "month_of_year": 10,
+          "x": 42061,
+          "y": 55791,
+          "ratio_raw": 1.3264,
+          "ratio_fitted": 1.3334
+        },
+        {
+          "month_of_year": 11,
+          "x": 28746,
+          "y": 38526,
+          "ratio_raw": 1.3402,
+          "ratio_fitted": 1.3442
+        },
+        {
+          "month_of_year": 12,
+          "x": 21047,
+          "y": 28463,
+          "ratio_raw": 1.3524,
+          "ratio_fitted": 1.3359
+        }
+      ],
+      "window_days": 899,
+      "window_start": "2020-07-27",
+      "window_end": "2024-02-28"
+    },
+    {
+      "from": "Terra+SNPP+NOAA20",
+      "to": "Terra+Aqua+SNPP+NOAA20",
+      "ratio_total": 1.06228,
+      "ratio_fitted_by_month": [
+        1.0432,
+        1.0455,
+        1.0483,
+        1.053,
+        1.061,
+        1.0706,
+        1.0773,
+        1.0764,
+        1.0677,
+        1.0556,
+        1.0463,
+        1.0425
+      ],
+      "ratio_ci_by_month": [
+        [
+          1.0394,
+          1.0471
+        ],
+        [
+          1.042,
+          1.05
+        ],
+        [
+          1.0451,
+          1.0529
+        ],
+        [
+          1.0494,
+          1.0566
+        ],
+        [
+          1.0578,
+          1.0643
+        ],
+        [
+          1.068,
+          1.0739
+        ],
+        [
+          1.074,
+          1.081
+        ],
+        [
+          1.0732,
+          1.0797
+        ],
+        [
+          1.0651,
+          1.0704
+        ],
+        [
+          1.0533,
+          1.0579
+        ],
+        [
+          1.0439,
+          1.0487
+        ],
+        [
+          1.0394,
+          1.0455
+        ]
+      ],
+      "n_months": 56,
+      "sum_x": 712398,
+      "sum_y": 756765,
+      "selected_method": "month_of_year/harmonic",
+      "cross_validation": {
+        "global": {
+          "monthly_mape_pct": 1.52,
+          "monthly_wape_pct": 1.37,
+          "total_bias_pct": 0.62,
+          "n_test_months": 28
+        },
+        "month_of_year/none": {
+          "monthly_mape_pct": 0.8,
+          "monthly_wape_pct": 0.67,
+          "total_bias_pct": 0.37,
+          "n_test_months": 28
+        },
+        "month_of_year/moving_average": {
+          "monthly_mape_pct": 0.79,
+          "monthly_wape_pct": 0.6,
+          "total_bias_pct": 0.27,
+          "n_test_months": 28
+        },
+        "month_of_year/harmonic": {
+          "monthly_mape_pct": 0.71,
+          "monthly_wape_pct": 0.47,
+          "total_bias_pct": 0.24,
+          "n_test_months": 28
+        }
+      },
+      "yearly": [
+        {
+          "year": 2018,
+          "x": 42096,
+          "y": 44842,
+          "ratio": 1.0652
+        },
+        {
+          "year": 2019,
+          "x": 114643,
+          "y": 122469,
+          "ratio": 1.0683
+        },
+        {
+          "year": 2020,
+          "x": 255795,
+          "y": 271879,
+          "ratio": 1.0629
+        },
+        {
+          "year": 2021,
+          "x": 131581,
+          "y": 139772,
+          "ratio": 1.0623
+        },
+        {
+          "year": 2022,
+          "x": 151154,
+          "y": 159992,
+          "ratio": 1.0585
+        },
+        {
+          "year": 2023,
+          "x": 17053,
+          "y": 17729,
+          "ratio": 1.0396
+        },
+        {
+          "year": 2024,
+          "x": 76,
+          "y": 82,
+          "ratio": 1.0789
+        }
+      ],
+      "month_of_year": [
+        {
+          "month_of_year": 1,
+          "x": 44856,
+          "y": 46987,
+          "ratio_raw": 1.0475,
+          "ratio_fitted": 1.0432
+        },
+        {
+          "month_of_year": 2,
+          "x": 41763,
+          "y": 43642,
+          "ratio_raw": 1.045,
+          "ratio_fitted": 1.0455
+        },
+        {
+          "month_of_year": 3,
+          "x": 31438,
+          "y": 32791,
+          "ratio_raw": 1.043,
+          "ratio_fitted": 1.0483
+        },
+        {
+          "month_of_year": 4,
+          "x": 24830,
+          "y": 26286,
+          "ratio_raw": 1.0586,
+          "ratio_fitted": 1.053
+        },
+        {
+          "month_of_year": 5,
+          "x": 25665,
+          "y": 27223,
+          "ratio_raw": 1.0607,
+          "ratio_fitted": 1.061
+        },
+        {
+          "month_of_year": 6,
+          "x": 26972,
+          "y": 28812,
+          "ratio_raw": 1.0682,
+          "ratio_fitted": 1.0706
+        },
+        {
+          "month_of_year": 7,
+          "x": 67261,
+          "y": 72575,
+          "ratio_raw": 1.079,
+          "ratio_fitted": 1.0773
+        },
+        {
+          "month_of_year": 8,
+          "x": 156480,
+          "y": 168283,
+          "ratio_raw": 1.0754,
+          "ratio_fitted": 1.0764
+        },
+        {
+          "month_of_year": 9,
+          "x": 139111,
+          "y": 148573,
+          "ratio_raw": 1.068,
+          "ratio_fitted": 1.0677
+        },
+        {
+          "month_of_year": 10,
+          "x": 71675,
+          "y": 75789,
+          "ratio_raw": 1.0574,
+          "ratio_fitted": 1.0556
+        },
+        {
+          "month_of_year": 11,
+          "x": 45471,
+          "y": 47459,
+          "ratio_raw": 1.0437,
+          "ratio_fitted": 1.0463
+        },
+        {
+          "month_of_year": 12,
+          "x": 36876,
+          "y": 38345,
+          "ratio_raw": 1.0398,
+          "ratio_fitted": 1.0425
+        }
+      ],
+      "window_days": 1597,
+      "window_start": "2018-08-29",
+      "window_end": "2024-02-28"
+    },
+    {
+      "from": "Aqua+SNPP+NOAA20",
+      "to": "Terra+Aqua+SNPP+NOAA20",
+      "ratio_total": 1.05875,
+      "ratio_fitted_by_month": [
+        1.0657,
+        1.0648,
+        1.0595,
+        1.0482,
+        1.036,
+        1.0307,
+        1.0366,
+        1.0504,
+        1.0637,
+        1.0699,
+        1.0692,
+        1.0666
+      ],
+      "ratio_ci_by_month": [
+        [
+          1.0597,
+          1.0793
+        ],
+        [
+          1.0599,
+          1.0747
+        ],
+        [
+          1.054,
+          1.0654
+        ],
+        [
+          1.0424,
+          1.0538
+        ],
+        [
+          1.0305,
+          1.0419
+        ],
+        [
+          1.0268,
+          1.0358
+        ],
+        [
+          1.0324,
+          1.0414
+        ],
+        [
+          1.0453,
+          1.055
+        ],
+        [
+          1.0591,
+          1.068
+        ],
+        [
+          1.0645,
+          1.076
+        ],
+        [
+          1.0617,
+          1.0799
+        ],
+        [
+          1.0584,
+          1.0795
+        ]
+      ],
+      "n_months": 30,
+      "sum_x": 335511,
+      "sum_y": 355223,
+      "selected_method": "month_of_year/harmonic",
+      "cross_validation": {
+        "global": {
+          "monthly_mape_pct": 1.54,
+          "monthly_wape_pct": 0.92,
+          "total_bias_pct": 0.62,
+          "n_test_months": 15
+        },
+        "month_of_year/none": {
+          "monthly_mape_pct": 1.58,
+          "monthly_wape_pct": 1.48,
+          "total_bias_pct": 1.3,
+          "n_test_months": 15
+        },
+        "month_of_year/moving_average": {
+          "monthly_mape_pct": 1.31,
+          "monthly_wape_pct": 1.14,
+          "total_bias_pct": 1.03,
+          "n_test_months": 15
+        },
+        "month_of_year/harmonic": {
+          "monthly_mape_pct": 1.37,
+          "monthly_wape_pct": 1.27,
+          "total_bias_pct": 1.11,
+          "n_test_months": 15
+        }
+      },
+      "yearly": [
+        {
+          "year": 2020,
+          "x": 34901,
+          "y": 37648,
+          "ratio": 1.0787
+        },
+        {
+          "year": 2021,
+          "x": 132154,
+          "y": 139772,
+          "ratio": 1.0576
+        },
+        {
+          "year": 2022,
+          "x": 151754,
+          "y": 159992,
+          "ratio": 1.0543
+        },
+        {
+          "year": 2023,
+          "x": 16630,
+          "y": 17729,
+          "ratio": 1.0661
+        },
+        {
+          "year": 2024,
+          "x": 72,
+          "y": 82,
+          "ratio": 1.1389
+        }
+      ],
+      "month_of_year": [
+        {
+          "month_of_year": 1,
+          "x": 36790,
+          "y": 39153,
+          "ratio_raw": 1.0642,
+          "ratio_fitted": 1.0657
+        },
+        {
+          "month_of_year": 2,
+          "x": 28354,
+          "y": 30136,
+          "ratio_raw": 1.0628,
+          "ratio_fitted": 1.0648
+        },
+        {
+          "month_of_year": 3,
+          "x": 9030,
+          "y": 9630,
+          "ratio_raw": 1.0664,
+          "ratio_fitted": 1.0595
+        },
+        {
+          "month_of_year": 4,
+          "x": 5622,
+          "y": 5882,
+          "ratio_raw": 1.0462,
+          "ratio_fitted": 1.0482
+        },
+        {
+          "month_of_year": 5,
+          "x": 9108,
+          "y": 9442,
+          "ratio_raw": 1.0367,
+          "ratio_fitted": 1.036
+        },
+        {
+          "month_of_year": 6,
+          "x": 10286,
+          "y": 10559,
+          "ratio_raw": 1.0265,
+          "ratio_fitted": 1.0307
+        },
+        {
+          "month_of_year": 7,
+          "x": 30104,
+          "y": 31240,
+          "ratio_raw": 1.0377,
+          "ratio_fitted": 1.0366
+        },
+        {
+          "month_of_year": 8,
+          "x": 57070,
+          "y": 59993,
+          "ratio_raw": 1.0512,
+          "ratio_fitted": 1.0504
+        },
+        {
+          "month_of_year": 9,
+          "x": 46127,
+          "y": 48925,
+          "ratio_raw": 1.0607,
+          "ratio_fitted": 1.0637
+        },
+        {
+          "month_of_year": 10,
+          "x": 40259,
+          "y": 43274,
+          "ratio_raw": 1.0749,
+          "ratio_fitted": 1.0699
+        },
+        {
+          "month_of_year": 11,
+          "x": 36241,
+          "y": 38526,
+          "ratio_raw": 1.0631,
+          "ratio_fitted": 1.0692
+        },
+        {
+          "month_of_year": 12,
+          "x": 26520,
+          "y": 28463,
+          "ratio_raw": 1.0733,
+          "ratio_fitted": 1.0666
+        }
+      ],
+      "window_days": 826,
+      "window_start": "2020-10-10",
+      "window_end": "2024-02-28"
+    },
+    {
+      "from": "Terra+Aqua+SNPP+NOAA20",
+      "to": "Terra+Aqua+SNPP+NOAA20+NOAA21",
+      "ratio_total": 1.18284,
+      "ratio_fitted_by_month": [
+        1.1923,
+        1.1818,
+        1.1803,
+        1.1942,
+        1.2134,
+        1.2194,
+        1.2044,
+        1.1797,
+        1.1648,
+        1.1692,
+        1.1853,
+        1.196
+      ],
+      "ratio_ci_by_month": [
+        [
+          1.1811,
+          1.2061
+        ],
+        [
+          1.1731,
+          1.196
+        ],
+        [
+          1.1693,
+          1.1955
+        ],
+        [
+          1.1803,
+          1.2139
+        ],
+        [
+          1.1998,
+          1.2332
+        ],
+        [
+          1.2032,
+          1.2368
+        ],
+        [
+          1.1829,
+          1.2245
+        ],
+        [
+          1.1597,
+          1.1964
+        ],
+        [
+          1.1478,
+          1.1774
+        ],
+        [
+          1.1506,
+          1.186
+        ],
+        [
+          1.1656,
+          1.2063
+        ],
+        [
+          1.1802,
+          1.2134
+        ]
+      ],
+      "n_months": 24,
+      "sum_x": 214970,
+      "sum_y": 254275,
+      "selected_method": "month_of_year/harmonic",
+      "cross_validation": {
+        "global": {
+          "monthly_mape_pct": 2.98,
+          "monthly_wape_pct": 2.14,
+          "total_bias_pct": -2.13,
+          "n_test_months": 12
+        },
+        "month_of_year/none": {
+          "monthly_mape_pct": 2.78,
+          "monthly_wape_pct": 2.65,
+          "total_bias_pct": -1.96,
+          "n_test_months": 12
+        },
+        "month_of_year/moving_average": {
+          "monthly_mape_pct": 2.98,
+          "monthly_wape_pct": 2.7,
+          "total_bias_pct": -2.05,
+          "n_test_months": 12
+        },
+        "month_of_year/harmonic": {
+          "monthly_mape_pct": 2.77,
+          "monthly_wape_pct": 2.69,
+          "total_bias_pct": -2.12,
+          "n_test_months": 12
+        }
+      },
+      "yearly": [
+        {
+          "year": 2023,
+          "x": 87267,
+          "y": 101735,
+          "ratio": 1.1658
+        },
+        {
+          "year": 2024,
+          "x": 106444,
+          "y": 127428,
+          "ratio": 1.1971
+        },
+        {
+          "year": 2025,
+          "x": 21259,
+          "y": 25112,
+          "ratio": 1.1812
+        }
+      ],
+      "month_of_year": [
+        {
+          "month_of_year": 1,
+          "x": 14627,
+          "y": 17489,
+          "ratio_raw": 1.1957,
+          "ratio_fitted": 1.1923
+        },
+        {
+          "month_of_year": 2,
+          "x": 14407,
+          "y": 16956,
+          "ratio_raw": 1.1769,
+          "ratio_fitted": 1.1818
+        },
+        {
+          "month_of_year": 3,
+          "x": 12425,
+          "y": 14648,
+          "ratio_raw": 1.1789,
+          "ratio_fitted": 1.1803
+        },
+        {
+          "month_of_year": 4,
+          "x": 6342,
+          "y": 7627,
+          "ratio_raw": 1.2026,
+          "ratio_fitted": 1.1942
+        },
+        {
+          "month_of_year": 5,
+          "x": 7034,
+          "y": 8493,
+          "ratio_raw": 1.2074,
+          "ratio_fitted": 1.2134
+        },
+        {
+          "month_of_year": 6,
+          "x": 11407,
+          "y": 13950,
+          "ratio_raw": 1.2229,
+          "ratio_fitted": 1.2194
+        },
+        {
+          "month_of_year": 7,
+          "x": 15106,
+          "y": 18212,
+          "ratio_raw": 1.2056,
+          "ratio_fitted": 1.2044
+        },
+        {
+          "month_of_year": 8,
+          "x": 49152,
+          "y": 57847,
+          "ratio_raw": 1.1769,
+          "ratio_fitted": 1.1797
+        },
+        {
+          "month_of_year": 9,
+          "x": 41010,
+          "y": 47898,
+          "ratio_raw": 1.168,
+          "ratio_fitted": 1.1648
+        },
+        {
+          "month_of_year": 10,
+          "x": 25163,
+          "y": 29482,
+          "ratio_raw": 1.1716,
+          "ratio_fitted": 1.1692
+        },
+        {
+          "month_of_year": 11,
+          "x": 11578,
+          "y": 13511,
+          "ratio_raw": 1.167,
+          "ratio_fitted": 1.1853
+        },
+        {
+          "month_of_year": 12,
+          "x": 6719,
+          "y": 8162,
+          "ratio_raw": 1.2148,
+          "ratio_fitted": 1.196
+        }
+      ],
+      "window_days": 696,
+      "window_start": "2023-03-01",
+      "window_end": "2025-02-27"
+    },
+    {
+      "from": "Terra+Aqua+SNPP+NOAA21",
+      "to": "Terra+Aqua+SNPP+NOAA20+NOAA21",
+      "ratio_total": 1.19932,
+      "ratio_fitted_by_month": [
+        1.1982,
+        1.1806,
+        1.1795,
+        1.2023,
+        1.2334,
+        1.2465,
+        1.2301,
+        1.1999,
+        1.1817,
+        1.1867,
+        1.2036,
+        1.2105
+      ],
+      "ratio_ci_by_month": [
+        [
+          1.1898,
+          1.21
+        ],
+        [
+          1.1723,
+          1.1926
+        ],
+        [
+          1.1708,
+          1.1912
+        ],
+        [
+          1.1954,
+          1.2125
+        ],
+        [
+          1.2262,
+          1.2418
+        ],
+        [
+          1.2394,
+          1.2535
+        ],
+        [
+          1.2254,
+          1.2349
+        ],
+        [
+          1.1972,
+          1.2026
+        ],
+        [
+          1.1799,
+          1.1834
+        ],
+        [
+          1.1818,
+          1.1914
+        ],
+        [
+          1.1948,
+          1.2118
+        ],
+        [
+          1.2005,
+          1.2211
+        ]
+      ],
+      "n_months": 36,
+      "sum_x": 315533,
+      "sum_y": 378425,
+      "selected_method": "month_of_year/harmonic",
+      "cross_validation": {
+        "global": {
+          "monthly_mape_pct": 1.66,
+          "monthly_wape_pct": 1.57,
+          "total_bias_pct": 0.61,
+          "n_test_months": 18
+        },
+        "month_of_year/none": {
+          "monthly_mape_pct": 1.24,
+          "monthly_wape_pct": 0.91,
+          "total_bias_pct": 0.19,
+          "n_test_months": 18
+        },
+        "month_of_year/moving_average": {
+          "monthly_mape_pct": 1.16,
+          "monthly_wape_pct": 1.04,
+          "total_bias_pct": 0.25,
+          "n_test_months": 18
+        },
+        "month_of_year/harmonic": {
+          "monthly_mape_pct": 0.82,
+          "monthly_wape_pct": 0.62,
+          "total_bias_pct": 0.04,
+          "n_test_months": 18
+        }
+      },
+      "yearly": [
+        {
+          "year": 2023,
+          "x": 84729,
+          "y": 101735,
+          "ratio": 1.2007
+        },
+        {
+          "year": 2024,
+          "x": 106179,
+          "y": 127428,
+          "ratio": 1.2001
+        },
+        {
+          "year": 2025,
+          "x": 118454,
+          "y": 141877,
+          "ratio": 1.1977
+        },
+        {
+          "year": 2026,
+          "x": 6171,
+          "y": 7385,
+          "ratio": 1.1967
+        }
+      ],
+      "month_of_year": [
+        {
+          "month_of_year": 1,
+          "x": 19759,
+          "y": 23739,
+          "ratio_raw": 1.2014,
+          "ratio_fitted": 1.1982
+        },
+        {
+          "month_of_year": 2,
+          "x": 15582,
+          "y": 18282,
+          "ratio_raw": 1.1733,
+          "ratio_fitted": 1.1806
+        },
+        {
+          "month_of_year": 3,
+          "x": 20710,
+          "y": 24434,
+          "ratio_raw": 1.1798,
+          "ratio_fitted": 1.1795
+        },
+        {
+          "month_of_year": 4,
+          "x": 12399,
+          "y": 14998,
+          "ratio_raw": 1.2096,
+          "ratio_fitted": 1.2023
+        },
+        {
+          "month_of_year": 5,
+          "x": 10714,
+          "y": 13179,
+          "ratio_raw": 1.2301,
+          "ratio_fitted": 1.2334
+        },
+        {
+          "month_of_year": 6,
+          "x": 15840,
+          "y": 19687,
+          "ratio_raw": 1.2429,
+          "ratio_fitted": 1.2465
+        },
+        {
+          "month_of_year": 7,
+          "x": 25760,
+          "y": 31747,
+          "ratio_raw": 1.2324,
+          "ratio_fitted": 1.2301
+        },
+        {
+          "month_of_year": 8,
+          "x": 72909,
+          "y": 87447,
+          "ratio_raw": 1.1994,
+          "ratio_fitted": 1.1999
+        },
+        {
+          "month_of_year": 9,
+          "x": 56705,
+          "y": 67057,
+          "ratio_raw": 1.1826,
+          "ratio_fitted": 1.1817
+        },
+        {
+          "month_of_year": 10,
+          "x": 36538,
+          "y": 43342,
+          "ratio_raw": 1.1862,
+          "ratio_fitted": 1.1867
+        },
+        {
+          "month_of_year": 11,
+          "x": 17776,
+          "y": 21327,
+          "ratio_raw": 1.1998,
+          "ratio_fitted": 1.2036
+        },
+        {
+          "month_of_year": 12,
+          "x": 10841,
+          "y": 13186,
+          "ratio_raw": 1.2163,
+          "ratio_fitted": 1.2105
+        }
+      ],
+      "window_days": 1037,
+      "window_start": "2023-03-01",
+      "window_end": "2026-02-04"
+    },
+    {
+      "from": "Terra+Aqua+NOAA20+NOAA21",
+      "to": "Terra+Aqua+SNPP+NOAA20+NOAA21",
+      "ratio_total": 1.17401,
+      "ratio_fitted_by_month": [
+        1.1701,
+        1.1676,
+        1.1738,
+        1.1876,
+        1.1992,
+        1.199,
+        1.1865,
+        1.1715,
+        1.1643,
+        1.167,
+        1.173,
+        1.1743
+      ],
+      "ratio_ci_by_month": [
+        [
+          1.1573,
+          1.1896
+        ],
+        [
+          1.1534,
+          1.1879
+        ],
+        [
+          1.159,
+          1.1919
+        ],
+        [
+          1.1732,
+          1.2046
+        ],
+        [
+          1.184,
+          1.2158
+        ],
+        [
+          1.1827,
+          1.217
+        ],
+        [
+          1.1687,
+          1.2059
+        ],
+        [
+          1.1566,
+          1.1914
+        ],
+        [
+          1.1497,
+          1.1818
+        ],
+        [
+          1.1517,
+          1.1854
+        ],
+        [
+          1.1567,
+          1.1887
+        ],
+        [
+          1.1607,
+          1.19
+        ]
+      ],
+      "n_months": 45,
+      "sum_x": 382717,
+      "sum_y": 449313,
+      "selected_method": "month_of_year/harmonic",
+      "cross_validation": {
+        "global": {
+          "monthly_mape_pct": 1.87,
+          "monthly_wape_pct": 1.74,
+          "total_bias_pct": 0.66,
+          "n_test_months": 23
+        },
+        "month_of_year/none": {
+          "monthly_mape_pct": 3.11,
+          "monthly_wape_pct": 2.69,
+          "total_bias_pct": 1.3,
+          "n_test_months": 23
+        },
+        "month_of_year/moving_average": {
+          "monthly_mape_pct": 2.89,
+          "monthly_wape_pct": 2.43,
+          "total_bias_pct": 1.13,
+          "n_test_months": 23
+        },
+        "month_of_year/harmonic": {
+          "monthly_mape_pct": 2.99,
+          "monthly_wape_pct": 2.51,
+          "total_bias_pct": 1.12,
+          "n_test_months": 23
+        }
+      },
+      "yearly": [
+        {
+          "year": 2023,
+          "x": 84708,
+          "y": 101735,
+          "ratio": 1.201
+        },
+        {
+          "year": 2024,
+          "x": 109856,
+          "y": 127428,
+          "ratio": 1.16
+        },
+        {
+          "year": 2025,
+          "x": 122559,
+          "y": 141877,
+          "ratio": 1.1576
+        },
+        {
+          "year": 2026,
+          "x": 65594,
+          "y": 78273,
+          "ratio": 1.1933
+        }
+      ],
+      "month_of_year": [
+        {
+          "month_of_year": 1,
+          "x": 20213,
+          "y": 23739,
+          "ratio_raw": 1.1744,
+          "ratio_fitted": 1.1701
+        },
+        {
+          "month_of_year": 2,
+          "x": 20369,
+          "y": 23636,
+          "ratio_raw": 1.1604,
+          "ratio_fitted": 1.1676
+        },
+        {
+          "month_of_year": 3,
+          "x": 25690,
+          "y": 30207,
+          "ratio_raw": 1.1758,
+          "ratio_fitted": 1.1738
+        },
+        {
+          "month_of_year": 4,
+          "x": 14502,
+          "y": 17246,
+          "ratio_raw": 1.1892,
+          "ratio_fitted": 1.1876
+        },
+        {
+          "month_of_year": 5,
+          "x": 15454,
+          "y": 18559,
+          "ratio_raw": 1.2009,
+          "ratio_fitted": 1.1992
+        },
+        {
+          "month_of_year": 6,
+          "x": 19759,
+          "y": 23610,
+          "ratio_raw": 1.1949,
+          "ratio_fitted": 1.199
+        },
+        {
+          "month_of_year": 7,
+          "x": 33329,
+          "y": 39593,
+          "ratio_raw": 1.1879,
+          "ratio_fitted": 1.1865
+        },
+        {
+          "month_of_year": 8,
+          "x": 82909,
+          "y": 97120,
+          "ratio_raw": 1.1714,
+          "ratio_fitted": 1.1715
+        },
+        {
+          "month_of_year": 9,
+          "x": 78652,
+          "y": 91584,
+          "ratio_raw": 1.1644,
+          "ratio_fitted": 1.1643
+        },
+        {
+          "month_of_year": 10,
+          "x": 42176,
+          "y": 49250,
+          "ratio_raw": 1.1677,
+          "ratio_fitted": 1.167
+        },
+        {
+          "month_of_year": 11,
+          "x": 18487,
+          "y": 21583,
+          "ratio_raw": 1.1675,
+          "ratio_fitted": 1.173
+        },
+        {
+          "month_of_year": 12,
+          "x": 11177,
+          "y": 13186,
+          "ratio_raw": 1.1797,
+          "ratio_fitted": 1.1743
+        }
+      ],
+      "window_days": 1292,
+      "window_start": "2023-03-01",
+      "window_end": "2026-11-02"
+    },
+    {
+      "from": "Terra+SNPP+NOAA20+NOAA21",
+      "to": "Terra+Aqua+SNPP+NOAA20+NOAA21",
+      "ratio_total": 1.0717,
+      "ratio_fitted_by_month": [
+        1.035,
+        1.0438,
+        1.0553,
+        1.0622,
+        1.0649,
+        1.0693,
+        1.0785,
+        1.0876,
+        1.0874,
+        1.0738,
+        1.0531,
+        1.0375
+      ],
+      "ratio_ci_by_month": [
+        [
+          1.0284,
+          1.0435
+        ],
+        [
+          1.0351,
+          1.0561
+        ],
+        [
+          1.0429,
+          1.07
+        ],
+        [
+          1.0486,
+          1.0772
+        ],
+        [
+          1.0538,
+          1.0759
+        ],
+        [
+          1.0597,
+          1.079
+        ],
+        [
+          1.0665,
+          1.0909
+        ],
+        [
+          1.0757,
+          1.1007
+        ],
+        [
+          1.0765,
+          1.0992
+        ],
+        [
+          1.064,
+          1.0858
+        ],
+        [
+          1.0422,
+          1.0641
+        ],
+        [
+          1.028,
+          1.0467
+        ]
+      ],
+      "n_months": 45,
+      "sum_x": 419251,
+      "sum_y": 449313,
+      "selected_method": "month_of_year/harmonic",
+      "cross_validation": {
+        "global": {
+          "monthly_mape_pct": 2.13,
+          "monthly_wape_pct": 2.77,
+          "total_bias_pct": -1.91,
+          "n_test_months": 23
+        },
+        "month_of_year/none": {
+          "monthly_mape_pct": 2.3,
+          "monthly_wape_pct": 2.34,
+          "total_bias_pct": -2.24,
+          "n_test_months": 23
+        },
+        "month_of_year/moving_average": {
+          "monthly_mape_pct": 2.22,
+          "monthly_wape_pct": 2.36,
+          "total_bias_pct": -2.31,
+          "n_test_months": 23
+        },
+        "month_of_year/harmonic": {
+          "monthly_mape_pct": 2.27,
+          "monthly_wape_pct": 2.34,
+          "total_bias_pct": -2.34,
+          "n_test_months": 23
+        }
+      },
+      "yearly": [
+        {
+          "year": 2023,
+          "x": 96457,
+          "y": 101735,
+          "ratio": 1.0547
+        },
+        {
+          "year": 2024,
+          "x": 119391,
+          "y": 127428,
+          "ratio": 1.0673
+        },
+        {
+          "year": 2025,
+          "x": 131310,
+          "y": 141877,
+          "ratio": 1.0805
+        },
+        {
+          "year": 2026,
+          "x": 72093,
+          "y": 78273,
+          "ratio": 1.0857
+        }
+      ],
+      "month_of_year": [
+        {
+          "month_of_year": 1,
+          "x": 22909,
+          "y": 23739,
+          "ratio_raw": 1.0362,
+          "ratio_fitted": 1.035
+        },
+        {
+          "month_of_year": 2,
+          "x": 22683,
+          "y": 23636,
+          "ratio_raw": 1.042,
+          "ratio_fitted": 1.0438
+        },
+        {
+          "month_of_year": 3,
+          "x": 28703,
+          "y": 30207,
+          "ratio_raw": 1.0524,
+          "ratio_fitted": 1.0553
+        },
+        {
+          "month_of_year": 4,
+          "x": 16157,
+          "y": 17246,
+          "ratio_raw": 1.0674,
+          "ratio_fitted": 1.0622
+        },
+        {
+          "month_of_year": 5,
+          "x": 17395,
+          "y": 18559,
+          "ratio_raw": 1.0669,
+          "ratio_fitted": 1.0649
+        },
+        {
+          "month_of_year": 6,
+          "x": 22144,
+          "y": 23610,
+          "ratio_raw": 1.0662,
+          "ratio_fitted": 1.0693
+        },
+        {
+          "month_of_year": 7,
+          "x": 36649,
+          "y": 39593,
+          "ratio_raw": 1.0803,
+          "ratio_fitted": 1.0785
+        },
+        {
+          "month_of_year": 8,
+          "x": 89508,
+          "y": 97120,
+          "ratio_raw": 1.085,
+          "ratio_fitted": 1.0876
+        },
+        {
+          "month_of_year": 9,
+          "x": 83863,
+          "y": 91584,
+          "ratio_raw": 1.0921,
+          "ratio_fitted": 1.0874
+        },
+        {
+          "month_of_year": 10,
+          "x": 46095,
+          "y": 49250,
+          "ratio_raw": 1.0684,
+          "ratio_fitted": 1.0738
+        },
+        {
+          "month_of_year": 11,
+          "x": 20536,
+          "y": 21583,
+          "ratio_raw": 1.051,
+          "ratio_fitted": 1.0531
+        },
+        {
+          "month_of_year": 12,
+          "x": 12609,
+          "y": 13186,
+          "ratio_raw": 1.0458,
+          "ratio_fitted": 1.0375
+        }
+      ],
+      "window_days": 1292,
+      "window_start": "2023-03-01",
+      "window_end": "2026-11-02"
+    }
+  ],
+  "factors": [
+    {
+      "active_mask": 1,
+      "epoch_id": "Terra",
+      "month_of_year": 1,
+      "n_days": 598,
+      "k_factor": 9.026475923327672,
+      "k_ci_low": 8.200351219732404,
+      "k_ci_high": 9.811420181159574,
+      "calibration_path": "[Terra+Aqua+SNPP+NOAA20 | Terra+Aqua+SNPP+NOAA20+NOAA21] -> [Terra+Aqua+SNPP | Terra+Aqua+SNPP+NOAA20] -> [Terra+Aqua | Terra+Aqua+SNPP] -> [Terra | Terra+Aqua]"
+    },
+    {
+      "active_mask": 1,
+      "epoch_id": "Terra",
+      "month_of_year": 2,
+      "n_days": 598,
+      "k_factor": 9.698009370835987,
+      "k_ci_low": 8.956597598759242,
+      "k_ci_high": 10.451924432416762,
+      "calibration_path": "[Terra+Aqua+SNPP+NOAA20 | Terra+Aqua+SNPP+NOAA20+NOAA21] -> [Terra+Aqua+SNPP | Terra+Aqua+SNPP+NOAA20] -> [Terra+Aqua | Terra+Aqua+SNPP] -> [Terra | Terra+Aqua]"
+    },
+    {
+      "active_mask": 1,
+      "epoch_id": "Terra",
+      "month_of_year": 3,
+      "n_days": 598,
+      "k_factor": 12.171655639877924,
+      "k_ci_low": 11.148678873406801,
+      "k_ci_high": 13.244366669100993,
+      "calibration_path": "[Terra+Aqua+SNPP+NOAA20 | Terra+Aqua+SNPP+NOAA20+NOAA21] -> [Terra+Aqua+SNPP | Terra+Aqua+SNPP+NOAA20] -> [Terra+Aqua | Terra+Aqua+SNPP] -> [Terra | Terra+Aqua]"
+    },
+    {
+      "active_mask": 1,
+      "epoch_id": "Terra",
+      "month_of_year": 4,
+      "n_days": 598,
+      "k_factor": 17.544773873898677,
+      "k_ci_low": 15.821796443458531,
+      "k_ci_high": 19.218742333526674,
+      "calibration_path": "[Terra+Aqua+SNPP+NOAA20 | Terra+Aqua+SNPP+NOAA20+NOAA21] -> [Terra+Aqua+SNPP | Terra+Aqua+SNPP+NOAA20] -> [Terra+Aqua | Terra+Aqua+SNPP] -> [Terra | Terra+Aqua]"
+    },
+    {
+      "active_mask": 1,
+      "epoch_id": "Terra",
+      "month_of_year": 5,
+      "n_days": 598,
+      "k_factor": 24.390041772907228,
+      "k_ci_low": 21.624712363219597,
+      "k_ci_high": 26.741127666540542,
+      "calibration_path": "[Terra+Aqua+SNPP+NOAA20 | Terra+Aqua+SNPP+NOAA20+NOAA21] -> [Terra+Aqua+SNPP | Terra+Aqua+SNPP+NOAA20] -> [Terra+Aqua | Terra+Aqua+SNPP] -> [Terra | Terra+Aqua]"
+    },
+    {
+      "active_mask": 1,
+      "epoch_id": "Terra",
+      "month_of_year": 6,
+      "n_days": 598,
+      "k_factor": 26.5356150508839,
+      "k_ci_low": 22.98195191411203,
+      "k_ci_high": 29.02443662728971,
+      "calibration_path": "[Terra+Aqua+SNPP+NOAA20 | Terra+Aqua+SNPP+NOAA20+NOAA21] -> [Terra+Aqua+SNPP | Terra+Aqua+SNPP+NOAA20] -> [Terra+Aqua | Terra+Aqua+SNPP] -> [Terra | Terra+Aqua]"
+    },
+    {
+      "active_mask": 1,
+      "epoch_id": "Terra",
+      "month_of_year": 7,
+      "n_days": 598,
+      "k_factor": 21.140735479566477,
+      "k_ci_low": 18.82961151233711,
+      "k_ci_high": 23.035335896910276,
+      "calibration_path": "[Terra+Aqua+SNPP+NOAA20 | Terra+Aqua+SNPP+NOAA20+NOAA21] -> [Terra+Aqua+SNPP | Terra+Aqua+SNPP+NOAA20] -> [Terra+Aqua | Terra+Aqua+SNPP] -> [Terra | Terra+Aqua]"
+    },
+    {
+      "active_mask": 1,
+      "epoch_id": "Terra",
+      "month_of_year": 8,
+      "n_days": 598,
+      "k_factor": 14.153014225886556,
+      "k_ci_low": 13.170364151954054,
+      "k_ci_high": 15.677381362723446,
+      "calibration_path": "[Terra+Aqua+SNPP+NOAA20 | Terra+Aqua+SNPP+NOAA20+NOAA21] -> [Terra+Aqua+SNPP | Terra+Aqua+SNPP+NOAA20] -> [Terra+Aqua | Terra+Aqua+SNPP] -> [Terra | Terra+Aqua]"
+    },
+    {
+      "active_mask": 1,
+      "epoch_id": "Terra",
+      "month_of_year": 9,
+      "n_days": 598,
+      "k_factor": 10.002124153193938,
+      "k_ci_low": 9.257126640032032,
+      "k_ci_high": 11.196219649962405,
+      "calibration_path": "[Terra+Aqua+SNPP+NOAA20 | Terra+Aqua+SNPP+NOAA20+NOAA21] -> [Terra+Aqua+SNPP | Terra+Aqua+SNPP+NOAA20] -> [Terra+Aqua | Terra+Aqua+SNPP] -> [Terra | Terra+Aqua]"
+    },
+    {
+      "active_mask": 1,
+      "epoch_id": "Terra",
+      "month_of_year": 10,
+      "n_days": 598,
+      "k_factor": 8.556797522381567,
+      "k_ci_low": 7.969978525885486,
+      "k_ci_high": 9.412590310111101,
+      "calibration_path": "[Terra+Aqua+SNPP+NOAA20 | Terra+Aqua+SNPP+NOAA20+NOAA21] -> [Terra+Aqua+SNPP | Terra+Aqua+SNPP+NOAA20] -> [Terra+Aqua | Terra+Aqua+SNPP] -> [Terra | Terra+Aqua]"
+    },
+    {
+      "active_mask": 1,
+      "epoch_id": "Terra",
+      "month_of_year": 11,
+      "n_days": 598,
+      "k_factor": 8.557625249577296,
+      "k_ci_low": 7.9557112556832665,
+      "k_ci_high": 9.106362277386157,
+      "calibration_path": "[Terra+Aqua+SNPP+NOAA20 | Terra+Aqua+SNPP+NOAA20+NOAA21] -> [Terra+Aqua+SNPP | Terra+Aqua+SNPP+NOAA20] -> [Terra+Aqua | Terra+Aqua+SNPP] -> [Terra | Terra+Aqua]"
+    },
+    {
+      "active_mask": 1,
+      "epoch_id": "Terra",
+      "month_of_year": 12,
+      "n_days": 598,
+      "k_factor": 8.86801246390247,
+      "k_ci_low": 8.070817003582516,
+      "k_ci_high": 9.609996998833891,
+      "calibration_path": "[Terra+Aqua+SNPP+NOAA20 | Terra+Aqua+SNPP+NOAA20+NOAA21] -> [Terra+Aqua+SNPP | Terra+Aqua+SNPP+NOAA20] -> [Terra+Aqua | Terra+Aqua+SNPP] -> [Terra | Terra+Aqua]"
+    },
+    {
+      "active_mask": 2,
+      "epoch_id": "Aqua",
+      "month_of_year": 1,
+      "n_days": 21,
+      "k_factor": 7.665037998480699,
+      "k_ci_low": 7.051106790224784,
+      "k_ci_high": 8.284797032040583,
+      "calibration_path": "[Terra+Aqua+SNPP+NOAA20 | Terra+Aqua+SNPP+NOAA20+NOAA21] -> [Terra+Aqua+SNPP | Terra+Aqua+SNPP+NOAA20] -> [Terra+Aqua | Terra+Aqua+SNPP] -> [Aqua | Terra+Aqua]"
+    },
+    {
+      "active_mask": 2,
+      "epoch_id": "Aqua",
+      "month_of_year": 2,
+      "n_days": 21,
+      "k_factor": 7.384609013359596,
+      "k_ci_low": 6.910996343813176,
+      "k_ci_high": 7.909633988755277,
+      "calibration_path": "[Terra+Aqua+SNPP+NOAA20 | Terra+Aqua+SNPP+NOAA20+NOAA21] -> [Terra+Aqua+SNPP | Terra+Aqua+SNPP+NOAA20] -> [Terra+Aqua | Terra+Aqua+SNPP] -> [Aqua | Terra+Aqua]"
+    },
+    {
+      "active_mask": 2,
+      "epoch_id": "Aqua",
+      "month_of_year": 3,
+      "n_days": 21,
+      "k_factor": 7.322514156760304,
+      "k_ci_low": 7.008524515541746,
+      "k_ci_high": 7.7766124237133125,
+      "calibration_path": "[Terra+Aqua+SNPP+NOAA20 | Terra+Aqua+SNPP+NOAA20+NOAA21] -> [Terra+Aqua+SNPP | Terra+Aqua+SNPP+NOAA20] -> [Terra+Aqua | Terra+Aqua+SNPP] -> [Aqua | Terra+Aqua]"
+    },
+    {
+      "active_mask": 2,
+      "epoch_id": "Aqua",
+      "month_of_year": 4,
+      "n_days": 21,
+      "k_factor": 7.438824620927731,
+      "k_ci_low": 7.137933591105431,
+      "k_ci_high": 7.851067537211981,
+      "calibration_path": "[Terra+Aqua+SNPP+NOAA20 | Terra+Aqua+SNPP+NOAA20+NOAA21] -> [Terra+Aqua+SNPP | Terra+Aqua+SNPP+NOAA20] -> [Terra+Aqua | Terra+Aqua+SNPP] -> [Aqua | Terra+Aqua]"
+    },
+    {
+      "active_mask": 2,
+      "epoch_id": "Aqua",
+      "month_of_year": 5,
+      "n_days": 21,
+      "k_factor": 7.33451274877066,
+      "k_ci_low": 7.032858713818713,
+      "k_ci_high": 7.741222086331414,
+      "calibration_path": "[Terra+Aqua+SNPP+NOAA20 | Terra+Aqua+SNPP+NOAA20+NOAA21] -> [Terra+Aqua+SNPP | Terra+Aqua+SNPP+NOAA20] -> [Terra+Aqua | Terra+Aqua+SNPP] -> [Aqua | Terra+Aqua]"
+    },
+    {
+      "active_mask": 2,
+      "epoch_id": "Aqua",
+      "month_of_year": 6,
+      "n_days": 21,
+      "k_factor": 6.749017030316794,
+      "k_ci_low": 6.457296707112911,
+      "k_ci_high": 7.1067572524642095,
+      "calibration_path": "[Terra+Aqua+SNPP+NOAA20 | Terra+Aqua+SNPP+NOAA20+NOAA21] -> [Terra+Aqua+SNPP | Terra+Aqua+SNPP+NOAA20] -> [Terra+Aqua | Terra+Aqua+SNPP] -> [Aqua | Terra+Aqua]"
+    },
+    {
+      "active_mask": 2,
+      "epoch_id": "Aqua",
+      "month_of_year": 7,
+      "n_days": 21,
+      "k_factor": 5.9673851974719945,
+      "k_ci_low": 5.751454409881865,
+      "k_ci_high": 6.23894209235762,
+      "calibration_path": "[Terra+Aqua+SNPP+NOAA20 | Terra+Aqua+SNPP+NOAA20+NOAA21] -> [Terra+Aqua+SNPP | Terra+Aqua+SNPP+NOAA20] -> [Terra+Aqua | Terra+Aqua+SNPP] -> [Aqua | Terra+Aqua]"
+    },
+    {
+      "active_mask": 2,
+      "epoch_id": "Aqua",
+      "month_of_year": 8,
+      "n_days": 21,
+      "k_factor": 5.507825766118576,
+      "k_ci_low": 5.320214887975298,
+      "k_ci_high": 5.734065705151691,
+      "calibration_path": "[Terra+Aqua+SNPP+NOAA20 | Terra+Aqua+SNPP+NOAA20+NOAA21] -> [Terra+Aqua+SNPP | Terra+Aqua+SNPP+NOAA20] -> [Terra+Aqua | Terra+Aqua+SNPP] -> [Aqua | Terra+Aqua]"
+    },
+    {
+      "active_mask": 2,
+      "epoch_id": "Aqua",
+      "month_of_year": 9,
+      "n_days": 21,
+      "k_factor": 5.660026229235176,
+      "k_ci_low": 5.416924523207278,
+      "k_ci_high": 5.958708174257941,
+      "calibration_path": "[Terra+Aqua+SNPP+NOAA20 | Terra+Aqua+SNPP+NOAA20+NOAA21] -> [Terra+Aqua+SNPP | Terra+Aqua+SNPP+NOAA20] -> [Terra+Aqua | Terra+Aqua+SNPP] -> [Aqua | Terra+Aqua]"
+    },
+    {
+      "active_mask": 2,
+      "epoch_id": "Aqua",
+      "month_of_year": 10,
+      "n_days": 21,
+      "k_factor": 6.384633813740957,
+      "k_ci_low": 6.072734243254405,
+      "k_ci_high": 6.715980759959241,
+      "calibration_path": "[Terra+Aqua+SNPP+NOAA20 | Terra+Aqua+SNPP+NOAA20+NOAA21] -> [Terra+Aqua+SNPP | Terra+Aqua+SNPP+NOAA20] -> [Terra+Aqua | Terra+Aqua+SNPP] -> [Aqua | Terra+Aqua]"
+    },
+    {
+      "active_mask": 2,
+      "epoch_id": "Aqua",
+      "month_of_year": 11,
+      "n_days": 21,
+      "k_factor": 7.282151855415667,
+      "k_ci_low": 6.933242840105308,
+      "k_ci_high": 7.674162337645439,
+      "calibration_path": "[Terra+Aqua+SNPP+NOAA20 | Terra+Aqua+SNPP+NOAA20+NOAA21] -> [Terra+Aqua+SNPP | Terra+Aqua+SNPP+NOAA20] -> [Terra+Aqua | Terra+Aqua+SNPP] -> [Aqua | Terra+Aqua]"
+    },
+    {
+      "active_mask": 2,
+      "epoch_id": "Aqua",
+      "month_of_year": 12,
+      "n_days": 21,
+      "k_factor": 7.766395634098019,
+      "k_ci_low": 7.225886818978463,
+      "k_ci_high": 8.334661672205327,
+      "calibration_path": "[Terra+Aqua+SNPP+NOAA20 | Terra+Aqua+SNPP+NOAA20+NOAA21] -> [Terra+Aqua+SNPP | Terra+Aqua+SNPP+NOAA20] -> [Terra+Aqua | Terra+Aqua+SNPP] -> [Aqua | Terra+Aqua]"
+    },
+    {
+      "active_mask": 3,
+      "epoch_id": "Terra+Aqua",
+      "month_of_year": 1,
+      "n_days": 3446,
+      "k_factor": 4.313096089885845,
+      "k_ci_low": 3.9848588130596743,
+      "k_ci_high": 4.604545891743026,
+      "calibration_path": "[Terra+Aqua+SNPP+NOAA20 | Terra+Aqua+SNPP+NOAA20+NOAA21] -> [Terra+Aqua+SNPP | Terra+Aqua+SNPP+NOAA20] -> [Terra+Aqua | Terra+Aqua+SNPP]"
+    },
+    {
+      "active_mask": 3,
+      "epoch_id": "Terra+Aqua",
+      "month_of_year": 2,
+      "n_days": 3446,
+      "k_factor": 4.327272548682335,
+      "k_ci_low": 4.074380296694317,
+      "k_ci_high": 4.58275645625506,
+      "calibration_path": "[Terra+Aqua+SNPP+NOAA20 | Terra+Aqua+SNPP+NOAA20+NOAA21] -> [Terra+Aqua+SNPP | Terra+Aqua+SNPP+NOAA20] -> [Terra+Aqua | Terra+Aqua+SNPP]"
+    },
+    {
+      "active_mask": 3,
+      "epoch_id": "Terra+Aqua",
+      "month_of_year": 3,
+      "n_days": 3446,
+      "k_factor": 4.660798381693508,
+      "k_ci_low": 4.50287724763737,
+      "k_ci_high": 4.918385711805307,
+      "calibration_path": "[Terra+Aqua+SNPP+NOAA20 | Terra+Aqua+SNPP+NOAA20+NOAA21] -> [Terra+Aqua+SNPP | Terra+Aqua+SNPP+NOAA20] -> [Terra+Aqua | Terra+Aqua+SNPP]"
+    },
+    {
+      "active_mask": 3,
+      "epoch_id": "Terra+Aqua",
+      "month_of_year": 4,
+      "n_days": 3446,
+      "k_factor": 5.2623800964094345,
+      "k_ci_low": 5.0835846111358105,
+      "k_ci_high": 5.53534093636489,
+      "calibration_path": "[Terra+Aqua+SNPP+NOAA20 | Terra+Aqua+SNPP+NOAA20+NOAA21] -> [Terra+Aqua+SNPP | Terra+Aqua+SNPP+NOAA20] -> [Terra+Aqua | Terra+Aqua+SNPP]"
+    },
+    {
+      "active_mask": 3,
+      "epoch_id": "Terra+Aqua",
+      "month_of_year": 5,
+      "n_days": 3446,
+      "k_factor": 5.689564306731573,
+      "k_ci_low": 5.48317291805256,
+      "k_ci_high": 5.992125212104964,
+      "calibration_path": "[Terra+Aqua+SNPP+NOAA20 | Terra+Aqua+SNPP+NOAA20+NOAA21] -> [Terra+Aqua+SNPP | Terra+Aqua+SNPP+NOAA20] -> [Terra+Aqua | Terra+Aqua+SNPP]"
+    },
+    {
+      "active_mask": 3,
+      "epoch_id": "Terra+Aqua",
+      "month_of_year": 6,
+      "n_days": 3446,
+      "k_factor": 5.465108146284978,
+      "k_ci_low": 5.260119484810378,
+      "k_ci_high": 5.7483862783291535,
+      "calibration_path": "[Terra+Aqua+SNPP+NOAA20 | Terra+Aqua+SNPP+NOAA20+NOAA21] -> [Terra+Aqua+SNPP | Terra+Aqua+SNPP+NOAA20] -> [Terra+Aqua | Terra+Aqua+SNPP]"
+    },
+    {
+      "active_mask": 3,
+      "epoch_id": "Terra+Aqua",
+      "month_of_year": 7,
+      "n_days": 3446,
+      "k_factor": 4.732930154954249,
+      "k_ci_low": 4.581647184920872,
+      "k_ci_high": 4.9296602706288,
+      "calibration_path": "[Terra+Aqua+SNPP+NOAA20 | Terra+Aqua+SNPP+NOAA20+NOAA21] -> [Terra+Aqua+SNPP | Terra+Aqua+SNPP+NOAA20] -> [Terra+Aqua | Terra+Aqua+SNPP]"
+    },
+    {
+      "active_mask": 3,
+      "epoch_id": "Terra+Aqua",
+      "month_of_year": 8,
+      "n_days": 3446,
+      "k_factor": 4.069917301553342,
+      "k_ci_low": 3.942311755127235,
+      "k_ci_high": 4.228253509164766,
+      "calibration_path": "[Terra+Aqua+SNPP+NOAA20 | Terra+Aqua+SNPP+NOAA20+NOAA21] -> [Terra+Aqua+SNPP | Terra+Aqua+SNPP+NOAA20] -> [Terra+Aqua | Terra+Aqua+SNPP]"
+    },
+    {
+      "active_mask": 3,
+      "epoch_id": "Terra+Aqua",
+      "month_of_year": 9,
+      "n_days": 3446,
+      "k_factor": 3.8194176798319734,
+      "k_ci_low": 3.6608341913275813,
+      "k_ci_high": 4.015045663670362,
+      "calibration_path": "[Terra+Aqua+SNPP+NOAA20 | Terra+Aqua+SNPP+NOAA20+NOAA21] -> [Terra+Aqua+SNPP | Terra+Aqua+SNPP+NOAA20] -> [Terra+Aqua | Terra+Aqua+SNPP]"
+    },
+    {
+      "active_mask": 3,
+      "epoch_id": "Terra+Aqua",
+      "month_of_year": 10,
+      "n_days": 3446,
+      "k_factor": 3.9632574823583955,
+      "k_ci_low": 3.779400874615099,
+      "k_ci_high": 4.149124240229438,
+      "calibration_path": "[Terra+Aqua+SNPP+NOAA20 | Terra+Aqua+SNPP+NOAA20+NOAA21] -> [Terra+Aqua+SNPP | Terra+Aqua+SNPP+NOAA20] -> [Terra+Aqua | Terra+Aqua+SNPP]"
+    },
+    {
+      "active_mask": 3,
+      "epoch_id": "Terra+Aqua",
+      "month_of_year": 11,
+      "n_days": 3446,
+      "k_factor": 4.248884115398905,
+      "k_ci_low": 4.054882579226157,
+      "k_ci_high": 4.445849159204188,
+      "calibration_path": "[Terra+Aqua+SNPP+NOAA20 | Terra+Aqua+SNPP+NOAA20+NOAA21] -> [Terra+Aqua+SNPP | Terra+Aqua+SNPP+NOAA20] -> [Terra+Aqua | Terra+Aqua+SNPP]"
+    },
+    {
+      "active_mask": 3,
+      "epoch_id": "Terra+Aqua",
+      "month_of_year": 12,
+      "n_days": 3446,
+      "k_factor": 4.376203408242643,
+      "k_ci_low": 4.078297042370392,
+      "k_ci_high": 4.660447890985035,
+      "calibration_path": "[Terra+Aqua+SNPP+NOAA20 | Terra+Aqua+SNPP+NOAA20+NOAA21] -> [Terra+Aqua+SNPP | Terra+Aqua+SNPP+NOAA20] -> [Terra+Aqua | Terra+Aqua+SNPP]"
+    },
+    {
+      "active_mask": 5,
+      "epoch_id": "Terra+SNPP",
+      "month_of_year": 1,
+      "n_days": 1,
+      "k_factor": 1.7926468293976066,
+      "k_ci_low": 1.7593132302149463,
+      "k_ci_high": 1.8303601397006428,
+      "calibration_path": "[Terra+Aqua+SNPP+NOAA20 | Terra+Aqua+SNPP+NOAA20+NOAA21] -> [Terra+Aqua+SNPP | Terra+Aqua+SNPP+NOAA20] -> [Terra+SNPP | Terra+Aqua+SNPP]"
+    },
+    {
+      "active_mask": 5,
+      "epoch_id": "Terra+SNPP",
+      "month_of_year": 2,
+      "n_days": 1,
+      "k_factor": 1.7609310376883403,
+      "k_ci_low": 1.7230255601004738,
+      "k_ci_high": 1.8141028753685027,
+      "calibration_path": "[Terra+Aqua+SNPP+NOAA20 | Terra+Aqua+SNPP+NOAA20+NOAA21] -> [Terra+Aqua+SNPP | Terra+Aqua+SNPP+NOAA20] -> [Terra+SNPP | Terra+Aqua+SNPP]"
+    },
+    {
+      "active_mask": 5,
+      "epoch_id": "Terra+SNPP",
+      "month_of_year": 3,
+      "n_days": 1,
+      "k_factor": 1.8029059352267305,
+      "k_ci_low": 1.767436495953633,
+      "k_ci_high": 1.8708643414235864,
+      "calibration_path": "[Terra+Aqua+SNPP+NOAA20 | Terra+Aqua+SNPP+NOAA20+NOAA21] -> [Terra+Aqua+SNPP | Terra+Aqua+SNPP+NOAA20] -> [Terra+SNPP | Terra+Aqua+SNPP]"
+    },
+    {
+      "active_mask": 5,
+      "epoch_id": "Terra+SNPP",
+      "month_of_year": 4,
+      "n_days": 1,
+      "k_factor": 1.9436376149997827,
+      "k_ci_low": 1.9043182020498213,
+      "k_ci_high": 2.0192370777433633,
+      "calibration_path": "[Terra+Aqua+SNPP+NOAA20 | Terra+Aqua+SNPP+NOAA20+NOAA21] -> [Terra+Aqua+SNPP | Terra+Aqua+SNPP+NOAA20] -> [Terra+SNPP | Terra+Aqua+SNPP]"
+    },
+    {
+      "active_mask": 5,
+      "epoch_id": "Terra+SNPP",
+      "month_of_year": 5,
+      "n_days": 1,
+      "k_factor": 2.119914025375399,
+      "k_ci_low": 2.075269173108968,
+      "k_ci_high": 2.18156359634089,
+      "calibration_path": "[Terra+Aqua+SNPP+NOAA20 | Terra+Aqua+SNPP+NOAA20+NOAA21] -> [Terra+Aqua+SNPP | Terra+Aqua+SNPP+NOAA20] -> [Terra+SNPP | Terra+Aqua+SNPP]"
+    },
+    {
+      "active_mask": 5,
+      "epoch_id": "Terra+SNPP",
+      "month_of_year": 6,
+      "n_days": 1,
+      "k_factor": 2.203968677331147,
+      "k_ci_low": 2.1590128134692566,
+      "k_ci_high": 2.2516152135528578,
+      "calibration_path": "[Terra+Aqua+SNPP+NOAA20 | Terra+Aqua+SNPP+NOAA20+NOAA21] -> [Terra+Aqua+SNPP | Terra+Aqua+SNPP+NOAA20] -> [Terra+SNPP | Terra+Aqua+SNPP]"
+    },
+    {
+      "active_mask": 5,
+      "epoch_id": "Terra+SNPP",
+      "month_of_year": 7,
+      "n_days": 1,
+      "k_factor": 2.1260926727711507,
+      "k_ci_low": 2.078826682816871,
+      "k_ci_high": 2.1738932975967673,
+      "calibration_path": "[Terra+Aqua+SNPP+NOAA20 | Terra+Aqua+SNPP+NOAA20+NOAA21] -> [Terra+Aqua+SNPP | Terra+Aqua+SNPP+NOAA20] -> [Terra+SNPP | Terra+Aqua+SNPP]"
+    },
+    {
+      "active_mask": 5,
+      "epoch_id": "Terra+SNPP",
+      "month_of_year": 8,
+      "n_days": 1,
+      "k_factor": 1.9599234981519962,
+      "k_ci_low": 1.9179927870578155,
+      "k_ci_high": 1.9985316455583841,
+      "calibration_path": "[Terra+Aqua+SNPP+NOAA20 | Terra+Aqua+SNPP+NOAA20+NOAA21] -> [Terra+Aqua+SNPP | Terra+Aqua+SNPP+NOAA20] -> [Terra+SNPP | Terra+Aqua+SNPP]"
+    },
+    {
+      "active_mask": 5,
+      "epoch_id": "Terra+SNPP",
+      "month_of_year": 9,
+      "n_days": 1,
+      "k_factor": 1.829870626220771,
+      "k_ci_low": 1.7937489785924254,
+      "k_ci_high": 1.8598887059658107,
+      "calibration_path": "[Terra+Aqua+SNPP+NOAA20 | Terra+Aqua+SNPP+NOAA20+NOAA21] -> [Terra+Aqua+SNPP | Terra+Aqua+SNPP+NOAA20] -> [Terra+SNPP | Terra+Aqua+SNPP]"
+    },
+    {
+      "active_mask": 5,
+      "epoch_id": "Terra+SNPP",
+      "month_of_year": 10,
+      "n_days": 1,
+      "k_factor": 1.7917837966877719,
+      "k_ci_low": 1.7524820644293415,
+      "k_ci_high": 1.8359309505986716,
+      "calibration_path": "[Terra+Aqua+SNPP+NOAA20 | Terra+Aqua+SNPP+NOAA20+NOAA21] -> [Terra+Aqua+SNPP | Terra+Aqua+SNPP+NOAA20] -> [Terra+SNPP | Terra+Aqua+SNPP]"
+    },
+    {
+      "active_mask": 5,
+      "epoch_id": "Terra+SNPP",
+      "month_of_year": 11,
+      "n_days": 1,
+      "k_factor": 1.8141705475124608,
+      "k_ci_low": 1.7688356936326863,
+      "k_ci_high": 1.864864379571799,
+      "calibration_path": "[Terra+Aqua+SNPP+NOAA20 | Terra+Aqua+SNPP+NOAA20+NOAA21] -> [Terra+Aqua+SNPP | Terra+Aqua+SNPP+NOAA20] -> [Terra+SNPP | Terra+Aqua+SNPP]"
+    },
+    {
+      "active_mask": 5,
+      "epoch_id": "Terra+SNPP",
+      "month_of_year": 12,
+      "n_days": 1,
+      "k_factor": 1.8254878892341764,
+      "k_ci_low": 1.7864226107000822,
+      "k_ci_high": 1.870003081978277,
+      "calibration_path": "[Terra+Aqua+SNPP+NOAA20 | Terra+Aqua+SNPP+NOAA20+NOAA21] -> [Terra+Aqua+SNPP | Terra+Aqua+SNPP+NOAA20] -> [Terra+SNPP | Terra+Aqua+SNPP]"
+    },
+    {
+      "active_mask": 6,
+      "epoch_id": "Aqua+SNPP",
+      "month_of_year": 1,
+      "n_days": 11,
+      "k_factor": 1.9166757680901558,
+      "k_ci_low": 1.876802508072893,
+      "k_ci_high": 1.958558356935099,
+      "calibration_path": "[Terra+Aqua+SNPP+NOAA20 | Terra+Aqua+SNPP+NOAA20+NOAA21] -> [Terra+Aqua+SNPP | Terra+Aqua+SNPP+NOAA20] -> [Aqua+SNPP | Terra+Aqua+SNPP]"
+    },
+    {
+      "active_mask": 6,
+      "epoch_id": "Aqua+SNPP",
+      "month_of_year": 2,
+      "n_days": 11,
+      "k_factor": 1.8385340919589934,
+      "k_ci_low": 1.7956540204380076,
+      "k_ci_high": 1.8919498851662808,
+      "calibration_path": "[Terra+Aqua+SNPP+NOAA20 | Terra+Aqua+SNPP+NOAA20+NOAA21] -> [Terra+Aqua+SNPP | Terra+Aqua+SNPP+NOAA20] -> [Aqua+SNPP | Terra+Aqua+SNPP]"
+    },
+    {
+      "active_mask": 6,
+      "epoch_id": "Aqua+SNPP",
+      "month_of_year": 3,
+      "n_days": 11,
+      "k_factor": 1.8011811111620835,
+      "k_ci_low": 1.7640171540393745,
+      "k_ci_high": 1.8708197807453895,
+      "calibration_path": "[Terra+Aqua+SNPP+NOAA20 | Terra+Aqua+SNPP+NOAA20+NOAA21] -> [Terra+Aqua+SNPP | Terra+Aqua+SNPP+NOAA20] -> [Aqua+SNPP | Terra+Aqua+SNPP]"
+    },
+    {
+      "active_mask": 6,
+      "epoch_id": "Aqua+SNPP",
+      "month_of_year": 4,
+      "n_days": 11,
+      "k_factor": 1.84331653828129,
+      "k_ci_low": 1.803129537975879,
+      "k_ci_high": 1.9161191453433857,
+      "calibration_path": "[Terra+Aqua+SNPP+NOAA20 | Terra+Aqua+SNPP+NOAA20+NOAA21] -> [Terra+Aqua+SNPP | Terra+Aqua+SNPP+NOAA20] -> [Aqua+SNPP | Terra+Aqua+SNPP]"
+    },
+    {
+      "active_mask": 6,
+      "epoch_id": "Aqua+SNPP",
+      "month_of_year": 5,
+      "n_days": 11,
+      "k_factor": 1.9264206132360135,
+      "k_ci_low": 1.8885832256727149,
+      "k_ci_high": 1.9811881551169521,
+      "calibration_path": "[Terra+Aqua+SNPP+NOAA20 | Terra+Aqua+SNPP+NOAA20+NOAA21] -> [Terra+Aqua+SNPP | Terra+Aqua+SNPP+NOAA20] -> [Aqua+SNPP | Terra+Aqua+SNPP]"
+    },
+    {
+      "active_mask": 6,
+      "epoch_id": "Aqua+SNPP",
+      "month_of_year": 6,
+      "n_days": 11,
+      "k_factor": 1.9647918199856347,
+      "k_ci_low": 1.9255819782124477,
+      "k_ci_high": 2.008603867937628,
+      "calibration_path": "[Terra+Aqua+SNPP+NOAA20 | Terra+Aqua+SNPP+NOAA20+NOAA21] -> [Terra+Aqua+SNPP | Terra+Aqua+SNPP+NOAA20] -> [Aqua+SNPP | Terra+Aqua+SNPP]"
+    },
+    {
+      "active_mask": 6,
+      "epoch_id": "Aqua+SNPP",
+      "month_of_year": 7,
+      "n_days": 11,
+      "k_factor": 1.9124738148582483,
+      "k_ci_low": 1.8712671889262775,
+      "k_ci_high": 1.9558024592624108,
+      "calibration_path": "[Terra+Aqua+SNPP+NOAA20 | Terra+Aqua+SNPP+NOAA20+NOAA21] -> [Terra+Aqua+SNPP | Terra+Aqua+SNPP+NOAA20] -> [Aqua+SNPP | Terra+Aqua+SNPP]"
+    },
+    {
+      "active_mask": 6,
+      "epoch_id": "Aqua+SNPP",
+      "month_of_year": 8,
+      "n_days": 11,
+      "k_factor": 1.8192229164480698,
+      "k_ci_low": 1.7819966399008067,
+      "k_ci_high": 1.8550564992651173,
+      "calibration_path": "[Terra+Aqua+SNPP+NOAA20 | Terra+Aqua+SNPP+NOAA20+NOAA21] -> [Terra+Aqua+SNPP | Terra+Aqua+SNPP+NOAA20] -> [Aqua+SNPP | Terra+Aqua+SNPP]"
+    },
+    {
+      "active_mask": 6,
+      "epoch_id": "Aqua+SNPP",
+      "month_of_year": 9,
+      "n_days": 11,
+      "k_factor": 1.7724245348151297,
+      "k_ci_low": 1.7382352345236776,
+      "k_ci_high": 1.8011973067089317,
+      "calibration_path": "[Terra+Aqua+SNPP+NOAA20 | Terra+Aqua+SNPP+NOAA20+NOAA21] -> [Terra+Aqua+SNPP | Terra+Aqua+SNPP+NOAA20] -> [Aqua+SNPP | Terra+Aqua+SNPP]"
+    },
+    {
+      "active_mask": 6,
+      "epoch_id": "Aqua+SNPP",
+      "month_of_year": 10,
+      "n_days": 11,
+      "k_factor": 1.8116708363897633,
+      "k_ci_low": 1.7704846124486997,
+      "k_ci_high": 1.8567013399813046,
+      "calibration_path": "[Terra+Aqua+SNPP+NOAA20 | Terra+Aqua+SNPP+NOAA20+NOAA21] -> [Terra+Aqua+SNPP | Terra+Aqua+SNPP+NOAA20] -> [Aqua+SNPP | Terra+Aqua+SNPP]"
+    },
+    {
+      "active_mask": 6,
+      "epoch_id": "Aqua+SNPP",
+      "month_of_year": 11,
+      "n_days": 11,
+      "k_factor": 1.8998295592509633,
+      "k_ci_low": 1.8497661721045782,
+      "k_ci_high": 1.954214478502459,
+      "calibration_path": "[Terra+Aqua+SNPP+NOAA20 | Terra+Aqua+SNPP+NOAA20+NOAA21] -> [Terra+Aqua+SNPP | Terra+Aqua+SNPP+NOAA20] -> [Aqua+SNPP | Terra+Aqua+SNPP]"
+    },
+    {
+      "active_mask": 6,
+      "epoch_id": "Aqua+SNPP",
+      "month_of_year": 12,
+      "n_days": 11,
+      "k_factor": 1.9515589946801797,
+      "k_ci_low": 1.902496259136902,
+      "k_ci_high": 2.001328073470124,
+      "calibration_path": "[Terra+Aqua+SNPP+NOAA20 | Terra+Aqua+SNPP+NOAA20+NOAA21] -> [Terra+Aqua+SNPP | Terra+Aqua+SNPP+NOAA20] -> [Aqua+SNPP | Terra+Aqua+SNPP]"
+    },
+    {
+      "active_mask": 7,
+      "epoch_id": "Terra+Aqua+SNPP",
+      "month_of_year": 1,
+      "n_days": 2250,
+      "k_factor": 1.6441619549488058,
+      "k_ci_low": 1.614001021166077,
+      "k_ci_high": 1.6764943387547881,
+      "calibration_path": "[Terra+Aqua+SNPP+NOAA20 | Terra+Aqua+SNPP+NOAA20+NOAA21] -> [Terra+Aqua+SNPP | Terra+Aqua+SNPP+NOAA20]"
+    },
+    {
+      "active_mask": 7,
+      "epoch_id": "Terra+Aqua+SNPP",
+      "month_of_year": 2,
+      "n_days": 2250,
+      "k_factor": 1.6096285998199364,
+      "k_ci_low": 1.5770448348904293,
+      "k_ci_high": 1.6560420240640181,
+      "calibration_path": "[Terra+Aqua+SNPP+NOAA20 | Terra+Aqua+SNPP+NOAA20+NOAA21] -> [Terra+Aqua+SNPP | Terra+Aqua+SNPP+NOAA20]"
+    },
+    {
+      "active_mask": 7,
+      "epoch_id": "Terra+Aqua+SNPP",
+      "month_of_year": 3,
+      "n_days": 2250,
+      "k_factor": 1.6352892447417198,
+      "k_ci_low": 1.6048848655557337,
+      "k_ci_high": 1.6975990998626143,
+      "calibration_path": "[Terra+Aqua+SNPP+NOAA20 | Terra+Aqua+SNPP+NOAA20+NOAA21] -> [Terra+Aqua+SNPP | Terra+Aqua+SNPP+NOAA20]"
+    },
+    {
+      "active_mask": 7,
+      "epoch_id": "Terra+Aqua+SNPP",
+      "month_of_year": 4,
+      "n_days": 2250,
+      "k_factor": 1.7346540158451949,
+      "k_ci_low": 1.7002982383857836,
+      "k_ci_high": 1.8000470143939828,
+      "calibration_path": "[Terra+Aqua+SNPP+NOAA20 | Terra+Aqua+SNPP+NOAA20+NOAA21] -> [Terra+Aqua+SNPP | Terra+Aqua+SNPP+NOAA20]"
+    },
+    {
+      "active_mask": 7,
+      "epoch_id": "Terra+Aqua+SNPP",
+      "month_of_year": 5,
+      "n_days": 2250,
+      "k_factor": 1.8477632823676613,
+      "k_ci_low": 1.8124141708554995,
+      "k_ci_high": 1.8980241515137728,
+      "calibration_path": "[Terra+Aqua+SNPP+NOAA20 | Terra+Aqua+SNPP+NOAA20+NOAA21] -> [Terra+Aqua+SNPP | Terra+Aqua+SNPP+NOAA20]"
+    },
+    {
+      "active_mask": 7,
+      "epoch_id": "Terra+Aqua+SNPP",
+      "month_of_year": 6,
+      "n_days": 2250,
+      "k_factor": 1.8791970199597543,
+      "k_ci_low": 1.8453263345236288,
+      "k_ci_high": 1.9192371217306006,
+      "calibration_path": "[Terra+Aqua+SNPP+NOAA20 | Terra+Aqua+SNPP+NOAA20+NOAA21] -> [Terra+Aqua+SNPP | Terra+Aqua+SNPP+NOAA20]"
+    },
+    {
+      "active_mask": 7,
+      "epoch_id": "Terra+Aqua+SNPP",
+      "month_of_year": 7,
+      "n_days": 2250,
+      "k_factor": 1.7977352548685688,
+      "k_ci_low": 1.7587762733192462,
+      "k_ci_high": 1.8371878074469778,
+      "calibration_path": "[Terra+Aqua+SNPP+NOAA20 | Terra+Aqua+SNPP+NOAA20+NOAA21] -> [Terra+Aqua+SNPP | Terra+Aqua+SNPP+NOAA20]"
+    },
+    {
+      "active_mask": 7,
+      "epoch_id": "Terra+Aqua+SNPP",
+      "month_of_year": 8,
+      "n_days": 2250,
+      "k_factor": 1.6754578389052057,
+      "k_ci_low": 1.641003140453503,
+      "k_ci_high": 1.7061710194636883,
+      "calibration_path": "[Terra+Aqua+SNPP+NOAA20 | Terra+Aqua+SNPP+NOAA20+NOAA21] -> [Terra+Aqua+SNPP | Terra+Aqua+SNPP+NOAA20]"
+    },
+    {
+      "active_mask": 7,
+      "epoch_id": "Terra+Aqua+SNPP",
+      "month_of_year": 9,
+      "n_days": 2250,
+      "k_factor": 1.6031149897601489,
+      "k_ci_low": 1.573161501858591,
+      "k_ci_high": 1.6270682889790082,
+      "calibration_path": "[Terra+Aqua+SNPP+NOAA20 | Terra+Aqua+SNPP+NOAA20+NOAA21] -> [Terra+Aqua+SNPP | Terra+Aqua+SNPP+NOAA20]"
+    },
+    {
+      "active_mask": 7,
+      "epoch_id": "Terra+Aqua+SNPP",
+      "month_of_year": 10,
+      "n_days": 2250,
+      "k_factor": 1.6101176375586732,
+      "k_ci_low": 1.57504447246404,
+      "k_ci_high": 1.6474808150026676,
+      "calibration_path": "[Terra+Aqua+SNPP+NOAA20 | Terra+Aqua+SNPP+NOAA20+NOAA21] -> [Terra+Aqua+SNPP | Terra+Aqua+SNPP+NOAA20]"
+    },
+    {
+      "active_mask": 7,
+      "epoch_id": "Terra+Aqua+SNPP",
+      "month_of_year": 11,
+      "n_days": 2250,
+      "k_factor": 1.6566672490163543,
+      "k_ci_low": 1.6160556834983213,
+      "k_ci_high": 1.7011940611472087,
+      "calibration_path": "[Terra+Aqua+SNPP+NOAA20 | Terra+Aqua+SNPP+NOAA20+NOAA21] -> [Terra+Aqua+SNPP | Terra+Aqua+SNPP+NOAA20]"
+    },
+    {
+      "active_mask": 7,
+      "epoch_id": "Terra+Aqua+SNPP",
+      "month_of_year": 12,
+      "n_days": 2250,
+      "k_factor": 1.6757500182286358,
+      "k_ci_low": 1.6392922699613406,
+      "k_ci_high": 1.7153775690599364,
+      "calibration_path": "[Terra+Aqua+SNPP+NOAA20 | Terra+Aqua+SNPP+NOAA20+NOAA21] -> [Terra+Aqua+SNPP | Terra+Aqua+SNPP+NOAA20]"
+    },
+    {
+      "active_mask": 11,
+      "epoch_id": "Terra+Aqua+NOAA20",
+      "month_of_year": 1,
+      "n_days": 15,
+      "k_factor": 1.5762365842568642,
+      "k_ci_low": 1.5460446824937206,
+      "k_ci_high": 1.6370817968528737,
+      "calibration_path": "[Terra+Aqua+SNPP+NOAA20 | Terra+Aqua+SNPP+NOAA20+NOAA21] -> [Terra+Aqua+NOAA20 | Terra+Aqua+SNPP+NOAA20]"
+    },
+    {
+      "active_mask": 11,
+      "epoch_id": "Terra+Aqua+NOAA20",
+      "month_of_year": 2,
+      "n_days": 15,
+      "k_factor": 1.5731723484852222,
+      "k_ci_low": 1.5429551574360723,
+      "k_ci_high": 1.6469673010750112,
+      "calibration_path": "[Terra+Aqua+SNPP+NOAA20 | Terra+Aqua+SNPP+NOAA20+NOAA21] -> [Terra+Aqua+NOAA20 | Terra+Aqua+SNPP+NOAA20]"
+    },
+    {
+      "active_mask": 11,
+      "epoch_id": "Terra+Aqua+NOAA20",
+      "month_of_year": 3,
+      "n_days": 15,
+      "k_factor": 1.623291274393259,
+      "k_ci_low": 1.5908173270601587,
+      "k_ci_high": 1.6840883226077887,
+      "calibration_path": "[Terra+Aqua+SNPP+NOAA20 | Terra+Aqua+SNPP+NOAA20+NOAA21] -> [Terra+Aqua+NOAA20 | Terra+Aqua+SNPP+NOAA20]"
+    },
+    {
+      "active_mask": 11,
+      "epoch_id": "Terra+Aqua+NOAA20",
+      "month_of_year": 4,
+      "n_days": 15,
+      "k_factor": 1.7117857955106754,
+      "k_ci_low": 1.6716415300060596,
+      "k_ci_high": 1.7582979492416124,
+      "calibration_path": "[Terra+Aqua+SNPP+NOAA20 | Terra+Aqua+SNPP+NOAA20+NOAA21] -> [Terra+Aqua+NOAA20 | Terra+Aqua+SNPP+NOAA20]"
+    },
+    {
+      "active_mask": 11,
+      "epoch_id": "Terra+Aqua+NOAA20",
+      "month_of_year": 5,
+      "n_days": 15,
+      "k_factor": 1.7749086704387869,
+      "k_ci_low": 1.7264779904680427,
+      "k_ci_high": 1.8228091488511433,
+      "calibration_path": "[Terra+Aqua+SNPP+NOAA20 | Terra+Aqua+SNPP+NOAA20+NOAA21] -> [Terra+Aqua+NOAA20 | Terra+Aqua+SNPP+NOAA20]"
+    },
+    {
+      "active_mask": 11,
+      "epoch_id": "Terra+Aqua+NOAA20",
+      "month_of_year": 6,
+      "n_days": 15,
+      "k_factor": 1.7545391721478523,
+      "k_ci_low": 1.7063862693322551,
+      "k_ci_high": 1.7987716348401335,
+      "calibration_path": "[Terra+Aqua+SNPP+NOAA20 | Terra+Aqua+SNPP+NOAA20+NOAA21] -> [Terra+Aqua+NOAA20 | Terra+Aqua+SNPP+NOAA20]"
+    },
+    {
+      "active_mask": 11,
+      "epoch_id": "Terra+Aqua+NOAA20",
+      "month_of_year": 7,
+      "n_days": 15,
+      "k_factor": 1.6639364378318957,
+      "k_ci_low": 1.6224973884182023,
+      "k_ci_high": 1.7047093660495736,
+      "calibration_path": "[Terra+Aqua+SNPP+NOAA20 | Terra+Aqua+SNPP+NOAA20+NOAA21] -> [Terra+Aqua+NOAA20 | Terra+Aqua+SNPP+NOAA20]"
+    },
+    {
+      "active_mask": 11,
+      "epoch_id": "Terra+Aqua+NOAA20",
+      "month_of_year": 8,
+      "n_days": 15,
+      "k_factor": 1.5734358893254374,
+      "k_ci_low": 1.5391147583021398,
+      "k_ci_high": 1.6109554906183723,
+      "calibration_path": "[Terra+Aqua+SNPP+NOAA20 | Terra+Aqua+SNPP+NOAA20+NOAA21] -> [Terra+Aqua+NOAA20 | Terra+Aqua+SNPP+NOAA20]"
+    },
+    {
+      "active_mask": 11,
+      "epoch_id": "Terra+Aqua+NOAA20",
+      "month_of_year": 9,
+      "n_days": 15,
+      "k_factor": 1.5381798857773672,
+      "k_ci_low": 1.5065630963016965,
+      "k_ci_high": 1.5715666686169036,
+      "calibration_path": "[Terra+Aqua+SNPP+NOAA20 | Terra+Aqua+SNPP+NOAA20+NOAA21] -> [Terra+Aqua+NOAA20 | Terra+Aqua+SNPP+NOAA20]"
+    },
+    {
+      "active_mask": 11,
+      "epoch_id": "Terra+Aqua+NOAA20",
+      "month_of_year": 10,
+      "n_days": 15,
+      "k_factor": 1.5590683997320445,
+      "k_ci_low": 1.526431990692215,
+      "k_ci_high": 1.5907296570396756,
+      "calibration_path": "[Terra+Aqua+SNPP+NOAA20 | Terra+Aqua+SNPP+NOAA20+NOAA21] -> [Terra+Aqua+NOAA20 | Terra+Aqua+SNPP+NOAA20]"
+    },
+    {
+      "active_mask": 11,
+      "epoch_id": "Terra+Aqua+NOAA20",
+      "month_of_year": 11,
+      "n_days": 15,
+      "k_factor": 1.5932038807716509,
+      "k_ci_low": 1.561041229909567,
+      "k_ci_high": 1.629659157593638,
+      "calibration_path": "[Terra+Aqua+SNPP+NOAA20 | Terra+Aqua+SNPP+NOAA20+NOAA21] -> [Terra+Aqua+NOAA20 | Terra+Aqua+SNPP+NOAA20]"
+    },
+    {
+      "active_mask": 11,
+      "epoch_id": "Terra+Aqua+NOAA20",
+      "month_of_year": 12,
+      "n_days": 15,
+      "k_factor": 1.5977398667941396,
+      "k_ci_low": 1.567219353345209,
+      "k_ci_high": 1.6427155451798352,
+      "calibration_path": "[Terra+Aqua+SNPP+NOAA20 | Terra+Aqua+SNPP+NOAA20+NOAA21] -> [Terra+Aqua+NOAA20 | Terra+Aqua+SNPP+NOAA20]"
+    },
+    {
+      "active_mask": 13,
+      "epoch_id": "Terra+SNPP+NOAA20",
+      "month_of_year": 1,
+      "n_days": 21,
+      "k_factor": 1.2437155248957137,
+      "k_ci_low": 1.2309288408018515,
+      "k_ci_high": 1.2585168977513372,
+      "calibration_path": "[Terra+Aqua+SNPP+NOAA20 | Terra+Aqua+SNPP+NOAA20+NOAA21] -> [Terra+SNPP+NOAA20 | Terra+Aqua+SNPP+NOAA20]"
+    },
+    {
+      "active_mask": 13,
+      "epoch_id": "Terra+SNPP+NOAA20",
+      "month_of_year": 2,
+      "n_days": 21,
+      "k_factor": 1.2355984286905917,
+      "k_ci_low": 1.2246273944591393,
+      "k_ci_high": 1.2511622657596868,
+      "calibration_path": "[Terra+Aqua+SNPP+NOAA20 | Terra+Aqua+SNPP+NOAA20+NOAA21] -> [Terra+SNPP+NOAA20 | Terra+Aqua+SNPP+NOAA20]"
+    },
+    {
+      "active_mask": 13,
+      "epoch_id": "Terra+SNPP+NOAA20",
+      "month_of_year": 3,
+      "n_days": 21,
+      "k_factor": 1.2373989892956898,
+      "k_ci_low": 1.2246954912753971,
+      "k_ci_high": 1.2537706346755224,
+      "calibration_path": "[Terra+Aqua+SNPP+NOAA20 | Terra+Aqua+SNPP+NOAA20+NOAA21] -> [Terra+SNPP+NOAA20 | Terra+Aqua+SNPP+NOAA20]"
+    },
+    {
+      "active_mask": 13,
+      "epoch_id": "Terra+SNPP+NOAA20",
+      "month_of_year": 4,
+      "n_days": 21,
+      "k_factor": 1.2575848828750071,
+      "k_ci_low": 1.2425809515811341,
+      "k_ci_high": 1.278079044428013,
+      "calibration_path": "[Terra+Aqua+SNPP+NOAA20 | Terra+Aqua+SNPP+NOAA20+NOAA21] -> [Terra+SNPP+NOAA20 | Terra+Aqua+SNPP+NOAA20]"
+    },
+    {
+      "active_mask": 13,
+      "epoch_id": "Terra+SNPP+NOAA20",
+      "month_of_year": 5,
+      "n_days": 21,
+      "k_factor": 1.287346915980153,
+      "k_ci_low": 1.2727897973290105,
+      "k_ci_high": 1.308783358253043,
+      "calibration_path": "[Terra+Aqua+SNPP+NOAA20 | Terra+Aqua+SNPP+NOAA20+NOAA21] -> [Terra+SNPP+NOAA20 | Terra+Aqua+SNPP+NOAA20]"
+    },
+    {
+      "active_mask": 13,
+      "epoch_id": "Terra+SNPP+NOAA20",
+      "month_of_year": 6,
+      "n_days": 21,
+      "k_factor": 1.3055480580640335,
+      "k_ci_low": 1.2879726915584462,
+      "k_ci_high": 1.3248240698640683,
+      "calibration_path": "[Terra+Aqua+SNPP+NOAA20 | Terra+Aqua+SNPP+NOAA20+NOAA21] -> [Terra+SNPP+NOAA20 | Terra+Aqua+SNPP+NOAA20]"
+    },
+    {
+      "active_mask": 13,
+      "epoch_id": "Terra+SNPP+NOAA20",
+      "month_of_year": 7,
+      "n_days": 21,
+      "k_factor": 1.297498521658829,
+      "k_ci_low": 1.274949170122684,
+      "k_ci_high": 1.319487206810415,
+      "calibration_path": "[Terra+Aqua+SNPP+NOAA20 | Terra+Aqua+SNPP+NOAA20+NOAA21] -> [Terra+SNPP+NOAA20 | Terra+Aqua+SNPP+NOAA20]"
+    },
+    {
+      "active_mask": 13,
+      "epoch_id": "Terra+SNPP+NOAA20",
+      "month_of_year": 8,
+      "n_days": 21,
+      "k_factor": 1.269809901783235,
+      "k_ci_low": 1.2482580463499848,
+      "k_ci_high": 1.2889136096203022,
+      "calibration_path": "[Terra+Aqua+SNPP+NOAA20 | Terra+Aqua+SNPP+NOAA20+NOAA21] -> [Terra+SNPP+NOAA20 | Terra+Aqua+SNPP+NOAA20]"
+    },
+    {
+      "active_mask": 13,
+      "epoch_id": "Terra+SNPP+NOAA20",
+      "month_of_year": 9,
+      "n_days": 21,
+      "k_factor": 1.2435648052669104,
+      "k_ci_low": 1.2250288826331457,
+      "k_ci_high": 1.257693706061691,
+      "calibration_path": "[Terra+Aqua+SNPP+NOAA20 | Terra+Aqua+SNPP+NOAA20+NOAA21] -> [Terra+SNPP+NOAA20 | Terra+Aqua+SNPP+NOAA20]"
+    },
+    {
+      "active_mask": 13,
+      "epoch_id": "Terra+SNPP+NOAA20",
+      "month_of_year": 10,
+      "n_days": 21,
+      "k_factor": 1.234283332388148,
+      "k_ci_low": 1.214494518172029,
+      "k_ci_high": 1.2526818230073617,
+      "calibration_path": "[Terra+Aqua+SNPP+NOAA20 | Terra+Aqua+SNPP+NOAA20+NOAA21] -> [Terra+SNPP+NOAA20 | Terra+Aqua+SNPP+NOAA20]"
+    },
+    {
+      "active_mask": 13,
+      "epoch_id": "Terra+SNPP+NOAA20",
+      "month_of_year": 11,
+      "n_days": 21,
+      "k_factor": 1.240133519485181,
+      "k_ci_low": 1.2187590310989957,
+      "k_ci_high": 1.2625191572687127,
+      "calibration_path": "[Terra+Aqua+SNPP+NOAA20 | Terra+Aqua+SNPP+NOAA20+NOAA21] -> [Terra+SNPP+NOAA20 | Terra+Aqua+SNPP+NOAA20]"
+    },
+    {
+      "active_mask": 13,
+      "epoch_id": "Terra+SNPP+NOAA20",
+      "month_of_year": 12,
+      "n_days": 21,
+      "k_factor": 1.2468352079773504,
+      "k_ci_low": 1.2298573503103611,
+      "k_ci_high": 1.2647356561166774,
+      "calibration_path": "[Terra+Aqua+SNPP+NOAA20 | Terra+Aqua+SNPP+NOAA20+NOAA21] -> [Terra+SNPP+NOAA20 | Terra+Aqua+SNPP+NOAA20]"
+    },
+    {
+      "active_mask": 14,
+      "epoch_id": "Aqua+SNPP+NOAA20",
+      "month_of_year": 1,
+      "n_days": 14,
+      "k_factor": 1.270579095871179,
+      "k_ci_low": 1.2562066626869288,
+      "k_ci_high": 1.2919052076799014,
+      "calibration_path": "[Terra+Aqua+SNPP+NOAA20 | Terra+Aqua+SNPP+NOAA20+NOAA21] -> [Aqua+SNPP+NOAA20 | Terra+Aqua+SNPP+NOAA20]"
+    },
+    {
+      "active_mask": 14,
+      "epoch_id": "Aqua+SNPP+NOAA20",
+      "month_of_year": 2,
+      "n_days": 14,
+      "k_factor": 1.2584693700052978,
+      "k_ci_low": 1.247001595478697,
+      "k_ci_high": 1.2779219631255065,
+      "calibration_path": "[Terra+Aqua+SNPP+NOAA20 | Terra+Aqua+SNPP+NOAA20+NOAA21] -> [Aqua+SNPP+NOAA20 | Terra+Aqua+SNPP+NOAA20]"
+    },
+    {
+      "active_mask": 14,
+      "epoch_id": "Aqua+SNPP+NOAA20",
+      "month_of_year": 3,
+      "n_days": 14,
+      "k_factor": 1.2505436332582862,
+      "k_ci_low": 1.2363356343394099,
+      "k_ci_high": 1.268002608904629,
+      "calibration_path": "[Terra+Aqua+SNPP+NOAA20 | Terra+Aqua+SNPP+NOAA20+NOAA21] -> [Aqua+SNPP+NOAA20 | Terra+Aqua+SNPP+NOAA20]"
+    },
+    {
+      "active_mask": 14,
+      "epoch_id": "Aqua+SNPP+NOAA20",
+      "month_of_year": 4,
+      "n_days": 14,
+      "k_factor": 1.2518009783528934,
+      "k_ci_low": 1.2360378657594553,
+      "k_ci_high": 1.2719775460013714,
+      "calibration_path": "[Terra+Aqua+SNPP+NOAA20 | Terra+Aqua+SNPP+NOAA20+NOAA21] -> [Aqua+SNPP+NOAA20 | Terra+Aqua+SNPP+NOAA20]"
+    },
+    {
+      "active_mask": 14,
+      "epoch_id": "Aqua+SNPP+NOAA20",
+      "month_of_year": 5,
+      "n_days": 14,
+      "k_factor": 1.2570116653283983,
+      "k_ci_low": 1.2410102662669564,
+      "k_ci_high": 1.2781707106498366,
+      "calibration_path": "[Terra+Aqua+SNPP+NOAA20 | Terra+Aqua+SNPP+NOAA20+NOAA21] -> [Aqua+SNPP+NOAA20 | Terra+Aqua+SNPP+NOAA20]"
+    },
+    {
+      "active_mask": 14,
+      "epoch_id": "Aqua+SNPP+NOAA20",
+      "month_of_year": 6,
+      "n_days": 14,
+      "k_factor": 1.2569037882411085,
+      "k_ci_low": 1.2391855849930489,
+      "k_ci_high": 1.2762502274030036,
+      "calibration_path": "[Terra+Aqua+SNPP+NOAA20 | Terra+Aqua+SNPP+NOAA20+NOAA21] -> [Aqua+SNPP+NOAA20 | Terra+Aqua+SNPP+NOAA20]"
+    },
+    {
+      "active_mask": 14,
+      "epoch_id": "Aqua+SNPP+NOAA20",
+      "month_of_year": 7,
+      "n_days": 14,
+      "k_factor": 1.2485434853585118,
+      "k_ci_low": 1.226709972237657,
+      "k_ci_high": 1.269492626233548,
+      "calibration_path": "[Terra+Aqua+SNPP+NOAA20 | Terra+Aqua+SNPP+NOAA20+NOAA21] -> [Aqua+SNPP+NOAA20 | Terra+Aqua+SNPP+NOAA20]"
+    },
+    {
+      "active_mask": 14,
+      "epoch_id": "Aqua+SNPP+NOAA20",
+      "month_of_year": 8,
+      "n_days": 14,
+      "k_factor": 1.2391290688942753,
+      "k_ci_low": 1.2172043649111604,
+      "k_ci_high": 1.257548651485374,
+      "calibration_path": "[Terra+Aqua+SNPP+NOAA20 | Terra+Aqua+SNPP+NOAA20+NOAA21] -> [Aqua+SNPP+NOAA20 | Terra+Aqua+SNPP+NOAA20]"
+    },
+    {
+      "active_mask": 14,
+      "epoch_id": "Aqua+SNPP+NOAA20",
+      "month_of_year": 9,
+      "n_days": 14,
+      "k_factor": 1.2389304523106424,
+      "k_ci_low": 1.2196065781060812,
+      "k_ci_high": 1.2530501049538894,
+      "calibration_path": "[Terra+Aqua+SNPP+NOAA20 | Terra+Aqua+SNPP+NOAA20+NOAA21] -> [Aqua+SNPP+NOAA20 | Terra+Aqua+SNPP+NOAA20]"
+    },
+    {
+      "active_mask": 14,
+      "epoch_id": "Aqua+SNPP+NOAA20",
+      "month_of_year": 10,
+      "n_days": 14,
+      "k_factor": 1.2509595210114262,
+      "k_ci_low": 1.23005776208982,
+      "k_ci_high": 1.2704592659598974,
+      "calibration_path": "[Terra+Aqua+SNPP+NOAA20 | Terra+Aqua+SNPP+NOAA20+NOAA21] -> [Aqua+SNPP+NOAA20 | Terra+Aqua+SNPP+NOAA20]"
+    },
+    {
+      "active_mask": 14,
+      "epoch_id": "Aqua+SNPP+NOAA20",
+      "month_of_year": 11,
+      "n_days": 14,
+      "k_factor": 1.2673174630871853,
+      "k_ci_low": 1.2439433228155246,
+      "k_ci_high": 1.2944518359051025,
+      "calibration_path": "[Terra+Aqua+SNPP+NOAA20 | Terra+Aqua+SNPP+NOAA20+NOAA21] -> [Aqua+SNPP+NOAA20 | Terra+Aqua+SNPP+NOAA20]"
+    },
+    {
+      "active_mask": 14,
+      "epoch_id": "Aqua+SNPP+NOAA20",
+      "month_of_year": 12,
+      "n_days": 14,
+      "k_factor": 1.27566344238468,
+      "k_ci_low": 1.256510332873724,
+      "k_ci_high": 1.3031539390017595,
+      "calibration_path": "[Terra+Aqua+SNPP+NOAA20 | Terra+Aqua+SNPP+NOAA20+NOAA21] -> [Aqua+SNPP+NOAA20 | Terra+Aqua+SNPP+NOAA20]"
+    },
+    {
+      "active_mask": 15,
+      "epoch_id": "Terra+Aqua+SNPP+NOAA20",
+      "month_of_year": 1,
+      "n_days": 1747,
+      "k_factor": 1.1922628179948274,
+      "k_ci_low": 1.18106213704434,
+      "k_ci_high": 1.2060852224015506,
+      "calibration_path": "[Terra+Aqua+SNPP+NOAA20 | Terra+Aqua+SNPP+NOAA20+NOAA21]"
+    },
+    {
+      "active_mask": 15,
+      "epoch_id": "Terra+Aqua+SNPP+NOAA20",
+      "month_of_year": 2,
+      "n_days": 1747,
+      "k_factor": 1.181828398475899,
+      "k_ci_low": 1.173127827495118,
+      "k_ci_high": 1.1960058587293663,
+      "calibration_path": "[Terra+Aqua+SNPP+NOAA20 | Terra+Aqua+SNPP+NOAA20+NOAA21]"
+    },
+    {
+      "active_mask": 15,
+      "epoch_id": "Terra+Aqua+SNPP+NOAA20",
+      "month_of_year": 3,
+      "n_days": 1747,
+      "k_factor": 1.1803317855012592,
+      "k_ci_low": 1.16931482296017,
+      "k_ci_high": 1.195505305863228,
+      "calibration_path": "[Terra+Aqua+SNPP+NOAA20 | Terra+Aqua+SNPP+NOAA20+NOAA21]"
+    },
+    {
+      "active_mask": 15,
+      "epoch_id": "Terra+Aqua+SNPP+NOAA20",
+      "month_of_year": 4,
+      "n_days": 1747,
+      "k_factor": 1.1942440113325874,
+      "k_ci_low": 1.1803068219002988,
+      "k_ci_high": 1.213881207372496,
+      "calibration_path": "[Terra+Aqua+SNPP+NOAA20 | Terra+Aqua+SNPP+NOAA20+NOAA21]"
+    },
+    {
+      "active_mask": 15,
+      "epoch_id": "Terra+Aqua+SNPP+NOAA20",
+      "month_of_year": 5,
+      "n_days": 1747,
+      "k_factor": 1.2133571290840894,
+      "k_ci_low": 1.1997685028144276,
+      "k_ci_high": 1.2332339753895525,
+      "calibration_path": "[Terra+Aqua+SNPP+NOAA20 | Terra+Aqua+SNPP+NOAA20+NOAA21]"
+    },
+    {
+      "active_mask": 15,
+      "epoch_id": "Terra+Aqua+SNPP+NOAA20",
+      "month_of_year": 6,
+      "n_days": 1747,
+      "k_factor": 1.2194092658753932,
+      "k_ci_low": 1.2032473752880257,
+      "k_ci_high": 1.236817154805602,
+      "calibration_path": "[Terra+Aqua+SNPP+NOAA20 | Terra+Aqua+SNPP+NOAA20+NOAA21]"
+    },
+    {
+      "active_mask": 15,
+      "epoch_id": "Terra+Aqua+SNPP+NOAA20",
+      "month_of_year": 7,
+      "n_days": 1747,
+      "k_factor": 1.2044035802969917,
+      "k_ci_low": 1.182897747471062,
+      "k_ci_high": 1.2245438704309435,
+      "calibration_path": "[Terra+Aqua+SNPP+NOAA20 | Terra+Aqua+SNPP+NOAA20+NOAA21]"
+    },
+    {
+      "active_mask": 15,
+      "epoch_id": "Terra+Aqua+SNPP+NOAA20",
+      "month_of_year": 8,
+      "n_days": 1747,
+      "k_factor": 1.1796855793681356,
+      "k_ci_low": 1.1596635164053612,
+      "k_ci_high": 1.1963724949363448,
+      "calibration_path": "[Terra+Aqua+SNPP+NOAA20 | Terra+Aqua+SNPP+NOAA20+NOAA21]"
+    },
+    {
+      "active_mask": 15,
+      "epoch_id": "Terra+Aqua+SNPP+NOAA20",
+      "month_of_year": 9,
+      "n_days": 1747,
+      "k_factor": 1.1647667038629064,
+      "k_ci_low": 1.147834215342686,
+      "k_ci_high": 1.1773582626926111,
+      "calibration_path": "[Terra+Aqua+SNPP+NOAA20 | Terra+Aqua+SNPP+NOAA20+NOAA21]"
+    },
+    {
+      "active_mask": 15,
+      "epoch_id": "Terra+Aqua+SNPP+NOAA20",
+      "month_of_year": 10,
+      "n_days": 1747,
+      "k_factor": 1.1692185082904738,
+      "k_ci_low": 1.1506211904678973,
+      "k_ci_high": 1.1859779395573962,
+      "calibration_path": "[Terra+Aqua+SNPP+NOAA20 | Terra+Aqua+SNPP+NOAA20+NOAA21]"
+    },
+    {
+      "active_mask": 15,
+      "epoch_id": "Terra+Aqua+SNPP+NOAA20",
+      "month_of_year": 11,
+      "n_days": 1747,
+      "k_factor": 1.1852868149862028,
+      "k_ci_low": 1.1655886868411176,
+      "k_ci_high": 1.2063250529787521,
+      "calibration_path": "[Terra+Aqua+SNPP+NOAA20 | Terra+Aqua+SNPP+NOAA20+NOAA21]"
+    },
+    {
+      "active_mask": 15,
+      "epoch_id": "Terra+Aqua+SNPP+NOAA20",
+      "month_of_year": 12,
+      "n_days": 1747,
+      "k_factor": 1.1960249818863957,
+      "k_ci_low": 1.1802110317038137,
+      "k_ci_high": 1.2134040452864197,
+      "calibration_path": "[Terra+Aqua+SNPP+NOAA20 | Terra+Aqua+SNPP+NOAA20+NOAA21]"
+    },
+    {
+      "active_mask": 23,
+      "epoch_id": "Terra+Aqua+SNPP+NOAA21",
+      "month_of_year": 1,
+      "n_days": 7,
+      "k_factor": 1.1982093631960538,
+      "k_ci_low": 1.1898465575462442,
+      "k_ci_high": 1.209959089091043,
+      "calibration_path": "[Terra+Aqua+SNPP+NOAA21 | Terra+Aqua+SNPP+NOAA20+NOAA21]"
+    },
+    {
+      "active_mask": 23,
+      "epoch_id": "Terra+Aqua+SNPP+NOAA21",
+      "month_of_year": 2,
+      "n_days": 7,
+      "k_factor": 1.1806056175837665,
+      "k_ci_low": 1.172260878857556,
+      "k_ci_high": 1.192566528210671,
+      "calibration_path": "[Terra+Aqua+SNPP+NOAA21 | Terra+Aqua+SNPP+NOAA20+NOAA21]"
+    },
+    {
+      "active_mask": 23,
+      "epoch_id": "Terra+Aqua+SNPP+NOAA21",
+      "month_of_year": 3,
+      "n_days": 7,
+      "k_factor": 1.1795265321880795,
+      "k_ci_low": 1.1708204929287764,
+      "k_ci_high": 1.191218159500503,
+      "calibration_path": "[Terra+Aqua+SNPP+NOAA21 | Terra+Aqua+SNPP+NOAA20+NOAA21]"
+    },
+    {
+      "active_mask": 23,
+      "epoch_id": "Terra+Aqua+SNPP+NOAA21",
+      "month_of_year": 4,
+      "n_days": 7,
+      "k_factor": 1.2023427915250977,
+      "k_ci_low": 1.1954327116965295,
+      "k_ci_high": 1.212543958243521,
+      "calibration_path": "[Terra+Aqua+SNPP+NOAA21 | Terra+Aqua+SNPP+NOAA20+NOAA21]"
+    },
+    {
+      "active_mask": 23,
+      "epoch_id": "Terra+Aqua+SNPP+NOAA21",
+      "month_of_year": 5,
+      "n_days": 7,
+      "k_factor": 1.233426588076681,
+      "k_ci_low": 1.2261673099147707,
+      "k_ci_high": 1.2418440990407429,
+      "calibration_path": "[Terra+Aqua+SNPP+NOAA21 | Terra+Aqua+SNPP+NOAA20+NOAA21]"
+    },
+    {
+      "active_mask": 23,
+      "epoch_id": "Terra+Aqua+SNPP+NOAA21",
+      "month_of_year": 6,
+      "n_days": 7,
+      "k_factor": 1.2464880310253392,
+      "k_ci_low": 1.2393746928961,
+      "k_ci_high": 1.2534650016440207,
+      "calibration_path": "[Terra+Aqua+SNPP+NOAA21 | Terra+Aqua+SNPP+NOAA20+NOAA21]"
+    },
+    {
+      "active_mask": 23,
+      "epoch_id": "Terra+Aqua+SNPP+NOAA21",
+      "month_of_year": 7,
+      "n_days": 7,
+      "k_factor": 1.230116747442403,
+      "k_ci_low": 1.2254044427026207,
+      "k_ci_high": 1.2348975703143905,
+      "calibration_path": "[Terra+Aqua+SNPP+NOAA21 | Terra+Aqua+SNPP+NOAA20+NOAA21]"
+    },
+    {
+      "active_mask": 23,
+      "epoch_id": "Terra+Aqua+SNPP+NOAA21",
+      "month_of_year": 8,
+      "n_days": 7,
+      "k_factor": 1.199914441810182,
+      "k_ci_low": 1.197243143008675,
+      "k_ci_high": 1.2025654320335923,
+      "calibration_path": "[Terra+Aqua+SNPP+NOAA21 | Terra+Aqua+SNPP+NOAA20+NOAA21]"
+    },
+    {
+      "active_mask": 23,
+      "epoch_id": "Terra+Aqua+SNPP+NOAA21",
+      "month_of_year": 9,
+      "n_days": 7,
+      "k_factor": 1.1816725403034343,
+      "k_ci_low": 1.1798722495865714,
+      "k_ci_high": 1.1833756216128164,
+      "calibration_path": "[Terra+Aqua+SNPP+NOAA21 | Terra+Aqua+SNPP+NOAA20+NOAA21]"
+    },
+    {
+      "active_mask": 23,
+      "epoch_id": "Terra+Aqua+SNPP+NOAA21",
+      "month_of_year": 10,
+      "n_days": 7,
+      "k_factor": 1.1867252976570832,
+      "k_ci_low": 1.1818197399145223,
+      "k_ci_high": 1.1913623967098228,
+      "calibration_path": "[Terra+Aqua+SNPP+NOAA21 | Terra+Aqua+SNPP+NOAA20+NOAA21]"
+    },
+    {
+      "active_mask": 23,
+      "epoch_id": "Terra+Aqua+SNPP+NOAA21",
+      "month_of_year": 11,
+      "n_days": 7,
+      "k_factor": 1.2036192164917372,
+      "k_ci_low": 1.1948371132098656,
+      "k_ci_high": 1.2117608504940967,
+      "calibration_path": "[Terra+Aqua+SNPP+NOAA21 | Terra+Aqua+SNPP+NOAA20+NOAA21]"
+    },
+    {
+      "active_mask": 23,
+      "epoch_id": "Terra+Aqua+SNPP+NOAA21",
+      "month_of_year": 12,
+      "n_days": 7,
+      "k_factor": 1.2104993876465642,
+      "k_ci_low": 1.2005308009415319,
+      "k_ci_high": 1.2211061584228693,
+      "calibration_path": "[Terra+Aqua+SNPP+NOAA21 | Terra+Aqua+SNPP+NOAA20+NOAA21]"
+    },
+    {
+      "active_mask": 27,
+      "epoch_id": "Terra+Aqua+NOAA20+NOAA21",
+      "month_of_year": 1,
+      "n_days": 48,
+      "k_factor": 1.170080745527359,
+      "k_ci_low": 1.1572935243878228,
+      "k_ci_high": 1.1895828904460455,
+      "calibration_path": "[Terra+Aqua+NOAA20+NOAA21 | Terra+Aqua+SNPP+NOAA20+NOAA21]"
+    },
+    {
+      "active_mask": 27,
+      "epoch_id": "Terra+Aqua+NOAA20+NOAA21",
+      "month_of_year": 2,
+      "n_days": 48,
+      "k_factor": 1.1675885016211325,
+      "k_ci_low": 1.15342662122384,
+      "k_ci_high": 1.187941905382922,
+      "calibration_path": "[Terra+Aqua+NOAA20+NOAA21 | Terra+Aqua+SNPP+NOAA20+NOAA21]"
+    },
+    {
+      "active_mask": 27,
+      "epoch_id": "Terra+Aqua+NOAA20+NOAA21",
+      "month_of_year": 3,
+      "n_days": 48,
+      "k_factor": 1.1738100682380272,
+      "k_ci_low": 1.1589717218496554,
+      "k_ci_high": 1.191905461554278,
+      "calibration_path": "[Terra+Aqua+NOAA20+NOAA21 | Terra+Aqua+SNPP+NOAA20+NOAA21]"
+    },
+    {
+      "active_mask": 27,
+      "epoch_id": "Terra+Aqua+NOAA20+NOAA21",
+      "month_of_year": 4,
+      "n_days": 48,
+      "k_factor": 1.1875755988744325,
+      "k_ci_low": 1.1732038267650564,
+      "k_ci_high": 1.2045741033235202,
+      "calibration_path": "[Terra+Aqua+NOAA20+NOAA21 | Terra+Aqua+SNPP+NOAA20+NOAA21]"
+    },
+    {
+      "active_mask": 27,
+      "epoch_id": "Terra+Aqua+NOAA20+NOAA21",
+      "month_of_year": 5,
+      "n_days": 48,
+      "k_factor": 1.1992206361827764,
+      "k_ci_low": 1.1839884650765071,
+      "k_ci_high": 1.2158358807928744,
+      "calibration_path": "[Terra+Aqua+NOAA20+NOAA21 | Terra+Aqua+SNPP+NOAA20+NOAA21]"
+    },
+    {
+      "active_mask": 27,
+      "epoch_id": "Terra+Aqua+NOAA20+NOAA21",
+      "month_of_year": 6,
+      "n_days": 48,
+      "k_factor": 1.1989793681016458,
+      "k_ci_low": 1.182691205528871,
+      "k_ci_high": 1.2169696217870185,
+      "calibration_path": "[Terra+Aqua+NOAA20+NOAA21 | Terra+Aqua+SNPP+NOAA20+NOAA21]"
+    },
+    {
+      "active_mask": 27,
+      "epoch_id": "Terra+Aqua+NOAA20+NOAA21",
+      "month_of_year": 7,
+      "n_days": 48,
+      "k_factor": 1.186540939402792,
+      "k_ci_low": 1.1686872413038125,
+      "k_ci_high": 1.2059348585358134,
+      "calibration_path": "[Terra+Aqua+NOAA20+NOAA21 | Terra+Aqua+SNPP+NOAA20+NOAA21]"
+    },
+    {
+      "active_mask": 27,
+      "epoch_id": "Terra+Aqua+NOAA20+NOAA21",
+      "month_of_year": 8,
+      "n_days": 48,
+      "k_factor": 1.1715206857075244,
+      "k_ci_low": 1.1565505702290801,
+      "k_ci_high": 1.191420106295435,
+      "calibration_path": "[Terra+Aqua+NOAA20+NOAA21 | Terra+Aqua+SNPP+NOAA20+NOAA21]"
+    },
+    {
+      "active_mask": 27,
+      "epoch_id": "Terra+Aqua+NOAA20+NOAA21",
+      "month_of_year": 9,
+      "n_days": 48,
+      "k_factor": 1.1642868522092915,
+      "k_ci_low": 1.1496735173800967,
+      "k_ci_high": 1.1818000506732007,
+      "calibration_path": "[Terra+Aqua+NOAA20+NOAA21 | Terra+Aqua+SNPP+NOAA20+NOAA21]"
+    },
+    {
+      "active_mask": 27,
+      "epoch_id": "Terra+Aqua+NOAA20+NOAA21",
+      "month_of_year": 10,
+      "n_days": 48,
+      "k_factor": 1.167006835741015,
+      "k_ci_low": 1.1516596170038917,
+      "k_ci_high": 1.1854012857632379,
+      "calibration_path": "[Terra+Aqua+NOAA20+NOAA21 | Terra+Aqua+SNPP+NOAA20+NOAA21]"
+    },
+    {
+      "active_mask": 27,
+      "epoch_id": "Terra+Aqua+NOAA20+NOAA21",
+      "month_of_year": 11,
+      "n_days": 48,
+      "k_factor": 1.1729901401700216,
+      "k_ci_low": 1.1566863711460478,
+      "k_ci_high": 1.1887412705202685,
+      "calibration_path": "[Terra+Aqua+NOAA20+NOAA21 | Terra+Aqua+SNPP+NOAA20+NOAA21]"
+    },
+    {
+      "active_mask": 27,
+      "epoch_id": "Terra+Aqua+NOAA20+NOAA21",
+      "month_of_year": 12,
+      "n_days": 48,
+      "k_factor": 1.1742584451240383,
+      "k_ci_low": 1.1606963838121078,
+      "k_ci_high": 1.190001734217518,
+      "calibration_path": "[Terra+Aqua+NOAA20+NOAA21 | Terra+Aqua+SNPP+NOAA20+NOAA21]"
+    },
+    {
+      "active_mask": 29,
+      "epoch_id": "Terra+SNPP+NOAA20+NOAA21",
+      "month_of_year": 1,
+      "n_days": 6,
+      "k_factor": 1.0349760993006771,
+      "k_ci_low": 1.0283562858305122,
+      "k_ci_high": 1.0434530892648912,
+      "calibration_path": "[Terra+SNPP+NOAA20+NOAA21 | Terra+Aqua+SNPP+NOAA20+NOAA21]"
+    },
+    {
+      "active_mask": 29,
+      "epoch_id": "Terra+SNPP+NOAA20+NOAA21",
+      "month_of_year": 2,
+      "n_days": 6,
+      "k_factor": 1.043810291309303,
+      "k_ci_low": 1.0350935481847152,
+      "k_ci_high": 1.0560764977647052,
+      "calibration_path": "[Terra+SNPP+NOAA20+NOAA21 | Terra+Aqua+SNPP+NOAA20+NOAA21]"
+    },
+    {
+      "active_mask": 29,
+      "epoch_id": "Terra+SNPP+NOAA20+NOAA21",
+      "month_of_year": 3,
+      "n_days": 6,
+      "k_factor": 1.055287420635862,
+      "k_ci_low": 1.0429366405261589,
+      "k_ci_high": 1.0699705327420566,
+      "calibration_path": "[Terra+SNPP+NOAA20+NOAA21 | Terra+Aqua+SNPP+NOAA20+NOAA21]"
+    },
+    {
+      "active_mask": 29,
+      "epoch_id": "Terra+SNPP+NOAA20+NOAA21",
+      "month_of_year": 4,
+      "n_days": 6,
+      "k_factor": 1.0621600183306665,
+      "k_ci_low": 1.0485962166500549,
+      "k_ci_high": 1.0771988283245988,
+      "calibration_path": "[Terra+SNPP+NOAA20+NOAA21 | Terra+Aqua+SNPP+NOAA20+NOAA21]"
+    },
+    {
+      "active_mask": 29,
+      "epoch_id": "Terra+SNPP+NOAA20+NOAA21",
+      "month_of_year": 5,
+      "n_days": 6,
+      "k_factor": 1.064877270669986,
+      "k_ci_low": 1.0538393429881214,
+      "k_ci_high": 1.0758698434609888,
+      "calibration_path": "[Terra+SNPP+NOAA20+NOAA21 | Terra+Aqua+SNPP+NOAA20+NOAA21]"
+    },
+    {
+      "active_mask": 29,
+      "epoch_id": "Terra+SNPP+NOAA20+NOAA21",
+      "month_of_year": 6,
+      "n_days": 6,
+      "k_factor": 1.0692849959349746,
+      "k_ci_low": 1.059711934197886,
+      "k_ci_high": 1.0789671865939168,
+      "calibration_path": "[Terra+SNPP+NOAA20+NOAA21 | Terra+Aqua+SNPP+NOAA20+NOAA21]"
+    },
+    {
+      "active_mask": 29,
+      "epoch_id": "Terra+SNPP+NOAA20+NOAA21",
+      "month_of_year": 7,
+      "n_days": 6,
+      "k_factor": 1.0784658784012222,
+      "k_ci_low": 1.0664629037452136,
+      "k_ci_high": 1.0908906793366255,
+      "calibration_path": "[Terra+SNPP+NOAA20+NOAA21 | Terra+Aqua+SNPP+NOAA20+NOAA21]"
+    },
+    {
+      "active_mask": 29,
+      "epoch_id": "Terra+SNPP+NOAA20+NOAA21",
+      "month_of_year": 8,
+      "n_days": 6,
+      "k_factor": 1.0875961729300119,
+      "k_ci_low": 1.0756771670076,
+      "k_ci_high": 1.100651233058643,
+      "calibration_path": "[Terra+SNPP+NOAA20+NOAA21 | Terra+Aqua+SNPP+NOAA20+NOAA21]"
+    },
+    {
+      "active_mask": 29,
+      "epoch_id": "Terra+SNPP+NOAA20+NOAA21",
+      "month_of_year": 9,
+      "n_days": 6,
+      "k_factor": 1.0874392853758372,
+      "k_ci_low": 1.0765219037084222,
+      "k_ci_high": 1.0991971478984797,
+      "calibration_path": "[Terra+SNPP+NOAA20+NOAA21 | Terra+Aqua+SNPP+NOAA20+NOAA21]"
+    },
+    {
+      "active_mask": 29,
+      "epoch_id": "Terra+SNPP+NOAA20+NOAA21",
+      "month_of_year": 10,
+      "n_days": 6,
+      "k_factor": 1.0737912216374006,
+      "k_ci_low": 1.0639715572059703,
+      "k_ci_high": 1.0857665033683808,
+      "calibration_path": "[Terra+SNPP+NOAA20+NOAA21 | Terra+Aqua+SNPP+NOAA20+NOAA21]"
+    },
+    {
+      "active_mask": 29,
+      "epoch_id": "Terra+SNPP+NOAA20+NOAA21",
+      "month_of_year": 11,
+      "n_days": 6,
+      "k_factor": 1.053071177470475,
+      "k_ci_low": 1.042211815603539,
+      "k_ci_high": 1.0641431936506611,
+      "calibration_path": "[Terra+SNPP+NOAA20+NOAA21 | Terra+Aqua+SNPP+NOAA20+NOAA21]"
+    },
+    {
+      "active_mask": 29,
+      "epoch_id": "Terra+SNPP+NOAA20+NOAA21",
+      "month_of_year": 12,
+      "n_days": 6,
+      "k_factor": 1.0374741298956505,
+      "k_ci_low": 1.0280273914128568,
+      "k_ci_high": 1.0467133278499743,
+      "calibration_path": "[Terra+SNPP+NOAA20+NOAA21 | Terra+Aqua+SNPP+NOAA20+NOAA21]"
+    },
+    {
+      "active_mask": 31,
+      "epoch_id": "Terra+Aqua+SNPP+NOAA20+NOAA21",
+      "month_of_year": 1,
+      "n_days": 1292,
+      "k_factor": 1.0,
+      "k_ci_low": 1.0,
+      "k_ci_high": 1.0,
+      "calibration_path": "reference"
+    },
+    {
+      "active_mask": 31,
+      "epoch_id": "Terra+Aqua+SNPP+NOAA20+NOAA21",
+      "month_of_year": 2,
+      "n_days": 1292,
+      "k_factor": 1.0,
+      "k_ci_low": 1.0,
+      "k_ci_high": 1.0,
+      "calibration_path": "reference"
+    },
+    {
+      "active_mask": 31,
+      "epoch_id": "Terra+Aqua+SNPP+NOAA20+NOAA21",
+      "month_of_year": 3,
+      "n_days": 1292,
+      "k_factor": 1.0,
+      "k_ci_low": 1.0,
+      "k_ci_high": 1.0,
+      "calibration_path": "reference"
+    },
+    {
+      "active_mask": 31,
+      "epoch_id": "Terra+Aqua+SNPP+NOAA20+NOAA21",
+      "month_of_year": 4,
+      "n_days": 1292,
+      "k_factor": 1.0,
+      "k_ci_low": 1.0,
+      "k_ci_high": 1.0,
+      "calibration_path": "reference"
+    },
+    {
+      "active_mask": 31,
+      "epoch_id": "Terra+Aqua+SNPP+NOAA20+NOAA21",
+      "month_of_year": 5,
+      "n_days": 1292,
+      "k_factor": 1.0,
+      "k_ci_low": 1.0,
+      "k_ci_high": 1.0,
+      "calibration_path": "reference"
+    },
+    {
+      "active_mask": 31,
+      "epoch_id": "Terra+Aqua+SNPP+NOAA20+NOAA21",
+      "month_of_year": 6,
+      "n_days": 1292,
+      "k_factor": 1.0,
+      "k_ci_low": 1.0,
+      "k_ci_high": 1.0,
+      "calibration_path": "reference"
+    },
+    {
+      "active_mask": 31,
+      "epoch_id": "Terra+Aqua+SNPP+NOAA20+NOAA21",
+      "month_of_year": 7,
+      "n_days": 1292,
+      "k_factor": 1.0,
+      "k_ci_low": 1.0,
+      "k_ci_high": 1.0,
+      "calibration_path": "reference"
+    },
+    {
+      "active_mask": 31,
+      "epoch_id": "Terra+Aqua+SNPP+NOAA20+NOAA21",
+      "month_of_year": 8,
+      "n_days": 1292,
+      "k_factor": 1.0,
+      "k_ci_low": 1.0,
+      "k_ci_high": 1.0,
+      "calibration_path": "reference"
+    },
+    {
+      "active_mask": 31,
+      "epoch_id": "Terra+Aqua+SNPP+NOAA20+NOAA21",
+      "month_of_year": 9,
+      "n_days": 1292,
+      "k_factor": 1.0,
+      "k_ci_low": 1.0,
+      "k_ci_high": 1.0,
+      "calibration_path": "reference"
+    },
+    {
+      "active_mask": 31,
+      "epoch_id": "Terra+Aqua+SNPP+NOAA20+NOAA21",
+      "month_of_year": 10,
+      "n_days": 1292,
+      "k_factor": 1.0,
+      "k_ci_low": 1.0,
+      "k_ci_high": 1.0,
+      "calibration_path": "reference"
+    },
+    {
+      "active_mask": 31,
+      "epoch_id": "Terra+Aqua+SNPP+NOAA20+NOAA21",
+      "month_of_year": 11,
+      "n_days": 1292,
+      "k_factor": 1.0,
+      "k_ci_low": 1.0,
+      "k_ci_high": 1.0,
+      "calibration_path": "reference"
+    },
+    {
+      "active_mask": 31,
+      "epoch_id": "Terra+Aqua+SNPP+NOAA20+NOAA21",
+      "month_of_year": 12,
+      "n_days": 1292,
+      "k_factor": 1.0,
+      "k_ci_low": 1.0,
+      "k_ci_high": 1.0,
+      "calibration_path": "reference"
+    }
+  ],
+  "daily_interpolation": true
+}

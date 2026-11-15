@@ -1,0 +1,130 @@
+# =============================================================================
+# Pipeline de armonización MODIS + VIIRS (FIRMS) — configuración global.
+# Nada en este archivo es específico de una región: la región se elige en la
+# CLI (`--region ARG`) y se resuelve con config/regions.yaml + Natural Earth.
+# =============================================================================
+
+paths:
+  # Carpetas con CSV originales de FIRMS. Se leen IN-PLACE (solo lectura), nunca
+  # se copian. El catálogo reconoce archivos por país/año y descargas globales.
+  local_sources:
+    - ~/Proyecto_NASA/Data_MODIS
+    - ~/Proyecto_NASA/Data_VIIRS
+    - ~/Proyecto_NASA/Data_VIIRS_NOAA-20
+    - ~/Proyecto_NASA/Data_VIIRS_NOAA-21
+  data_dir: data            # relativo a la raíz del proyecto
+
+period:
+  start: 2000-11-01         # primer dato MODIS disponible en FIRMS
+  end: null                 # null = ayer (UTC)
+
+# Ventanas operativas de cada satélite. `start` = primer dato verificado en los
+# archivos; `end` null = en operación. La actividad real de cada día se recorta
+# además con la cobertura de los archivos (ver catalog.coverage).
+satellites:
+  Terra:  {instrument: MODIS, product: MODIS,  bit: 1,  start: 2000-11-01, end: null}
+  Aqua:   {instrument: MODIS, product: MODIS,  bit: 2,  start: 2002-07-04, end: null}
+  SNPP:   {instrument: VIIRS, product: SNPP,   bit: 4,  start: 2012-01-20, end: null}
+  NOAA20: {instrument: VIIRS, product: NOAA20, bit: 8,  start: 2018-04-01, end: null}
+  NOAA21: {instrument: VIIRS, product: NOAA21, bit: 16, start: 2023-03-01, end: null}
+
+filters:
+  keep_types: [0]           # 0 = vegetación (presunta). 1 volcán, 2 fuente estática, 3 offshore
+  # Fuentes fijas a nivel de celda H3 (SP y NRT). FIRMS tipifica por píxel y deja
+  # pasar píxeles vecinos de mecheros/refinerías como "vegetación". Criterios
+  # derivados de la auditoría ARG (audits/): mecheros = continuos, nocturnos, FRP bajo;
+  # incendios reales (p.ej. Delta del Paraná 2020) = ~33% nocturnos, FRP mediano ~7 MW.
+  static_sources:
+    enabled: true
+    persistent: {min_days_per_year: 30, min_years: 2, min_night_frac: 0.5}
+    flare:      {min_days_in_a_year: 60, min_night_frac: 0.6, max_median_frp_mw: 3.0}
+    typed:      {min_nonveg_detections: 10, min_nonveg_share: 0.25}
+    # fuente crónica de baja intensidad (ingenios, plantas): pocos días/año pero muchos años
+    chronic:    {min_active_years: 8, min_days_per_active_year: 5, min_night_frac: 0.6, max_median_frp_mw: 3.0}
+    # falsa alarma persistente de MODIS: la ve MODIS en la era VIIRS y VIIRS (más sensible) nunca.
+    # Control ARG: de 43.187 celdas con >=5 días MODIS en era VIIRS, el 99,74% tiene detecciones VIIRS.
+    modis_only: {min_modis_days_viirs_era: 5, min_modis_years: 5, max_viirs_detections: 0}
+  # FRP: 0 = no disponible (se publica nulo, frp_quality='missing'); > extreme_mw se conserva
+  # pero se marca 'extreme' (píxeles MODIS grandes de borde de barrido, retrieval incierto).
+  frp:
+    extreme_mw: 5000
+
+# Caídas de satélites: un satélite nominalmente activo se considera CAÍDO el día d si no
+# aporta ninguna detección (en todo el bbox, cualquier confianza/tipo) y lo esperado era
+# >= min_expected_detections. Esperado = cociente local satélite/resto (±ratio_window_days)
+# × detecciones del resto ese día; si nadie más detectó, climatología del propio satélite
+# (mediana interanual de la media ±climatology_window_days). Día sin satélites = sin dato (no 0).
+availability:
+  detect_outages: true
+  min_expected_detections: 20
+  # Racha de días consecutivos en cero: caída si Σ esperado de la racha >= este valor
+  # (detecta caídas largas en estaciones de poco fuego, p.ej. Terra 2001-06-15→07-02).
+  min_expected_run: 100
+  # Rachas de >= N días con 0 eventos y satélites activos que NO alcanzan a ser caída:
+  # se publican como observadas pero con observation_flag='suspect_zero'.
+  suspect_zero_min_run: 3
+  ratio_window_days: 30
+  climatology_window_days: 15
+
+confidence:
+  # MODIS (0-100) -> nivel ordinal. Umbrales del MODIS C6/C6.1 Active Fire User Guide.
+  modis_thresholds: {nominal: 30, high: 80}
+  # Nivel mínimo para que un evento entre en la serie armonizada y en la
+  # calibración. Los eventos 'low' se conservan siempre (capa de alertas).
+  series_min_level: nominal
+
+grid:
+  h3_resolution: 7
+  # Día "solar local": timestamp_utc + lon/15 h. Agnóstico de región (no requiere
+  # zona horaria) y alinea el día con el ciclo diurno del fuego.
+  day_start_solar_hour: 0
+
+calibration:
+  # Encadenamiento por sub-constelaciones: en cada época se simula la
+  # constelación anterior quitando satélites y se mide el cociente de eventos.
+  reference: auto           # auto = constelación con más satélites (mayor duración en empate)
+  window: adjacent          # adjacent = días cuya constelación activa == el superconjunto del par
+  min_window_days: 60       # si la ventana adyacente es menor, usa todos los días elegibles
+  # Proximidad temporal: cada cociente se estima solo con los días del superconjunto a <= N años
+  # de la época que calibra (la ganancia de sumar un satélite cambia con los años: Aqua aportó
+  # ~15% más en 2002-2003 que el promedio 2002-2012). null = toda la ventana.
+  proximity_years: 2
+  # Alcance del factor: month_of_year (12 factores por constelación) | global (1 factor)
+  factor_scope: month_of_year
+  # Interpola el factor día a día (circular, exacto en los centros de mes) para evitar
+  # escalones al cambiar de mes (auditoría: hasta ×1,54 en época Terra). false = escalonado.
+  daily_interpolation: true
+  # Suavizado circular (dic↔ene) de los cocientes mensuales, en escala log y ponderado
+  # por eventos (≈ inverso de la varianza): harmonic | moving_average | none
+  smoothing:
+    method: harmonic
+    harmonics: 2            # armónico: log r(m) = a0 + Σ_k [a_k cos(2πkm/12) + b_k sin(2πkm/12)]
+    window: 3               # media móvil circular (meses, impar)
+  bootstrap: {n: 1000, seed: 20261115, ci: 0.95}   # remuestreo estratificado por mes del año
+
+api:
+  enabled: true
+  area_url: https://firms.modaps.eosdis.nasa.gov/api/area/csv
+  availability_url: https://firms.modaps.eosdis.nasa.gov/api/data_availability/csv
+  map_key_env: FIRMS_MAP_KEY   # se lee del entorno o de .env (nunca del código)
+  day_range: 5
+  timeout_s: 120
+  max_retries: 4
+  products:                    # producto API por familia (SP = científico, NRT = provisorio)
+    MODIS:  {sp: MODIS_SP,        nrt: MODIS_NRT}
+    SNPP:   {sp: VIIRS_SNPP_SP,   nrt: VIIRS_SNPP_NRT}
+    NOAA20: {sp: VIIRS_NOAA20_SP, nrt: VIIRS_NOAA20_NRT}
+    NOAA21: {sp: VIIRS_NOAA21_SP, nrt: VIIRS_NOAA21_NRT}
+
+export:
+  csv: true                 # además del Parquet de trabajo, exporta CSV de los productos finales
+  web:
+    dir: Datos_Para_La_Web  # relativo a la raíz del proyecto; carpeta autocontenida para la app
+    row_group_size: 100000
+    h3_coarse_res: 3        # celda gruesa: orden físico de los eventos (poda por estadísticas min/max)
+    h3_map_res: 5           # celda para agregación del mapa en zoom bajo
+    # Calidad de calibración por constelación × mes, a partir de K y de su IC 95%
+    # (rel_ci = (ci_high - ci_low) / (2·K)). Lo que no cumple 'medium' es 'low'.
+    quality:
+      high:   {max_k: 1.5, max_rel_ci: 0.05}
+      medium: {max_k: 5.0, max_rel_ci: 0.10}
