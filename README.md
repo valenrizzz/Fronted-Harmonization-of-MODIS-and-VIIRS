@@ -59,9 +59,9 @@ Tiempo real NOAA-21: los archivos NRT nuevos (descarga o API) se reconocen como 
 
 ## Frontend (app web)
 
-App React + Vite + Tailwind en la raíz (`index.html`, `src/App.jsx`, `src/components/`). Hoy usa datos simulados (`src/data/mockFireService.js`); la fuente real será `Datos_Para_La_Web/<R>/`.
+| Carpeta | Qué es | Local |
+|---|---|---|
+| `frontend/` | React + Vite + Tailwind. Hoy usa datos simulados (`src/data/mockFireService.js`). | `cd frontend && npm install && npm run dev` → http://localhost:5173 |
+| `backend/` | API FastAPI + DuckDB sobre `Datos_Para_La_Web` (ver [backend/README.md](backend/README.md)). | `cd backend && .venv/bin/uvicorn app.main:app --reload --port 8000` → http://localhost:8000/api/v1/docs |
 
-```bash
-npm install
-npm run dev
-```
+Despliegue: dos proyectos de Vercel sobre este repo, con Root Directory `frontend` y `backend`.

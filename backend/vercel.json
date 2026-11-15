@@ -1,0 +1,13 @@
+{
+  "$schema": "https://openapi.vercel.sh/vercel.json",
+  "buildCommand": "rm -rf data_bundle && cp -r ../Datos_Para_La_Web data_bundle && rm -f data_bundle/README.md",
+  "functions": {
+    "api/index.py": {
+      "includeFiles": "{app/**,data_bundle/**}",
+      "excludeFiles": "{.venv/**,.cache/**,tests/**}",
+      "memory": 1024,
+      "maxDuration": 30
+    }
+  },
+  "rewrites": [{ "source": "/(.*)", "destination": "/api/index" }]
+}
