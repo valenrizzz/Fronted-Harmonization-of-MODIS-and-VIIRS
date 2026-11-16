@@ -22,9 +22,10 @@ function useIsDesktop() {
 export default function MapPage() {
   const fd = useFD();
   const desktop = useIsDesktop();
+  const [panelOpen, setPanelOpen] = useState(true);
   const insets = useMemo(() => (desktop
-    ? { top: 110, left: 360, right: 80, bottom: 24 }
-    : { top: 120, left: 24, right: 64, bottom: 24 }), [desktop]);
+    ? { top: 110, left: panelOpen ? 360 : 24, right: 80, bottom: 24 }
+    : { top: 120, left: 24, right: 64, bottom: 24 }), [desktop, panelOpen]);
 
   return (
     <div className="h-[100dvh] flex flex-col overflow-hidden">
@@ -37,10 +38,11 @@ export default function MapPage() {
           insets={insets}
           onViewport={fd.setViewport}
           busy={fd.summary.loading}
+          legendLeft={desktop ? (panelOpen ? 352 : 16) : undefined}
         />
         <div className="absolute inset-0 z-30 p-3 md:p-4 flex flex-col md:flex-row md:items-start gap-3 pointer-events-none">
           <div className="pointer-events-auto flex min-h-0 max-h-[72%] md:max-h-full">
-            <ControlPanel />
+            <ControlPanel open={panelOpen} setOpen={setPanelOpen} />
           </div>
           {fd.regionInfo && <div className="flex-1 min-w-0"><KpiDropdowns fd={fd} /></div>}
         </div>

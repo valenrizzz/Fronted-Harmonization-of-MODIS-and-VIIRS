@@ -1,7 +1,7 @@
 import { useEffect, useState } from 'react';
-import { Link, useNavigate, useSearchParams } from 'react-router-dom';
+import { Link, useSearchParams } from 'react-router-dom';
 import { motion } from 'framer-motion';
-import { ArrowLeft, CalendarDays, BarChart3, LineChart, Flame, Lock, Map } from 'lucide-react';
+import { ArrowLeft, BarChart3, LineChart, Flame, Lock } from 'lucide-react';
 import { useFD } from '../hooks/FireDataContext';
 import { fmtDate, regionName } from '../data/constants';
 import { inRange, rangeYears } from '../data/presets';
@@ -12,11 +12,6 @@ import CalendarTab from '../components/timeline/CalendarTab';
 import SeriesTab from '../components/timeline/SeriesTab';
 import ComparisonTab from '../components/timeline/ComparisonTab';
 
-const VIEWS = [
-  { id: 'mapa', label: 'Mapa', icon: Map },
-  { id: 'calendario', label: 'Calendario', icon: CalendarDays },
-  { id: 'estadisticas', label: 'Estadísticas', icon: BarChart3 },
-];
 const reveal = (i) => ({ initial: { opacity: 0, y: 14 }, animate: { opacity: 1, y: 0 }, transition: { duration: 0.45, delay: i * 0.06, ease: [0.16, 1, 0.3, 1] } });
 
 function Panel({ icon: Icon, title, sub, children, i = 0 }) {
@@ -35,9 +30,8 @@ function Panel({ icon: Icon, title, sub, children, i = 0 }) {
  */
 export default function CalendarStatsPage() {
   const fd = useFD();
-  const [params, setParams] = useSearchParams();
-  const navigate = useNavigate();
-  const pick = (id) => (id === 'mapa' ? navigate('/') : setParams({ vista: id }));
+  // La vista se elige desde la barra principal (Calendario / Estadísticas)
+  const [params] = useSearchParams();
   const view = params.get('vista') === 'estadisticas' ? 'estadisticas' : 'calendario';
   const [year, setYear] = useState(fd.year);
 
@@ -68,17 +62,7 @@ export default function CalendarStatsPage() {
               </p>
             )}
           </div>
-          <div className="flex flex-col items-end gap-2">
-            <div className="flex p-1 rounded-xl bg-white/5 ring-1 ring-white/10" role="tablist">
-              {VIEWS.map((v) => (
-                <button key={v.id} role="tab" aria-selected={view === v.id} onClick={() => pick(v.id)}
-                  className={`relative flex items-center gap-1.5 px-3.5 h-8 rounded-lg text-xs font-semibold transition-colors ${view === v.id ? 'text-brand-700' : 'text-slate-300 hover:text-white'}`}>
-                  {view === v.id && <motion.span layoutId="view-pill" className="absolute inset-0 rounded-lg bg-white shadow-sm ring-1 ring-brand-200" transition={{ type: 'spring', stiffness: 420, damping: 36 }} />}
-                  <v.icon className={`relative w-3.5 h-3.5 ${view === v.id ? 'text-brand-600' : ''}`} />
-                  <span className="relative">{v.label}</span>
-                </button>
-              ))}
-            </div>
+          <div className="flex items-end">
             <CsvDownload compact />
           </div>
         </motion.header>

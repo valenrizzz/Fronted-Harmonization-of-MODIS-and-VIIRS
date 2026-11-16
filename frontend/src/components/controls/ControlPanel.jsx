@@ -1,6 +1,6 @@
 import { useNavigate } from 'react-router-dom';
-import { motion } from 'framer-motion';
-import { MapPin, CalendarRange, CalendarDays, BarChart3, FileDown, Info } from 'lucide-react';
+import { AnimatePresence, motion } from 'framer-motion';
+import { MapPin, CalendarRange, CalendarDays, BarChart3, FileDown, Info, Search, ChevronUp } from 'lucide-react';
 import { useFD } from '../../hooks/FireDataContext';
 import { fmtDate, regionName } from '../../data/constants';
 import CountrySearch from './CountrySearch';
@@ -19,27 +19,63 @@ function Section({ icon: Icon, title, children, className = 'shrink-0' }) {
   );
 }
 
+const EASE = [0.16, 1, 0.3, 1];
+
+/** Panel plegado: una sola burbuja que vuelve a abrir el panel completo. */
+function SearchBubble({ fd, onOpen }) {
+  const { regionInfo, range } = fd;
+  return (
+    <motion.button
+      key="bubble"
+      initial={{ opacity: 0, scale: 0.9, x: -8 }}
+      animate={{ opacity: 1, scale: 1, x: 0 }}
+      transition={{ duration: 0.3, ease: EASE }}
+      onClick={onOpen}
+      aria-expanded={false}
+      className="glass !rounded-full pointer-events-auto self-start flex items-center gap-2.5 pl-3.5 pr-4 h-11 text-sm font-semibold text-brand-900 hover:ring-2 hover:ring-brand-300 hover:shadow-brand transition-shadow"
+    >
+      <Search className="w-4 h-4 text-brand-600" />
+      Buscar ubicación
+      {regionInfo && range && (
+        <span className="text-[11px] font-mono font-medium text-brand-600 bg-brand-50 ring-1 ring-brand-100 rounded-full px-2 py-0.5">
+          {regionInfo.region} · {range.start.slice(0, 4)}–{range.end.slice(0, 4)}
+        </span>
+      )}
+    </motion.button>
+  );
+}
+
 /**
- * Panel fijo del mapa: país → CSV → rango de años → accesos a Calendario y
- * Estadísticas. Es el único lugar donde se cambian país y fechas.
+ * Panel del mapa: país → CSV → rango de años → accesos a Calendario y
+ * Estadísticas. Es el único lugar donde se cambian país y fechas. Arranca
+ * abierto y se puede plegar a una burbuja de búsqueda.
  */
-export default function ControlPanel() {
+export default function ControlPanel({ open, setOpen }) {
   const fd = useFD();
   const navigate = useNavigate();
   const { regionInfo, range } = fd;
   const go = (vista) => navigate(`/Calender-Statistics?vista=${vista}`);
 
   return (
+    <AnimatePresence initial={false} mode="popLayout">
+      {!open ? <SearchBubble fd={fd} onOpen={() => setOpen(true)} /> : (
     <motion.aside
+      key="panel"
       initial={{ opacity: 0, x: -12 }}
       animate={{ opacity: 1, x: 0 }}
-      transition={{ duration: 0.4, ease: [0.16, 1, 0.3, 1] }}
+      transition={{ duration: 0.35, ease: EASE }}
       className="glass pointer-events-auto w-full md:w-[320px] shrink-0 flex flex-col max-h-full min-h-0 overflow-hidden"
     >
-      <div className="shrink-0 flex items-center gap-2 px-4 py-2.5 text-sm font-semibold text-brand-900">
+      <button
+        onClick={() => setOpen(false)}
+        aria-expanded
+        title="Plegar el panel"
+        className="group shrink-0 flex items-center gap-2 px-4 py-2.5 text-sm font-semibold text-brand-900 hover:bg-brand-50/60 transition-colors"
+      >
         <MapPin className="w-4 h-4 text-brand-600" />
         Explorar ubicación
-      </div>
+        <ChevronUp className="w-4 h-4 ml-auto text-slate-400 group-hover:text-brand-600 transition-colors" />
+      </button>
 
       {/* Si falta altura, solo se desplaza la lista de países: años y botones quedan visibles */}
       <Section icon={MapPin} title="País / Región" className="flex flex-col min-h-[132px] shrink">
@@ -84,5 +120,7 @@ export default function ControlPanel() {
         )}
       </div>
     </motion.aside>
+      )}
+    </AnimatePresence>
   );
 }

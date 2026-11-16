@@ -4,7 +4,7 @@ import { FIRE_GRADIENT_CSS, fmtCount, fmtInt } from '../../data/constants';
 export default function MapLegend({ hex, style }) {
   const m = hex.meta;
   return (
-    <div className="absolute left-3 md:left-[352px] z-20 glass px-3 py-2 md:py-2.5 w-[200px] md:w-[236px] transition-[bottom] duration-300 ease-out" style={style}>
+    <div className="absolute left-3 z-20 glass px-3 py-2 md:py-2.5 w-[200px] md:w-[236px] transition-[left,bottom] duration-500 ease-out" style={style}>
       <div className="flex items-center justify-between">
         <span className="eyebrow">Intensidad armonizada</span>
         {hex.loading && <Loader2 className="w-3 h-3 animate-spin text-brand-500" />}

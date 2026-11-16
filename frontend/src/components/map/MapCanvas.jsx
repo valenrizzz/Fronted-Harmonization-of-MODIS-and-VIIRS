@@ -10,7 +10,7 @@ import MapLegend from './MapLegend';
 import MapToolbar from './MapToolbar';
 import { ProgressLine } from '../ui/primitives';
 
-export default function MapCanvas({ region, regionInfo, range, insets, onViewport, busy }) {
+export default function MapCanvas({ region, regionInfo, range, insets, onViewport, busy, legendLeft }) {
   const containerRef = useRef(null);
   const cartoRef = useRef(null);
   const [map, setMap] = useState(null);
@@ -131,7 +131,7 @@ export default function MapCanvas({ region, regionInfo, range, insets, onViewpor
         res={hex.meta?.res}
         bounds={{ width: container?.clientWidth || 0, height: container?.clientHeight || 0 }}
       />
-      <MapLegend hex={hex} style={{ bottom: insets.bottom }} />
+      <MapLegend hex={hex} style={{ bottom: insets.bottom, left: legendLeft }} />
       <MapToolbar
         top={insets.top}
         map={map}
