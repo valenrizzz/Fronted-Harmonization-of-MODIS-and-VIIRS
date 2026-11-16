@@ -1,6 +1,6 @@
 {
   "$schema": "https://openapi.vercel.sh/vercel.json",
-  "buildCommand": "rm -rf data_bundle && cp -r ../Datos_Para_La_Web data_bundle && rm -f data_bundle/README.md && mkdir -p public && printf 'User-agent: *\\nDisallow:\\n' > public/robots.txt",
+  "buildCommand": "test -f data_bundle/ARG/manifest.json || { echo 'Falta backend/data_bundle: correr scripts/build_data_bundle.py antes de desplegar'; exit 1; } && mkdir -p public && printf 'User-agent: *\\nDisallow:\\n' > public/robots.txt",
   "outputDirectory": "public",
   "functions": {
     "api/index.py": {

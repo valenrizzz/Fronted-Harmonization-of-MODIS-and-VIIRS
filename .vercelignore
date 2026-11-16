@@ -11,7 +11,8 @@
 **/.cache
 frontend/dist
 frontend/fronteo del armony
-backend/data_bundle
+# backend/data_bundle SÍ se sube: es el paquete de datos podado para la función (ver backend/scripts/build_data_bundle.py)
+/Datos_Para_La_Web
 backend/tests
 .env
 .env.local

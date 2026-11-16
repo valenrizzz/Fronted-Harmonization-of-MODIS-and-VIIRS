@@ -54,10 +54,19 @@ class ReadOnlyDB:
             for code, rdir in regions.items():
                 v = view_names(code)
                 events_glob = _sql_str(str(rdir / "events" / "*" / "*" / "*.parquet"))
-                writer.execute(
-                    f"CREATE VIEW {v['events']} AS SELECT * FROM read_parquet("
-                    f"{events_glob}, hive_partitioning=true, union_by_name=true)"
-                )
+                events_src = f"read_parquet({events_glob}, hive_partitioning=true, union_by_name=true)"
+                cols = {r[0] for r in writer.execute(f"DESCRIBE SELECT * FROM {events_src}").fetchall()}
+                if "cell_lat" in cols:
+                    events_sql = f"SELECT * FROM {events_src}"
+                else:
+                    # Paquete podado para Vercel (scripts/build_data_bundle.py): coordenadas y
+                    # resoluciones H3 gruesas dependen solo de h3_cell y se toman del mapa de celdas.
+                    map_src = f"read_parquet({_sql_str(str(rdir / 'h3_region_map.parquet'))})"
+                    events_sql = (
+                        f"SELECT e.*, m.cell_lat, m.cell_lon, m.h3_r5, m.h3_r3 FROM {events_src} e "
+                        f"JOIN {map_src} m ON e.h3_cell = m.h3_cell"
+                    )
+                writer.execute(f"CREATE VIEW {v['events']} AS {events_sql}")
                 for key, fname in (
                     ("daily", "timeseries_daily.parquet"),
                     ("monthly", "timeseries_monthly.parquet"),

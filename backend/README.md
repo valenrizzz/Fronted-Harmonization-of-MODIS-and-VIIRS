@@ -47,7 +47,16 @@ Parámetros comunes: `region` (obligatorio), `start`, `end` (día solar, inclusi
 
 ## Despliegue en Vercel
 
-Proyecto aparte con **Root Directory = `backend`**. [vercel.json](vercel.json) reescribe todas las rutas hacia [api/index.py](api/index.py). En el build copia `../Datos_Para_La_Web` a `data_bundle/` y lo incluye en la función, que pesa unos 165 MB entre dependencias y datos. `requirements.txt` tiene solo las dependencias de runtime; las de desarrollo están en `requirements-dev.txt`. Las variables de entorno están en [.env.vercel.example](.env.vercel.example).
+Proyecto aparte con **Root Directory = `backend`**. [vercel.json](vercel.json) reescribe todas las rutas hacia [api/index.py](api/index.py) e incluye `data_bundle/` en la función.
+
+Vercel limita cada función a 225 MB y los datos completos de los 5 países (~200 MB) más DuckDB no entran. Por eso, **antes de cada deploy** hay que armar el paquete podado:
+
+```bash
+cd backend && .venv/bin/python scripts/build_data_bundle.py   # ~66 MB
+cd .. && vercel deploy --prod --project fire-harmonized-api
+```
+
+[scripts/build_data_bundle.py](scripts/build_data_bundle.py) copia `Datos_Para_La_Web/` con los eventos reducidos a las columnas que consulta la API. Saca `cell_lat`, `cell_lon`, `h3_r5` y `h3_r3`, que dependen solo de `h3_cell`, y [app/db.py](app/db.py) los recupera de `h3_region_map.parquet`, después de validar que el mapa los reproduce exactamente. Las respuestas son idénticas a las de los datos completos. Si falta `data_bundle/`, el build de Vercel falla con un aviso. `Datos_Para_La_Web/` no se sube (ver `.vercelignore`). `requirements.txt` tiene solo las dependencias de runtime; las de desarrollo están en `requirements-dev.txt`. Las variables de entorno están en [.env.vercel.example](.env.vercel.example).
 
 ## Caché y actualización
 
