@@ -44,10 +44,10 @@ export default function YearRangeBar({ period, range, yearly, setYearWindow, set
   return (
     <div>
       <div className="flex items-baseline justify-between mb-2">
-        <span className="font-display text-xl font-semibold text-brand-900 tabular-nums">
-          {sel[0]}<span className="text-slate-300 mx-1">–</span>{sel[1]}
+        <span className="font-display text-xl font-semibold text-white tabular-nums">
+          {sel[0]}<span className="text-slate-600 mx-1">–</span>{sel[1]}
         </span>
-        <span className="text-[11px] text-slate-400">{sel[1] - sel[0] + 1} año{sel[1] > sel[0] ? 's' : ''}</span>
+        <span className="text-[11px] text-slate-500">{sel[1] - sel[0] + 1} año{sel[1] > sel[0] ? 's' : ''}</span>
       </div>
 
       {/* Histograma de actividad anual (región completa) */}
@@ -67,7 +67,7 @@ export default function YearRangeBar({ period, range, yearly, setYearWindow, set
                 initial={false}
                 animate={{ height: `${yearly ? Math.max((v / maxT) * 100, 4) : 30 + ((y * 37) % 50)}%` }}
                 transition={{ type: 'spring', stiffness: 200, damping: 26 }}
-                style={{ background: yearly ? (inside ? fireColor(0.25 + 0.75 * (v / maxT), 1) : '#e2e8f0') : undefined }}
+                style={{ background: yearly ? (inside ? fireColor(0.25 + 0.75 * (v / maxT), 1) : 'rgba(255,255,255,0.12)') : undefined }}
               />
             </button>
           );
@@ -76,9 +76,9 @@ export default function YearRangeBar({ period, range, yearly, setYearWindow, set
 
       {/* Slider doble */}
       <div className="relative h-5 mt-1">
-        <div className="absolute top-1/2 -translate-y-1/2 inset-x-0 h-1.5 rounded-full bg-slate-200" />
+        <div className="absolute top-1/2 -translate-y-1/2 inset-x-0 h-1.5 rounded-full bg-white/10" />
         <motion.div
-          className="absolute top-1/2 -translate-y-1/2 h-1.5 rounded-full bg-gradient-to-r from-brand-400 to-brand-700"
+          className="absolute top-1/2 -translate-y-1/2 h-1.5 rounded-full bg-gradient-to-r from-brand-400 to-beam"
           animate={{ left: `${pct(sel[0])}%`, right: `${100 - pct(sel[1])}%` }}
           transition={{ type: 'spring', stiffness: 400, damping: 40 }}
         />
@@ -100,7 +100,7 @@ export default function YearRangeBar({ period, range, yearly, setYearWindow, set
           />
         ))}
       </div>
-      <div className="flex justify-between text-[10px] font-mono text-slate-400 mt-0.5">
+      <div className="flex justify-between text-[10px] font-mono text-slate-500 mt-0.5">
         <span>{minY}</span><span>{maxY}</span>
       </div>
 

@@ -16,7 +16,7 @@ export default function MapCanvas({ region, regionInfo, range, insets, onViewpor
   const [map, setMap] = useState(null);
   const [bearing, setBearing] = useState(0);
   const [is3D, setIs3D] = useState(false);
-  const [basemap, setBasemap] = useState('light');
+  const [basemap, setBasemap] = useState('satellite');
   const viewportCb = useRef(onViewport);
   viewportCb.current = onViewport;
   const regionBox = useRef(null);
@@ -38,6 +38,10 @@ export default function MapCanvas({ region, regionInfo, range, insets, onViewpor
       compact: true,
       customAttribution: 'Focos: NASA FIRMS · MODIS + VIIRS armonizados',
     }), 'bottom-right');
+    // Atribución obligatoria (Esri, OpenStreetMap, CARTO): plegada en un ícono ⓘ que se abre con un clic
+    const collapseAttrib = () => m.getContainer().querySelector('.maplibregl-ctrl-attrib')?.classList.remove('maplibregl-compact-show');
+    collapseAttrib();
+    m.once('load', collapseAttrib);
     m.on('load', () => {
       cartoRef.current = installBasemaps(m);
       addFireLayers(m);

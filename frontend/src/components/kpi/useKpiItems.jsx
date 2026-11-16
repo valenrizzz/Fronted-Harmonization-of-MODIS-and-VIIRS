@@ -29,55 +29,55 @@ export function useKpiItems(fd) {
   return [
     {
       id: 'total', icon: Flame, label: 'Focos armonizados',
-      value: (cls) => <span className={`${big} ${cls} text-brand-950`}><AnimatedNumber value={ci?.value} format={fmtCount} /></span>,
+      value: (cls) => <span className={`${big} ${cls} text-white`}><AnimatedNumber value={ci?.value} format={fmtCount} /></span>,
       detail: (
         <>
-          <div className="text-[10px] text-slate-500 font-mono">
+          <div className="text-[10px] text-slate-400 font-mono">
             {ci && ci.ci_high - ci.ci_low >= 1 ? `IC 95% ${fmtCount(ci.ci_low)}–${fmtCount(ci.ci_high)}` : 'IC 95% exacto · calibración directa'}
           </div>
           {s?.total_nasa_detections != null && (
-            <div className="text-[10px] text-slate-500">NASA FIRMS original: <span className="font-mono">{fmtCount(s.total_nasa_detections)}</span></div>
+            <div className="text-[10px] text-slate-400">NASA FIRMS original: <span className="font-mono">{fmtCount(s.total_nasa_detections)}</span></div>
           )}
           <Sparkline values={spark} />
         </>
       ),
     },
     {
-      id: 'yoy', icon: up ? TrendingUp : TrendingDown, label: 'Variación interanual', accent: up ? 'text-red-600' : 'text-brand-500',
+      id: 'yoy', icon: up ? TrendingUp : TrendingDown, label: 'Variación interanual', accent: up ? 'text-red-400' : 'text-beam',
       value: (cls) => (hasYoy
-        ? <span className={`${big} ${cls} ${up ? 'text-red-600' : 'text-brand-500'}`}><AnimatedNumber value={yoy.change_pct} format={pct} /></span>
-        : <span className={`${big} ${cls} text-slate-400`}>n/d</span>),
+        ? <span className={`${big} ${cls} ${up ? 'text-red-400' : 'text-beam'}`}><AnimatedNumber value={yoy.change_pct} format={pct} /></span>
+        : <span className={`${big} ${cls} text-slate-500`}>n/d</span>),
       detail: hasYoy
-        ? <div className="text-[10px] text-slate-500">vs. {fmtDate(yoy.previous_start)} – {fmtDate(yoy.previous_end)} ({fmtCount(yoy.previous_value)} focos)</div>
-        : <div className="text-[10px] text-slate-500">{yoy?.reason || 'Sin período comparable'}</div>,
+        ? <div className="text-[10px] text-slate-400">vs. {fmtDate(yoy.previous_start)} – {fmtDate(yoy.previous_end)} ({fmtCount(yoy.previous_value)} focos)</div>
+        : <div className="text-[10px] text-slate-400">{yoy?.reason || 'Sin período comparable'}</div>,
     },
     {
       id: 'peak', icon: Zap, label: 'Pico diario',
       value: (cls) => (
-        <span className={`${big} ${cls} text-brand-950`}>
+        <span className={`${big} ${cls} text-white`}>
           <AnimatedNumber value={s?.peak_day?.events_harmonized} format={fmtCount} />
-          <span className="text-xs text-slate-500 font-sans font-normal ml-1">focos</span>
+          <span className="text-xs text-slate-400 font-sans font-normal ml-1">focos</span>
         </span>
       ),
       detail: (
-        <div className="text-[10px] text-slate-500">
+        <div className="text-[10px] text-slate-400">
           {s?.peak_day ? fmtDate(s.peak_day.date) : '–'}
           {s?.peak_month && <> · mes pico {fmtMonth(s.peak_month.date)}</>}
         </div>
       ),
     },
     {
-      id: 'quality', icon: ShieldCheck, label: 'Calidad del dato', accent: 'text-emerald-600',
+      id: 'quality', icon: ShieldCheck, label: 'Calidad del dato', accent: 'text-emerald-400',
       value: (cls) => (
-        <span className={`${big} ${cls} text-brand-950`}>
+        <span className={`${big} ${cls} text-white`}>
           <AnimatedNumber value={(s?.reliability_share?.high || 0) * 100} format={(v) => `${Math.round(v)}%`} />
-          <span className="text-[10px] text-slate-500 font-sans font-normal ml-1.5">alta confiabilidad</span>
+          <span className="text-[10px] text-slate-400 font-sans font-normal ml-1.5">alta confiabilidad</span>
         </span>
       ),
       detail: (
         <>
           {s && <QualityBar rs={s.reliability_share} nrt={s.layer_share?.NRT} />}
-          {s?.days_no_data > 0 && <div className="text-[10px] text-slate-400 mt-0.5">{fmtInt(s.days_no_data)} días sin dato satelital</div>}
+          {s?.days_no_data > 0 && <div className="text-[10px] text-slate-500 mt-0.5">{fmtInt(s.days_no_data)} días sin dato satelital</div>}
         </>
       ),
     },

@@ -16,25 +16,25 @@ function DayTooltip({ t }) {
   return createPortal(
     <div className="fixed z-[100] pointer-events-none glass-strong px-3 py-2 text-[11px] min-w-[190px]"
       style={{ left: Math.min(t.x + 14, window.innerWidth - 230), top: t.y - 96 }}>
-      <div className="font-semibold text-brand-950">{d.day} {MONTH_NAMES[t.month]} {t.year}</div>
+      <div className="font-semibold text-white">{d.day} {MONTH_NAMES[t.month]} {t.year}</div>
       {noData ? (
-        <div className="text-slate-500">Sin dato satelital ese día</div>
+        <div className="text-slate-400">Sin dato satelital ese día</div>
       ) : (
         <>
           {t.raw ? (
             <>
-              <div className="font-display text-base text-violet-700">{fmtInt(d.nasa)} <span className="text-[10px] text-slate-500 font-sans">detecciones NASA originales</span></div>
-              <div className="text-[10px] text-slate-500">Confiabilidad baja: conteo sin armonizar <span className="font-mono text-slate-400">(armonizado {fmtInt(d.harmonized)})</span></div>
+              <div className="font-display text-base text-violet-300">{fmtInt(d.nasa)} <span className="text-[10px] text-slate-400 font-sans">detecciones NASA originales</span></div>
+              <div className="text-[10px] text-slate-400">Confiabilidad baja: conteo sin armonizar <span className="font-mono text-slate-500">(armonizado {fmtInt(d.harmonized)})</span></div>
             </>
           ) : (
-            <div className="font-display text-base text-orange-700">{fmtInt(d.harmonized)} <span className="text-[10px] text-slate-500 font-sans">focos armonizados</span></div>
+            <div className="font-display text-base text-orange-300">{fmtInt(d.harmonized)} <span className="text-[10px] text-slate-400 font-sans">focos armonizados</span></div>
           )}
           {!t.raw && d.ciLow != null && d.ciHigh - d.ciLow >= 1 && (
-            <div className="font-mono text-[10px] text-slate-500">IC 95% {fmtInt(d.ciLow)}–{fmtInt(d.ciHigh)}</div>
+            <div className="font-mono text-[10px] text-slate-400">IC 95% {fmtInt(d.ciLow)}–{fmtInt(d.ciHigh)}</div>
           )}
-          <div className="text-[10px] text-slate-500">{fmtInt(d.observed)} observados · confiabilidad {TIER_LABEL[d.tier] || '–'}</div>
-          {d.layer === 'NRT' && <div className="text-[10px] text-orange-600">Dato provisorio (NRT)</div>}
-          {d.status === 'suspect_zero' && <div className="text-[10px] text-amber-600">Cero dudoso: posible falta de cobertura</div>}
+          <div className="text-[10px] text-slate-400">{fmtInt(d.observed)} observados · confiabilidad {TIER_LABEL[d.tier] || '–'}</div>
+          {d.layer === 'NRT' && <div className="text-[10px] text-orange-400">Dato provisorio (NRT)</div>}
+          {d.status === 'suspect_zero' && <div className="text-[10px] text-amber-300">Cero dudoso: posible falta de cobertura</div>}
         </>
       )}
     </div>,
@@ -71,10 +71,10 @@ export default function CalendarTab({ fd, year, onYear }) {
       <div className="flex flex-wrap gap-1">
         {data.years.filter((y) => inRange(y, fd.range)).map((y) => (
           <button key={y} onClick={() => onYear(y)}
-            className={`relative pill-btn font-mono ${y === year ? 'text-brand-700' : 'pill-inactive'}`}
+            className={`relative pill-btn font-mono ${y === year ? 'text-night-900' : 'pill-inactive'}`}
             title={partial.has(y) ? 'Año con registro parcial' : undefined}>
             {y === year && (
-              <motion.span layoutId="year-pill" className="absolute inset-0 rounded-full bg-brand-50 ring-1 ring-brand-200"
+              <motion.span layoutId="year-pill" className="absolute inset-0 rounded-full bg-white ring-1 ring-white shadow-night"
                 transition={{ type: 'spring', stiffness: 420, damping: 36 }} />
             )}
             <span className="relative">{y}{partial.has(y) ? '*' : ''}</span>
@@ -87,13 +87,13 @@ export default function CalendarTab({ fd, year, onYear }) {
         {months.map(({ m, days, total }) => {
           const offset = startDay(year, m) + (days[0].day - 1);
           return (
-            <div key={m} className="rounded-xl bg-slate-50/80 border border-slate-100 p-3">
+            <div key={m} className="rounded-xl bg-white/5 border border-white/5 p-3">
               <div className="flex items-center justify-between mb-2">
-                <span className="text-xs font-semibold uppercase tracking-wider text-slate-600">{MONTH_NAMES[m]}</span>
-                <span className="text-[10px] font-mono text-slate-400">{fmtCount(total)} focos</span>
+                <span className="text-xs font-semibold uppercase tracking-wider text-slate-300">{MONTH_NAMES[m]}</span>
+                <span className="text-[10px] font-mono text-slate-500">{fmtCount(total)} focos</span>
               </div>
               <div className="grid grid-cols-7 gap-[3px]">
-                {WEEKDAYS.map((w) => <div key={w} className="text-center text-[8px] font-medium text-slate-400">{w}</div>)}
+                {WEEKDAYS.map((w) => <div key={w} className="text-center text-[8px] font-medium text-slate-500">{w}</div>)}
                 {Array.from({ length: offset }, (_, i) => <div key={`e${i}`} />)}
                 {days.map((d) => {
                   const noData = d.status === 'no_data';
@@ -107,14 +107,14 @@ export default function CalendarTab({ fd, year, onYear }) {
                       onMouseMove={(e) => setTip({ x: e.clientX, y: e.clientY, day: d, month: m, year, raw })}
                       onMouseLeave={() => setTip(null)}
                       className={`relative aspect-square rounded-[4px] flex items-center justify-center cursor-default transition-transform duration-100 hover:scale-125 hover:z-10 hover:shadow-md ${
-                        noData ? 'hatch-nodata' : shown > 0 ? '' : 'bg-white border border-slate-200/70'
+                        noData ? 'hatch-nodata' : shown > 0 ? '' : 'bg-white/5 border border-white/10'
                       } ${raw ? 'ring-1 ring-inset ring-violet-500/70' : ''} ${
                         d.layer === 'NRT' ? 'outline outline-1 outline-dashed outline-orange-400 -outline-offset-1' : ''
                       } ${hot ? 'ring-1 ring-red-500/60 shadow-sm shadow-red-300/50' : ''}`}
-                      style={!noData && shown > 0 ? { background: fireColor(t) } : undefined}
+                      style={!noData && shown > 0 ? { background: fireColor(t, 0.55 + 0.45 * t) } : undefined}
                     >
                       {!noData && shown > 0 && (
-                        <span className="text-[7px] font-semibold font-mono leading-none select-none" style={{ color: t > 0.6 ? '#fff' : '#431407' }}>
+                        <span className="text-[7px] font-semibold font-mono leading-none select-none" style={{ color: '#fff', textShadow: '0 1px 1px rgba(0,0,0,0.45)' }}>
                           {short(shown)}
                         </span>
                       )}
@@ -128,13 +128,13 @@ export default function CalendarTab({ fd, year, onYear }) {
         })}
       </motion.div>
 
-      <div className="flex flex-wrap items-center gap-x-5 gap-y-1.5 text-[11px] text-slate-500">
+      <div className="flex flex-wrap items-center gap-x-5 gap-y-1.5 text-[11px] text-slate-400">
         <span className="flex items-center gap-1.5">Menos <span className="w-24 h-2.5 rounded-full" style={{ background: FIRE_GRADIENT_CSS }} /> Más</span>
-        <span className="flex items-center gap-1.5"><span className="w-3 h-3 rounded-[3px] hatch-nodata border border-slate-200" />Sin dato satelital</span>
+        <span className="flex items-center gap-1.5"><span className="w-3 h-3 rounded-[3px] hatch-nodata border border-white/10" />Sin dato satelital</span>
         <span className="flex items-center gap-1.5"><span className="w-3 h-3 rounded-[3px] outline outline-1 outline-dashed outline-orange-400" />Provisorio (NRT)</span>
         <span className="flex items-center gap-1.5"><Flame className="w-3 h-3 text-red-500" fill="currentColor" />Día pico (≥ P90 histórico)</span>
         <span className="flex items-center gap-1.5"><span className="w-3 h-3 rounded-[3px] ring-1 ring-inset ring-violet-500/70" />Confiabilidad baja (conteo NASA)</span>
-        {partial.size > 0 && <span className="text-slate-400">* Año con registro parcial</span>}
+        {partial.size > 0 && <span className="text-slate-500">* Año con registro parcial</span>}
       </div>
       {tip && <DayTooltip t={tip} />}
     </div>

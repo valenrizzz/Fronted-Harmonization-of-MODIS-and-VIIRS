@@ -11,6 +11,7 @@ export default {
           900: '#0E1937',
           800: '#152349',
           700: '#1E2F5E',
+          600: '#2A4079',
         },
         beam: '#1FACC7',
         // Azul institucional ViSU: #050077 = brand-700
@@ -52,9 +53,10 @@ export default {
         mono: ['"JetBrains Mono"', 'ui-monospace', 'monospace'],
       },
       boxShadow: {
-        panel: '0 12px 32px -12px rgba(15,23,42,0.18), 0 2px 6px -2px rgba(15,23,42,0.06)',
+        panel: '0 16px 40px -14px rgba(2,6,23,0.75), inset 0 1px 0 rgba(255,255,255,0.06)',
         ember: '0 6px 20px -6px rgba(249,115,22,0.55)',
         brand: '0 6px 20px -6px rgba(5,0,119,0.45)',
+        night: '0 8px 22px -8px rgba(14,25,55,0.7)',
       },
       keyframes: {
         shimmer: { '100%': { transform: 'translateX(100%)' } },

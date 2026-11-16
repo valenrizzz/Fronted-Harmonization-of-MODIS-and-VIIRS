@@ -27,15 +27,15 @@
     background-attachment: fixed;
   }
 
-  /* Paneles flotantes translúcidos (glassmorphism claro) */
+  /* Recuadros del inicio (sobre el mapa): azul noche un tono más claro que la barra */
   .glass {
-    @apply bg-white/85 backdrop-blur-xl border border-slate-200/80 rounded-2xl shadow-panel;
+    @apply bg-night-700/80 backdrop-blur-xl border border-white/15 rounded-2xl shadow-panel text-slate-100;
   }
   .glass-strong {
-    @apply bg-white/95 backdrop-blur-2xl border border-slate-200 rounded-xl shadow-panel;
+    @apply bg-night-950/95 backdrop-blur-2xl border border-white/10 rounded-xl shadow-panel text-slate-100;
   }
   .card {
-    @apply bg-white border border-slate-200/80 rounded-2xl shadow-sm;
+    @apply bg-night-800/60 backdrop-blur-md border border-white/10 rounded-2xl shadow-panel text-slate-100;
   }
   .eyebrow {
     @apply text-[10px] font-semibold uppercase tracking-[0.16em] text-slate-400;
@@ -46,42 +46,43 @@
   .pill-btn {
     @apply px-2.5 py-1 rounded-full text-[11px] font-medium transition-all duration-200 cursor-pointer select-none active:scale-95;
   }
-  .pill-active { @apply bg-brand-50 text-brand-700 ring-1 ring-brand-200 shadow-sm; }
-  .pill-inactive { @apply text-slate-500 ring-1 ring-slate-200 hover:bg-brand-50/60 hover:text-brand-700; }
+  .pill-active { @apply bg-white text-night-900 ring-1 ring-white shadow-night; }
+  .pill-inactive { @apply text-slate-300 ring-1 ring-white/15 hover:bg-white/10 hover:text-white; }
   .tool-btn {
-    @apply w-9 h-9 flex items-center justify-center rounded-lg text-slate-600 hover:text-brand-700 hover:bg-brand-50 transition-colors active:scale-95;
+    @apply w-9 h-9 flex items-center justify-center rounded-lg text-slate-200 hover:text-white hover:bg-white/10 transition-colors active:scale-95;
   }
-  /* Acción principal (azul institucional) y secundaria */
+  /* Botones blancos con texto azul noche; acento cian al pasar el mouse */
   .btn-primary {
-    @apply inline-flex items-center justify-center gap-2 rounded-xl bg-gradient-to-r from-brand-700 to-brand-500 text-white font-semibold
-      shadow-brand hover:brightness-125 hover:-translate-y-px active:translate-y-0 active:scale-[0.98] transition;
+    @apply inline-flex items-center justify-center gap-2 rounded-xl bg-white text-night-900 font-semibold
+      ring-1 ring-white shadow-night hover:bg-slate-100 hover:ring-beam hover:-translate-y-px
+      active:translate-y-0 active:scale-[0.98] transition;
   }
   .btn-secondary {
-    @apply inline-flex items-center justify-center gap-2 rounded-xl bg-brand-50 text-brand-700 font-semibold ring-1 ring-brand-200
-      hover:bg-brand-100 hover:-translate-y-px active:translate-y-0 active:scale-[0.98] transition;
+    @apply inline-flex items-center justify-center gap-2 rounded-xl bg-white/90 text-night-900 font-semibold ring-1 ring-white/70
+      hover:bg-white hover:ring-beam hover:-translate-y-px active:translate-y-0 active:scale-[0.98] transition;
   }
 
   /* Skeleton con brillo deslizante */
-  .skeleton { @apply relative overflow-hidden rounded-md bg-slate-200/70; }
+  .skeleton { @apply relative overflow-hidden rounded-md bg-white/10; }
   .skeleton::after {
     content: '';
     @apply absolute inset-0 -translate-x-full animate-shimmer;
-    background: linear-gradient(90deg, transparent, rgba(255,255,255,0.7), transparent);
+    background: linear-gradient(90deg, transparent, rgba(255,255,255,0.12), transparent);
   }
 
   .hatch-nodata {
-    background: repeating-linear-gradient(45deg, #e2e8f0 0 2px, #f8fafc 2px 5px);
+    background: repeating-linear-gradient(45deg, rgba(255,255,255,0.12) 0 2px, transparent 2px 5px);
   }
 
   /* Slider doble de años: dos inputs range superpuestos */
   .range-thumb { @apply absolute inset-x-0 w-full appearance-none bg-transparent pointer-events-none; height: 20px; }
   .range-thumb::-webkit-slider-thumb {
-    @apply appearance-none pointer-events-auto w-4 h-4 rounded-full bg-white border-2 border-brand-700 shadow-md cursor-grab;
+    @apply appearance-none pointer-events-auto w-4 h-4 rounded-full bg-white border-2 border-beam shadow-md cursor-grab;
     transition: transform 0.15s;
   }
   .range-thumb::-webkit-slider-thumb:active { @apply cursor-grabbing; transform: scale(1.25); }
   .range-thumb::-moz-range-thumb {
-    @apply pointer-events-auto w-4 h-4 rounded-full bg-white border-2 border-brand-700 shadow-md cursor-grab;
+    @apply pointer-events-auto w-4 h-4 rounded-full bg-white border-2 border-beam shadow-md cursor-grab;
   }
 }
 
@@ -96,6 +97,14 @@
   border-radius: 8px !important;
 }
 .maplibregl-ctrl-attrib a { color: #475569 !important; }
+/* Plegada: solo el ícono ⓘ, en el azul de los recuadros */
+.maplibregl-ctrl-attrib.maplibregl-compact:not(.maplibregl-compact-show) {
+  background: rgba(30, 47, 94, 0.8) !important;
+  border: 1px solid rgba(255, 255, 255, 0.15);
+}
+.maplibregl-ctrl-attrib.maplibregl-compact:not(.maplibregl-compact-show) .maplibregl-ctrl-attrib-button {
+  filter: invert(1);
+}
 
 @media (prefers-reduced-motion: reduce) {
   *, *::before, *::after { animation-duration: 0.01ms !important; transition-duration: 0.01ms !important; }

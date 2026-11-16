@@ -38,7 +38,7 @@ components/
 
 ## 4. Estado (`useFD()`)
 
-- `region`, `setRegion`, `regionInfo`.
+- `region`, `setRegion`, `regionInfo`: **sin país predeterminado**; hasta que el usuario elige, no hay métricas ni rango y Calendario/Estadísticas muestran un aviso para volver al mapa.
 - `range {start, end, preset}`: ventana temporal única, **siempre alineada a años completos** (1 Ene → 31 Dic, recortada a los datos). Arranca en `recent` (los 2 últimos años) y se cambia solo desde el mapa con `setYearWindow` / `setCustomWindow`. `rangeYears` / `inRange` (presets.js) filtran por años.
 - `viewport` y `scope`: el mapa reporta su vista. La ruta de estadísticas lo resetea para trabajar con la región completa.
 - `summary`, `monthly`, `daily`: consultas `{data, loading, error}`.
@@ -46,8 +46,8 @@ components/
 
 ## 5. Reglas de diseño
 
-1. Fondo azul: `.bg-app` (azul noche `night-900` #0E1937, el del logo, con brillos de #050077 y del cian `beam` #1FACC7); navbar `night-900`. Tarjetas `.card` y paneles `.glass` blancos encima. Logo: `public/logo.jpeg` (también favicon) junto al nombre ViSU.
-   - **Interfaz = azul institucional `brand` (#050077 = `brand-700`)**: marca, navegación, selecciones, slider, foco, botones (`.btn-primary` / `.btn-secondary`), títulos (`text-brand-900/950`).
+1. Fondo azul: `.bg-app` (azul noche `night-900` #0E1937, el del logo, con brillos de #050077 y del cian `beam` #1FACC7); navbar `night-900`. Tarjetas `.card` y paneles `.glass` en **azul noche translúcido** con texto claro (los gráficos y el calendario usan colores para fondo oscuro). Mapa base predeterminado: satélite. Logo: `public/logo.jpeg` (también favicon) junto al nombre ViSU.
+   - **Interfaz = azul institucional `brand` (#050077) y azul noche `night`**: marca, fondo, recuadros y foco. **Botones blancos con texto azul noche** (`.btn-primary` / `.btn-secondary`, `.pill-active`, sección activa de la barra). Atribución del mapa plegada en un ícono ⓘ (obligatoria por licencia).
    - **Datos = fuego** (`fire-*`, `FIRE_STOPS`): hexágonos, calendario, serie, valores sobre lo normal. "Bajo lo normal" / descenso interanual en azul (`#2B27B0`).
 2. Los focos siempre usan `FIRE_STOPS` / `fireColor()`. La confiabilidad baja va en violeta y el NRT en rojo/naranja punteado. Los días sin dato llevan rayado gris y nunca se muestran como cero.
 3. Animaciones con framer-motion: pastillas con `layoutId`, números animados, revelado al hacer scroll y transición entre rutas. Respetar `prefers-reduced-motion`.

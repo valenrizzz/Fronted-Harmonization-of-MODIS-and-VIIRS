@@ -42,16 +42,16 @@ export default function SeriesChart({ rows, lowSpans, nrtSpans, onPickYear, onPi
       >
         <defs>
           <linearGradient id="g-area" x1="0" y1="0" x2="0" y2="1">
-            <stop offset="0" stopColor="#F97316" stopOpacity={0.22} />
+            <stop offset="0" stopColor="#F97316" stopOpacity={0.3} />
             <stop offset="1" stopColor="#F97316" stopOpacity={0} />
           </linearGradient>
           <pattern id="hatch-low" width="7" height="7" patternUnits="userSpaceOnUse" patternTransform="rotate(45)">
-            <rect width="7" height="7" fill="rgba(139,92,246,0.04)" />
-            <line x1="0" y1="0" x2="0" y2="7" stroke="rgba(139,92,246,0.28)" strokeWidth="1.4" />
+            <rect width="7" height="7" fill="rgba(167,139,250,0.06)" />
+            <line x1="0" y1="0" x2="0" y2="7" stroke="rgba(167,139,250,0.4)" strokeWidth="1.4" />
           </pattern>
           <pattern id="hatch-nrt" width="7" height="7" patternUnits="userSpaceOnUse" patternTransform="rotate(-45)">
-            <rect width="7" height="7" fill="rgba(220,38,38,0.04)" />
-            <line x1="0" y1="0" x2="0" y2="7" stroke="rgba(220,38,38,0.3)" strokeWidth="1.4" />
+            <rect width="7" height="7" fill="rgba(248,113,113,0.06)" />
+            <line x1="0" y1="0" x2="0" y2="7" stroke="rgba(248,113,113,0.4)" strokeWidth="1.4" />
           </pattern>
           <filter id="glow" x="-10%" y="-50%" width="120%" height="200%">
             <feGaussianBlur stdDeviation="2.4" result="b" />
@@ -59,41 +59,41 @@ export default function SeriesChart({ rows, lowSpans, nrtSpans, onPickYear, onPi
           </filter>
         </defs>
 
-        <CartesianGrid stroke="rgba(15,23,42,0.06)" vertical={false} />
+        <CartesianGrid stroke="rgba(255,255,255,0.07)" vertical={false} />
         <XAxis
           dataKey="ts" type="number" scale="time" domain={['dataMin', 'dataMax']} ticks={ticks}
           tickFormatter={tickLabel(isShort(rows))}
-          tick={{ fill: '#64748b', fontSize: 10, fontFamily: 'JetBrains Mono' }}
-          axisLine={{ stroke: '#e2e8f0' }} tickLine={false}
+          tick={{ fill: '#94a3b8', fontSize: 10, fontFamily: 'JetBrains Mono' }}
+          axisLine={{ stroke: 'rgba(255,255,255,0.15)' }} tickLine={false}
         />
         <YAxis
           width={46} tickFormatter={fmtCount} tickCount={4}
-          tick={{ fill: '#64748b', fontSize: 10, fontFamily: 'JetBrains Mono' }}
+          tick={{ fill: '#94a3b8', fontSize: 10, fontFamily: 'JetBrains Mono' }}
           axisLine={false} tickLine={false}
         />
 
         {lowSpans.map((s) => (
           <ReferenceArea key={`low-${s.x1}`} x1={s.x1} x2={s.x2} fill="url(#hatch-low)" ifOverflow="hidden"
-            label={s.label ? { value: s.label, position: 'insideTopLeft', fill: '#7c3aed', fontSize: 9, offset: -12 } : undefined} />
+            label={s.label ? { value: s.label, position: 'insideTopLeft', fill: '#c4b5fd', fontSize: 9, offset: -12 } : undefined} />
         ))}
         {nrtSpans.map((s) => (
           <ReferenceArea key={`nrt-${s.x1}`} x1={s.x1} x2={s.x2} fill="url(#hatch-nrt)" ifOverflow="hidden"
-            label={{ value: 'NRT', position: 'insideTop', fill: '#dc2626', fontSize: 9, offset: -12 }} />
+            label={{ value: 'NRT', position: 'insideTop', fill: '#fca5a5', fontSize: 9, offset: -12 }} />
         ))}
 
         <Area dataKey="v" type="monotone" stroke="none" fill="url(#g-area)" isAnimationActive={false} activeDot={false} />
         <Area dataKey="band" type="monotone" stroke="none" fill="#FB923C" fillOpacity={0.22} isAnimationActive={false} activeDot={false} />
         <Line dataKey="sp" type="monotone" stroke="#F97316" strokeWidth={2} dot={false}
           activeDot={{ r: 4, fill: '#fff', stroke: '#F97316', strokeWidth: 2 }} isAnimationActive animationDuration={900} connectNulls={false} />
-        <Line dataKey="raw" type="monotone" stroke="#8B5CF6" strokeWidth={1.6} dot={{ r: 1.6, fill: '#8B5CF6', strokeWidth: 0 }}
+        <Line dataKey="raw" type="monotone" stroke="#A78BFA" strokeWidth={1.6} dot={{ r: 1.6, fill: '#A78BFA', strokeWidth: 0 }}
           activeDot={{ r: 4, fill: '#fff', stroke: '#8B5CF6', strokeWidth: 2 }} isAnimationActive={false} connectNulls={false} />
-        <Line dataKey="nrt" type="monotone" stroke="#DC2626" strokeWidth={2} strokeDasharray="5 4" dot={false}
+        <Line dataKey="nrt" type="monotone" stroke="#F87171" strokeWidth={2} strokeDasharray="5 4" dot={false}
           activeDot={{ r: 4, fill: '#fff', stroke: '#DC2626', strokeWidth: 2 }} isAnimationActive={false} />
 
-        <Tooltip content={<ChartTooltip />} cursor={{ stroke: 'rgba(15,23,42,0.25)', strokeDasharray: '2 3' }} isAnimationActive={false} />
+        <Tooltip content={<ChartTooltip />} cursor={{ stroke: 'rgba(255,255,255,0.3)', strokeDasharray: '2 3' }} isAnimationActive={false} />
 
         {sel?.a != null && sel?.b != null && (
-          <ReferenceArea x1={Math.min(sel.a, sel.b)} x2={Math.max(sel.a, sel.b)} fill="rgba(249,115,22,0.14)" stroke="#F97316" />
+          <ReferenceArea x1={Math.min(sel.a, sel.b)} x2={Math.max(sel.a, sel.b)} fill="rgba(31,172,199,0.18)" stroke="#1FACC7" />
         )}
       </ComposedChart>
     </ResponsiveContainer>

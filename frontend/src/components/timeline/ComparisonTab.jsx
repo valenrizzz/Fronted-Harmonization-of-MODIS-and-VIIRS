@@ -8,13 +8,13 @@ import { compareYear } from '../../data/transform';
 import { Skeleton } from '../ui/primitives';
 import { inRange } from '../../data/presets';
 
-const AXIS = { fill: '#64748b', fontSize: 10, fontFamily: 'JetBrains Mono' };
+const AXIS = { fill: '#94a3b8', fontSize: 10, fontFamily: 'JetBrains Mono' };
 
 function Box({ title, sub, children, className = '' }) {
   return (
-    <div className={`rounded-xl bg-slate-50 ring-1 ring-slate-200 p-3 flex flex-col min-h-0 ${className}`}>
-      <div className="text-xs font-semibold text-slate-700">{title}</div>
-      {sub && <div className="text-[10px] text-slate-500 mb-1">{sub}</div>}
+    <div className={`rounded-xl bg-white/5 ring-1 ring-white/10 p-3 flex flex-col min-h-0 ${className}`}>
+      <div className="text-xs font-semibold text-slate-200">{title}</div>
+      {sub && <div className="text-[10px] text-slate-400 mb-1">{sub}</div>}
       <div className="flex-1 min-h-[140px]">{children}</div>
     </div>
   );
@@ -22,7 +22,7 @@ function Box({ title, sub, children, className = '' }) {
 
 function Tip({ active, payload, label, render }) {
   if (!active || !payload?.length) return null;
-  return <div className="glass-strong px-2.5 py-1.5 text-[11px] text-slate-600">{render(payload[0].payload, label)}</div>;
+  return <div className="glass-strong px-2.5 py-1.5 text-[11px] text-slate-300">{render(payload[0].payload, label)}</div>;
 }
 
 export default function ComparisonTab({ fd, year, onYear }) {
@@ -59,14 +59,14 @@ export default function ComparisonTab({ fd, year, onYear }) {
       >
         <ResponsiveContainer width="100%" height="100%">
           <ComposedChart data={monthly} margin={{ top: 6, right: 6, left: 0, bottom: 0 }}>
-            <CartesianGrid stroke="rgba(15,23,42,0.06)" vertical={false} />
+            <CartesianGrid stroke="rgba(255,255,255,0.07)" vertical={false} />
             <XAxis dataKey="label" tick={AXIS} axisLine={false} tickLine={false} interval={1} />
             <YAxis width={42} tick={AXIS} tickFormatter={fmtCount} axisLine={false} tickLine={false} tickCount={4} />
-            <Area dataKey="band" fill="#8B89E0" fillOpacity={0.16} stroke="none" isAnimationActive={false} />
-            <Line dataKey="median" stroke="#5A57CC" strokeDasharray="4 3" strokeWidth={1.3} dot={false} isAnimationActive={false} />
+            <Area dataKey="band" fill="#8B89E0" fillOpacity={0.22} stroke="none" isAnimationActive={false} />
+            <Line dataKey="median" stroke="#B9B8EF" strokeDasharray="4 3" strokeWidth={1.3} dot={false} isAnimationActive={false} />
             <Line dataKey="current" stroke="#F97316" strokeWidth={2.2} dot={{ r: 2.5, fill: '#F97316', strokeWidth: 0 }} connectNulls={false} animationDuration={700} />
-            <Tooltip cursor={{ stroke: 'rgba(15,23,42,0.2)' }} content={<Tip render={(r) => (
-              <><b className="text-brand-950">{r.label} {year}</b>: {fmtCount(r.current)} focos<br /><span className="text-slate-500">mediana {fmtCount(r.median)}</span></>
+            <Tooltip cursor={{ stroke: 'rgba(255,255,255,0.2)' }} content={<Tip render={(r) => (
+              <><b className="text-white">{r.label} {year}</b>: {fmtCount(r.current)} focos<br /><span className="text-slate-400">mediana {fmtCount(r.median)}</span></>
             )} />} />
           </ComposedChart>
         </ResponsiveContainer>
@@ -75,19 +75,19 @@ export default function ComparisonTab({ fd, year, onYear }) {
       <Box title="Anomalía anual vs. mediana" sub="Clic en una barra para analizar ese año · años parciales en la misma ventana">
         <ResponsiveContainer width="100%" height="100%">
           <BarChart data={anomalies} margin={{ top: 6, right: 6, left: 0, bottom: 0 }}>
-            <CartesianGrid stroke="rgba(15,23,42,0.06)" vertical={false} />
+            <CartesianGrid stroke="rgba(255,255,255,0.07)" vertical={false} />
             <XAxis dataKey="year" tick={AXIS} axisLine={false} tickLine={false} interval={years.length > 12 ? 4 : 0} />
             <YAxis width={42} tick={AXIS} tickFormatter={(v) => `${v}%`} axisLine={false} tickLine={false} tickCount={4}
               domain={[(min) => Math.min(min, 0), (max) => Math.max(max, 0)]} />
-            <ReferenceLine y={0} stroke="rgba(15,23,42,0.2)" />
+            <ReferenceLine y={0} stroke="rgba(255,255,255,0.2)" />
             <Bar dataKey="pct" maxBarSize={36} radius={[2, 2, 2, 2]} onClick={(d) => onYear(d.year)} cursor="pointer" animationDuration={700}>
               {anomalies.map((a) => (
-                <Cell key={a.year} fill={a.pct >= 0 ? '#EF4444' : '#2B27B0'} fillOpacity={a.year === year ? 1 : 0.45}
-                  stroke={a.year === year ? '#050077' : 'none'} />
+                <Cell key={a.year} fill={a.pct >= 0 ? '#EF4444' : '#1FACC7'} fillOpacity={a.year === year ? 1 : 0.45}
+                  stroke={a.year === year ? '#ffffff' : 'none'} />
               ))}
             </Bar>
-            <Tooltip cursor={{ fill: 'rgba(15,23,42,0.04)' }} content={<Tip render={(r) => (
-              <><b className="text-brand-950">{r.year}</b>: {r.pct >= 0 ? '+' : ''}{r.pct}% vs. mediana</>
+            <Tooltip cursor={{ fill: 'rgba(255,255,255,0.05)' }} content={<Tip render={(r) => (
+              <><b className="text-white">{r.year}</b>: {r.pct >= 0 ? '+' : ''}{r.pct}% vs. mediana</>
             )} />} />
           </BarChart>
         </ResponsiveContainer>
@@ -97,15 +97,15 @@ export default function ComparisonTab({ fd, year, onYear }) {
         <div className="space-y-2 mt-1">
           {top.map((t, i) => (
             <button key={t.year} onClick={() => onYear(t.year)} className="w-full flex items-center gap-2 group">
-              <span className={`w-5 text-[10px] font-mono ${i === 0 ? 'text-orange-600' : 'text-slate-500'}`}>
+              <span className={`w-5 text-[10px] font-mono ${i === 0 ? 'text-orange-400' : 'text-slate-400'}`}>
                 {i === 0 ? <Trophy className="w-3.5 h-3.5" /> : `${i + 1}°`}
               </span>
-              <span className={`text-xs font-mono w-9 ${t.year === year ? 'text-brand-950' : 'text-slate-600'}`}>{t.year}{t.partial ? '*' : ''}</span>
-              <span className="flex-1 h-4 rounded-full bg-slate-100 overflow-hidden">
+              <span className={`text-xs font-mono w-9 ${t.year === year ? 'text-white' : 'text-slate-300'}`}>{t.year}{t.partial ? '*' : ''}</span>
+              <span className="flex-1 h-4 rounded-full bg-white/10 overflow-hidden">
                 <span className="block h-full rounded-full bg-gradient-to-r from-fire-300 to-fire-600 group-hover:brightness-125 transition"
                   style={{ width: `${(t.total / maxTop) * 100}%`, opacity: 1 - i * 0.13 }} />
               </span>
-              <span className="text-[10px] font-mono text-slate-500 w-14 text-right">{fmtCount(t.total)}</span>
+              <span className="text-[10px] font-mono text-slate-400 w-14 text-right">{fmtCount(t.total)}</span>
             </button>
           ))}
         </div>

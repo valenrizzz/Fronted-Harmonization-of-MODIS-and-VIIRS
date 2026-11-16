@@ -23,7 +23,8 @@ export function useFireData() {
 
   const regionsQ = useQuery(`regions:${reloadKey}`, (signal) => api.regions({ signal }));
   const regions = regionsQ.data || [];
-  const activeRegion = region || regions.find((r) => r.region === 'ARG')?.region || regions[0]?.region || null;
+  // Sin país predeterminado: el usuario elige el primero desde el mapa
+  const activeRegion = region && regions.some((r) => r.region === region) ? region : null;
   const regionInfo = useMemo(() => regions.find((r) => r.region === activeRegion) || null, [regions, activeRegion]);
 
   const range = useMemo(

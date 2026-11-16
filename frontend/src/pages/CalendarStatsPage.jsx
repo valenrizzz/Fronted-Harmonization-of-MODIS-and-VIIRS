@@ -17,8 +17,8 @@ const reveal = (i) => ({ initial: { opacity: 0, y: 14 }, animate: { opacity: 1, 
 function Panel({ icon: Icon, title, sub, children, i = 0 }) {
   return (
     <motion.section {...reveal(i)} className="card p-4 md:p-5">
-      <h2 className="flex items-center gap-2 text-base font-semibold text-brand-900"><Icon className="w-4 h-4 text-brand-500" />{title}</h2>
-      {sub && <p className="text-xs text-slate-500 mt-0.5 mb-3">{sub}</p>}
+      <h2 className="flex items-center gap-2 text-base font-semibold text-white"><Icon className="w-4 h-4 text-beam" />{title}</h2>
+      {sub && <p className="text-xs text-slate-400 mt-0.5 mb-3">{sub}</p>}
       {children}
     </motion.section>
   );
@@ -42,6 +42,21 @@ export default function CalendarStatsPage() {
   // Estas vistas usan la región completa, no el recorte del mapa
   useEffect(() => { fd.setViewport(null); }, []); // eslint-disable-line react-hooks/exhaustive-deps
   useEffect(() => { window.scrollTo({ top: 0, behavior: 'smooth' }); }, [view]);
+
+  if (fd.status === 'ready' && !fd.regionInfo) {
+    return (
+      <div className="min-h-[100dvh]">
+        <Navbar />
+        <main className="max-w-xl mx-auto px-4 py-24 text-center">
+          <motion.div {...reveal(0)} className="card p-8">
+            <h1 className="font-display text-2xl font-bold text-white">Elegí un país en el mapa</h1>
+            <p className="text-sm text-slate-300 mt-2">El calendario y las estadísticas muestran el país y el rango de años que elijas en el mapa.</p>
+            <Link to="/" className="btn-primary h-10 px-5 text-sm mt-6"><ArrowLeft className="w-4 h-4" /> Ir al mapa</Link>
+          </motion.div>
+        </main>
+      </div>
+    );
+  }
 
   return (
     <div className="min-h-[100dvh]">

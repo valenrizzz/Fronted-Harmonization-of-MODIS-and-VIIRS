@@ -35,7 +35,7 @@ function Splash() {
             ) : (
               <>
                 <p className="font-display text-lg text-white">Cargando 26 años de actividad de fuego armonizada</p>
-                <p className="text-xs text-slate-400 mt-1">MODIS + VIIRS · NASA FIRMS · Cono Sur</p>
+                <p className="text-xs text-slate-400 mt-1">MODIS + VIIRS · NASA FIRMS</p>
               </>
             )}
           </div>

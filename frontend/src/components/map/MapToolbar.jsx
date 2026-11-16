@@ -23,15 +23,15 @@ export default function MapToolbar({ top, map, bearing, onFit, is3D, setIs3D, ba
                 key={b.id}
                 onClick={() => { setBasemap(b.id); setOpen(false); }}
                 className={`w-full flex items-center gap-2.5 p-1.5 rounded-lg text-left transition-colors ${
-                  basemap === b.id ? 'bg-brand-50 ring-1 ring-brand-200' : 'hover:bg-slate-100'
+                  basemap === b.id ? 'bg-white/10 ring-1 ring-beam/40' : 'hover:bg-white/5'
                 }`}
               >
-                <img src={b.thumb} alt="" loading="lazy" className="w-10 h-10 rounded-md object-cover ring-1 ring-slate-200 bg-slate-100" />
+                <img src={b.thumb} alt="" loading="lazy" className="w-10 h-10 rounded-md object-cover ring-1 ring-white/10 bg-white/10" />
                 <span className="min-w-0">
-                  <span className="block text-xs font-medium text-slate-800">{b.label}</span>
-                  <span className="block text-[10px] text-slate-500 truncate">{b.desc}</span>
+                  <span className="block text-xs font-medium text-slate-100">{b.label}</span>
+                  <span className="block text-[10px] text-slate-400 truncate">{b.desc}</span>
                 </span>
-                {basemap === b.id && <Check className="w-3.5 h-3.5 text-brand-600 ml-auto shrink-0" />}
+                {basemap === b.id && <Check className="w-3.5 h-3.5 text-beam ml-auto shrink-0" />}
               </button>
             ))}
           </motion.div>
@@ -46,9 +46,9 @@ export default function MapToolbar({ top, map, bearing, onFit, is3D, setIs3D, ba
           <Compass className="w-4 h-4 transition-transform" style={{ transform: `rotate(${-bearing - 45}deg)` }} />
         </button>
         <button className="tool-btn" title="Encuadrar región" aria-label="Encuadrar región" onClick={onFit}><Maximize className="w-4 h-4" /></button>
-        <div className="h-px bg-slate-100 my-0.5 mx-1.5" />
+        <div className="h-px bg-white/10 my-0.5 mx-1.5" />
         <button
-          className={`tool-btn ${is3D ? 'bg-brand-50 text-brand-700 ring-1 ring-brand-300' : ''}`}
+          className={`tool-btn ${is3D ? 'bg-white text-night-900 ring-1 ring-white hover:bg-white hover:text-night-900' : ''}`}
           title="Vista 3D (altura = actividad)"
           aria-pressed={is3D}
           onClick={() => setIs3D(!is3D)}
@@ -56,7 +56,7 @@ export default function MapToolbar({ top, map, bearing, onFit, is3D, setIs3D, ba
           <Box className="w-4 h-4" />
         </button>
         <button
-          className={`tool-btn ${open ? 'bg-slate-100 text-brand-950' : ''}`}
+          className={`tool-btn ${open ? 'bg-white text-night-900 ring-1 ring-white hover:bg-white hover:text-night-900' : ''}`}
           title="Mapa base"
           aria-expanded={open}
           onClick={() => setOpen(!open)}

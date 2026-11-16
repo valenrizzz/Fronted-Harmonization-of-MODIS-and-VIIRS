@@ -25,8 +25,8 @@ export default function CsvDownload({ compact = false }) {
     <button
       onClick={go}
       disabled={!ready}
-      title={ready ? `Datos diarios de ${regionName(fd.region)}, ${years}` : 'Cargando datos…'}
-      className={`btn-secondary text-sm disabled:opacity-50 disabled:cursor-wait ${compact ? 'h-9 px-4' : 'w-full h-9'}`}
+      title={ready ? `Datos diarios de ${regionName(fd.region)}, ${years}` : fd.region ? 'Cargando datos…' : 'Elegí un país primero'}
+      className={`btn-secondary text-sm disabled:opacity-50 disabled:cursor-wait ${compact ? 'h-9 px-4 !ring-white/25' : 'w-full h-9'}`}
     >
       {done ? <Check className="w-4 h-4" /> : <Download className="w-4 h-4" />}
       {done ? 'Descargado' : `Descargar CSV${ready ? ` · ${years}` : ''}`}

@@ -19,9 +19,9 @@ export const regionName = (code) => REGION_NAMES[code] || code;
 
 export const TIER_LABEL = { high: 'alta', medium: 'media', low: 'baja' };
 export const TIER_STYLE = {
-  high: 'bg-emerald-50 text-emerald-700 ring-emerald-200',
-  medium: 'bg-sky-50 text-sky-700 ring-sky-200',
-  low: 'bg-violet-50 text-violet-700 ring-violet-200',
+  high: 'bg-emerald-400/15 text-emerald-300 ring-emerald-400/30',
+  medium: 'bg-sky-400/15 text-sky-300 ring-sky-400/30',
+  low: 'bg-violet-400/15 text-violet-300 ring-violet-400/30',
 };
 
 /**

@@ -42,12 +42,12 @@ export default function Navbar() {
             const active = view === l.id;
             return (
               <Link key={l.id} to={l.to} aria-current={active ? 'page' : undefined}
-                className={`relative flex items-center gap-1.5 px-3 h-8 rounded-lg text-xs font-medium transition-colors ${active ? 'text-brand-700' : 'text-slate-300 hover:text-white'}`}>
+                className={`relative flex items-center gap-1.5 px-3 h-8 rounded-lg text-xs font-medium transition-colors ${active ? 'text-night-900' : 'text-slate-300 hover:text-white hover:bg-white/5'}`}>
                 {active && (
-                  <motion.span layoutId="nav-pill" className="absolute inset-0 rounded-lg bg-white shadow-sm ring-1 ring-brand-200"
+                  <motion.span layoutId="nav-pill" className="absolute inset-0 rounded-lg bg-white shadow-night ring-1 ring-white"
                     transition={{ type: 'spring', stiffness: 420, damping: 36 }} />
                 )}
-                <l.icon className={`relative w-3.5 h-3.5 ${active ? 'text-brand-600' : ''}`} />
+                <l.icon className={`relative w-3.5 h-3.5 ${active ? 'text-night-700' : ''}`} />
                 <span className="relative hidden sm:inline">{l.label}</span>
               </Link>
             );

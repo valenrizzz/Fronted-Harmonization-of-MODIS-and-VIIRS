@@ -3,7 +3,7 @@ import { Skeleton } from '../ui/primitives';
 
 const share = (v) => `${Math.round((v || 0) * 100)}%`;
 
-export function Card({ icon: Icon, label, accent = 'text-orange-600', children, loading, empty, delay = 0 }) {
+export function Card({ icon: Icon, label, accent = 'text-orange-400', children, loading, empty, delay = 0 }) {
   return (
     <motion.div
       initial={{ opacity: 0, y: -8 }}
@@ -58,13 +58,13 @@ export function QualityBar({ rs, nrt }) {
   ];
   return (
     <div className="mt-2">
-      <div className="flex h-1.5 rounded-full overflow-hidden bg-slate-100">
+      <div className="flex h-1.5 rounded-full overflow-hidden bg-white/10">
         {parts.map((p) => <div key={p.k} className={`${p.c} transition-all duration-700`} style={{ width: share(p.v) }} />)}
       </div>
-      <div className="flex gap-2.5 mt-1.5 text-[10px] text-slate-500">
+      <div className="flex gap-2.5 mt-1.5 text-[10px] text-slate-400">
         <span><i className="inline-block w-1.5 h-1.5 rounded-full bg-emerald-500 mr-1" />alta {share(rs.high)}</span>
         <span><i className="inline-block w-1.5 h-1.5 rounded-full bg-violet-500 mr-1" />baja {share(rs.low)}</span>
-        {nrt > 0 && <span className="text-orange-600">NRT {share(nrt)}</span>}
+        {nrt > 0 && <span className="text-orange-400">NRT {share(nrt)}</span>}
       </div>
     </div>
   );

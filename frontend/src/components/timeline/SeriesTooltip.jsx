@@ -24,31 +24,31 @@ export function ChartTooltip({ active, payload }) {
   const r = payload[0].payload;
   return (
     <div className="glass-strong px-3 py-2 text-[11px] min-w-[190px]">
-      <div className="font-semibold text-brand-950">{fmtMonth(r.date)}</div>
+      <div className="font-semibold text-white">{fmtMonth(r.date)}</div>
       {r.v == null ? (
-        <div className="text-slate-500">Sin dato satelital</div>
+        <div className="text-slate-400">Sin dato satelital</div>
       ) : (
         <>
           {r.isRaw ? (
             <>
-              <div className="font-display text-lg text-violet-700 leading-tight mt-0.5">
-                {fmtInt(r.v)} <span className="text-[10px] text-slate-500 font-sans">detecciones NASA originales</span>
+              <div className="font-display text-lg text-violet-300 leading-tight mt-0.5">
+                {fmtInt(r.v)} <span className="text-[10px] text-slate-400 font-sans">detecciones NASA originales</span>
               </div>
-              <div className="text-[10px] text-slate-500">
+              <div className="text-[10px] text-slate-400">
                 Sin armonizar: calibración poco confiable este mes
-                <span className="block font-mono text-slate-400">(armonizado: {fmtCount(r.harmonized)})</span>
+                <span className="block font-mono text-slate-500">(armonizado: {fmtCount(r.harmonized)})</span>
               </div>
             </>
           ) : (
             <>
-              <div className="font-display text-lg text-orange-700 leading-tight mt-0.5">
-                {fmtCount(r.v)} <span className="text-[10px] text-slate-500 font-sans">focos armonizados</span>
+              <div className="font-display text-lg text-orange-300 leading-tight mt-0.5">
+                {fmtCount(r.v)} <span className="text-[10px] text-slate-400 font-sans">focos armonizados</span>
               </div>
-              {r.band && <div className="font-mono text-[10px] text-slate-500">IC 95% {fmtCount(r.band[0])}–{fmtCount(r.band[1])}</div>}
-              {r.nasa != null && <div className="font-mono text-[10px] text-slate-400">NASA FIRMS original: {fmtInt(r.nasa)}</div>}
+              {r.band && <div className="font-mono text-[10px] text-slate-400">IC 95% {fmtCount(r.band[0])}–{fmtCount(r.band[1])}</div>}
+              {r.nasa != null && <div className="font-mono text-[10px] text-slate-500">NASA FIRMS original: {fmtInt(r.nasa)}</div>}
             </>
           )}
-          <div className="text-[10px] text-slate-500 mt-0.5">
+          <div className="text-[10px] text-slate-400 mt-0.5">
             {fmtInt(r.observed)} observados
             {r.coverage != null && r.coverage < 1 && ` · cobertura ${Math.round(r.coverage * 100)}%`}
           </div>

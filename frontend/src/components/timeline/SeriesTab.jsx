@@ -6,7 +6,7 @@ import SeriesChart from './SeriesChart';
 import { buildRows, spans } from './seriesRows';
 
 function Legend({ swatch, children, title }) {
-  return <span className="flex items-center gap-1.5 text-[10px] text-slate-500" title={title}>{swatch}{children}</span>;
+  return <span className="flex items-center gap-1.5 text-[10px] text-slate-400" title={title}>{swatch}{children}</span>;
 }
 
 const AQUA_START = '2002-07-04'; // antes de Aqua solo operaba MODIS-Terra
@@ -35,20 +35,20 @@ export default function SeriesTab({ fd }) {
       <div className="flex flex-wrap items-center gap-x-4 gap-y-1.5">
         <Legend swatch={<span className="w-4 h-0.5 rounded bg-fire-500" />}>Focos armonizados / mes</Legend>
         <Legend swatch={<span className="w-4 h-2.5 rounded-sm bg-orange-300/40" />}>
-          IC 95% {data?.ci_method === 'sum_of_event_ci' && <span className="text-slate-400">(aprox. por evento)</span>}
+          IC 95% {data?.ci_method === 'sum_of_event_ci' && <span className="text-slate-500">(aprox. por evento)</span>}
         </Legend>
         {hasRaw && (
           <Legend
             swatch={<span className="w-4 h-2.5 rounded-sm ring-1 ring-violet-400/40" style={{ background: 'repeating-linear-gradient(45deg, rgba(139,92,246,0.35) 0 1.5px, transparent 1.5px 4px)' }} />}
             title="En meses de confiabilidad baja se grafica el conteo original de NASA FIRMS, sin corrección."
           >
-            Confiabilidad baja · <span className="text-violet-600">conteo NASA original</span>
+            Confiabilidad baja · <span className="text-violet-300">conteo NASA original</span>
           </Legend>
         )}
         <span className="flex-1" />
         {hasEarlyLow && (
           <span
-            className="chip bg-violet-50 text-violet-700 ring-violet-200"
+            className="chip bg-violet-400/10 text-violet-300 ring-violet-400/30"
             title="Antes de Aqua (jul. 2002) solo operaba MODIS-Terra: la calibración entre sensores tiene mayor incertidumbre."
           >
             <AlertTriangle className="w-3 h-3" />
@@ -60,7 +60,7 @@ export default function SeriesTab({ fd }) {
 
       <div className="relative flex-1 min-h-0">
         {!data && loading && <Skeleton className="absolute inset-0 !rounded-xl" />}
-        {error && !data && <div className="text-xs text-orange-600 p-4">No se pudo cargar la serie: {error}</div>}
+        {error && !data && <div className="text-xs text-orange-400 p-4">No se pudo cargar la serie: {error}</div>}
         {data && (
           <div className={`absolute inset-0 transition-opacity duration-300 ${loading ? 'opacity-50' : ''}`}>
             <SeriesChart
@@ -71,10 +71,10 @@ export default function SeriesTab({ fd }) {
           </div>
         )}
       </div>
-      <div className="flex items-center gap-1.5 text-[10px] text-slate-400">
+      <div className="flex items-center gap-1.5 text-[10px] text-slate-500">
         <MousePointerClick className="w-3 h-3" />
         Pasá el cursor para ver el detalle de cada mes. Se muestra solo el rango de años elegido en el mapa.
-        {fd.scope === 'area' && <span className="ml-auto text-orange-600">Serie recortada al área visible del mapa</span>}
+        {fd.scope === 'area' && <span className="ml-auto text-orange-400">Serie recortada al área visible del mapa</span>}
       </div>
     </div>
   );

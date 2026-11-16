@@ -34,9 +34,9 @@ function KpiMenu({ item, loading, empty, delay }) {
         aria-pressed={pinned}
         title={pinned ? 'Clic para soltar' : 'Clic para dejarlo abierto'}
         className={`glass !rounded-xl w-full flex items-center gap-2.5 pl-3 pr-2.5 py-2 text-left transition-shadow ${
-          pinned ? 'ring-2 ring-brand-500 shadow-brand' : open ? 'ring-2 ring-brand-200' : ''}`}
+          pinned ? 'ring-2 ring-beam/80 shadow-night' : open ? 'ring-2 ring-white/25' : ''}`}
       >
-        <Icon className={`w-4 h-4 shrink-0 ${item.accent || 'text-orange-600'}`} />
+        <Icon className={`w-4 h-4 shrink-0 ${item.accent || 'text-orange-400'}`} />
         <span className="min-w-0">
           <span className="block eyebrow !text-[9px] leading-none">{item.label}</span>
           {empty ? <Skeleton className="h-5 w-20 mt-1" /> : (
@@ -44,8 +44,8 @@ function KpiMenu({ item, loading, empty, delay }) {
           )}
         </span>
         {pinned
-          ? <Pin className="w-3.5 h-3.5 text-brand-600 fill-brand-600 ml-auto" />
-          : <ChevronDown className={`w-3.5 h-3.5 text-slate-400 ml-auto transition-transform duration-300 ${open ? 'rotate-180' : ''}`} />}
+          ? <Pin className="w-3.5 h-3.5 text-beam fill-beam ml-auto" />
+          : <ChevronDown className={`w-3.5 h-3.5 text-slate-500 ml-auto transition-transform duration-300 ${open ? 'rotate-180' : ''}`} />}
       </button>
 
       <AnimatePresence>
@@ -59,7 +59,7 @@ function KpiMenu({ item, loading, empty, delay }) {
           >
             <div className="eyebrow mb-1 flex items-center justify-between">
               {item.label}
-              {pinned && <span className="normal-case tracking-normal font-medium text-brand-600">Fijado</span>}
+              {pinned && <span className="normal-case tracking-normal font-medium text-beam">Fijado</span>}
             </div>
             <div className="mb-1">{item.value('text-2xl')}</div>
             <div className={`relative min-h-[34px] ${item.id === 'total' ? 'pb-10' : ''}`}>{item.detail}</div>

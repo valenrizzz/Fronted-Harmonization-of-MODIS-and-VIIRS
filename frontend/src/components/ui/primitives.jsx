@@ -42,7 +42,7 @@ export function TierChip({ tier, prefix = 'Confiabilidad' }) {
 
 export function NrtChip({ label = 'Provisorio · NRT' }) {
   return (
-    <span className="chip bg-orange-50 text-orange-700 ring-orange-200">
+    <span className="chip bg-orange-400/10 text-orange-300 ring-orange-400/30">
       <span className="relative flex w-1.5 h-1.5">
         <span className="absolute inline-flex h-full w-full rounded-full bg-orange-400 opacity-75 animate-ping" />
         <span className="relative inline-flex rounded-full w-1.5 h-1.5 bg-orange-500" />
