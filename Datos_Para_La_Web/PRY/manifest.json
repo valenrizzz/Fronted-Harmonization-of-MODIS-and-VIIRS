@@ -1,0 +1,432 @@
+{
+  "dataset": "firms_harmonized_fire_events",
+  "region": "PRY",
+  "generated_utc": "2026-11-15T21:06:13+00:00",
+  "calibration_version": "PRY-cal-14ccff1819ab",
+  "calibration": {
+    "reference_constellation": "Terra+Aqua+SNPP+NOAA20+NOAA21",
+    "factor_scope": "month_of_year",
+    "smoothing": {
+      "method": "harmonic",
+      "harmonics": 2,
+      "window": 3,
+      "prior_events": 100.0,
+      "select_by_cv": true
+    },
+    "series_min_confidence": "nominal",
+    "quality_rules": {
+      "high": {
+        "max_k": 1.5,
+        "max_rel_ci": 0.05
+      },
+      "medium": {
+        "max_k": 5.0,
+        "max_rel_ci": 0.1
+      }
+    }
+  },
+  "sp_nrt_cut": {
+    "sp_cutoff": "2026-07-31",
+    "nrt_start": "2026-08-01",
+    "data_end": "2026-11-14",
+    "pending_products": [
+      "MODIS",
+      "NOAA20",
+      "NOAA21",
+      "SNPP"
+    ],
+    "products": {
+      "MODIS": {
+        "sp_end": "2026-08-31",
+        "data_end": "2026-11-14"
+      },
+      "NOAA20": {
+        "sp_end": "2026-07-31",
+        "data_end": "2026-11-14"
+      },
+      "NOAA21": {
+        "sp_end": "2026-07-31",
+        "data_end": "2026-11-14"
+      },
+      "SNPP": {
+        "sp_end": "2026-07-31",
+        "data_end": "2026-11-02"
+      }
+    },
+    "sp_cutoff_solar_day": "2026-07-31"
+  },
+  "layers": {
+    "SP": {
+      "events": 1630619,
+      "first": "2000-11-01",
+      "last": "2026-07-31"
+    },
+    "NRT": {
+      "events": 25114,
+      "first": "2026-08-01",
+      "last": "2026-11-14"
+    }
+  },
+  "period": [
+    "2000-11-01",
+    "2026-11-14"
+  ],
+  "h3": {
+    "event_res": 7,
+    "coarse_res": 3,
+    "map_res": 5
+  },
+  "schemas": {
+    "events": {
+      "region": "String",
+      "layer": "String",
+      "year": "Int32",
+      "solar_date": "Date",
+      "month_of_year": "Int8",
+      "doy": "Int16",
+      "h3_index": "String",
+      "h3_cell": "UInt64",
+      "h3_r3": "UInt64",
+      "h3_r5": "UInt64",
+      "cell_lat": "Float64",
+      "cell_lon": "Float64",
+      "epoch_id": "String",
+      "in_series": "Boolean",
+      "harmonized_weight": "Float64",
+      "weight_ci_low": "Float64",
+      "weight_ci_high": "Float64",
+      "reliability_tier": "String",
+      "calibration_version": "String",
+      "n_raw_detections": "UInt32",
+      "n_satellites": "UInt8",
+      "satellites": "String",
+      "n_modis_detections": "UInt32",
+      "n_viirs_detections": "UInt32",
+      "sat_mask": "Int32",
+      "sat_mask_series": "Int32",
+      "frp_max": "Float32",
+      "frp_mean": "Float32",
+      "frp_quality": "String",
+      "max_confidence": "String",
+      "max_confidence_rank": "Int8",
+      "first_detection_utc": "Datetime(time_unit='us', time_zone='UTC')",
+      "last_detection_utc": "Datetime(time_unit='us', time_zone='UTC')",
+      "is_provisional": "Boolean",
+      "n_provisional_detections": "UInt32"
+    },
+    "timeseries_daily": {
+      "region": "String",
+      "date": "Date",
+      "month": "Date",
+      "doy": "Int16",
+      "layer": "String",
+      "epoch_id": "String",
+      "n_active": "Int8",
+      "active_mask": "Int32",
+      "observation_flag": "String",
+      "events_observed": "Int64",
+      "events_all_confidence": "Int64",
+      "k_factor": "Float64",
+      "k_factor_ci_low": "Float64",
+      "k_factor_ci_high": "Float64",
+      "events_harmonized": "Float64",
+      "events_harmonized_ci_low": "Float64",
+      "events_harmonized_ci_high": "Float64",
+      "reliability_tier": "String",
+      "calibration_version": "String"
+    },
+    "timeseries_monthly": {
+      "region": "String",
+      "month": "Date",
+      "layer": "String",
+      "epochs": "String",
+      "days_observed": "UInt32",
+      "days_in_month": "UInt32",
+      "days_suspect_zero": "UInt32",
+      "events_observed": "Int64",
+      "events_all_confidence": "Int64",
+      "events_harmonized": "Float64",
+      "events_harmonized_ci_low": "Float64",
+      "events_harmonized_ci_high": "Float64",
+      "coverage_frac": "Float64",
+      "events_harmonized_gapfilled": "Float64",
+      "events_harmonized_gapfilled_ci_low": "Float64",
+      "events_harmonized_gapfilled_ci_high": "Float64",
+      "reliability_tier": "String",
+      "calibration_version": "String"
+    },
+    "calibration_factors": {
+      "active_mask": "Int64",
+      "epoch_id": "String",
+      "month_of_year": "Int8",
+      "n_days": "Int64",
+      "k_factor": "Float64",
+      "k_ci_low": "Float64",
+      "k_ci_high": "Float64",
+      "calibration_path": "String",
+      "k_rel_ci_halfwidth": "Float64",
+      "reliability_tier": "String",
+      "calibration_version": "String"
+    },
+    "calibration_factors_daily": {
+      "active_mask": "Int32",
+      "epoch_id": "String",
+      "doy": "Int16",
+      "k_factor": "Float64",
+      "k_ci_low": "Float64",
+      "k_ci_high": "Float64",
+      "calibration_version": "String"
+    }
+  },
+  "files": [
+    {
+      "path": "calibration_factors.json",
+      "bytes": 94088,
+      "sha256": "dac833f923740f433335dca41cd7ae79441ee6003894859720712f1c90dccb34"
+    },
+    {
+      "path": "calibration_factors.parquet",
+      "bytes": 10791,
+      "sha256": "c504fd1e69883733e88d173efc9ee78393757c366463afdb3139d00278be59d9",
+      "rows": 240
+    },
+    {
+      "path": "calibration_factors_daily.parquet",
+      "bytes": 122807,
+      "sha256": "b0f1827850fcf5e27cf7eb7381400bd0eb8fcbbe1312e5266be4b68fabbde8a2",
+      "rows": 7320
+    },
+    {
+      "path": "events/layer=NRT/year=2026/part_0.parquet",
+      "bytes": 730293,
+      "sha256": "47e11188d4df87e9a752312947801abe313db059c232e3b6a42f61c79f776cae",
+      "rows": 25114
+    },
+    {
+      "path": "events/layer=SP/year=2000/part_0.parquet",
+      "bytes": 34877,
+      "sha256": "b16d435b419362b4d98d7354d05b1035c2babb8205f80ea69b9d7a51049a824c",
+      "rows": 808
+    },
+    {
+      "path": "events/layer=SP/year=2001/part_0.parquet",
+      "bytes": 425603,
+      "sha256": "9e656c175d1efecd399e21b136fa10a0f4d881becddbec0caeb2fc498b0c2a3f",
+      "rows": 14185
+    },
+    {
+      "path": "events/layer=SP/year=2002/part_0.parquet",
+      "bytes": 877532,
+      "sha256": "5a3a99256fcff5799b9b69752b60e1086b748fe03f494c336a4f6b2072ab547b",
+      "rows": 33719
+    },
+    {
+      "path": "events/layer=SP/year=2003/part_0.parquet",
+      "bytes": 1218186,
+      "sha256": "2635be9c37b4aafb4e1650781f065064d5910a8d0b18dac8cea399edc10c234b",
+      "rows": 49541
+    },
+    {
+      "path": "events/layer=SP/year=2004/part_0.parquet",
+      "bytes": 882982,
+      "sha256": "c02f6223c77916ade321545b681414ef489201a5e559807110d99e79e996851e",
+      "rows": 34077
+    },
+    {
+      "path": "events/layer=SP/year=2005/part_0.parquet",
+      "bytes": 950175,
+      "sha256": "e0ccfe381d11c159a11ad8368f3c9b13889bf95fd7bc40ea918117727c918583",
+      "rows": 35987
+    },
+    {
+      "path": "events/layer=SP/year=2006/part_0.parquet",
+      "bytes": 917145,
+      "sha256": "992e54937810dbc59b8c37a60a630e94c6b986502fd79bf2e9e33d7475473873",
+      "rows": 34030
+    },
+    {
+      "path": "events/layer=SP/year=2007/part_0.parquet",
+      "bytes": 1084237,
+      "sha256": "23ec8a999489fc1336272fc5dc96276cd31c3a9c5b9f44f5d54da41ccbeea203",
+      "rows": 43009
+    },
+    {
+      "path": "events/layer=SP/year=2008/part_0.parquet",
+      "bytes": 840220,
+      "sha256": "7c6f764a4cb95fa9c2a4c28a216b9080a5dcbbaa57f800e3249a0b1bcc0f8144",
+      "rows": 30732
+    },
+    {
+      "path": "events/layer=SP/year=2009/part_0.parquet",
+      "bytes": 696317,
+      "sha256": "575140cbb8ebefea1aeacc18977d530caecfd63c414135a7ba7d19a37876511a",
+      "rows": 24169
+    },
+    {
+      "path": "events/layer=SP/year=2010/part_0.parquet",
+      "bytes": 795467,
+      "sha256": "8b673aa6e4fe53c1ed96812a315cd44fd4e8ed626aa187e3b7c39732ce0eba55",
+      "rows": 29131
+    },
+    {
+      "path": "events/layer=SP/year=2011/part_0.parquet",
+      "bytes": 834833,
+      "sha256": "d4e739404eb087eeedcc2fd2f0ea9a4f6f9e35ec0b86ba00ca5323279480cf0d",
+      "rows": 30536
+    },
+    {
+      "path": "events/layer=SP/year=2012/part_0.parquet",
+      "bytes": 1732305,
+      "sha256": "1395bcde43dc923f83303db0800a22b1d96731e5abf35d1fad60315caadb8076",
+      "rows": 66810
+    },
+    {
+      "path": "events/layer=SP/year=2013/part_0.parquet",
+      "bytes": 2182989,
+      "sha256": "cb711358da363655d06f9bd7c442685ea97c3ba3e4f6fdbfd4eed7323a644444",
+      "rows": 87725
+    },
+    {
+      "path": "events/layer=SP/year=2014/part_0.parquet",
+      "bytes": 1458181,
+      "sha256": "1d5ab44df3c2e811c597e6c32fc8feaa005cf5afdfa2d312be260e7b6ebbb6c7",
+      "rows": 55404
+    },
+    {
+      "path": "events/layer=SP/year=2015/part_0.parquet",
+      "bytes": 1374715,
+      "sha256": "15517c1cddf77a01bdfaff89be4bb25cb2d970568267b31bde348d47b5fdef82",
+      "rows": 51270
+    },
+    {
+      "path": "events/layer=SP/year=2016/part_0.parquet",
+      "bytes": 1905005,
+      "sha256": "f88290aef94302765f736161187f0f10889683e5feb839901cf169848fde6285",
+      "rows": 74274
+    },
+    {
+      "path": "events/layer=SP/year=2017/part_0.parquet",
+      "bytes": 2052505,
+      "sha256": "0558e571d89cef694e72754a662010b22fcb1336ee4942c6be3ff0ce374db824",
+      "rows": 80736
+    },
+    {
+      "path": "events/layer=SP/year=2018/part_0.parquet",
+      "bytes": 2059566,
+      "sha256": "dd2c73557df151504b4115733f0c881992727a8376413b6752a342ea6bd79d94",
+      "rows": 82589
+    },
+    {
+      "path": "events/layer=SP/year=2019/part_0.parquet",
+      "bytes": 2618106,
+      "sha256": "aec9e5de8db29da776948273a8084d22251fcb4ddc81f352e4d563b3a5e4529c",
+      "rows": 105220
+    },
+    {
+      "path": "events/layer=SP/year=2020/part_0.parquet",
+      "bytes": 3831414,
+      "sha256": "89b71d4e37a094276da13af23737bf10e80ca43b8a59d0b21b49c407268feb48",
+      "rows": 155514
+    },
+    {
+      "path": "events/layer=SP/year=2021/part_0.parquet",
+      "bytes": 2567688,
+      "sha256": "610569d31ddca48e0d06d5d9c00550c28a330274045e6c4e45db76cff13c766a",
+      "rows": 105101
+    },
+    {
+      "path": "events/layer=SP/year=2022/part_0.parquet",
+      "bytes": 2194055,
+      "sha256": "60927412cf80a54814baea6cfac8bc710a621e3024a4f377c2c836adadb8aeb6",
+      "rows": 88168
+    },
+    {
+      "path": "events/layer=SP/year=2023/part_0.parquet",
+      "bytes": 2481939,
+      "sha256": "2495cb6e334887348a617ca6aeea1a0a2c4dba721660f131d3a698408301b85f",
+      "rows": 96479
+    },
+    {
+      "path": "events/layer=SP/year=2024/part_0.parquet",
+      "bytes": 2862027,
+      "sha256": "5b553cd1dbbf1b1618ef43f129303d82d499dd91e36e0f15e770c107d15d749e",
+      "rows": 111051
+    },
+    {
+      "path": "events/layer=SP/year=2025/part_0.parquet",
+      "bytes": 2025350,
+      "sha256": "35b357c1fdfda5d180675a9dcfcb96c38b816c5596e15c88ef0cd8d8dbe3cc69",
+      "rows": 77419
+    },
+    {
+      "path": "events/layer=SP/year=2026/part_0.parquet",
+      "bytes": 907270,
+      "sha256": "bd8bf3cf838f4cbfe8f36c9d819bda167789c38fe4648959a3f7a87d3d5b6ff9",
+      "rows": 32935
+    },
+    {
+      "path": "h3_region_map.parquet",
+      "bytes": 1243412,
+      "sha256": "81d5ac5a57e8641f8cbd80245b137a121b2ed0452afd8168416dc43aabd57490",
+      "rows": 75628
+    },
+    {
+      "path": "metadata/calibration_report.json",
+      "bytes": 267125,
+      "sha256": "54a84e59f8e7462a0e9a90574a08d47e0d28df4f971b5e77034705c5e8eeaea7"
+    },
+    {
+      "path": "metadata/calibration_report.md",
+      "bytes": 46085,
+      "sha256": "e7d674ce25b7ae0757bbd070894e0974bf230182e864e4a419b742ee4b474376"
+    },
+    {
+      "path": "metadata/coverage.json",
+      "bytes": 584,
+      "sha256": "ce874daab571fe1dbdfd8482d1c8e89a2d8485163dd1cc47b7e42b3a246a6da3"
+    },
+    {
+      "path": "metadata/rejection_summary.csv",
+      "bytes": 11025,
+      "sha256": "a5f1e1d3a21845707913fdd2b0f1864be251645a0693049ea0338da883faabfe"
+    },
+    {
+      "path": "metadata/run_config.json",
+      "bytes": 6547,
+      "sha256": "ba9739d56719c2aba24002a6fa24acc209beefd1dfd1108c5bbd8b710ff49288"
+    },
+    {
+      "path": "metadata/satellite_outages.csv",
+      "bytes": 15589,
+      "sha256": "970b684d850eff36e3632f4c3b07fd59eeb1d9b9f539f1430606fffcb82eb825"
+    },
+    {
+      "path": "metadata/source_manifest.json",
+      "bytes": 26829,
+      "sha256": "4e5444ce6e6165494b3466b61f761a1b96cce82121c523fb9162eb3c53c70ad7"
+    },
+    {
+      "path": "metadata/static_source_cells.parquet",
+      "bytes": 6815,
+      "sha256": "94a95e45d05f8c3752cd1b409703f7d36d540e1da111f7d61689d4648835fe9b",
+      "rows": 33
+    },
+    {
+      "path": "timeseries_daily.parquet",
+      "bytes": 252830,
+      "sha256": "d3b6644960f5070a3dc3be2854d0443d02ef83988d75036ff3005c2a506a5bbc",
+      "rows": 9510
+    },
+    {
+      "path": "timeseries_monthly.json",
+      "bytes": 180117,
+      "sha256": "09cfd7a55d208f87cfca8c82067e942e8a541ea41307c36c6da1a4406b2bc439"
+    },
+    {
+      "path": "timeseries_monthly.parquet",
+      "bytes": 25298,
+      "sha256": "bdb80a8ee2b6af7fd6f7af295303884685f8432eef4d12fe63c6a707c4537f65",
+      "rows": 313
+    }
+  ]
+}

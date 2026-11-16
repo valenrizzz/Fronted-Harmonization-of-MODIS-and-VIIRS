@@ -17,7 +17,12 @@ def write_markdown_report(path: Path, summary: dict, cal: dict) -> None:
          f"(en la serie, confianza ≥ {cal['series_min_confidence']}: {_fmt(summary['n_events_in_series'])})",
          f"- Celdas de fuente fija (SP+NRT): {_fmt(summary['n_static_source_cells'])}",
          f"- Caídas de satélite detectadas: {_fmt(summary['n_satellite_outage_days'])} satélite-día; "
-         f"días sin ningún satélite (sin dato): {_fmt(summary['n_days_without_any_satellite'])}", "",
+         f"días sin ningún satélite (sin dato): {_fmt(summary['n_days_without_any_satellite'])}",
+         f"- Caídas climatológicas vetadas por actividad del satélite en la zona de referencia: "
+         f"{_fmt(summary.get('n_satellite_outage_vetoes', 0))} satélite-día"
+         + (f" (bbox {summary['outage_reference']['bbox']}, ≥ {summary['outage_reference']['min_detections']} "
+            f"detecciones; países: {', '.join(summary['outage_reference']['country_files_found'])})"
+            if summary.get("outage_reference", {}).get("enabled") else " (veto deshabilitado)"), "",
          "## Descartes", "", "| Motivo | Registros |", "|---|---:|"]
     L += [f"| {k} | {_fmt(v)} |" for k, v in sorted(summary["rejections"].items(), key=lambda kv: -kv[1])]
     L += ["", "## Épocas (constelación activa)", "", "| Constelación | Inicio | Fin | Días |", "|---|---|---|---:|"]
@@ -34,14 +39,16 @@ def write_markdown_report(path: Path, summary: dict, cal: dict) -> None:
     L += ["", "### Validación cruzada temporal (ajuste en 1ª mitad de la ventana → predicción mensual de la 2ª)", "",
           "MAPE = error % medio por mes; WAPE = Σ|error| / Σ observado; Sesgo = error del total.", ""]
     methods = list(cal["edges"][0]["cross_validation"].keys())
-    L += ["| Origen → Destino | " + " | ".join(methods) + " |", "|---|" + "---:|" * len(methods)]
+    L += ["| Origen → Destino | " + " | ".join(methods) + " | Aplicado |", "|---|" + "---:|" * len(methods) + "---|"]
     for e in cal["edges"]:
         cells = []
         for mth in methods:
             c = e["cross_validation"].get(mth)
             cells.append("—" if not c else f"MAPE {c['monthly_mape_pct']}% · WAPE {c['monthly_wape_pct']}% · sesgo {c['total_bias_pct']}%")
-        L.append(f"| {e['from']} → {e['to']} | " + " | ".join(cells) + " |")
-    L += ["", f"Método aplicado: `{cal['edges'][0]['selected_method']}`.", "",
+        L.append(f"| {e['from']} → {e['to']} | " + " | ".join(cells) + f" | `{e['selected_method']}` |")
+    sm = cal.get("smoothing", {})
+    L += ["", f"Contracción hacia el cociente anual: {sm.get('prior_events', 0)} eventos de pseudo-observación por mes; "
+          f"selección por validación cruzada: {'sí' if sm.get('select_by_cv') else 'no'}.", "",
           "### Cociente por mes del año (crudo → ajustado)", "",
           "| Origen → Destino | " + " | ".join(MES) + " |", "|---|" + "---:|" * 12]
     for e in cal["edges"]:

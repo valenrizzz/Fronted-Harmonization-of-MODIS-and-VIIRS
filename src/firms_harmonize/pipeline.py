@@ -10,7 +10,7 @@ import polars as pl
 from . import calibrate as cal
 from .catalog import coverage, discover
 from .config import load_pipeline, load_region
-from .constellation import daily_activity, daily_satellite_counts, detect_outages
+from .constellation import daily_activity, daily_satellite_counts, detect_outages, reference_satellite_counts
 from .dedup import build_events
 from .firms_api import fill_gaps
 from .ingest import run_ingest
@@ -64,11 +64,22 @@ def run(region_code: str, use_api: bool = True, hash_sources: bool = True, threa
 
     # 1c. caídas de satélites (actividad diaria basada en datos, no solo en cobertura de archivos)
     sat_counts = daily_satellite_counts(cfg, row_files, SATELLITE_MAP)
-    activity, outages = detect_outages(cfg, activity, sat_counts)
+    ref_counts, ref_info = None, {"enabled": False}
+    ref = cfg.availability.reference
+    if ref.enabled:
+        ref_files, _ = discover(cfg.paths.local_sources, api_dir, "__REFERENCE__", ref.country_files)
+        ref_files = [f for f in ref_files if f.kind == "country" or (ref.include_global and f.kind == "global")]
+        ref_counts = reference_satellite_counts(cfg, ref_files, d / "reference" / "availability",
+                                                SATELLITE_MAP, threads)
+        ref_info = {"enabled": True, "bbox": list(ref.bbox), "min_detections": ref.min_detections,
+                    "n_files": len(ref_files),
+                    "country_files_found": sorted({f.scope for f in ref_files if f.kind == "country"})}
+    activity, outages, vetoes = detect_outages(cfg, activity, sat_counts, ref_counts)
     lineage.mkdir(parents=True, exist_ok=True)
     outages.write_csv(lineage / "satellite_outages.csv")
-    log.info("Caídas detectadas: %d satélite-día; días sin ningún satélite: %d",
-             outages.height, activity.filter(pl.col("active_mask") == 0).height)
+    vetoes.write_csv(lineage / "satellite_outage_vetoes.csv")
+    log.info("Caídas detectadas: %d satélite-día (vetadas por actividad regional: %d); días sin ningún satélite: %d",
+             outages.height, vetoes.height, activity.filter(pl.col("active_mask") == 0).height)
 
     # 2. estandarización
     rej = RejectLog()
@@ -122,6 +133,8 @@ def run(region_code: str, use_api: bool = True, hash_sources: bool = True, threa
         "n_events_in_series": int(events["in_series"].sum()),
         "n_static_source_cells": static_cells.height,
         "n_satellite_outage_days": outages.height,
+        "n_satellite_outage_vetoes": vetoes.height,
+        "outage_reference": ref_info,
         "n_days_without_any_satellite": activity.filter(pl.col("active_mask") == 0).height,
         "rejections": {r["reason"]: r["n_records"] for r in
                        rej_summary.group_by("reason").agg(pl.col("n_records").sum()).to_dicts()},

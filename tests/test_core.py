@@ -4,6 +4,7 @@ from pathlib import Path
 
 import numpy as np
 import polars as pl
+import pytest
 from shapely.geometry import box
 
 from firms_harmonize.calibrate import calibrate
@@ -125,6 +126,40 @@ def test_monthly_fit_smoothing():
     assert np.allclose(g, y.sum() / x.sum())
 
 
+def test_monthly_shrinkage_tames_sparse_months():
+    """Un mes con muy pocos eventos no debe dar un factor extremo; los meses con muchos casi no cambian."""
+    from firms_harmonize.calibrate import fit_monthly_ratio
+    x = np.array([2000, 1800, 1500, 900, 300, 12, 12, 400, 1500, 2000, 2100, 2100], float)
+    y = x * 4.0
+    y[6] = 12 * 36                                  # julio: 12 eventos, cociente crudo ×36 (ruido)
+    raw = fit_monthly_ratio(x, y, "month_of_year", "harmonic")
+    shr = fit_monthly_ratio(x, y, "month_of_year", "harmonic", prior_events=100)
+    assert shr.max() < raw.max()
+    assert shr[6] < 8                                # sin contracción el armónico lo dejaba muy alto
+    assert abs(shr[0] - 4.0) / 4.0 < 0.15            # enero (2.000 eventos) sigue cerca de su valor
+    # se conserva el total de la ventana
+    assert (shr * x).sum() == pytest.approx(y.sum(), rel=1e-9)
+
+
+def test_select_by_cv_prefers_global_when_season_overfits():
+    import numpy as np
+    from firms_harmonize.calibrate import _ratio_stats
+    from firms_harmonize.config import CalibrationCfg
+    rng = np.random.default_rng(0)
+    months = pl.date_range(date(2010, 1, 1), date(2013, 12, 1), "1mo", eager=True)
+    x = rng.poisson(200, len(months)).astype(float)
+    y = rng.poisson(x * 3.0).astype(float)          # sin estacionalidad real: cociente constante ×3
+    days = [{"solar_date": m, "month": m, "moy": m.month, "c_1": int(a), "c_3": int(b)}
+            for m, a, b in zip(months, x, y)]
+    df = pl.DataFrame(days)
+    cc = CalibrationCfg()
+    cc.bootstrap.n = 20
+    cc.smoothing.method, cc.smoothing.select_by_cv = "none", True   # 12 cocientes crudos = sobreajuste
+    st = _ratio_stats(df, 1, 3, np.random.default_rng(1), cc)
+    assert st["selected_method"] == "global"
+    assert np.allclose(st["r12"], st["r_total"])
+
+
 def test_static_source_rule():
     from firms_harmonize.standardize import static_source_cells
     cfg = load_pipeline()
@@ -174,8 +209,58 @@ def test_outage_detection():
                 n = 0
             rows.append({"date": d, "satellite": s, "n": n})
     counts = pl.DataFrame(rows).filter(pl.col("n") > 0)
-    new, outs = detect_outages(cfg, act, counts)
+    new, outs, vetoes = detect_outages(cfg, act, counts)
     snpp = outs.filter(pl.col("satellite") == "SNPP")["date"].to_list()
     assert snpp == [date(2019, 7, d) for d in range(10, 15)]
     assert outs.filter(pl.col("satellite") == "Terra")["date"].to_list() == [date(2019, 3, 3)]
     assert new.filter(pl.col("date") == date(2019, 7, 12))["epoch_id"].item() == "Terra+Aqua+NOAA20"
+    assert vetoes.height == 0
+
+
+def _quiet_day_setup():
+    """Región con fuego todos los días salvo una semana en que NINGÚN satélite detecta nada."""
+    cfg = load_pipeline()
+    cfg.period.start = date(2019, 1, 1)
+    cov = {(p, "SP"): [(date(2019, 1, 1), date(2019, 12, 31))] for p in ("MODIS", "SNPP", "NOAA20")}
+    act = daily_activity(cfg, cov, date(2019, 12, 31))
+    quiet = [date(2019, 2, d) for d in range(10, 17)]
+    rows = [{"date": d, "satellite": s, "n": n}
+            for d in act["date"].to_list() if d not in quiet
+            for s, n in (("Terra", 50), ("Aqua", 100), ("SNPP", 300), ("NOAA20", 320))]
+    return cfg, act, pl.DataFrame(rows), quiet
+
+
+def test_outage_regional_veto():
+    """Semana húmeda sin fuego: sin veto todo queda 'sin dato'; con actividad regional de los
+    satélites, la caída climatológica se veta y los días quedan como observados en cero."""
+    from firms_harmonize.constellation import detect_outages
+    cfg, act, counts, quiet = _quiet_day_setup()
+
+    new, outs, vetoes = detect_outages(cfg, act, counts)          # comportamiento anterior
+    assert new.filter(pl.col("date").is_in(quiet))["active_mask"].to_list() == [0] * len(quiet)
+
+    ref = pl.DataFrame([{"date": d, "satellite": s, "n": 500} for d in act["date"].to_list()
+                        for s in ("Terra", "Aqua", "SNPP", "NOAA20")])
+    new, outs, vetoes = detect_outages(cfg, act, counts, ref)
+    assert outs.filter(pl.col("date").is_in(quiet)).height == 0
+    assert vetoes.filter(pl.col("date").is_in(quiet)).height == 4 * len(quiet)
+    assert set(new.filter(pl.col("date").is_in(quiet))["epoch_id"].to_list()) == {"Terra+Aqua+SNPP+NOAA20"}
+
+
+def test_outage_veto_keeps_real_outages():
+    """Una caída real (el satélite no aporta nada tampoco en la zona de referencia) se mantiene,
+    y una caída por cociente con otros satélites (evidencia local) nunca se veta."""
+    from firms_harmonize.constellation import detect_outages
+    cfg, act, counts, quiet = _quiet_day_setup()
+    gap = [date(2019, 7, d) for d in range(10, 15)]
+    counts = counts.filter(~((pl.col("satellite") == "SNPP") & pl.col("date").is_in(gap)))
+    ref = pl.DataFrame([{"date": d, "satellite": s,
+                         "n": 20 if (s == "Aqua" and d in quiet) else 500}   # Aqua: caída parcial (4% de lo habitual)
+                        for d in act["date"].to_list()
+                        for s in ("Terra", "Aqua", "SNPP", "NOAA20")
+                        if not (s == "Terra" and d in quiet)])            # Terra caído de verdad
+    new, outs, vetoes = detect_outages(cfg, act, counts, ref)
+    assert outs.filter((pl.col("satellite") == "Terra") & pl.col("date").is_in(quiet)).height == len(quiet)
+    assert outs.filter((pl.col("satellite") == "Aqua") & pl.col("date").is_in(quiet)).height == len(quiet)
+    assert outs.filter((pl.col("satellite") == "SNPP") & pl.col("date").is_in(gap)).height == len(gap)
+    assert vetoes.filter((pl.col("satellite") == "SNPP") & pl.col("date").is_in(gap)).height == 0

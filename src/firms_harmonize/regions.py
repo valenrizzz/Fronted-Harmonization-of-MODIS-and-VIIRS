@@ -74,6 +74,9 @@ def resolve_region(cfg: PipelineCfg, reg: RegionCfg, bnd: BoundariesCfg) -> Regi
         geoms = [shape(f["geometry"]) for f in gj.get("features", [gj])]
         geom = unary_union(geoms)
         prov.update(file=str(path), sha256=sha256_file(path))
+    if reg.clip_bbox:
+        geom = geom.intersection(box(*reg.clip_bbox))
+        prov["clip_bbox"] = reg.clip_bbox
     if reg.polygon_buffer_deg:
         geom = geom.buffer(reg.polygon_buffer_deg)
     shapely.prepare(geom)

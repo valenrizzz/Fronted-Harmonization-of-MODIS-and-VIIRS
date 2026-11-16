@@ -70,8 +70,19 @@ class FiltersCfg(BaseModel):
     frp: FrpCfg = FrpCfg()
 
 
+class AvailabilityReferenceCfg(BaseModel):
+    """Evidencia regional de que un satélite estaba operando (veto de caídas climatológicas)."""
+    enabled: bool = False
+    country_files: list[str] = []          # archivos por país de FIRMS que forman la zona de referencia
+    include_global: bool = True            # sumar las descargas globales (recortadas a `bbox`)
+    bbox: tuple[float, float, float, float] = (-82.0, -56.0, -34.0, 13.0)  # lon0, lat0, lon1, lat1
+    min_detections: int = 10               # detecciones del satélite ese día solar para vetar la caída
+    min_fraction: float = 0.25             # y al menos esta fracción de su mediana regional (±climatology_window_days)
+
+
 class AvailabilityCfg(BaseModel):
     detect_outages: bool = True
+    reference: AvailabilityReferenceCfg = AvailabilityReferenceCfg()
     min_expected_detections: float = 20
     min_expected_run: float = 100
     suspect_zero_min_run: int = 3
@@ -103,6 +114,12 @@ class SmoothingCfg(BaseModel):
     method: Literal["harmonic", "moving_average", "none"] = "harmonic"
     harmonics: int = 2
     window: int = 3
+    # Contracción (Bayes empírico) de cada mes hacia el cociente anual del par: cada mes suma una
+    # pseudo-observación de `prior_events` eventos con el cociente anual. 0 = sin contracción.
+    prior_events: float = 0.0
+    # Por par de constelaciones, usar el factor estacional solo si su validación cruzada (WAPE)
+    # no es peor que la del factor anual único; si no, usar el anual.
+    select_by_cv: bool = False
 
 
 class CalibrationCfg(BaseModel):
@@ -191,6 +208,9 @@ class RegionCfg(BaseModel):
     file: str | None = None
     firms_country_files: list[str] = []
     polygon_buffer_deg: float = 0.0
+    # Recorte opcional del polígono [lon_min, lat_min, lon_max, lat_max] (p. ej. excluir islas
+    # oceánicas lejanas que agrandan el bbox y el mapa sin aportar actividad de fuego relevante).
+    clip_bbox: list[float] | None = None
 
 
 class BoundariesCfg(BaseModel):

@@ -1,0 +1,870 @@
+[
+  {
+    "source_file": "Data_MODIS__2000__modis_2000_Bolivia",
+    "path": "/home/franco_quiroga/Proyecto_NASA/Data_MODIS/2000/modis_2000_Bolivia.csv",
+    "product": "MODIS",
+    "kind": "country",
+    "level": "SP",
+    "coverage": [
+      "2000-01-01",
+      "2000-12-31"
+    ],
+    "n_rows": 869,
+    "n_in_bbox": 869,
+    "sha256": "a744b134145637fbfe27d7a46856d57b275325de967140857d39a7ec7b8266b6"
+  },
+  {
+    "source_file": "Data_MODIS__2001__modis_2001_Bolivia",
+    "path": "/home/franco_quiroga/Proyecto_NASA/Data_MODIS/2001/modis_2001_Bolivia.csv",
+    "product": "MODIS",
+    "kind": "country",
+    "level": "SP",
+    "coverage": [
+      "2001-01-01",
+      "2001-12-31"
+    ],
+    "n_rows": 14132,
+    "n_in_bbox": 14132,
+    "sha256": "000dfc167cd6d1d5abc573971bb6e26ceef846d98e3b03fd4514f4a59de6deed"
+  },
+  {
+    "source_file": "Data_MODIS__2002__modis_2002_Bolivia",
+    "path": "/home/franco_quiroga/Proyecto_NASA/Data_MODIS/2002/modis_2002_Bolivia.csv",
+    "product": "MODIS",
+    "kind": "country",
+    "level": "SP",
+    "coverage": [
+      "2002-01-01",
+      "2002-12-31"
+    ],
+    "n_rows": 65502,
+    "n_in_bbox": 65502,
+    "sha256": "9811e563ebe40b9dc887ab73f4201fbe801175fa651dcef0f6ae3983e56636e7"
+  },
+  {
+    "source_file": "Data_MODIS__2003__modis_2003_Bolivia",
+    "path": "/home/franco_quiroga/Proyecto_NASA/Data_MODIS/2003/modis_2003_Bolivia.csv",
+    "product": "MODIS",
+    "kind": "country",
+    "level": "SP",
+    "coverage": [
+      "2003-01-01",
+      "2003-12-31"
+    ],
+    "n_rows": 53733,
+    "n_in_bbox": 53733,
+    "sha256": "e5a16440cccce40b0b16720c2bc3f990e13df547e8439ce4f4db4641965fe5ed"
+  },
+  {
+    "source_file": "Data_MODIS__2004__modis_2004_Bolivia",
+    "path": "/home/franco_quiroga/Proyecto_NASA/Data_MODIS/2004/modis_2004_Bolivia.csv",
+    "product": "MODIS",
+    "kind": "country",
+    "level": "SP",
+    "coverage": [
+      "2004-01-01",
+      "2004-12-31"
+    ],
+    "n_rows": 103384,
+    "n_in_bbox": 103384,
+    "sha256": "770a9a180a5ca5d1dcd4dbffaacd9178a6ab00eea4ed2094682cd60d2504cc89"
+  },
+  {
+    "source_file": "Data_MODIS__2005__modis_2005_Bolivia",
+    "path": "/home/franco_quiroga/Proyecto_NASA/Data_MODIS/2005/modis_2005_Bolivia.csv",
+    "product": "MODIS",
+    "kind": "country",
+    "level": "SP",
+    "coverage": [
+      "2005-01-01",
+      "2005-12-31"
+    ],
+    "n_rows": 88897,
+    "n_in_bbox": 88897,
+    "sha256": "38a32333691e2c3e8110e87fecca8a4b813cbf74c0b0639121fd6940dc15be31"
+  },
+  {
+    "source_file": "Data_MODIS__2006__modis_2006_Bolivia",
+    "path": "/home/franco_quiroga/Proyecto_NASA/Data_MODIS/2006/modis_2006_Bolivia.csv",
+    "product": "MODIS",
+    "kind": "country",
+    "level": "SP",
+    "coverage": [
+      "2006-01-01",
+      "2006-12-31"
+    ],
+    "n_rows": 71165,
+    "n_in_bbox": 71165,
+    "sha256": "f9ceec23515dbcd3112456e3b492942f9beef50fdfe16fd2fe8a1070c8499450"
+  },
+  {
+    "source_file": "Data_MODIS__2007__modis_2007_Bolivia",
+    "path": "/home/franco_quiroga/Proyecto_NASA/Data_MODIS/2007/modis_2007_Bolivia.csv",
+    "product": "MODIS",
+    "kind": "country",
+    "level": "SP",
+    "coverage": [
+      "2007-01-01",
+      "2007-12-31"
+    ],
+    "n_rows": 105304,
+    "n_in_bbox": 105304,
+    "sha256": "43e36abda790ef4725717789709278377d6f36725dec40e34bbf46f27e8dc4d3"
+  },
+  {
+    "source_file": "Data_MODIS__2008__modis_2008_Bolivia",
+    "path": "/home/franco_quiroga/Proyecto_NASA/Data_MODIS/2008/modis_2008_Bolivia.csv",
+    "product": "MODIS",
+    "kind": "country",
+    "level": "SP",
+    "coverage": [
+      "2008-01-01",
+      "2008-12-31"
+    ],
+    "n_rows": 71340,
+    "n_in_bbox": 71340,
+    "sha256": "857a85df59d3f44c6079aca04c6c5e46397b2bf292c1e18c49fe7ae5bf75dd60"
+  },
+  {
+    "source_file": "Data_MODIS__2009__modis_2009_Bolivia",
+    "path": "/home/franco_quiroga/Proyecto_NASA/Data_MODIS/2009/modis_2009_Bolivia.csv",
+    "product": "MODIS",
+    "kind": "country",
+    "level": "SP",
+    "coverage": [
+      "2009-01-01",
+      "2009-12-31"
+    ],
+    "n_rows": 43297,
+    "n_in_bbox": 43297,
+    "sha256": "a922150d17addaf07c433834db4e2782ca6f00655ab9b77f466d5fb98aabc0d0"
+  },
+  {
+    "source_file": "Data_MODIS__2010__modis_2010_Bolivia",
+    "path": "/home/franco_quiroga/Proyecto_NASA/Data_MODIS/2010/modis_2010_Bolivia.csv",
+    "product": "MODIS",
+    "kind": "country",
+    "level": "SP",
+    "coverage": [
+      "2010-01-01",
+      "2010-12-31"
+    ],
+    "n_rows": 151119,
+    "n_in_bbox": 151119,
+    "sha256": "ebc41057cb1736715c37e6681b4761704d7b71dd69ed3e70560c1d2f36c43fa0"
+  },
+  {
+    "source_file": "Data_MODIS__2011__modis_2011_Bolivia",
+    "path": "/home/franco_quiroga/Proyecto_NASA/Data_MODIS/2011/modis_2011_Bolivia.csv",
+    "product": "MODIS",
+    "kind": "country",
+    "level": "SP",
+    "coverage": [
+      "2011-01-01",
+      "2011-12-31"
+    ],
+    "n_rows": 63326,
+    "n_in_bbox": 63326,
+    "sha256": "b47da24b18e905e50aee3ea62da7b66b88955ff8fe39176355b9a59ff742a815"
+  },
+  {
+    "source_file": "Data_MODIS__2012__modis_2012_Bolivia",
+    "path": "/home/franco_quiroga/Proyecto_NASA/Data_MODIS/2012/modis_2012_Bolivia.csv",
+    "product": "MODIS",
+    "kind": "country",
+    "level": "SP",
+    "coverage": [
+      "2012-01-01",
+      "2012-12-31"
+    ],
+    "n_rows": 41706,
+    "n_in_bbox": 41706,
+    "sha256": "fc021b48cfb198f1c5e03e86dea374826d29ba41077bb7e7b8dd0980df96c976"
+  },
+  {
+    "source_file": "Data_MODIS__2013__modis_2013_Bolivia",
+    "path": "/home/franco_quiroga/Proyecto_NASA/Data_MODIS/2013/modis_2013_Bolivia.csv",
+    "product": "MODIS",
+    "kind": "country",
+    "level": "SP",
+    "coverage": [
+      "2013-01-01",
+      "2013-12-31"
+    ],
+    "n_rows": 29742,
+    "n_in_bbox": 29742,
+    "sha256": "a2b6db3c2da27de0c4da773b544f0e5fde733523048171f978467acbde19225d"
+  },
+  {
+    "source_file": "Data_MODIS__2014__modis_2014_Bolivia",
+    "path": "/home/franco_quiroga/Proyecto_NASA/Data_MODIS/2014/modis_2014_Bolivia.csv",
+    "product": "MODIS",
+    "kind": "country",
+    "level": "SP",
+    "coverage": [
+      "2014-01-01",
+      "2014-12-31"
+    ],
+    "n_rows": 28756,
+    "n_in_bbox": 28756,
+    "sha256": "f9b34d09696b79dea6498d43f5c8b312522366ab9dcbfcbadc8a1274cc9d8807"
+  },
+  {
+    "source_file": "Data_MODIS__2015__modis_2015_Bolivia",
+    "path": "/home/franco_quiroga/Proyecto_NASA/Data_MODIS/2015/modis_2015_Bolivia.csv",
+    "product": "MODIS",
+    "kind": "country",
+    "level": "SP",
+    "coverage": [
+      "2015-01-01",
+      "2015-12-31"
+    ],
+    "n_rows": 41002,
+    "n_in_bbox": 41002,
+    "sha256": "a032d100372f578f2e987e31409a732cc4c98e50b4c793cf22f58a20441511dc"
+  },
+  {
+    "source_file": "Data_MODIS__2016__modis_2016_Bolivia",
+    "path": "/home/franco_quiroga/Proyecto_NASA/Data_MODIS/2016/modis_2016_Bolivia.csv",
+    "product": "MODIS",
+    "kind": "country",
+    "level": "SP",
+    "coverage": [
+      "2016-01-01",
+      "2016-12-31"
+    ],
+    "n_rows": 68384,
+    "n_in_bbox": 68384,
+    "sha256": "27dcd732100a5543a590001292c5580c5692151ded8a75be18d3e4fb8a821d88"
+  },
+  {
+    "source_file": "Data_MODIS__2017__modis_2017_Bolivia",
+    "path": "/home/franco_quiroga/Proyecto_NASA/Data_MODIS/2017/modis_2017_Bolivia.csv",
+    "product": "MODIS",
+    "kind": "country",
+    "level": "SP",
+    "coverage": [
+      "2017-01-01",
+      "2017-12-31"
+    ],
+    "n_rows": 57792,
+    "n_in_bbox": 57792,
+    "sha256": "980b4cd17b68c15dc8ded13f9ce66f5fd0dd662fce25ba500452c96aeac55f64"
+  },
+  {
+    "source_file": "Data_MODIS__2018__modis_2018_Bolivia",
+    "path": "/home/franco_quiroga/Proyecto_NASA/Data_MODIS/2018/modis_2018_Bolivia.csv",
+    "product": "MODIS",
+    "kind": "country",
+    "level": "SP",
+    "coverage": [
+      "2018-01-01",
+      "2018-12-31"
+    ],
+    "n_rows": 49924,
+    "n_in_bbox": 49924,
+    "sha256": "cb3582cec9d20027c19f350970cf9edcef528ff9b06e9522dcc6f8af162621f1"
+  },
+  {
+    "source_file": "Data_MODIS__2019__modis_2019_Bolivia",
+    "path": "/home/franco_quiroga/Proyecto_NASA/Data_MODIS/2019/modis_2019_Bolivia.csv",
+    "product": "MODIS",
+    "kind": "country",
+    "level": "SP",
+    "coverage": [
+      "2019-01-01",
+      "2019-12-31"
+    ],
+    "n_rows": 90772,
+    "n_in_bbox": 90772,
+    "sha256": "e052b8e397cc18d812fba7755371e3602dd9e47985269ad26bac2e58a91b4f94"
+  },
+  {
+    "source_file": "Data_MODIS__2020__modis_2020_Bolivia",
+    "path": "/home/franco_quiroga/Proyecto_NASA/Data_MODIS/2020/modis_2020_Bolivia.csv",
+    "product": "MODIS",
+    "kind": "country",
+    "level": "SP",
+    "coverage": [
+      "2020-01-01",
+      "2020-12-31"
+    ],
+    "n_rows": 79046,
+    "n_in_bbox": 79046,
+    "sha256": "486460b9e7c3a89c1cb14c2d62525f9d11511b4dffbf2088714cffdcda46c252"
+  },
+  {
+    "source_file": "Data_MODIS__2021__modis_2021_Bolivia",
+    "path": "/home/franco_quiroga/Proyecto_NASA/Data_MODIS/2021/modis_2021_Bolivia.csv",
+    "product": "MODIS",
+    "kind": "country",
+    "level": "SP",
+    "coverage": [
+      "2021-01-01",
+      "2021-12-31"
+    ],
+    "n_rows": 76714,
+    "n_in_bbox": 76714,
+    "sha256": "443492345b112acf043a7921e480b5dbb7d8e522205ebbeea89d52c1b71d07be"
+  },
+  {
+    "source_file": "Data_MODIS__2022__modis_2022_Bolivia",
+    "path": "/home/franco_quiroga/Proyecto_NASA/Data_MODIS/2022/modis_2022_Bolivia.csv",
+    "product": "MODIS",
+    "kind": "country",
+    "level": "SP",
+    "coverage": [
+      "2022-01-01",
+      "2022-12-31"
+    ],
+    "n_rows": 90787,
+    "n_in_bbox": 90787,
+    "sha256": "c0de13b1e466c9f12b4a864273f0093f4722d97f13b0b96265c8be592c20b2c6"
+  },
+  {
+    "source_file": "Data_MODIS__2023__modis_2023_Bolivia",
+    "path": "/home/franco_quiroga/Proyecto_NASA/Data_MODIS/2023/modis_2023_Bolivia.csv",
+    "product": "MODIS",
+    "kind": "country",
+    "level": "SP",
+    "coverage": [
+      "2023-01-01",
+      "2023-12-31"
+    ],
+    "n_rows": 99825,
+    "n_in_bbox": 99825,
+    "sha256": "206199f021ad2091d1bc7ac4706701d2bc9d642d0dcd4001ebdefea78018356b"
+  },
+  {
+    "source_file": "Data_MODIS__2024__modis_2024_Bolivia",
+    "path": "/home/franco_quiroga/Proyecto_NASA/Data_MODIS/2024/modis_2024_Bolivia.csv",
+    "product": "MODIS",
+    "kind": "country",
+    "level": "SP",
+    "coverage": [
+      "2024-01-01",
+      "2024-12-31"
+    ],
+    "n_rows": 213817,
+    "n_in_bbox": 213817,
+    "sha256": "1cd73156493000e69ae4af6c10c9ecc0cc171252b9c50ec2872a0c7cda290f2b"
+  },
+  {
+    "source_file": "Data_MODIS__2025__modis_2025_Bolivia",
+    "path": "/home/franco_quiroga/Proyecto_NASA/Data_MODIS/2025/modis_2025_Bolivia.csv",
+    "product": "MODIS",
+    "kind": "country",
+    "level": "SP",
+    "coverage": [
+      "2025-01-01",
+      "2025-12-31"
+    ],
+    "n_rows": 37623,
+    "n_in_bbox": 37623,
+    "sha256": "1c3559cd52e9c7d91655aab943486072f48d9d151d0055fb0aeca07843728a68"
+  },
+  {
+    "source_file": "Data_MODIS__2026__fire_archive_M-C61_848537",
+    "path": "/home/franco_quiroga/Proyecto_NASA/Data_MODIS/2026/fire_archive_M-C61_848537.csv",
+    "product": "MODIS",
+    "kind": "global",
+    "level": "SP",
+    "coverage": [
+      "2026-04-02",
+      "2026-08-31"
+    ],
+    "n_rows": 1578990,
+    "n_in_bbox": 17086,
+    "sha256": "983ed36bd56fb7baa66ea4c541f8af0f949ae1d891fdd2359a9148ceb32594ae"
+  },
+  {
+    "source_file": "Data_MODIS__2026__fire_nrt_M-C61_848537",
+    "path": "/home/franco_quiroga/Proyecto_NASA/Data_MODIS/2026/fire_nrt_M-C61_848537.csv",
+    "product": "MODIS",
+    "kind": "global",
+    "level": "NRT",
+    "coverage": [
+      "2026-09-01",
+      "2026-11-14"
+    ],
+    "n_rows": 799469,
+    "n_in_bbox": 20604,
+    "sha256": "a13d996818617fa323bb2906a15584bf8e55a997b6e3ef85908bc1846564225d"
+  },
+  {
+    "source_file": "Data_MODIS__DL_FIRE_M-C61_848528__fire_archive_M-C61_848528",
+    "path": "/home/franco_quiroga/Proyecto_NASA/Data_MODIS/DL_FIRE_M-C61_848528/fire_archive_M-C61_848528.csv",
+    "product": "MODIS",
+    "kind": "global",
+    "level": "SP",
+    "coverage": [
+      "2025-04-01",
+      "2026-04-01"
+    ],
+    "n_rows": 3537277,
+    "n_in_bbox": 52415,
+    "sha256": "fbf10948e90646458ec0488732d096fb9a02d89c3df95450748c0f90b7d7d346"
+  },
+  {
+    "source_file": "Data_VIIRS__2012__viirs-snpp_2012_Bolivia",
+    "path": "/home/franco_quiroga/Proyecto_NASA/Data_VIIRS/2012/viirs-snpp_2012_Bolivia.csv",
+    "product": "SNPP",
+    "kind": "country",
+    "level": "SP",
+    "coverage": [
+      "2012-01-01",
+      "2012-12-31"
+    ],
+    "n_rows": 159400,
+    "n_in_bbox": 159400,
+    "sha256": "98402f8db08039f37d576b21f2783513fa42ac226fd8f0633b7b9b411a945630"
+  },
+  {
+    "source_file": "Data_VIIRS__2013__viirs-snpp_2013_Bolivia",
+    "path": "/home/franco_quiroga/Proyecto_NASA/Data_VIIRS/2013/viirs-snpp_2013_Bolivia.csv",
+    "product": "SNPP",
+    "kind": "country",
+    "level": "SP",
+    "coverage": [
+      "2013-01-01",
+      "2013-12-31"
+    ],
+    "n_rows": 115772,
+    "n_in_bbox": 115772,
+    "sha256": "dcf074319fb78a3ff60ae607732d6bd597089adedc173acb41815aa7909046a6"
+  },
+  {
+    "source_file": "Data_VIIRS__2014__viirs-snpp_2014_Bolivia",
+    "path": "/home/franco_quiroga/Proyecto_NASA/Data_VIIRS/2014/viirs-snpp_2014_Bolivia.csv",
+    "product": "SNPP",
+    "kind": "country",
+    "level": "SP",
+    "coverage": [
+      "2014-01-01",
+      "2014-12-31"
+    ],
+    "n_rows": 101746,
+    "n_in_bbox": 101746,
+    "sha256": "6c4eaad43169f0e128366f1493dca424415d5288941fdbcbe956efe0fd7c4868"
+  },
+  {
+    "source_file": "Data_VIIRS__2015__viirs-snpp_2015_Bolivia",
+    "path": "/home/franco_quiroga/Proyecto_NASA/Data_VIIRS/2015/viirs-snpp_2015_Bolivia.csv",
+    "product": "SNPP",
+    "kind": "country",
+    "level": "SP",
+    "coverage": [
+      "2015-01-01",
+      "2015-12-31"
+    ],
+    "n_rows": 146577,
+    "n_in_bbox": 146577,
+    "sha256": "a24a74e54a0ec3f1fea352aa3ddf1d12fc50886e34e6d9fd645ac8e94e792ab0"
+  },
+  {
+    "source_file": "Data_VIIRS__2016__viirs-snpp_2016_Bolivia",
+    "path": "/home/franco_quiroga/Proyecto_NASA/Data_VIIRS/2016/viirs-snpp_2016_Bolivia.csv",
+    "product": "SNPP",
+    "kind": "country",
+    "level": "SP",
+    "coverage": [
+      "2016-01-01",
+      "2016-12-31"
+    ],
+    "n_rows": 248466,
+    "n_in_bbox": 248466,
+    "sha256": "27cb320e6fb65bfc6d611ca62564e80006642f223240f15db1fd5164ce28a278"
+  },
+  {
+    "source_file": "Data_VIIRS__2017__viirs-snpp_2017_Bolivia",
+    "path": "/home/franco_quiroga/Proyecto_NASA/Data_VIIRS/2017/viirs-snpp_2017_Bolivia.csv",
+    "product": "SNPP",
+    "kind": "country",
+    "level": "SP",
+    "coverage": [
+      "2017-01-01",
+      "2017-12-31"
+    ],
+    "n_rows": 199964,
+    "n_in_bbox": 199964,
+    "sha256": "ba47dd4ee0fa6a75ae25bec4e901e316948db0d2897f98b1546cf8ff31d7e5f5"
+  },
+  {
+    "source_file": "Data_VIIRS__2018__viirs-snpp_2018_Bolivia",
+    "path": "/home/franco_quiroga/Proyecto_NASA/Data_VIIRS/2018/viirs-snpp_2018_Bolivia.csv",
+    "product": "SNPP",
+    "kind": "country",
+    "level": "SP",
+    "coverage": [
+      "2018-01-01",
+      "2018-12-31"
+    ],
+    "n_rows": 174208,
+    "n_in_bbox": 174208,
+    "sha256": "84006cdb5c1ba6aa4f72ce545690d89cfc2a69e27b3a1c34d2552d2921b0f375"
+  },
+  {
+    "source_file": "Data_VIIRS__2019__viirs-snpp_2019_Bolivia",
+    "path": "/home/franco_quiroga/Proyecto_NASA/Data_VIIRS/2019/viirs-snpp_2019_Bolivia.csv",
+    "product": "SNPP",
+    "kind": "country",
+    "level": "SP",
+    "coverage": [
+      "2019-01-01",
+      "2019-12-31"
+    ],
+    "n_rows": 379815,
+    "n_in_bbox": 379815,
+    "sha256": "d4c02dc759a59a88953502ed2af578b2a6e28e1f41e58e6be3e412381a4befd6"
+  },
+  {
+    "source_file": "Data_VIIRS__2020__viirs-snpp_2020_Bolivia",
+    "path": "/home/franco_quiroga/Proyecto_NASA/Data_VIIRS/2020/viirs-snpp_2020_Bolivia.csv",
+    "product": "SNPP",
+    "kind": "country",
+    "level": "SP",
+    "coverage": [
+      "2020-01-01",
+      "2020-12-31"
+    ],
+    "n_rows": 308864,
+    "n_in_bbox": 308864,
+    "sha256": "d8b1996f60a2aa23cd333018933621c7c8086b4b9a6dc230f8fa65725d8fc05a"
+  },
+  {
+    "source_file": "Data_VIIRS__2021__viirs-snpp_2021_Bolivia",
+    "path": "/home/franco_quiroga/Proyecto_NASA/Data_VIIRS/2021/viirs-snpp_2021_Bolivia.csv",
+    "product": "SNPP",
+    "kind": "country",
+    "level": "SP",
+    "coverage": [
+      "2021-01-01",
+      "2021-12-31"
+    ],
+    "n_rows": 303038,
+    "n_in_bbox": 303038,
+    "sha256": "1cad0efd45936bf713757d384f2dd9107d7d1ac4f6c69464b10661cdda70aa93"
+  },
+  {
+    "source_file": "Data_VIIRS__2022__viirs-snpp_2022_Bolivia",
+    "path": "/home/franco_quiroga/Proyecto_NASA/Data_VIIRS/2022/viirs-snpp_2022_Bolivia.csv",
+    "product": "SNPP",
+    "kind": "country",
+    "level": "SP",
+    "coverage": [
+      "2022-01-01",
+      "2022-12-31"
+    ],
+    "n_rows": 329990,
+    "n_in_bbox": 329990,
+    "sha256": "bf4e23c28d9772bd89bfc3b0a48d1d711ca3d6eaa1360cf03cb3703fd405f526"
+  },
+  {
+    "source_file": "Data_VIIRS__2023__viirs-snpp_2023_Bolivia",
+    "path": "/home/franco_quiroga/Proyecto_NASA/Data_VIIRS/2023/viirs-snpp_2023_Bolivia.csv",
+    "product": "SNPP",
+    "kind": "country",
+    "level": "SP",
+    "coverage": [
+      "2023-01-01",
+      "2023-12-31"
+    ],
+    "n_rows": 356191,
+    "n_in_bbox": 356191,
+    "sha256": "7da60f6997860ea79ec5e9a30f3f3af40915a92216bd3d2a6d4991575a2e7b1f"
+  },
+  {
+    "source_file": "Data_VIIRS__2024__viirs-snpp_2024_Bolivia",
+    "path": "/home/franco_quiroga/Proyecto_NASA/Data_VIIRS/2024/viirs-snpp_2024_Bolivia.csv",
+    "product": "SNPP",
+    "kind": "country",
+    "level": "SP",
+    "coverage": [
+      "2024-01-01",
+      "2024-12-31"
+    ],
+    "n_rows": 883940,
+    "n_in_bbox": 883940,
+    "sha256": "5011381a135498842d2aaaedf3df1775c39e164b2fc049bffcbb74ed9b1d6dda"
+  },
+  {
+    "source_file": "Data_VIIRS__2025__viirs-snpp_2025_Bolivia",
+    "path": "/home/franco_quiroga/Proyecto_NASA/Data_VIIRS/2025/viirs-snpp_2025_Bolivia.csv",
+    "product": "SNPP",
+    "kind": "country",
+    "level": "SP",
+    "coverage": [
+      "2025-01-01",
+      "2025-12-31"
+    ],
+    "n_rows": 139554,
+    "n_in_bbox": 139554,
+    "sha256": "088df3c976f0d2015d0768a5a8d54cf80c2085e65d894045f7d6ca78ed262f7d"
+  },
+  {
+    "source_file": "Data_VIIRS__DL_FIRE_SV-C2_848530__fire_archive_SV-C2_848530",
+    "path": "/home/franco_quiroga/Proyecto_NASA/Data_VIIRS/DL_FIRE_SV-C2_848530/fire_archive_SV-C2_848530.csv",
+    "product": "SNPP",
+    "kind": "global",
+    "level": "SP",
+    "coverage": [
+      "2025-04-01",
+      "2026-04-01"
+    ],
+    "n_rows": 17804613,
+    "n_in_bbox": 191637,
+    "sha256": "d88c3075ea500082b35cf7ad9a305c434b0b5e054fd69eae4fd857fbdef6037a"
+  },
+  {
+    "source_file": "Data_VIIRS__DL_FIRE_SV-C2_848539__fire_archive_SV-C2_848539",
+    "path": "/home/franco_quiroga/Proyecto_NASA/Data_VIIRS/DL_FIRE_SV-C2_848539/fire_archive_SV-C2_848539.csv",
+    "product": "SNPP",
+    "kind": "global",
+    "level": "SP",
+    "coverage": [
+      "2026-04-02",
+      "2026-07-31"
+    ],
+    "n_rows": 4907282,
+    "n_in_bbox": 39138,
+    "sha256": "33ff439170178ce8a89946f70afb3ef91789a38fdd8fc6a47bcfbb6908a91258"
+  },
+  {
+    "source_file": "Data_VIIRS__DL_FIRE_SV-C2_848539__fire_nrt_SV-C2_848539",
+    "path": "/home/franco_quiroga/Proyecto_NASA/Data_VIIRS/DL_FIRE_SV-C2_848539/fire_nrt_SV-C2_848539.csv",
+    "product": "SNPP",
+    "kind": "global",
+    "level": "NRT",
+    "coverage": [
+      "2026-08-01",
+      "2026-11-02"
+    ],
+    "n_rows": 6602259,
+    "n_in_bbox": 81025,
+    "sha256": "4c4f39c2da02e19cfa9c54b7126104dbcbf98c409fc36bbd2a73f214542f5f65"
+  },
+  {
+    "source_file": "Data_VIIRS_NOAA-20__2018__viirs-jpss1_2018_Bolivia",
+    "path": "/home/franco_quiroga/Proyecto_NASA/Data_VIIRS_NOAA-20/2018/viirs-jpss1_2018_Bolivia.csv",
+    "product": "NOAA20",
+    "kind": "country",
+    "level": "SP",
+    "coverage": [
+      "2018-01-01",
+      "2018-12-31"
+    ],
+    "n_rows": 163678,
+    "n_in_bbox": 163678,
+    "sha256": "a077714da650fd09ea7e61f3785750b0a4ab447ded75f2ddb6539fd0a3ea0a3e"
+  },
+  {
+    "source_file": "Data_VIIRS_NOAA-20__2019__viirs-jpss1_2019_Bolivia",
+    "path": "/home/franco_quiroga/Proyecto_NASA/Data_VIIRS_NOAA-20/2019/viirs-jpss1_2019_Bolivia.csv",
+    "product": "NOAA20",
+    "kind": "country",
+    "level": "SP",
+    "coverage": [
+      "2019-01-01",
+      "2019-12-31"
+    ],
+    "n_rows": 382637,
+    "n_in_bbox": 382637,
+    "sha256": "365ee824c5c54550f48dc27de3fee08a1de9a461751197366a2308da047f8ae1"
+  },
+  {
+    "source_file": "Data_VIIRS_NOAA-20__2020__viirs-jpss1_2020_Bolivia",
+    "path": "/home/franco_quiroga/Proyecto_NASA/Data_VIIRS_NOAA-20/2020/viirs-jpss1_2020_Bolivia.csv",
+    "product": "NOAA20",
+    "kind": "country",
+    "level": "SP",
+    "coverage": [
+      "2020-01-01",
+      "2020-12-31"
+    ],
+    "n_rows": 313670,
+    "n_in_bbox": 313670,
+    "sha256": "ecc5ba770814832a4fa43d81ffaad0d4a96bc069ab683abec4826ecd656e8cf2"
+  },
+  {
+    "source_file": "Data_VIIRS_NOAA-20__2021__viirs-jpss1_2021_Bolivia",
+    "path": "/home/franco_quiroga/Proyecto_NASA/Data_VIIRS_NOAA-20/2021/viirs-jpss1_2021_Bolivia.csv",
+    "product": "NOAA20",
+    "kind": "country",
+    "level": "SP",
+    "coverage": [
+      "2021-01-01",
+      "2021-12-31"
+    ],
+    "n_rows": 293790,
+    "n_in_bbox": 293790,
+    "sha256": "0038daf23f159e58e02cbe9d79472453a9d2685da2d225d5b1071fe69207204c"
+  },
+  {
+    "source_file": "Data_VIIRS_NOAA-20__2022__viirs-jpss1_2022_Bolivia",
+    "path": "/home/franco_quiroga/Proyecto_NASA/Data_VIIRS_NOAA-20/2022/viirs-jpss1_2022_Bolivia.csv",
+    "product": "NOAA20",
+    "kind": "country",
+    "level": "SP",
+    "coverage": [
+      "2022-01-01",
+      "2022-12-31"
+    ],
+    "n_rows": 334408,
+    "n_in_bbox": 334408,
+    "sha256": "f59bffec323b30bd761377a553a1551cfbde0d4fb763b85a978f242ea9d3b354"
+  },
+  {
+    "source_file": "Data_VIIRS_NOAA-20__2023__viirs-jpss1_2023_Bolivia",
+    "path": "/home/franco_quiroga/Proyecto_NASA/Data_VIIRS_NOAA-20/2023/viirs-jpss1_2023_Bolivia.csv",
+    "product": "NOAA20",
+    "kind": "country",
+    "level": "SP",
+    "coverage": [
+      "2023-01-01",
+      "2023-12-31"
+    ],
+    "n_rows": 353844,
+    "n_in_bbox": 353844,
+    "sha256": "6f4646fe46c00f9f41a67b1c95f7110083b252dbbb9b42512020a741ed46c5f6"
+  },
+  {
+    "source_file": "Data_VIIRS_NOAA-20__2024__viirs-jpss1_2024_Bolivia",
+    "path": "/home/franco_quiroga/Proyecto_NASA/Data_VIIRS_NOAA-20/2024/viirs-jpss1_2024_Bolivia.csv",
+    "product": "NOAA20",
+    "kind": "country",
+    "level": "SP",
+    "coverage": [
+      "2024-01-01",
+      "2024-12-31"
+    ],
+    "n_rows": 937638,
+    "n_in_bbox": 937638,
+    "sha256": "7980091501eceaeb436af5c57b48ab51555d012510743928db91cf130ebb2774"
+  },
+  {
+    "source_file": "Data_VIIRS_NOAA-20__2025__viirs-jpss1_2025_Bolivia",
+    "path": "/home/franco_quiroga/Proyecto_NASA/Data_VIIRS_NOAA-20/2025/viirs-jpss1_2025_Bolivia.csv",
+    "product": "NOAA20",
+    "kind": "country",
+    "level": "SP",
+    "coverage": [
+      "2025-01-01",
+      "2025-12-31"
+    ],
+    "n_rows": 141560,
+    "n_in_bbox": 141560,
+    "sha256": "31fb3426d8ca5120230955857cf2e81591b3240719576d389eb0cf3ab4552df6"
+  },
+  {
+    "source_file": "Data_VIIRS_NOAA-20__DL_FIRE_J1V-C2_848529__fire_archive_J1V-C2_848529",
+    "path": "/home/franco_quiroga/Proyecto_NASA/Data_VIIRS_NOAA-20/DL_FIRE_J1V-C2_848529/fire_archive_J1V-C2_848529.csv",
+    "product": "NOAA20",
+    "kind": "global",
+    "level": "SP",
+    "coverage": [
+      "2025-04-01",
+      "2026-04-01"
+    ],
+    "n_rows": 17913797,
+    "n_in_bbox": 193849,
+    "sha256": "fd32502af54f037280ca5f941a72b493345694ff9a35cb8215c9384ff9b6fd1b"
+  },
+  {
+    "source_file": "Data_VIIRS_NOAA-20__DL_FIRE_J1V-C2_848538__fire_archive_J1V-C2_848538",
+    "path": "/home/franco_quiroga/Proyecto_NASA/Data_VIIRS_NOAA-20/DL_FIRE_J1V-C2_848538/fire_archive_J1V-C2_848538.csv",
+    "product": "NOAA20",
+    "kind": "global",
+    "level": "SP",
+    "coverage": [
+      "2026-04-02",
+      "2026-07-31"
+    ],
+    "n_rows": 5492001,
+    "n_in_bbox": 42751,
+    "sha256": "e2dd8b00d7f4d1f9b8b5650ece9c62839e9d95873d8bd87266967b619d302df7"
+  },
+  {
+    "source_file": "Data_VIIRS_NOAA-20__DL_FIRE_J1V-C2_848538__fire_nrt_J1V-C2_848538",
+    "path": "/home/franco_quiroga/Proyecto_NASA/Data_VIIRS_NOAA-20/DL_FIRE_J1V-C2_848538/fire_nrt_J1V-C2_848538.csv",
+    "product": "NOAA20",
+    "kind": "global",
+    "level": "NRT",
+    "coverage": [
+      "2026-08-01",
+      "2026-11-14"
+    ],
+    "n_rows": 7478189,
+    "n_in_bbox": 97895,
+    "sha256": "f4dacb40305cf61780b90b4c00468a5f419b32a2c63729122dfb9c365ab259de"
+  },
+  {
+    "source_file": "Data_VIIRS_NOAA-21__DL_FIRE_J2V-C2_848545__fire_archive_J2V-C2_848545",
+    "path": "/home/franco_quiroga/Proyecto_NASA/Data_VIIRS_NOAA-21/DL_FIRE_J2V-C2_848545/fire_archive_J2V-C2_848545.csv",
+    "product": "NOAA21",
+    "kind": "global",
+    "level": "SP",
+    "coverage": [
+      "2023-03-01",
+      "2024-03-01"
+    ],
+    "n_rows": 21164104,
+    "n_in_bbox": 463908,
+    "sha256": "997a72dd486a4abde936db28d98cd882597c9c20cb410b731d9b9b5c048873a4"
+  },
+  {
+    "source_file": "Data_VIIRS_NOAA-21__DL_FIRE_J2V-C2_848546__fire_archive_J2V-C2_848546",
+    "path": "/home/franco_quiroga/Proyecto_NASA/Data_VIIRS_NOAA-21/DL_FIRE_J2V-C2_848546/fire_archive_J2V-C2_848546.csv",
+    "product": "NOAA21",
+    "kind": "global",
+    "level": "SP",
+    "coverage": [
+      "2024-03-02",
+      "2025-03-02"
+    ],
+    "n_rows": 21723833,
+    "n_in_bbox": 1136011,
+    "sha256": "9e3e4ea33c3f25f63afc84bb574875477666f70ac6e01a61145d243da82604e1"
+  },
+  {
+    "source_file": "Data_VIIRS_NOAA-21__DL_FIRE_J2V-C2_848551__fire_archive_J2V-C2_848551",
+    "path": "/home/franco_quiroga/Proyecto_NASA/Data_VIIRS_NOAA-21/DL_FIRE_J2V-C2_848551/fire_archive_J2V-C2_848551.csv",
+    "product": "NOAA21",
+    "kind": "global",
+    "level": "SP",
+    "coverage": [
+      "2025-03-03",
+      "2026-03-03"
+    ],
+    "n_rows": 17324856,
+    "n_in_bbox": 186422,
+    "sha256": "191afd35d92296d1d5fa069464d09abddc94247ea39d8e9bc2cff6c601c08464"
+  },
+  {
+    "source_file": "Data_VIIRS_NOAA-21__DL_FIRE_J2V-C2_848553__fire_archive_J2V-C2_848553",
+    "path": "/home/franco_quiroga/Proyecto_NASA/Data_VIIRS_NOAA-21/DL_FIRE_J2V-C2_848553/fire_archive_J2V-C2_848553.csv",
+    "product": "NOAA21",
+    "kind": "global",
+    "level": "SP",
+    "coverage": [
+      "2026-03-04",
+      "2026-07-31"
+    ],
+    "n_rows": 6461112,
+    "n_in_bbox": 42838,
+    "sha256": "ceb6ca54b40eeb69bd5e6dfebdcb27754189195baac4fe6695ad007318b1af64"
+  },
+  {
+    "source_file": "Data_VIIRS_NOAA-21__DL_FIRE_J2V-C2_848553__fire_nrt_J2V-C2_848553",
+    "path": "/home/franco_quiroga/Proyecto_NASA/Data_VIIRS_NOAA-21/DL_FIRE_J2V-C2_848553/fire_nrt_J2V-C2_848553.csv",
+    "product": "NOAA21",
+    "kind": "global",
+    "level": "NRT",
+    "coverage": [
+      "2026-08-01",
+      "2026-11-14"
+    ],
+    "n_rows": 7186305,
+    "n_in_bbox": 90966,
+    "sha256": "7444767108491400bdbeba74ae296dedf772904e5255a6a5c9d90497517f616d"
+  }
+]

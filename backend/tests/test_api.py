@@ -160,6 +160,41 @@ def test_summary_yoy_unavailable_at_start(client):
     assert s["reliability_share"]["low"] > 0.9
 
 
+# -- caídas de satélites y conteo original de la NASA -------------------------
+def test_outages_periods(client):
+    o = get(client, "/outages", region="ARG")
+    terra_2001 = [p for p in o["periods"] if p["satellite"] == "Terra" and p["start"] == "2001-06-15"]
+    assert terra_2001 and terra_2001[0]["end"] == "2001-07-02" and terra_2001[0]["days"] == 18
+    assert terra_2001[0]["kind"] == "full"                 # época solo Terra: nadie observó
+    assert "2001-06-20" in o["no_data_days"]
+    assert sum(p["days"] for p in o["periods"]) == o["satellite_days"]
+    assert any(p["kind"] == "partial" for p in o["periods"])
+    for p in o["periods"]:
+        assert p["start"] <= p["end"]
+
+
+def test_daily_points_carry_nasa_count_and_satellites_down(client):
+    pts = get(client, "/timeseries", region="ARG", granularity="daily", start="2001-06-13", end="2001-06-16")["points"]
+    by = {p["date"]: p for p in pts}
+    assert by["2001-06-15"]["satellites_down"] == ["Terra"] and by["2001-06-15"]["nasa_detections"] is None
+    assert by["2001-06-13"]["satellites_down"] == [] and by["2001-06-13"]["nasa_detections"] > 0
+    # el conteo de la NASA (píxeles, todas las confianzas) nunca es menor que los eventos celda-día
+    assert by["2001-06-13"]["nasa_detections"] >= by["2001-06-13"]["events_observed"]
+
+
+def test_nasa_count_consistent_daily_monthly_summary(client):
+    kw = dict(region="URY", start="2001-01-01", end="2001-12-31")
+    d = get(client, "/timeseries", granularity="daily", **kw)["points"]
+    m = get(client, "/timeseries", granularity="monthly", **kw)["points"]
+    s = get(client, "/summary", **kw)
+    total = sum(p["nasa_detections"] or 0 for p in d)
+    assert total == sum(p["nasa_detections"] or 0 for p in m) == s["total_nasa_detections"] > 0
+    assert all("days_with_satellite_down" in p for p in m)
+    # con bbox que cubre la región, mismo conteo
+    boxed = get(client, "/timeseries", granularity="daily", bbox="-60,-36,-52,-29", **kw)["points"]
+    assert sum(p["nasa_detections"] or 0 for p in boxed) == total
+
+
 # -- contrato, errores, caché, seguridad --------------------------------------
 @pytest.mark.parametrize("path,params", [
     ("/timeseries", dict(region="ARG", granularity="monthly")),

@@ -81,8 +81,13 @@ def daily_subset_counts(events: pl.DataFrame, activity: pl.DataFrame, masks: lis
 
 # ----------------------------------------------------------------------------- ajuste mensual
 def fit_monthly_ratio(x: np.ndarray, y: np.ndarray, scope: str, method: str,
-                      harmonics: int = 2, window: int = 3) -> np.ndarray:
-    """Cociente por mes del año (12 valores) a partir de sumas x, y por mes del año."""
+                      harmonics: int = 2, window: int = 3, prior_events: float = 0.0) -> np.ndarray:
+    """Cociente por mes del año (12 valores) a partir de sumas x, y por mes del año.
+
+    Con `prior_events` = k > 0, el log-cociente de cada mes se contrae hacia el del total
+    (Bayes empírico): log r_m = (x_m·log(y_m/x_m) + k·log r_total) / (x_m + k), con peso x_m + k.
+    Un mes con pocos eventos (p. ej. 12 en el invierno uruguayo de 2002) queda cerca del cociente
+    anual en vez de producir un factor extremo; un mes con miles de eventos casi no cambia."""
     x, y = np.asarray(x, float), np.asarray(y, float)
     total = y.sum() / x.sum() if x.sum() > 0 else np.nan
     if scope == "global" or not np.isfinite(total):
@@ -90,6 +95,10 @@ def fit_monthly_ratio(x: np.ndarray, y: np.ndarray, scope: str, method: str,
     valid = (x > 0) & (y > 0)
     lr = np.where(valid, np.log(np.where(valid, y, 1) / np.where(valid, x, 1)), 0.0)
     w = np.where(valid, x, 0.0)
+    if prior_events > 0:
+        lr = (w * lr + prior_events * np.log(total)) / (w + prior_events)
+        w = w + prior_events
+        valid = np.ones(12, bool)
     if method == "none":
         r = np.where(valid, np.exp(lr), total)
     elif method == "moving_average":
@@ -102,7 +111,7 @@ def fit_monthly_ratio(x: np.ndarray, y: np.ndarray, scope: str, method: str,
     elif method == "harmonic":
         n_par = 1 + 2 * harmonics
         if valid.sum() < n_par:
-            return fit_monthly_ratio(x, y, scope, "moving_average", harmonics, window)
+            return fit_monthly_ratio(x, y, scope, "moving_average", harmonics, window, prior_events)
         t = 2 * np.pi * np.arange(12) / 12
         X = np.column_stack([np.ones(12)] + [f(k * t) for k in range(1, harmonics + 1) for f in (np.cos, np.sin)])
         sw = np.sqrt(w)
@@ -125,7 +134,7 @@ def _cv(moy, xs, ys, scope, method, sm) -> dict | None:
     if h < 3 or xs[:h].sum() == 0 or ys[h:].sum() == 0:
         return None
     r12 = fit_monthly_ratio(_by_moy(moy[:h], xs[:h]), _by_moy(moy[:h], ys[:h]), scope, method,
-                            sm.harmonics, sm.window)
+                            sm.harmonics, sm.window, sm.prior_events)
     r12 = np.where(np.isfinite(r12), r12, ys[:h].sum() / xs[:h].sum())
     pred, obs = r12[moy[h:] - 1] * xs[h:], ys[h:]
     ok = obs > 0
@@ -143,7 +152,18 @@ def _ratio_stats(df: pl.DataFrame, x: int, y: int, rng: np.random.Generator, cc:
     if xs.sum() == 0:
         raise ValueError(f"Sin eventos para estimar r({x}->{y})")
     sm, scope = cc.smoothing, cc.factor_scope
-    fit = lambda a, b: fit_monthly_ratio(a, b, scope, sm.method, sm.harmonics, sm.window)  # noqa: E731
+    cv = {f"{s}/{mt}" if s != "global" else "global": _cv(moy, xs, ys, s, mt, sm) for s, mt in CV_METHODS}
+    selected = "global" if scope == "global" else f"{scope}/{sm.method}"
+    if selected not in cv:
+        cv[selected] = _cv(moy, xs, ys, scope, sm.method, sm)
+    # Selección por validación cruzada: el factor estacional solo si predice al menos tan bien
+    # como el anual único (WAPE de la 2ª mitad de la ventana).
+    if sm.select_by_cv and selected != "global" and cv.get(selected) and cv.get("global"):
+        if cv["global"]["monthly_wape_pct"] < cv[selected]["monthly_wape_pct"]:
+            selected = "global"
+    fit_scope, fit_method = ("global", "none") if selected == "global" else (scope, sm.method)
+    fit = lambda a, b: fit_monthly_ratio(a, b, fit_scope, fit_method, sm.harmonics, sm.window,  # noqa: E731
+                                         sm.prior_events)
     x12, y12 = _by_moy(moy, xs), _by_moy(moy, ys)
     r12 = fit(x12, y12)
     r_total = ys.sum() / xs.sum()
@@ -158,11 +178,6 @@ def _ratio_stats(df: pl.DataFrame, x: int, y: int, rng: np.random.Generator, cc:
             xb[:, k], yb[:, k] = xs[draw].sum(1), ys[draw].sum(1)
     boot = np.vstack([fit(xb[b], yb[b]) for b in range(B)])
     boot = np.where(np.isfinite(boot), boot, r12)
-
-    cv = {f"{s}/{mt}" if s != "global" else "global": _cv(moy, xs, ys, s, mt, sm) for s, mt in CV_METHODS}
-    selected = "global" if scope == "global" else f"{scope}/{sm.method}"
-    if selected not in cv:
-        cv[selected] = _cv(moy, xs, ys, scope, sm.method, sm)
 
     yearly = (df.group_by(pl.col("solar_date").dt.year().alias("year"))
               .agg(pl.col(f"c_{x}").sum().alias("x"), pl.col(f"c_{y}").sum().alias("y")).sort("year")

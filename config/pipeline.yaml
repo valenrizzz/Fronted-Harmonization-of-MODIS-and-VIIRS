@@ -65,6 +65,22 @@ availability:
   suspect_zero_min_run: 3
   ratio_window_days: 30
   climatology_window_days: 15
+  # Veto regional. Si en el país NINGÚN satélite detectó nada (lo esperado sale de la
+  # climatología), un cero puede ser un día húmedo/nublado sin fuego y no una caída. La caída se
+  # descarta si ese mismo satélite tuvo >= min_detections ese día solar en la zona de referencia
+  # (estaba operando). Las caídas por cociente con otros satélites del país (evidencia local de
+  # un hueco de datos) no se vetan. Diagnóstico PRY 2026-11-15: 630 de 691 caídas climatológicas
+  # tenían actividad regional del mismo satélite; en ARG, 151 de 189 caídas tienen 0 regional.
+  reference:
+    enabled: true
+    country_files: [Argentina, Bolivia, Brazil, Chile, Paraguay, Uruguay, Peru]  # los que falten se ignoran
+    include_global: true
+    bbox: [-82.0, -56.0, -34.0, 13.0]   # Sudamérica: [lon_min, lat_min, lon_max, lat_max]
+    min_detections: 10
+    # ...y >= esta fracción de su mediana regional móvil (±climatology_window_days): con pocas
+    # detecciones regionales el satélite pudo perder la mayoría de sus barridos (caída parcial,
+    # p.ej. Terra 2002-03-19/28 con 15-22% de su actividad habitual) y la caída se mantiene.
+    min_fraction: 0.25
 
 confidence:
   # MODIS (0-100) -> nivel ordinal. Umbrales del MODIS C6/C6.1 Active Fire User Guide.
@@ -100,6 +116,14 @@ calibration:
     method: harmonic
     harmonics: 2            # armónico: log r(m) = a0 + Σ_k [a_k cos(2πkm/12) + b_k sin(2πkm/12)]
     window: 3               # media móvil circular (meses, impar)
+    # Contracción (Bayes empírico) hacia el cociente anual del par: cada mes suma una
+    # pseudo-observación de N eventos con el cociente anual. Un mes con pocos eventos queda cerca
+    # del anual en vez de dar un factor extremo (URY 2002: julio con 12 eventos daba ×36 crudo y
+    # K Terra = ×86); con ≥ 1.000 eventos la estacionalidad casi no cambia.
+    prior_events: 100
+    # Por par de constelaciones, si el factor anual único predice mejor que el estacional en la
+    # validación cruzada (WAPE), se usa el anual (p. ej. BOL Terra→Terra+Aqua).
+    select_by_cv: true
   bootstrap: {n: 1000, seed: 20261115, ci: 0.95}   # remuestreo estratificado por mes del año
 
 api:

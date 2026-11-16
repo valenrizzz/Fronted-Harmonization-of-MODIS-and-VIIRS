@@ -75,6 +75,13 @@ class TimeseriesPoint(BaseModel):
     reliability_tier: Tier | None
     layer: Layer
     status: Status
+    nasa_detections: int | None = Field(
+        None,
+        description="Conteo original de NASA FIRMS: detecciones (píxeles) de todas las confianzas, "
+        "sin corrección por constelación. No es comparable entre épocas.",
+    )
+    satellites_down: list[str] | None = Field(None, description="Solo daily: satélites fuera de servicio ese día")
+    days_with_satellite_down: int | None = Field(None, description="Solo monthly: días con algún satélite caído")
 
 
 class TimeseriesOut(ResponseMeta):
@@ -108,6 +115,22 @@ class CellsOut(ResponseMeta):
     cells: list[Cell]
 
 
+class OutagePeriod(BaseModel):
+    satellite: str
+    start: Date
+    end: Date
+    days: int
+    kind: Literal["full", "partial"] = Field(
+        description="full: ningún satélite observó esos días (sin dato); partial: otros satélites siguieron observando"
+    )
+
+
+class OutagesOut(ResponseMeta):
+    periods: list[OutagePeriod]
+    no_data_days: list[Date] = Field(description="Días sin ningún satélite operativo (sin dato, no 0)")
+    satellite_days: int
+
+
 class Total(BaseModel):
     value: float
     ci_low: float
@@ -131,6 +154,7 @@ class Peak(BaseModel):
 class SummaryOut(ResponseMeta):
     total_harmonized: Total
     total_observed: int
+    total_nasa_detections: int = Field(description="Conteo original de NASA FIRMS (sin corrección)")
     yoy: YoY
     peak_day: Peak | None
     peak_month: Peak | None

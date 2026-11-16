@@ -1,5 +1,5 @@
 {
-  "generated_utc": "2026-11-15T16:50:21+00:00",
+  "generated_utc": "2026-11-15T21:04:13+00:00",
   "python": "3.12.3",
   "libraries": {
     "polars": "2.1.0",
@@ -98,6 +98,27 @@
     },
     "availability": {
       "detect_outages": true,
+      "reference": {
+        "enabled": true,
+        "country_files": [
+          "Argentina",
+          "Bolivia",
+          "Brazil",
+          "Chile",
+          "Paraguay",
+          "Uruguay",
+          "Peru"
+        ],
+        "include_global": true,
+        "bbox": [
+          -82.0,
+          -56.0,
+          -34.0,
+          13.0
+        ],
+        "min_detections": 10,
+        "min_fraction": 0.25
+      },
       "min_expected_detections": 20.0,
       "min_expected_run": 100.0,
       "suspect_zero_min_run": 3,
@@ -125,7 +146,9 @@
       "smoothing": {
         "method": "harmonic",
         "harmonics": 2,
-        "window": 3
+        "window": 3,
+        "prior_events": 100.0,
+        "select_by_cv": true
       },
       "bootstrap": {
         "n": 1000,
@@ -206,17 +229,38 @@
     "n_events": 2607588,
     "n_events_in_series": 2473633,
     "n_static_source_cells": 761,
-    "n_satellite_outage_days": 189,
-    "n_days_without_any_satellite": 33,
+    "n_satellite_outage_days": 179,
+    "n_satellite_outage_vetoes": 10,
+    "outage_reference": {
+      "enabled": true,
+      "bbox": [
+        -82.0,
+        -56.0,
+        -34.0,
+        13.0
+      ],
+      "min_detections": 10,
+      "n_files": 350,
+      "country_files_found": [
+        "Argentina",
+        "Bolivia",
+        "Brazil",
+        "Chile",
+        "Paraguay",
+        "Peru",
+        "Uruguay"
+      ]
+    },
+    "n_days_without_any_satellite": 27,
     "rejections": {
-      "type_2_non_vegetation": 195282,
       "type_1_non_vegetation": 4,
-      "static_source_cell": 113645,
-      "duplicate_record": 267103,
-      "satellite_inactive_on_day": 22,
-      "outside_region_bbox": 138262259,
+      "outside_region_polygon": 694486,
       "type_3_non_vegetation": 15814,
-      "outside_region_polygon": 694486
+      "type_2_non_vegetation": 195282,
+      "outside_region_bbox": 138262259,
+      "satellite_inactive_on_day": 22,
+      "static_source_cell": 113645,
+      "duplicate_record": 267103
     },
     "api": {
       "downloaded": [],
@@ -229,6 +273,6 @@
       ],
       "skipped": null
     },
-    "elapsed_s": 24.5
+    "elapsed_s": 29.2
   }
 }

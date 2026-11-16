@@ -1,20 +1,46 @@
 # Datos_Para_La_Web — almacén de focos de incendio armonizados (MODIS + VIIRS)
 
 Carpeta **autocontenida** para alimentar el backend y el frontend. No requiere el pipeline de cálculo: alcanza con leer los archivos Parquet o JSON, por ejemplo con DuckDB.
-Cada región vive en su propia subcarpeta (hoy solo `ARG/`) y se reemplaza de forma atómica en cada actualización.
+Cada región vive en su propia subcarpeta (hoy `ARG/`, `BOL/`, `CHL/`, `PRY/` y `URY/`), con exactamente la misma estructura y esquemas, y se reemplaza de forma atómica en cada actualización.
+
+## Regiones disponibles
+
+Las cinco se procesan con el **mismo método** (corrida del 2026-11-15):
+- factor por mes del año con suavizado armónico, **contraído hacia el factor anual** en los meses con pocos datos y **elegido por validación cruzada** en cada par de constelaciones;
+- veto regional de caídas de satélites;
+- referencia `Terra+Aqua+SNPP+NOAA20+NOAA21`;
+- período 2000-11-01 → 2026-11-14.
+
+| Región | `calibration_version` | Capa SP (días solares · eventos) | Capa NRT (días solares · eventos) |
+|---|---|---|---|
+| `ARG` | `ARG-cal-1a9cec898caf` | 2000-11-01 → 2026-07-30 · 2.559.422 | 2026-07-31 → 2026-11-14 · 48.166 |
+| `BOL` | `BOL-cal-7f0886f53261` | 2000-11-01 → 2026-07-31 · 2.588.472 | 2026-08-01 → 2026-11-14 · 62.046 |
+| `CHL` | `CHL-cal-29f092de68ea` | 2000-11-01 → 2026-07-31 · 264.316 | 2026-08-01 → 2026-11-14 · 3.036 |
+| `PRY` | `PRY-cal-14ccff1819ab` | 2000-11-01 → 2026-07-31 · 1.630.619 | 2026-08-01 → 2026-11-14 · 25.114 |
+| `URY` | `URY-cal-c203251357e9` | 2000-11-02 → 2026-07-31 · 61.438 | 2026-08-02 → 2026-11-12 · 1.522 |
+
+> **Qué se corrigió respecto de la primera corrida**
+> - **Caídas de satélites falsas.** En países chicos o húmedos, los días sin fuego se marcaban como "sin dato" y creaban épocas de calibración espurias. Con el veto regional, `PRY` bajó de 259 a 29 días *sin dato*, y el peso `low`, de 63% a 17%.
+> - **Factores extremos en meses con pocos datos.** `URY`, época solo Terra: el factor de junio y julio era ×86, estimado con 12 eventos; ahora es ×38, y la amplitud estacional bajó de ×6,1 a ×1,6. `CHL`: septiembre de 2002–2012 bajó de ×9,5 a ×8,4.
+> - **Método por par.** Cuando el factor anual único predice mejor que el estacional, se usa el anual (`selected_method` en `metadata/calibration_report.json`).
+> - **`CHL` continental.** Se excluyen Isla de Pascua, Juan Fernández y Desventuradas (`clip_bbox` en `config/regions.yaml`).
+>
+> **Para tener en cuenta**
+> - En `URY` (y en parte de `CHL`) la corrección de los años MODIS es grande: el factor Terra+Aqua es ≈ ×7. Por eso una parte importante del peso queda en confiabilidad `low`. Para esos días y meses, la app muestra el **conteo original de la NASA** (`nasa_detections`).
+> - Los días *sin dato* que quedan coinciden con caídas reales de satélites; por ejemplo, Terra del 15-jun al 2-jul de 2001. La API de FIRMS tampoco tiene detecciones esos días, y se publican en `GET /api/v1/outages`.
 
 > **Fuente de verdad de cada región: `<REGIÓN>/manifest.json`.** Contiene la versión de calibración, el corte SP/NRT, los conteos, el esquema de cada tabla y el sha256 de cada archivo. Leelo al iniciar el backend en lugar de fijar valores en el código.
 
-## Estado actual — `ARG`
+## Detalle — `ARG`
 
 | | |
 |---|---|
 | Periodo | 2000-11-01 → 2026-11-14 |
-| `calibration_version` | `ARG-cal-d0dcb9cdf578` |
-| Calibración | Factor por mes del año con suavizado armónico (2 términos), **interpolado día a día**; cada cociente se estima con los 2 años más cercanos a la época que calibra; referencia `Terra+Aqua+SNPP+NOAA20+NOAA21` |
+| `calibration_version` | `ARG-cal-1a9cec898caf` |
+| Calibración | Factor por mes del año con suavizado armónico (2 términos), contraído hacia el factor anual (100 eventos de pseudo-observación por mes) y elegido por validación cruzada en cada par, **interpolado día a día**; cada cociente se estima con los 2 años más cercanos a la época que calibra; referencia `Terra+Aqua+SNPP+NOAA20+NOAA21` |
 | Capa **SP** (definitiva) | 2000-11-01 → **2026-07-30** · 2.559.422 eventos |
 | Capa **NRT** (provisoria) | **2026-07-31** → 2026-11-14 · 48.166 eventos |
-| Filtros de calidad | 761 celdas excluidas (fuentes fijas y falsas alarmas MODIS, SP y NRT); 189 días-satélite con caída detectada; 33 días sin ningún satélite → *sin dato*; 20 días `suspect_zero` |
+| Filtros de calidad | 761 celdas excluidas (fuentes fijas y falsas alarmas MODIS, SP y NRT); 179 días-satélite con caída detectada (10 vetados por actividad regional); 27 días sin ningún satélite → *sin dato* |
 
 El corte se calcula solo, en dos pasos:
 1. **Fecha UTC (`sp_cutoff`)**: la última en que todos los satélites que siguen enviando datos tienen producto científico (SP). Hoy MODIS SP llega al 2026-08-31, pero S-NPP, NOAA-20 y NOAA-21 SP llegan al 2026-07-31.

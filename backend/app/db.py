@@ -32,6 +32,7 @@ def view_names(code: str) -> dict[str, str]:
         "daily": f"tsd_{code}",
         "monthly": f"tsm_{code}",
         "cells": f"map_{code}",
+        "outages": f"out_{code}",
     }
 
 
@@ -65,6 +66,21 @@ class ReadOnlyDB:
                     writer.execute(
                         f"CREATE VIEW {v[key]} AS SELECT * FROM read_parquet("
                         f"{_sql_str(str(rdir / fname))})"
+                    )
+                # Caídas de satélite detectadas por el pipeline (vacío si la región no las exporta)
+                out_csv = rdir / "metadata" / "satellite_outages.csv"
+                if out_csv.is_file():
+                    writer.execute(
+                        f"CREATE VIEW {v['outages']} AS SELECT CAST(date AS DATE) AS date, satellite "
+                        f"FROM read_csv({_sql_str(str(out_csv))}, header=true, columns="
+                        "{'date': 'DATE', 'satellite': 'VARCHAR', 'expected_detections': 'DOUBLE', "
+                        "'zero_run_days': 'BIGINT', 'zero_run_expected': 'DOUBLE', "
+                        "'detections_other_satellites': 'BIGINT', 'method': 'VARCHAR'})"
+                    )
+                else:
+                    writer.execute(
+                        f"CREATE VIEW {v['outages']} AS SELECT CAST(NULL AS DATE) AS date, "
+                        "CAST(NULL AS VARCHAR) AS satellite WHERE false"
                     )
         finally:
             writer.close()

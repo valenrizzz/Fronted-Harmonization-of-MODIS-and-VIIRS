@@ -1,0 +1,870 @@
+[
+  {
+    "source_file": "Data_MODIS__2000__modis_2000_Chile",
+    "path": "/home/franco_quiroga/Proyecto_NASA/Data_MODIS/2000/modis_2000_Chile.csv",
+    "product": "MODIS",
+    "kind": "country",
+    "level": "SP",
+    "coverage": [
+      "2000-01-01",
+      "2000-12-31"
+    ],
+    "n_rows": 199,
+    "n_in_bbox": 199,
+    "sha256": "6356b1b666c23831522fd4cbeddf01c46e3be728755e45734968a210c77c1a72"
+  },
+  {
+    "source_file": "Data_MODIS__2001__modis_2001_Chile",
+    "path": "/home/franco_quiroga/Proyecto_NASA/Data_MODIS/2001/modis_2001_Chile.csv",
+    "product": "MODIS",
+    "kind": "country",
+    "level": "SP",
+    "coverage": [
+      "2001-01-01",
+      "2001-12-31"
+    ],
+    "n_rows": 1531,
+    "n_in_bbox": 1529,
+    "sha256": "758502304f6dc8c2cec240163d9a5f0239ba6c13468d97381b3c2aff0b216b2c"
+  },
+  {
+    "source_file": "Data_MODIS__2002__modis_2002_Chile",
+    "path": "/home/franco_quiroga/Proyecto_NASA/Data_MODIS/2002/modis_2002_Chile.csv",
+    "product": "MODIS",
+    "kind": "country",
+    "level": "SP",
+    "coverage": [
+      "2002-01-01",
+      "2002-12-31"
+    ],
+    "n_rows": 2066,
+    "n_in_bbox": 2064,
+    "sha256": "af647b0adc85282cc101280f489e8cb61f249b602be8bd424f567c9a2462af34"
+  },
+  {
+    "source_file": "Data_MODIS__2003__modis_2003_Chile",
+    "path": "/home/franco_quiroga/Proyecto_NASA/Data_MODIS/2003/modis_2003_Chile.csv",
+    "product": "MODIS",
+    "kind": "country",
+    "level": "SP",
+    "coverage": [
+      "2003-01-01",
+      "2003-12-31"
+    ],
+    "n_rows": 5606,
+    "n_in_bbox": 5605,
+    "sha256": "fbb8ffaff18f6346fc80c1adf589674dcd2b9a479ae45d149018ce4caf20960d"
+  },
+  {
+    "source_file": "Data_MODIS__2004__modis_2004_Chile",
+    "path": "/home/franco_quiroga/Proyecto_NASA/Data_MODIS/2004/modis_2004_Chile.csv",
+    "product": "MODIS",
+    "kind": "country",
+    "level": "SP",
+    "coverage": [
+      "2004-01-01",
+      "2004-12-31"
+    ],
+    "n_rows": 6451,
+    "n_in_bbox": 6450,
+    "sha256": "6e46386aad27380b89e015e4d6e9787150c95f9d92c397f2557eba7a9d209f8e"
+  },
+  {
+    "source_file": "Data_MODIS__2005__modis_2005_Chile",
+    "path": "/home/franco_quiroga/Proyecto_NASA/Data_MODIS/2005/modis_2005_Chile.csv",
+    "product": "MODIS",
+    "kind": "country",
+    "level": "SP",
+    "coverage": [
+      "2005-01-01",
+      "2005-12-31"
+    ],
+    "n_rows": 7141,
+    "n_in_bbox": 7138,
+    "sha256": "62e61ba9d1fdd7093672a0dd130fbfc2715e67961f044fa81d2a9c90c4e7e929"
+  },
+  {
+    "source_file": "Data_MODIS__2006__modis_2006_Chile",
+    "path": "/home/franco_quiroga/Proyecto_NASA/Data_MODIS/2006/modis_2006_Chile.csv",
+    "product": "MODIS",
+    "kind": "country",
+    "level": "SP",
+    "coverage": [
+      "2006-01-01",
+      "2006-12-31"
+    ],
+    "n_rows": 6072,
+    "n_in_bbox": 6070,
+    "sha256": "f85f90f3db646fdfd7af85d4209040e7ee913d1de451b4afb6664051f312b8f2"
+  },
+  {
+    "source_file": "Data_MODIS__2007__modis_2007_Chile",
+    "path": "/home/franco_quiroga/Proyecto_NASA/Data_MODIS/2007/modis_2007_Chile.csv",
+    "product": "MODIS",
+    "kind": "country",
+    "level": "SP",
+    "coverage": [
+      "2007-01-01",
+      "2007-12-31"
+    ],
+    "n_rows": 6807,
+    "n_in_bbox": 6806,
+    "sha256": "9234abaf0e8484c476f88f08f325f748d2b671b634ff5d782f84cc2d65823b55"
+  },
+  {
+    "source_file": "Data_MODIS__2008__modis_2008_Chile",
+    "path": "/home/franco_quiroga/Proyecto_NASA/Data_MODIS/2008/modis_2008_Chile.csv",
+    "product": "MODIS",
+    "kind": "country",
+    "level": "SP",
+    "coverage": [
+      "2008-01-01",
+      "2008-12-31"
+    ],
+    "n_rows": 8441,
+    "n_in_bbox": 8438,
+    "sha256": "eab901ec9f71c01e852e00e14df3b17fe3067767d1b3fed6cca6e6ac1686d7b2"
+  },
+  {
+    "source_file": "Data_MODIS__2009__modis_2009_Chile",
+    "path": "/home/franco_quiroga/Proyecto_NASA/Data_MODIS/2009/modis_2009_Chile.csv",
+    "product": "MODIS",
+    "kind": "country",
+    "level": "SP",
+    "coverage": [
+      "2009-01-01",
+      "2009-12-31"
+    ],
+    "n_rows": 8256,
+    "n_in_bbox": 8256,
+    "sha256": "481e500dd44ccec19fd2c4cda3e2598d8476cbd196ae4d15c69b5768296fbdf1"
+  },
+  {
+    "source_file": "Data_MODIS__2010__modis_2010_Chile",
+    "path": "/home/franco_quiroga/Proyecto_NASA/Data_MODIS/2010/modis_2010_Chile.csv",
+    "product": "MODIS",
+    "kind": "country",
+    "level": "SP",
+    "coverage": [
+      "2010-01-01",
+      "2010-12-31"
+    ],
+    "n_rows": 7083,
+    "n_in_bbox": 7080,
+    "sha256": "2b7a9652c5962315e31eed6908a4c701206bcbd3c157714a1d75a1e60038a777"
+  },
+  {
+    "source_file": "Data_MODIS__2011__modis_2011_Chile",
+    "path": "/home/franco_quiroga/Proyecto_NASA/Data_MODIS/2011/modis_2011_Chile.csv",
+    "product": "MODIS",
+    "kind": "country",
+    "level": "SP",
+    "coverage": [
+      "2011-01-01",
+      "2011-12-31"
+    ],
+    "n_rows": 7577,
+    "n_in_bbox": 7575,
+    "sha256": "2305add869fdd5b598633711dec3f4fb4a61067c50658380ad06eedd269ddbda"
+  },
+  {
+    "source_file": "Data_MODIS__2012__modis_2012_Chile",
+    "path": "/home/franco_quiroga/Proyecto_NASA/Data_MODIS/2012/modis_2012_Chile.csv",
+    "product": "MODIS",
+    "kind": "country",
+    "level": "SP",
+    "coverage": [
+      "2012-01-01",
+      "2012-12-31"
+    ],
+    "n_rows": 7411,
+    "n_in_bbox": 7409,
+    "sha256": "8ef73f85e4f81191ddc82c12c29f8569b126e98186f4e83f3b0629d8a7851f44"
+  },
+  {
+    "source_file": "Data_MODIS__2013__modis_2013_Chile",
+    "path": "/home/franco_quiroga/Proyecto_NASA/Data_MODIS/2013/modis_2013_Chile.csv",
+    "product": "MODIS",
+    "kind": "country",
+    "level": "SP",
+    "coverage": [
+      "2013-01-01",
+      "2013-12-31"
+    ],
+    "n_rows": 6713,
+    "n_in_bbox": 6712,
+    "sha256": "1427ffc32505176703811a7e8e914f93e666e82fa4956c926d9db8363de78725"
+  },
+  {
+    "source_file": "Data_MODIS__2014__modis_2014_Chile",
+    "path": "/home/franco_quiroga/Proyecto_NASA/Data_MODIS/2014/modis_2014_Chile.csv",
+    "product": "MODIS",
+    "kind": "country",
+    "level": "SP",
+    "coverage": [
+      "2014-01-01",
+      "2014-12-31"
+    ],
+    "n_rows": 7147,
+    "n_in_bbox": 7136,
+    "sha256": "c53edb3a3310bcf28c5ef8eff16eca5d42bf5e3a7105f07a8707ea25b9d5dd50"
+  },
+  {
+    "source_file": "Data_MODIS__2015__modis_2015_Chile",
+    "path": "/home/franco_quiroga/Proyecto_NASA/Data_MODIS/2015/modis_2015_Chile.csv",
+    "product": "MODIS",
+    "kind": "country",
+    "level": "SP",
+    "coverage": [
+      "2015-01-01",
+      "2015-12-31"
+    ],
+    "n_rows": 9559,
+    "n_in_bbox": 9557,
+    "sha256": "30fe437e28ea7289f7f25c827f08006432df1b3236babc6a78ae0476310e3cfa"
+  },
+  {
+    "source_file": "Data_MODIS__2016__modis_2016_Chile",
+    "path": "/home/franco_quiroga/Proyecto_NASA/Data_MODIS/2016/modis_2016_Chile.csv",
+    "product": "MODIS",
+    "kind": "country",
+    "level": "SP",
+    "coverage": [
+      "2016-01-01",
+      "2016-12-31"
+    ],
+    "n_rows": 7069,
+    "n_in_bbox": 7065,
+    "sha256": "14e3c5bb212d4c8f4846e77becec475d6e5b73ff3e2c89a2a1da87101e27a40b"
+  },
+  {
+    "source_file": "Data_MODIS__2017__modis_2017_Chile",
+    "path": "/home/franco_quiroga/Proyecto_NASA/Data_MODIS/2017/modis_2017_Chile.csv",
+    "product": "MODIS",
+    "kind": "country",
+    "level": "SP",
+    "coverage": [
+      "2017-01-01",
+      "2017-12-31"
+    ],
+    "n_rows": 16504,
+    "n_in_bbox": 16498,
+    "sha256": "386b8fbb1934d5b0981549d27ebc10df8f273ac6542492b282371aa25e9a53cc"
+  },
+  {
+    "source_file": "Data_MODIS__2018__modis_2018_Chile",
+    "path": "/home/franco_quiroga/Proyecto_NASA/Data_MODIS/2018/modis_2018_Chile.csv",
+    "product": "MODIS",
+    "kind": "country",
+    "level": "SP",
+    "coverage": [
+      "2018-01-01",
+      "2018-12-31"
+    ],
+    "n_rows": 7172,
+    "n_in_bbox": 7172,
+    "sha256": "12ad07011b09def899da75dd793e5a954a11a82d32ca59299a53f862c697db8a"
+  },
+  {
+    "source_file": "Data_MODIS__2019__modis_2019_Chile",
+    "path": "/home/franco_quiroga/Proyecto_NASA/Data_MODIS/2019/modis_2019_Chile.csv",
+    "product": "MODIS",
+    "kind": "country",
+    "level": "SP",
+    "coverage": [
+      "2019-01-01",
+      "2019-12-31"
+    ],
+    "n_rows": 7635,
+    "n_in_bbox": 7635,
+    "sha256": "725a48a8531514edeb619351b10496ecbf883a4dc604e21c10b816536f40f5b7"
+  },
+  {
+    "source_file": "Data_MODIS__2020__modis_2020_Chile",
+    "path": "/home/franco_quiroga/Proyecto_NASA/Data_MODIS/2020/modis_2020_Chile.csv",
+    "product": "MODIS",
+    "kind": "country",
+    "level": "SP",
+    "coverage": [
+      "2020-01-01",
+      "2020-12-31"
+    ],
+    "n_rows": 8456,
+    "n_in_bbox": 8452,
+    "sha256": "a64eae582638e4b646a56962e4d496401e061d7d0e0afe98406ab062250b42a8"
+  },
+  {
+    "source_file": "Data_MODIS__2021__modis_2021_Chile",
+    "path": "/home/franco_quiroga/Proyecto_NASA/Data_MODIS/2021/modis_2021_Chile.csv",
+    "product": "MODIS",
+    "kind": "country",
+    "level": "SP",
+    "coverage": [
+      "2021-01-01",
+      "2021-12-31"
+    ],
+    "n_rows": 7564,
+    "n_in_bbox": 7556,
+    "sha256": "4f223ff2e3a181246ed618227a4a6961d58c96a46eec5e47b6ab758ad93f0643"
+  },
+  {
+    "source_file": "Data_MODIS__2022__modis_2022_Chile",
+    "path": "/home/franco_quiroga/Proyecto_NASA/Data_MODIS/2022/modis_2022_Chile.csv",
+    "product": "MODIS",
+    "kind": "country",
+    "level": "SP",
+    "coverage": [
+      "2022-01-01",
+      "2022-12-31"
+    ],
+    "n_rows": 7552,
+    "n_in_bbox": 7544,
+    "sha256": "189a11be2cf269fe6de0eb14c297cb60ba3bc9d1ebd658ccb87a499fb4d380ea"
+  },
+  {
+    "source_file": "Data_MODIS__2023__modis_2023_Chile",
+    "path": "/home/franco_quiroga/Proyecto_NASA/Data_MODIS/2023/modis_2023_Chile.csv",
+    "product": "MODIS",
+    "kind": "country",
+    "level": "SP",
+    "coverage": [
+      "2023-01-01",
+      "2023-12-31"
+    ],
+    "n_rows": 16473,
+    "n_in_bbox": 16470,
+    "sha256": "75224614c69d06d3c10c07f19d3ca65db4cd62c9614f4771fc37d04eff3efc64"
+  },
+  {
+    "source_file": "Data_MODIS__2024__modis_2024_Chile",
+    "path": "/home/franco_quiroga/Proyecto_NASA/Data_MODIS/2024/modis_2024_Chile.csv",
+    "product": "MODIS",
+    "kind": "country",
+    "level": "SP",
+    "coverage": [
+      "2024-01-01",
+      "2024-12-31"
+    ],
+    "n_rows": 6495,
+    "n_in_bbox": 6495,
+    "sha256": "c1c86ecebc767911bd35b18bba1f33cb8a6f1443baf2139555bc902e61338700"
+  },
+  {
+    "source_file": "Data_MODIS__2025__modis_2025_Chile",
+    "path": "/home/franco_quiroga/Proyecto_NASA/Data_MODIS/2025/modis_2025_Chile.csv",
+    "product": "MODIS",
+    "kind": "country",
+    "level": "SP",
+    "coverage": [
+      "2025-01-01",
+      "2025-12-31"
+    ],
+    "n_rows": 6737,
+    "n_in_bbox": 6737,
+    "sha256": "c225abab2d48f6f52644d1b7295ef3cdabf3ce492bb21d960087acea530cf2ca"
+  },
+  {
+    "source_file": "Data_MODIS__2026__fire_archive_M-C61_848537",
+    "path": "/home/franco_quiroga/Proyecto_NASA/Data_MODIS/2026/fire_archive_M-C61_848537.csv",
+    "product": "MODIS",
+    "kind": "global",
+    "level": "SP",
+    "coverage": [
+      "2026-04-02",
+      "2026-08-31"
+    ],
+    "n_rows": 1578990,
+    "n_in_bbox": 2249,
+    "sha256": "983ed36bd56fb7baa66ea4c541f8af0f949ae1d891fdd2359a9148ceb32594ae"
+  },
+  {
+    "source_file": "Data_MODIS__2026__fire_nrt_M-C61_848537",
+    "path": "/home/franco_quiroga/Proyecto_NASA/Data_MODIS/2026/fire_nrt_M-C61_848537.csv",
+    "product": "MODIS",
+    "kind": "global",
+    "level": "NRT",
+    "coverage": [
+      "2026-09-01",
+      "2026-11-14"
+    ],
+    "n_rows": 799469,
+    "n_in_bbox": 1212,
+    "sha256": "a13d996818617fa323bb2906a15584bf8e55a997b6e3ef85908bc1846564225d"
+  },
+  {
+    "source_file": "Data_MODIS__DL_FIRE_M-C61_848528__fire_archive_M-C61_848528",
+    "path": "/home/franco_quiroga/Proyecto_NASA/Data_MODIS/DL_FIRE_M-C61_848528/fire_archive_M-C61_848528.csv",
+    "product": "MODIS",
+    "kind": "global",
+    "level": "SP",
+    "coverage": [
+      "2025-04-01",
+      "2026-04-01"
+    ],
+    "n_rows": 3537277,
+    "n_in_bbox": 11496,
+    "sha256": "fbf10948e90646458ec0488732d096fb9a02d89c3df95450748c0f90b7d7d346"
+  },
+  {
+    "source_file": "Data_VIIRS__2012__viirs-snpp_2012_Chile",
+    "path": "/home/franco_quiroga/Proyecto_NASA/Data_VIIRS/2012/viirs-snpp_2012_Chile.csv",
+    "product": "SNPP",
+    "kind": "country",
+    "level": "SP",
+    "coverage": [
+      "2012-01-01",
+      "2012-12-31"
+    ],
+    "n_rows": 21642,
+    "n_in_bbox": 21630,
+    "sha256": "60e8d51b189a89c6aa8f4f46e2e8b7d280a0a8cfdab9562174af7cf53626b138"
+  },
+  {
+    "source_file": "Data_VIIRS__2013__viirs-snpp_2013_Chile",
+    "path": "/home/franco_quiroga/Proyecto_NASA/Data_VIIRS/2013/viirs-snpp_2013_Chile.csv",
+    "product": "SNPP",
+    "kind": "country",
+    "level": "SP",
+    "coverage": [
+      "2013-01-01",
+      "2013-12-31"
+    ],
+    "n_rows": 23764,
+    "n_in_bbox": 23761,
+    "sha256": "59ca55abd316aaf13202affd64ac33fbc25bd7a5038c3d213e1c21c0883c5957"
+  },
+  {
+    "source_file": "Data_VIIRS__2014__viirs-snpp_2014_Chile",
+    "path": "/home/franco_quiroga/Proyecto_NASA/Data_VIIRS/2014/viirs-snpp_2014_Chile.csv",
+    "product": "SNPP",
+    "kind": "country",
+    "level": "SP",
+    "coverage": [
+      "2014-01-01",
+      "2014-12-31"
+    ],
+    "n_rows": 25021,
+    "n_in_bbox": 24956,
+    "sha256": "129ff951cc85afd8e9de7e1d8b68d146f991dc462ff8ea6167d44b653cb0cbc8"
+  },
+  {
+    "source_file": "Data_VIIRS__2015__viirs-snpp_2015_Chile",
+    "path": "/home/franco_quiroga/Proyecto_NASA/Data_VIIRS/2015/viirs-snpp_2015_Chile.csv",
+    "product": "SNPP",
+    "kind": "country",
+    "level": "SP",
+    "coverage": [
+      "2015-01-01",
+      "2015-12-31"
+    ],
+    "n_rows": 34469,
+    "n_in_bbox": 34449,
+    "sha256": "d9a2923f7eaa5ab65d7fea38c5001356023ae6e29cabdd15961de1b7b50f4190"
+  },
+  {
+    "source_file": "Data_VIIRS__2016__viirs-snpp_2016_Chile",
+    "path": "/home/franco_quiroga/Proyecto_NASA/Data_VIIRS/2016/viirs-snpp_2016_Chile.csv",
+    "product": "SNPP",
+    "kind": "country",
+    "level": "SP",
+    "coverage": [
+      "2016-01-01",
+      "2016-12-31"
+    ],
+    "n_rows": 24967,
+    "n_in_bbox": 24946,
+    "sha256": "1189f8b200217b8cdbbbf14008b561242ef39c2fc56ece8eed663f4e3693dcde"
+  },
+  {
+    "source_file": "Data_VIIRS__2017__viirs-snpp_2017_Chile",
+    "path": "/home/franco_quiroga/Proyecto_NASA/Data_VIIRS/2017/viirs-snpp_2017_Chile.csv",
+    "product": "SNPP",
+    "kind": "country",
+    "level": "SP",
+    "coverage": [
+      "2017-01-01",
+      "2017-12-31"
+    ],
+    "n_rows": 54842,
+    "n_in_bbox": 54790,
+    "sha256": "3241722a7abd3e230ec6745eda70476e5707d488e621d2da9d39b6274b86a5bc"
+  },
+  {
+    "source_file": "Data_VIIRS__2018__viirs-snpp_2018_Chile",
+    "path": "/home/franco_quiroga/Proyecto_NASA/Data_VIIRS/2018/viirs-snpp_2018_Chile.csv",
+    "product": "SNPP",
+    "kind": "country",
+    "level": "SP",
+    "coverage": [
+      "2018-01-01",
+      "2018-12-31"
+    ],
+    "n_rows": 23042,
+    "n_in_bbox": 23028,
+    "sha256": "adbe875112d2cc6e51696133098c4c443806db755ca5682dbd9aff307f383b6f"
+  },
+  {
+    "source_file": "Data_VIIRS__2019__viirs-snpp_2019_Chile",
+    "path": "/home/franco_quiroga/Proyecto_NASA/Data_VIIRS/2019/viirs-snpp_2019_Chile.csv",
+    "product": "SNPP",
+    "kind": "country",
+    "level": "SP",
+    "coverage": [
+      "2019-01-01",
+      "2019-12-31"
+    ],
+    "n_rows": 24791,
+    "n_in_bbox": 24783,
+    "sha256": "249d99a517ec826c81972e249869c654af0de39d65f084700b3ed35f8e0c9758"
+  },
+  {
+    "source_file": "Data_VIIRS__2020__viirs-snpp_2020_Chile",
+    "path": "/home/franco_quiroga/Proyecto_NASA/Data_VIIRS/2020/viirs-snpp_2020_Chile.csv",
+    "product": "SNPP",
+    "kind": "country",
+    "level": "SP",
+    "coverage": [
+      "2020-01-01",
+      "2020-12-31"
+    ],
+    "n_rows": 27707,
+    "n_in_bbox": 27695,
+    "sha256": "b7fa9a8730acbedcbdac3afd9d92c5690004ff28e29ec3e3f3130147ac25304b"
+  },
+  {
+    "source_file": "Data_VIIRS__2021__viirs-snpp_2021_Chile",
+    "path": "/home/franco_quiroga/Proyecto_NASA/Data_VIIRS/2021/viirs-snpp_2021_Chile.csv",
+    "product": "SNPP",
+    "kind": "country",
+    "level": "SP",
+    "coverage": [
+      "2021-01-01",
+      "2021-12-31"
+    ],
+    "n_rows": 24669,
+    "n_in_bbox": 24613,
+    "sha256": "6b6354496f5317eef183226dcc8ac01517f5e58c94e8d926a05c07ec3406185a"
+  },
+  {
+    "source_file": "Data_VIIRS__2022__viirs-snpp_2022_Chile",
+    "path": "/home/franco_quiroga/Proyecto_NASA/Data_VIIRS/2022/viirs-snpp_2022_Chile.csv",
+    "product": "SNPP",
+    "kind": "country",
+    "level": "SP",
+    "coverage": [
+      "2022-01-01",
+      "2022-12-31"
+    ],
+    "n_rows": 29420,
+    "n_in_bbox": 29397,
+    "sha256": "6b5255b0f5f2cae3cb3a9fd4c71b2ea16b48b025f1352622c44ded794ab5f453"
+  },
+  {
+    "source_file": "Data_VIIRS__2023__viirs-snpp_2023_Chile",
+    "path": "/home/franco_quiroga/Proyecto_NASA/Data_VIIRS/2023/viirs-snpp_2023_Chile.csv",
+    "product": "SNPP",
+    "kind": "country",
+    "level": "SP",
+    "coverage": [
+      "2023-01-01",
+      "2023-12-31"
+    ],
+    "n_rows": 54947,
+    "n_in_bbox": 54942,
+    "sha256": "ced287dac1f1dd4503a5649dbf92afb719595eefbb69e78f6cddd3a81cbc14af"
+  },
+  {
+    "source_file": "Data_VIIRS__2024__viirs-snpp_2024_Chile",
+    "path": "/home/franco_quiroga/Proyecto_NASA/Data_VIIRS/2024/viirs-snpp_2024_Chile.csv",
+    "product": "SNPP",
+    "kind": "country",
+    "level": "SP",
+    "coverage": [
+      "2024-01-01",
+      "2024-12-31"
+    ],
+    "n_rows": 21647,
+    "n_in_bbox": 21646,
+    "sha256": "bbf8704aeeb4ca02a2a4ff8057bad2c524ccd7ffd8d4790ed558cc15b1a4ccc5"
+  },
+  {
+    "source_file": "Data_VIIRS__2025__viirs-snpp_2025_Chile",
+    "path": "/home/franco_quiroga/Proyecto_NASA/Data_VIIRS/2025/viirs-snpp_2025_Chile.csv",
+    "product": "SNPP",
+    "kind": "country",
+    "level": "SP",
+    "coverage": [
+      "2025-01-01",
+      "2025-12-31"
+    ],
+    "n_rows": 25885,
+    "n_in_bbox": 25882,
+    "sha256": "c6ad5e85bcb65e7a49f3aa60446dcceedf835bcd3f0ee86769be7df79a3e89cf"
+  },
+  {
+    "source_file": "Data_VIIRS__DL_FIRE_SV-C2_848530__fire_archive_SV-C2_848530",
+    "path": "/home/franco_quiroga/Proyecto_NASA/Data_VIIRS/DL_FIRE_SV-C2_848530/fire_archive_SV-C2_848530.csv",
+    "product": "SNPP",
+    "kind": "global",
+    "level": "SP",
+    "coverage": [
+      "2025-04-01",
+      "2026-04-01"
+    ],
+    "n_rows": 17804613,
+    "n_in_bbox": 53023,
+    "sha256": "d88c3075ea500082b35cf7ad9a305c434b0b5e054fd69eae4fd857fbdef6037a"
+  },
+  {
+    "source_file": "Data_VIIRS__DL_FIRE_SV-C2_848539__fire_archive_SV-C2_848539",
+    "path": "/home/franco_quiroga/Proyecto_NASA/Data_VIIRS/DL_FIRE_SV-C2_848539/fire_archive_SV-C2_848539.csv",
+    "product": "SNPP",
+    "kind": "global",
+    "level": "SP",
+    "coverage": [
+      "2026-04-02",
+      "2026-07-31"
+    ],
+    "n_rows": 4907282,
+    "n_in_bbox": 12348,
+    "sha256": "33ff439170178ce8a89946f70afb3ef91789a38fdd8fc6a47bcfbb6908a91258"
+  },
+  {
+    "source_file": "Data_VIIRS__DL_FIRE_SV-C2_848539__fire_nrt_SV-C2_848539",
+    "path": "/home/franco_quiroga/Proyecto_NASA/Data_VIIRS/DL_FIRE_SV-C2_848539/fire_nrt_SV-C2_848539.csv",
+    "product": "SNPP",
+    "kind": "global",
+    "level": "NRT",
+    "coverage": [
+      "2026-08-01",
+      "2026-11-02"
+    ],
+    "n_rows": 6602259,
+    "n_in_bbox": 7707,
+    "sha256": "4c4f39c2da02e19cfa9c54b7126104dbcbf98c409fc36bbd2a73f214542f5f65"
+  },
+  {
+    "source_file": "Data_VIIRS_NOAA-20__2018__viirs-jpss1_2018_Chile",
+    "path": "/home/franco_quiroga/Proyecto_NASA/Data_VIIRS_NOAA-20/2018/viirs-jpss1_2018_Chile.csv",
+    "product": "NOAA20",
+    "kind": "country",
+    "level": "SP",
+    "coverage": [
+      "2018-01-01",
+      "2018-12-31"
+    ],
+    "n_rows": 13009,
+    "n_in_bbox": 13003,
+    "sha256": "e4fe8198fdd96757faa73c09a80bfed2f2004150fc7e4f62ae4cd4766d05d47c"
+  },
+  {
+    "source_file": "Data_VIIRS_NOAA-20__2019__viirs-jpss1_2019_Chile",
+    "path": "/home/franco_quiroga/Proyecto_NASA/Data_VIIRS_NOAA-20/2019/viirs-jpss1_2019_Chile.csv",
+    "product": "NOAA20",
+    "kind": "country",
+    "level": "SP",
+    "coverage": [
+      "2019-01-01",
+      "2019-12-31"
+    ],
+    "n_rows": 24579,
+    "n_in_bbox": 24568,
+    "sha256": "3360a3f3b39dc60595508cf1ce7b308aca3e53cc86dc6ce9f91549ece70f9579"
+  },
+  {
+    "source_file": "Data_VIIRS_NOAA-20__2020__viirs-jpss1_2020_Chile",
+    "path": "/home/franco_quiroga/Proyecto_NASA/Data_VIIRS_NOAA-20/2020/viirs-jpss1_2020_Chile.csv",
+    "product": "NOAA20",
+    "kind": "country",
+    "level": "SP",
+    "coverage": [
+      "2020-01-01",
+      "2020-12-31"
+    ],
+    "n_rows": 26798,
+    "n_in_bbox": 26782,
+    "sha256": "6c7102cb48be4feae3633b3d7449b65574e8b3d3cf1a3d4c16a333b900a3dbcb"
+  },
+  {
+    "source_file": "Data_VIIRS_NOAA-20__2021__viirs-jpss1_2021_Chile",
+    "path": "/home/franco_quiroga/Proyecto_NASA/Data_VIIRS_NOAA-20/2021/viirs-jpss1_2021_Chile.csv",
+    "product": "NOAA20",
+    "kind": "country",
+    "level": "SP",
+    "coverage": [
+      "2021-01-01",
+      "2021-12-31"
+    ],
+    "n_rows": 24713,
+    "n_in_bbox": 24680,
+    "sha256": "8315c76db8dc5e81c4c27e1e74c6b0924e9ebf6c70757cda3a4505f7cffb6752"
+  },
+  {
+    "source_file": "Data_VIIRS_NOAA-20__2022__viirs-jpss1_2022_Chile",
+    "path": "/home/franco_quiroga/Proyecto_NASA/Data_VIIRS_NOAA-20/2022/viirs-jpss1_2022_Chile.csv",
+    "product": "NOAA20",
+    "kind": "country",
+    "level": "SP",
+    "coverage": [
+      "2022-01-01",
+      "2022-12-31"
+    ],
+    "n_rows": 27967,
+    "n_in_bbox": 27941,
+    "sha256": "6b92a7a9020f5a25085da65a82093ad036a28305f9b5ebc625d81dd64369f4ea"
+  },
+  {
+    "source_file": "Data_VIIRS_NOAA-20__2023__viirs-jpss1_2023_Chile",
+    "path": "/home/franco_quiroga/Proyecto_NASA/Data_VIIRS_NOAA-20/2023/viirs-jpss1_2023_Chile.csv",
+    "product": "NOAA20",
+    "kind": "country",
+    "level": "SP",
+    "coverage": [
+      "2023-01-01",
+      "2023-12-31"
+    ],
+    "n_rows": 51222,
+    "n_in_bbox": 51217,
+    "sha256": "e4abaa9bd61932f0fe5237d39184b76b1105887d0f4e4ae5dfe4cd7520598a98"
+  },
+  {
+    "source_file": "Data_VIIRS_NOAA-20__2024__viirs-jpss1_2024_Chile",
+    "path": "/home/franco_quiroga/Proyecto_NASA/Data_VIIRS_NOAA-20/2024/viirs-jpss1_2024_Chile.csv",
+    "product": "NOAA20",
+    "kind": "country",
+    "level": "SP",
+    "coverage": [
+      "2024-01-01",
+      "2024-12-31"
+    ],
+    "n_rows": 21526,
+    "n_in_bbox": 21523,
+    "sha256": "74a0d83a261c9bd273c46300c97a5b998e16002e8048c8463631964948cf1428"
+  },
+  {
+    "source_file": "Data_VIIRS_NOAA-20__2025__viirs-jpss1_2025_Chile",
+    "path": "/home/franco_quiroga/Proyecto_NASA/Data_VIIRS_NOAA-20/2025/viirs-jpss1_2025_Chile.csv",
+    "product": "NOAA20",
+    "kind": "country",
+    "level": "SP",
+    "coverage": [
+      "2025-01-01",
+      "2025-12-31"
+    ],
+    "n_rows": 25195,
+    "n_in_bbox": 25192,
+    "sha256": "93fef398c4b4923ed51733b706d9a042d7223fed1b156cf270d432b86d92b9bf"
+  },
+  {
+    "source_file": "Data_VIIRS_NOAA-20__DL_FIRE_J1V-C2_848529__fire_archive_J1V-C2_848529",
+    "path": "/home/franco_quiroga/Proyecto_NASA/Data_VIIRS_NOAA-20/DL_FIRE_J1V-C2_848529/fire_archive_J1V-C2_848529.csv",
+    "product": "NOAA20",
+    "kind": "global",
+    "level": "SP",
+    "coverage": [
+      "2025-04-01",
+      "2026-04-01"
+    ],
+    "n_rows": 17913797,
+    "n_in_bbox": 52892,
+    "sha256": "fd32502af54f037280ca5f941a72b493345694ff9a35cb8215c9384ff9b6fd1b"
+  },
+  {
+    "source_file": "Data_VIIRS_NOAA-20__DL_FIRE_J1V-C2_848538__fire_archive_J1V-C2_848538",
+    "path": "/home/franco_quiroga/Proyecto_NASA/Data_VIIRS_NOAA-20/DL_FIRE_J1V-C2_848538/fire_archive_J1V-C2_848538.csv",
+    "product": "NOAA20",
+    "kind": "global",
+    "level": "SP",
+    "coverage": [
+      "2026-04-02",
+      "2026-07-31"
+    ],
+    "n_rows": 5492001,
+    "n_in_bbox": 12352,
+    "sha256": "e2dd8b00d7f4d1f9b8b5650ece9c62839e9d95873d8bd87266967b619d302df7"
+  },
+  {
+    "source_file": "Data_VIIRS_NOAA-20__DL_FIRE_J1V-C2_848538__fire_nrt_J1V-C2_848538",
+    "path": "/home/franco_quiroga/Proyecto_NASA/Data_VIIRS_NOAA-20/DL_FIRE_J1V-C2_848538/fire_nrt_J1V-C2_848538.csv",
+    "product": "NOAA20",
+    "kind": "global",
+    "level": "NRT",
+    "coverage": [
+      "2026-08-01",
+      "2026-11-14"
+    ],
+    "n_rows": 7478189,
+    "n_in_bbox": 8417,
+    "sha256": "f4dacb40305cf61780b90b4c00468a5f419b32a2c63729122dfb9c365ab259de"
+  },
+  {
+    "source_file": "Data_VIIRS_NOAA-21__DL_FIRE_J2V-C2_848545__fire_archive_J2V-C2_848545",
+    "path": "/home/franco_quiroga/Proyecto_NASA/Data_VIIRS_NOAA-21/DL_FIRE_J2V-C2_848545/fire_archive_J2V-C2_848545.csv",
+    "product": "NOAA21",
+    "kind": "global",
+    "level": "SP",
+    "coverage": [
+      "2023-03-01",
+      "2024-03-01"
+    ],
+    "n_rows": 21164104,
+    "n_in_bbox": 34975,
+    "sha256": "997a72dd486a4abde936db28d98cd882597c9c20cb410b731d9b9b5c048873a4"
+  },
+  {
+    "source_file": "Data_VIIRS_NOAA-21__DL_FIRE_J2V-C2_848546__fire_archive_J2V-C2_848546",
+    "path": "/home/franco_quiroga/Proyecto_NASA/Data_VIIRS_NOAA-21/DL_FIRE_J2V-C2_848546/fire_archive_J2V-C2_848546.csv",
+    "product": "NOAA21",
+    "kind": "global",
+    "level": "SP",
+    "coverage": [
+      "2024-03-02",
+      "2025-03-02"
+    ],
+    "n_rows": 21723833,
+    "n_in_bbox": 42936,
+    "sha256": "9e3e4ea33c3f25f63afc84bb574875477666f70ac6e01a61145d243da82604e1"
+  },
+  {
+    "source_file": "Data_VIIRS_NOAA-21__DL_FIRE_J2V-C2_848551__fire_archive_J2V-C2_848551",
+    "path": "/home/franco_quiroga/Proyecto_NASA/Data_VIIRS_NOAA-21/DL_FIRE_J2V-C2_848551/fire_archive_J2V-C2_848551.csv",
+    "product": "NOAA21",
+    "kind": "global",
+    "level": "SP",
+    "coverage": [
+      "2025-03-03",
+      "2026-03-03"
+    ],
+    "n_rows": 17324856,
+    "n_in_bbox": 47849,
+    "sha256": "191afd35d92296d1d5fa069464d09abddc94247ea39d8e9bc2cff6c601c08464"
+  },
+  {
+    "source_file": "Data_VIIRS_NOAA-21__DL_FIRE_J2V-C2_848553__fire_archive_J2V-C2_848553",
+    "path": "/home/franco_quiroga/Proyecto_NASA/Data_VIIRS_NOAA-21/DL_FIRE_J2V-C2_848553/fire_archive_J2V-C2_848553.csv",
+    "product": "NOAA21",
+    "kind": "global",
+    "level": "SP",
+    "coverage": [
+      "2026-03-04",
+      "2026-07-31"
+    ],
+    "n_rows": 6461112,
+    "n_in_bbox": 17869,
+    "sha256": "ceb6ca54b40eeb69bd5e6dfebdcb27754189195baac4fe6695ad007318b1af64"
+  },
+  {
+    "source_file": "Data_VIIRS_NOAA-21__DL_FIRE_J2V-C2_848553__fire_nrt_J2V-C2_848553",
+    "path": "/home/franco_quiroga/Proyecto_NASA/Data_VIIRS_NOAA-21/DL_FIRE_J2V-C2_848553/fire_nrt_J2V-C2_848553.csv",
+    "product": "NOAA21",
+    "kind": "global",
+    "level": "NRT",
+    "coverage": [
+      "2026-08-01",
+      "2026-11-14"
+    ],
+    "n_rows": 7186305,
+    "n_in_bbox": 7825,
+    "sha256": "7444767108491400bdbeba74ae296dedf772904e5255a6a5c9d90497517f616d"
+  }
+]

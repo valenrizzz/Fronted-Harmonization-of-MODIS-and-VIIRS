@@ -65,6 +65,7 @@ def summarize(w: Window) -> dict[str, Any]:
     return {
         "total_harmonized": {"value": rnd(total), "ci_low": rnd(ci_low), "ci_high": rnd(ci_high)},
         "total_observed": observed,
+        "total_nasa_detections": sum(r["nasa"] for r in valid),
         "yoy": yoy,
         "peak_day": {"date": peak_day["date"], "events_harmonized": rnd(peak_day["w"])} if peak_day else None,
         "peak_month": {"date": peak_month[0], "events_harmonized": rnd(peak_month[1])} if peak_month else None,

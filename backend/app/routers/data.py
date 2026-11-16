@@ -4,7 +4,8 @@ from fastapi import APIRouter, Query, Request
 
 from ..deps import Window, WindowDep
 from ..errors import APIError
-from ..schemas import CellsOut, SummaryOut, TimeseriesOut
+from ..schemas import CellsOut, OutagesOut, SummaryOut, TimeseriesOut
+from ..services import outages as outages_svc
 from ..services import spatial as spatial_svc
 from ..services import summary as summary_svc
 from ..services import timeseries as ts_svc
@@ -81,6 +82,14 @@ def spatial_cells(
         body = spatial_svc.to_geojson(CellsOut(**payload).model_dump(mode="json"))
         return JSONResponse(body, media_type="application/geo+json")
     return payload
+
+
+@router.get("/outages", response_model=OutagesOut, summary="Satélites fuera de servicio")
+def outages(w: WindowDep) -> dict:
+    """Períodos en que un satélite estuvo fuera de servicio (detectados con los datos).
+    `kind = full`: ese día ningún satélite observó (el valor es *sin dato*, no 0);
+    `partial`: los demás satélites siguieron observando y la serie usa su constelación."""
+    return {**_meta(w), **outages_svc.outages(w)}
 
 
 @router.get("/summary", response_model=SummaryOut, summary="KPIs del período")

@@ -19,6 +19,31 @@ regions:
     firms_country_files: [Argentina]   # nombre en modis_YYYY_<Nombre>.csv
     polygon_buffer_deg: 0.0
 
+  # Cono Sur (mismo esquema que ARG; se declaran para fijar el nombre de archivo FIRMS)
+  BOL:
+    kind: country
+    iso_a3: BOL
+    firms_country_files: [Bolivia]
+    polygon_buffer_deg: 0.0
+  CHL:
+    kind: country
+    iso_a3: CHL
+    firms_country_files: [Chile]
+    polygon_buffer_deg: 0.0
+    # Chile continental (incluye Chiloé y Tierra del Fuego). Excluye Isla de Pascua (−109°),
+    # Juan Fernández (−79°/−81°) y Desventuradas (−80°), que llevaban el bbox hasta −109,4°.
+    clip_bbox: [-76.5, -56.6, -66.0, -17.0]
+  URY:
+    kind: country
+    iso_a3: URY
+    firms_country_files: [Uruguay]
+    polygon_buffer_deg: 0.0
+  PRY:
+    kind: country
+    iso_a3: PRY
+    firms_country_files: [Paraguay]
+    polygon_buffer_deg: 0.0
+
   # Ejemplo de región a medida (no se usa por defecto):
   # PATAGONIA:
   #   kind: bbox

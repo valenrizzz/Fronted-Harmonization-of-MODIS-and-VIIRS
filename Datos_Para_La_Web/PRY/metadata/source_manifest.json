@@ -1,0 +1,870 @@
+[
+  {
+    "source_file": "Data_MODIS__2000__modis_2000_Paraguay",
+    "path": "/home/franco_quiroga/Proyecto_NASA/Data_MODIS/2000/modis_2000_Paraguay.csv",
+    "product": "MODIS",
+    "kind": "country",
+    "level": "SP",
+    "coverage": [
+      "2000-01-01",
+      "2000-12-31"
+    ],
+    "n_rows": 987,
+    "n_in_bbox": 987,
+    "sha256": "d8bc76fe6c920f25f7d79301f38179091134a6ca9ddd8bc8be05534195ca3b2b"
+  },
+  {
+    "source_file": "Data_MODIS__2001__modis_2001_Paraguay",
+    "path": "/home/franco_quiroga/Proyecto_NASA/Data_MODIS/2001/modis_2001_Paraguay.csv",
+    "product": "MODIS",
+    "kind": "country",
+    "level": "SP",
+    "coverage": [
+      "2001-01-01",
+      "2001-12-31"
+    ],
+    "n_rows": 18536,
+    "n_in_bbox": 18536,
+    "sha256": "0ce56c32f5e2e9ce41401cb545360e015b35f4b4129fb7346a142bc401da549a"
+  },
+  {
+    "source_file": "Data_MODIS__2002__modis_2002_Paraguay",
+    "path": "/home/franco_quiroga/Proyecto_NASA/Data_MODIS/2002/modis_2002_Paraguay.csv",
+    "product": "MODIS",
+    "kind": "country",
+    "level": "SP",
+    "coverage": [
+      "2002-01-01",
+      "2002-12-31"
+    ],
+    "n_rows": 47399,
+    "n_in_bbox": 47399,
+    "sha256": "906ae7b7261879024aef8bd23580e2082a11271ba69d59929d5e61dcbb2ae3b8"
+  },
+  {
+    "source_file": "Data_MODIS__2003__modis_2003_Paraguay",
+    "path": "/home/franco_quiroga/Proyecto_NASA/Data_MODIS/2003/modis_2003_Paraguay.csv",
+    "product": "MODIS",
+    "kind": "country",
+    "level": "SP",
+    "coverage": [
+      "2003-01-01",
+      "2003-12-31"
+    ],
+    "n_rows": 66072,
+    "n_in_bbox": 66072,
+    "sha256": "a5cd31be9fa8203f672b37666dc9ede4f6bf2086898a49b37b7734dcc2b531b7"
+  },
+  {
+    "source_file": "Data_MODIS__2004__modis_2004_Paraguay",
+    "path": "/home/franco_quiroga/Proyecto_NASA/Data_MODIS/2004/modis_2004_Paraguay.csv",
+    "product": "MODIS",
+    "kind": "country",
+    "level": "SP",
+    "coverage": [
+      "2004-01-01",
+      "2004-12-31"
+    ],
+    "n_rows": 44873,
+    "n_in_bbox": 44873,
+    "sha256": "18dff2b0f3159685e7f3eb6e946d1f088a0c80a76d9c676eb825eec0073d8d05"
+  },
+  {
+    "source_file": "Data_MODIS__2005__modis_2005_Paraguay",
+    "path": "/home/franco_quiroga/Proyecto_NASA/Data_MODIS/2005/modis_2005_Paraguay.csv",
+    "product": "MODIS",
+    "kind": "country",
+    "level": "SP",
+    "coverage": [
+      "2005-01-01",
+      "2005-12-31"
+    ],
+    "n_rows": 50051,
+    "n_in_bbox": 50051,
+    "sha256": "3f919f47ff84085de458f1400912cb1f4f366b06656eaf4941fd626f36da4d85"
+  },
+  {
+    "source_file": "Data_MODIS__2006__modis_2006_Paraguay",
+    "path": "/home/franco_quiroga/Proyecto_NASA/Data_MODIS/2006/modis_2006_Paraguay.csv",
+    "product": "MODIS",
+    "kind": "country",
+    "level": "SP",
+    "coverage": [
+      "2006-01-01",
+      "2006-12-31"
+    ],
+    "n_rows": 47375,
+    "n_in_bbox": 47375,
+    "sha256": "0ef41322a655f927714a140f7dfc85a9fe20ed53f3e979dac7eadae782ce0f97"
+  },
+  {
+    "source_file": "Data_MODIS__2007__modis_2007_Paraguay",
+    "path": "/home/franco_quiroga/Proyecto_NASA/Data_MODIS/2007/modis_2007_Paraguay.csv",
+    "product": "MODIS",
+    "kind": "country",
+    "level": "SP",
+    "coverage": [
+      "2007-01-01",
+      "2007-12-31"
+    ],
+    "n_rows": 63917,
+    "n_in_bbox": 63917,
+    "sha256": "b43e06988820e98d1842ab781fbccf6daac9f3c73369eb32cdf5b6f261afa07d"
+  },
+  {
+    "source_file": "Data_MODIS__2008__modis_2008_Paraguay",
+    "path": "/home/franco_quiroga/Proyecto_NASA/Data_MODIS/2008/modis_2008_Paraguay.csv",
+    "product": "MODIS",
+    "kind": "country",
+    "level": "SP",
+    "coverage": [
+      "2008-01-01",
+      "2008-12-31"
+    ],
+    "n_rows": 42272,
+    "n_in_bbox": 42272,
+    "sha256": "affad19a2c5220c5fdbd6ae197110f6b052053443e9e567e168681dbf8ae161d"
+  },
+  {
+    "source_file": "Data_MODIS__2009__modis_2009_Paraguay",
+    "path": "/home/franco_quiroga/Proyecto_NASA/Data_MODIS/2009/modis_2009_Paraguay.csv",
+    "product": "MODIS",
+    "kind": "country",
+    "level": "SP",
+    "coverage": [
+      "2009-01-01",
+      "2009-12-31"
+    ],
+    "n_rows": 33960,
+    "n_in_bbox": 33960,
+    "sha256": "e4562ee469e98775f95438d013952ce310b643b345af33b89ea56c51e78f25b0"
+  },
+  {
+    "source_file": "Data_MODIS__2010__modis_2010_Paraguay",
+    "path": "/home/franco_quiroga/Proyecto_NASA/Data_MODIS/2010/modis_2010_Paraguay.csv",
+    "product": "MODIS",
+    "kind": "country",
+    "level": "SP",
+    "coverage": [
+      "2010-01-01",
+      "2010-12-31"
+    ],
+    "n_rows": 41836,
+    "n_in_bbox": 41836,
+    "sha256": "0b8823858250b781238b8ec9a593e0cebd8bd7d75bf858a44a5b53542b7447a8"
+  },
+  {
+    "source_file": "Data_MODIS__2011__modis_2011_Paraguay",
+    "path": "/home/franco_quiroga/Proyecto_NASA/Data_MODIS/2011/modis_2011_Paraguay.csv",
+    "product": "MODIS",
+    "kind": "country",
+    "level": "SP",
+    "coverage": [
+      "2011-01-01",
+      "2011-12-31"
+    ],
+    "n_rows": 43349,
+    "n_in_bbox": 43349,
+    "sha256": "b58e7a79c6337567791e9abb5c49f6dbd09098f2ed0b59c1202cea16d1e81187"
+  },
+  {
+    "source_file": "Data_MODIS__2012__modis_2012_Paraguay",
+    "path": "/home/franco_quiroga/Proyecto_NASA/Data_MODIS/2012/modis_2012_Paraguay.csv",
+    "product": "MODIS",
+    "kind": "country",
+    "level": "SP",
+    "coverage": [
+      "2012-01-01",
+      "2012-12-31"
+    ],
+    "n_rows": 36722,
+    "n_in_bbox": 36722,
+    "sha256": "70f9e71035d2835e4bce8063fb4aaf81bf069ec30f5f4ac08c0ba2dc4171abb6"
+  },
+  {
+    "source_file": "Data_MODIS__2013__modis_2013_Paraguay",
+    "path": "/home/franco_quiroga/Proyecto_NASA/Data_MODIS/2013/modis_2013_Paraguay.csv",
+    "product": "MODIS",
+    "kind": "country",
+    "level": "SP",
+    "coverage": [
+      "2013-01-01",
+      "2013-12-31"
+    ],
+    "n_rows": 49610,
+    "n_in_bbox": 49610,
+    "sha256": "061c6fd68028948917b69c807f8b9a211cff40367e2cb2ca74f4ab008c8e76f2"
+  },
+  {
+    "source_file": "Data_MODIS__2014__modis_2014_Paraguay",
+    "path": "/home/franco_quiroga/Proyecto_NASA/Data_MODIS/2014/modis_2014_Paraguay.csv",
+    "product": "MODIS",
+    "kind": "country",
+    "level": "SP",
+    "coverage": [
+      "2014-01-01",
+      "2014-12-31"
+    ],
+    "n_rows": 29744,
+    "n_in_bbox": 29744,
+    "sha256": "189b8c6c31dfc2e0388d85d26bb54ac8d6d367e7bcb5472725828f9d96d5ea48"
+  },
+  {
+    "source_file": "Data_MODIS__2015__modis_2015_Paraguay",
+    "path": "/home/franco_quiroga/Proyecto_NASA/Data_MODIS/2015/modis_2015_Paraguay.csv",
+    "product": "MODIS",
+    "kind": "country",
+    "level": "SP",
+    "coverage": [
+      "2015-01-01",
+      "2015-12-31"
+    ],
+    "n_rows": 28738,
+    "n_in_bbox": 28738,
+    "sha256": "951834133638cc01f7113bd02bb82f250802fc55692493c236846a424de36b37"
+  },
+  {
+    "source_file": "Data_MODIS__2016__modis_2016_Paraguay",
+    "path": "/home/franco_quiroga/Proyecto_NASA/Data_MODIS/2016/modis_2016_Paraguay.csv",
+    "product": "MODIS",
+    "kind": "country",
+    "level": "SP",
+    "coverage": [
+      "2016-01-01",
+      "2016-12-31"
+    ],
+    "n_rows": 40126,
+    "n_in_bbox": 40126,
+    "sha256": "61a471f1d0fd89b9b6e5ea51c98bce5f523b58db61505e73ea586e18389e59dc"
+  },
+  {
+    "source_file": "Data_MODIS__2017__modis_2017_Paraguay",
+    "path": "/home/franco_quiroga/Proyecto_NASA/Data_MODIS/2017/modis_2017_Paraguay.csv",
+    "product": "MODIS",
+    "kind": "country",
+    "level": "SP",
+    "coverage": [
+      "2017-01-01",
+      "2017-12-31"
+    ],
+    "n_rows": 46237,
+    "n_in_bbox": 46237,
+    "sha256": "9593402701f9332656f69d98d0248a584f358e9146db2c9c633dddf9c6ce8f66"
+  },
+  {
+    "source_file": "Data_MODIS__2018__modis_2018_Paraguay",
+    "path": "/home/franco_quiroga/Proyecto_NASA/Data_MODIS/2018/modis_2018_Paraguay.csv",
+    "product": "MODIS",
+    "kind": "country",
+    "level": "SP",
+    "coverage": [
+      "2018-01-01",
+      "2018-12-31"
+    ],
+    "n_rows": 29829,
+    "n_in_bbox": 29829,
+    "sha256": "2708cecf7eb766de0951d6a3a8cbda53e9d037e2b9231ab2173eaf0d42eaa1f0"
+  },
+  {
+    "source_file": "Data_MODIS__2019__modis_2019_Paraguay",
+    "path": "/home/franco_quiroga/Proyecto_NASA/Data_MODIS/2019/modis_2019_Paraguay.csv",
+    "product": "MODIS",
+    "kind": "country",
+    "level": "SP",
+    "coverage": [
+      "2019-01-01",
+      "2019-12-31"
+    ],
+    "n_rows": 42319,
+    "n_in_bbox": 42319,
+    "sha256": "e1f87c115f29797d310d811c7bffdfbf6979df65a0c67684859c3ff4503fa105"
+  },
+  {
+    "source_file": "Data_MODIS__2020__modis_2020_Paraguay",
+    "path": "/home/franco_quiroga/Proyecto_NASA/Data_MODIS/2020/modis_2020_Paraguay.csv",
+    "product": "MODIS",
+    "kind": "country",
+    "level": "SP",
+    "coverage": [
+      "2020-01-01",
+      "2020-12-31"
+    ],
+    "n_rows": 69937,
+    "n_in_bbox": 69937,
+    "sha256": "72eb4c683df6ad2b24f27cbf2f4e197c48dcf663c748d168dfc1f2f299461c6a"
+  },
+  {
+    "source_file": "Data_MODIS__2021__modis_2021_Paraguay",
+    "path": "/home/franco_quiroga/Proyecto_NASA/Data_MODIS/2021/modis_2021_Paraguay.csv",
+    "product": "MODIS",
+    "kind": "country",
+    "level": "SP",
+    "coverage": [
+      "2021-01-01",
+      "2021-12-31"
+    ],
+    "n_rows": 45053,
+    "n_in_bbox": 45053,
+    "sha256": "7c3e9fba47456907f35c555f18cf7a8fe925ed946f8c48271669a9af0f4fde89"
+  },
+  {
+    "source_file": "Data_MODIS__2022__modis_2022_Paraguay",
+    "path": "/home/franco_quiroga/Proyecto_NASA/Data_MODIS/2022/modis_2022_Paraguay.csv",
+    "product": "MODIS",
+    "kind": "country",
+    "level": "SP",
+    "coverage": [
+      "2022-01-01",
+      "2022-12-31"
+    ],
+    "n_rows": 33922,
+    "n_in_bbox": 33922,
+    "sha256": "24a3448dc80bfb38fa5e8ec5959f074199c8ba82751f2b516a744c3086c79734"
+  },
+  {
+    "source_file": "Data_MODIS__2023__modis_2023_Paraguay",
+    "path": "/home/franco_quiroga/Proyecto_NASA/Data_MODIS/2023/modis_2023_Paraguay.csv",
+    "product": "MODIS",
+    "kind": "country",
+    "level": "SP",
+    "coverage": [
+      "2023-01-01",
+      "2023-12-31"
+    ],
+    "n_rows": 34891,
+    "n_in_bbox": 34891,
+    "sha256": "6d9458e050d4884070a791d8961cd721702b0e622a92e1e65aac11166e86af06"
+  },
+  {
+    "source_file": "Data_MODIS__2024__modis_2024_Paraguay",
+    "path": "/home/franco_quiroga/Proyecto_NASA/Data_MODIS/2024/modis_2024_Paraguay.csv",
+    "product": "MODIS",
+    "kind": "country",
+    "level": "SP",
+    "coverage": [
+      "2024-01-01",
+      "2024-12-31"
+    ],
+    "n_rows": 41154,
+    "n_in_bbox": 41154,
+    "sha256": "f5b13d1715a4933afadff325c67b9fa224ff0c0c9cd5891b5ee818451b91ae6e"
+  },
+  {
+    "source_file": "Data_MODIS__2025__modis_2025_Paraguay",
+    "path": "/home/franco_quiroga/Proyecto_NASA/Data_MODIS/2025/modis_2025_Paraguay.csv",
+    "product": "MODIS",
+    "kind": "country",
+    "level": "SP",
+    "coverage": [
+      "2025-01-01",
+      "2025-12-31"
+    ],
+    "n_rows": 20155,
+    "n_in_bbox": 20155,
+    "sha256": "7ab8f4cfa22a71e6d827fba97a396f1836afc99705369f50c49b19aab024c0f0"
+  },
+  {
+    "source_file": "Data_MODIS__2026__fire_archive_M-C61_848537",
+    "path": "/home/franco_quiroga/Proyecto_NASA/Data_MODIS/2026/fire_archive_M-C61_848537.csv",
+    "product": "MODIS",
+    "kind": "global",
+    "level": "SP",
+    "coverage": [
+      "2026-04-02",
+      "2026-08-31"
+    ],
+    "n_rows": 1578990,
+    "n_in_bbox": 7722,
+    "sha256": "983ed36bd56fb7baa66ea4c541f8af0f949ae1d891fdd2359a9148ceb32594ae"
+  },
+  {
+    "source_file": "Data_MODIS__2026__fire_nrt_M-C61_848537",
+    "path": "/home/franco_quiroga/Proyecto_NASA/Data_MODIS/2026/fire_nrt_M-C61_848537.csv",
+    "product": "MODIS",
+    "kind": "global",
+    "level": "NRT",
+    "coverage": [
+      "2026-09-01",
+      "2026-11-14"
+    ],
+    "n_rows": 799469,
+    "n_in_bbox": 10324,
+    "sha256": "a13d996818617fa323bb2906a15584bf8e55a997b6e3ef85908bc1846564225d"
+  },
+  {
+    "source_file": "Data_MODIS__DL_FIRE_M-C61_848528__fire_archive_M-C61_848528",
+    "path": "/home/franco_quiroga/Proyecto_NASA/Data_MODIS/DL_FIRE_M-C61_848528/fire_archive_M-C61_848528.csv",
+    "product": "MODIS",
+    "kind": "global",
+    "level": "SP",
+    "coverage": [
+      "2025-04-01",
+      "2026-04-01"
+    ],
+    "n_rows": 3537277,
+    "n_in_bbox": 27894,
+    "sha256": "fbf10948e90646458ec0488732d096fb9a02d89c3df95450748c0f90b7d7d346"
+  },
+  {
+    "source_file": "Data_VIIRS__2012__viirs-snpp_2012_Paraguay",
+    "path": "/home/franco_quiroga/Proyecto_NASA/Data_VIIRS/2012/viirs-snpp_2012_Paraguay.csv",
+    "product": "SNPP",
+    "kind": "country",
+    "level": "SP",
+    "coverage": [
+      "2012-01-01",
+      "2012-12-31"
+    ],
+    "n_rows": 119447,
+    "n_in_bbox": 119447,
+    "sha256": "89481dc05fbcaa10675e6d51dad7584a013519773367b53e786c8ab0324efcdf"
+  },
+  {
+    "source_file": "Data_VIIRS__2013__viirs-snpp_2013_Paraguay",
+    "path": "/home/franco_quiroga/Proyecto_NASA/Data_VIIRS/2013/viirs-snpp_2013_Paraguay.csv",
+    "product": "SNPP",
+    "kind": "country",
+    "level": "SP",
+    "coverage": [
+      "2013-01-01",
+      "2013-12-31"
+    ],
+    "n_rows": 166022,
+    "n_in_bbox": 166022,
+    "sha256": "61eec8f9af0b5bb88472118441af454ae804c50640da84cd4a4a1abad0080f9c"
+  },
+  {
+    "source_file": "Data_VIIRS__2014__viirs-snpp_2014_Paraguay",
+    "path": "/home/franco_quiroga/Proyecto_NASA/Data_VIIRS/2014/viirs-snpp_2014_Paraguay.csv",
+    "product": "SNPP",
+    "kind": "country",
+    "level": "SP",
+    "coverage": [
+      "2014-01-01",
+      "2014-12-31"
+    ],
+    "n_rows": 100242,
+    "n_in_bbox": 100242,
+    "sha256": "da91171ea184517580fcb2abc49c648f717a493746ee138646c6c3b024a629e2"
+  },
+  {
+    "source_file": "Data_VIIRS__2015__viirs-snpp_2015_Paraguay",
+    "path": "/home/franco_quiroga/Proyecto_NASA/Data_VIIRS/2015/viirs-snpp_2015_Paraguay.csv",
+    "product": "SNPP",
+    "kind": "country",
+    "level": "SP",
+    "coverage": [
+      "2015-01-01",
+      "2015-12-31"
+    ],
+    "n_rows": 90252,
+    "n_in_bbox": 90252,
+    "sha256": "285fe399766dddd533346ca415a021af3bbef40ea461276d493ea9eb09a4a791"
+  },
+  {
+    "source_file": "Data_VIIRS__2016__viirs-snpp_2016_Paraguay",
+    "path": "/home/franco_quiroga/Proyecto_NASA/Data_VIIRS/2016/viirs-snpp_2016_Paraguay.csv",
+    "product": "SNPP",
+    "kind": "country",
+    "level": "SP",
+    "coverage": [
+      "2016-01-01",
+      "2016-12-31"
+    ],
+    "n_rows": 128258,
+    "n_in_bbox": 128258,
+    "sha256": "60a68bde071575efea6582a20e51e20b2f207b16a804261694c39917b5a52557"
+  },
+  {
+    "source_file": "Data_VIIRS__2017__viirs-snpp_2017_Paraguay",
+    "path": "/home/franco_quiroga/Proyecto_NASA/Data_VIIRS/2017/viirs-snpp_2017_Paraguay.csv",
+    "product": "SNPP",
+    "kind": "country",
+    "level": "SP",
+    "coverage": [
+      "2017-01-01",
+      "2017-12-31"
+    ],
+    "n_rows": 150785,
+    "n_in_bbox": 150785,
+    "sha256": "72dcd39b60da4dd32efd94e2c7a85967f9a5b07803742c2a38d69bed0a89f671"
+  },
+  {
+    "source_file": "Data_VIIRS__2018__viirs-snpp_2018_Paraguay",
+    "path": "/home/franco_quiroga/Proyecto_NASA/Data_VIIRS/2018/viirs-snpp_2018_Paraguay.csv",
+    "product": "SNPP",
+    "kind": "country",
+    "level": "SP",
+    "coverage": [
+      "2018-01-01",
+      "2018-12-31"
+    ],
+    "n_rows": 97134,
+    "n_in_bbox": 97134,
+    "sha256": "4a1cd536538fc8cd3be0666c31fb66e5cc019e29287d333fca3b25cf8e246854"
+  },
+  {
+    "source_file": "Data_VIIRS__2019__viirs-snpp_2019_Paraguay",
+    "path": "/home/franco_quiroga/Proyecto_NASA/Data_VIIRS/2019/viirs-snpp_2019_Paraguay.csv",
+    "product": "SNPP",
+    "kind": "country",
+    "level": "SP",
+    "coverage": [
+      "2019-01-01",
+      "2019-12-31"
+    ],
+    "n_rows": 148822,
+    "n_in_bbox": 148822,
+    "sha256": "31236ae79f5715805c4addfca5cc750100b88adc618d211ae62a1ef82acb7486"
+  },
+  {
+    "source_file": "Data_VIIRS__2020__viirs-snpp_2020_Paraguay",
+    "path": "/home/franco_quiroga/Proyecto_NASA/Data_VIIRS/2020/viirs-snpp_2020_Paraguay.csv",
+    "product": "SNPP",
+    "kind": "country",
+    "level": "SP",
+    "coverage": [
+      "2020-01-01",
+      "2020-12-31"
+    ],
+    "n_rows": 247177,
+    "n_in_bbox": 247177,
+    "sha256": "7b883b5700ad4b7895e50680cf521b3bcca17ec52983333fb6ae1310749181d6"
+  },
+  {
+    "source_file": "Data_VIIRS__2021__viirs-snpp_2021_Paraguay",
+    "path": "/home/franco_quiroga/Proyecto_NASA/Data_VIIRS/2021/viirs-snpp_2021_Paraguay.csv",
+    "product": "SNPP",
+    "kind": "country",
+    "level": "SP",
+    "coverage": [
+      "2021-01-01",
+      "2021-12-31"
+    ],
+    "n_rows": 156963,
+    "n_in_bbox": 156963,
+    "sha256": "78c9219c7de0317837d58b28bc5e41ef476b91e5e25879772d5d1dbd52603f6f"
+  },
+  {
+    "source_file": "Data_VIIRS__2022__viirs-snpp_2022_Paraguay",
+    "path": "/home/franco_quiroga/Proyecto_NASA/Data_VIIRS/2022/viirs-snpp_2022_Paraguay.csv",
+    "product": "SNPP",
+    "kind": "country",
+    "level": "SP",
+    "coverage": [
+      "2022-01-01",
+      "2022-12-31"
+    ],
+    "n_rows": 123404,
+    "n_in_bbox": 123404,
+    "sha256": "a340d379f727a75465e6adab0808612aba8a2b22b21be2a01b89c788d7722400"
+  },
+  {
+    "source_file": "Data_VIIRS__2023__viirs-snpp_2023_Paraguay",
+    "path": "/home/franco_quiroga/Proyecto_NASA/Data_VIIRS/2023/viirs-snpp_2023_Paraguay.csv",
+    "product": "SNPP",
+    "kind": "country",
+    "level": "SP",
+    "coverage": [
+      "2023-01-01",
+      "2023-12-31"
+    ],
+    "n_rows": 121631,
+    "n_in_bbox": 121631,
+    "sha256": "58fd3e7299a5440cfed717c93af8f5da3698ff40cbcca5e7880bda6d3d44e10e"
+  },
+  {
+    "source_file": "Data_VIIRS__2024__viirs-snpp_2024_Paraguay",
+    "path": "/home/franco_quiroga/Proyecto_NASA/Data_VIIRS/2024/viirs-snpp_2024_Paraguay.csv",
+    "product": "SNPP",
+    "kind": "country",
+    "level": "SP",
+    "coverage": [
+      "2024-01-01",
+      "2024-12-31"
+    ],
+    "n_rows": 135267,
+    "n_in_bbox": 135267,
+    "sha256": "9bd1bc8fa65535441548fda91db3e61fe6dc671deae2da9ee266ffe802cd1115"
+  },
+  {
+    "source_file": "Data_VIIRS__2025__viirs-snpp_2025_Paraguay",
+    "path": "/home/franco_quiroga/Proyecto_NASA/Data_VIIRS/2025/viirs-snpp_2025_Paraguay.csv",
+    "product": "SNPP",
+    "kind": "country",
+    "level": "SP",
+    "coverage": [
+      "2025-01-01",
+      "2025-12-31"
+    ],
+    "n_rows": 72929,
+    "n_in_bbox": 72929,
+    "sha256": "d0ccb5d0d4c3591f6e9b41ed26850b9591bca25f8661cd53eb6f85e4614d955a"
+  },
+  {
+    "source_file": "Data_VIIRS__DL_FIRE_SV-C2_848530__fire_archive_SV-C2_848530",
+    "path": "/home/franco_quiroga/Proyecto_NASA/Data_VIIRS/DL_FIRE_SV-C2_848530/fire_archive_SV-C2_848530.csv",
+    "product": "SNPP",
+    "kind": "global",
+    "level": "SP",
+    "coverage": [
+      "2025-04-01",
+      "2026-04-01"
+    ],
+    "n_rows": 17804613,
+    "n_in_bbox": 95267,
+    "sha256": "d88c3075ea500082b35cf7ad9a305c434b0b5e054fd69eae4fd857fbdef6037a"
+  },
+  {
+    "source_file": "Data_VIIRS__DL_FIRE_SV-C2_848539__fire_archive_SV-C2_848539",
+    "path": "/home/franco_quiroga/Proyecto_NASA/Data_VIIRS/DL_FIRE_SV-C2_848539/fire_archive_SV-C2_848539.csv",
+    "product": "SNPP",
+    "kind": "global",
+    "level": "SP",
+    "coverage": [
+      "2026-04-02",
+      "2026-07-31"
+    ],
+    "n_rows": 4907282,
+    "n_in_bbox": 15639,
+    "sha256": "33ff439170178ce8a89946f70afb3ef91789a38fdd8fc6a47bcfbb6908a91258"
+  },
+  {
+    "source_file": "Data_VIIRS__DL_FIRE_SV-C2_848539__fire_nrt_SV-C2_848539",
+    "path": "/home/franco_quiroga/Proyecto_NASA/Data_VIIRS/DL_FIRE_SV-C2_848539/fire_nrt_SV-C2_848539.csv",
+    "product": "SNPP",
+    "kind": "global",
+    "level": "NRT",
+    "coverage": [
+      "2026-08-01",
+      "2026-11-02"
+    ],
+    "n_rows": 6602259,
+    "n_in_bbox": 37985,
+    "sha256": "4c4f39c2da02e19cfa9c54b7126104dbcbf98c409fc36bbd2a73f214542f5f65"
+  },
+  {
+    "source_file": "Data_VIIRS_NOAA-20__2018__viirs-jpss1_2018_Paraguay",
+    "path": "/home/franco_quiroga/Proyecto_NASA/Data_VIIRS_NOAA-20/2018/viirs-jpss1_2018_Paraguay.csv",
+    "product": "NOAA20",
+    "kind": "country",
+    "level": "SP",
+    "coverage": [
+      "2018-01-01",
+      "2018-12-31"
+    ],
+    "n_rows": 91627,
+    "n_in_bbox": 91627,
+    "sha256": "770b91c8ca2f5fa03f94d0b3d5de9ffd42413de747be24f50b7b2b5a9e54a4e3"
+  },
+  {
+    "source_file": "Data_VIIRS_NOAA-20__2019__viirs-jpss1_2019_Paraguay",
+    "path": "/home/franco_quiroga/Proyecto_NASA/Data_VIIRS_NOAA-20/2019/viirs-jpss1_2019_Paraguay.csv",
+    "product": "NOAA20",
+    "kind": "country",
+    "level": "SP",
+    "coverage": [
+      "2019-01-01",
+      "2019-12-31"
+    ],
+    "n_rows": 142876,
+    "n_in_bbox": 142876,
+    "sha256": "b001174b188dcac66363dbc7e07b859ad62aeeca700289c56449f0273678c8d3"
+  },
+  {
+    "source_file": "Data_VIIRS_NOAA-20__2020__viirs-jpss1_2020_Paraguay",
+    "path": "/home/franco_quiroga/Proyecto_NASA/Data_VIIRS_NOAA-20/2020/viirs-jpss1_2020_Paraguay.csv",
+    "product": "NOAA20",
+    "kind": "country",
+    "level": "SP",
+    "coverage": [
+      "2020-01-01",
+      "2020-12-31"
+    ],
+    "n_rows": 235993,
+    "n_in_bbox": 235993,
+    "sha256": "f07a0f844e3653a2c21ce7105e4aeb8ec4b8d79ce5ca9c2249c543f511718f03"
+  },
+  {
+    "source_file": "Data_VIIRS_NOAA-20__2021__viirs-jpss1_2021_Paraguay",
+    "path": "/home/franco_quiroga/Proyecto_NASA/Data_VIIRS_NOAA-20/2021/viirs-jpss1_2021_Paraguay.csv",
+    "product": "NOAA20",
+    "kind": "country",
+    "level": "SP",
+    "coverage": [
+      "2021-01-01",
+      "2021-12-31"
+    ],
+    "n_rows": 159415,
+    "n_in_bbox": 159415,
+    "sha256": "09773011bd4fb025d261ee79fadacc2f1df25923cfc12ce5ac0b59411f93cc42"
+  },
+  {
+    "source_file": "Data_VIIRS_NOAA-20__2022__viirs-jpss1_2022_Paraguay",
+    "path": "/home/franco_quiroga/Proyecto_NASA/Data_VIIRS_NOAA-20/2022/viirs-jpss1_2022_Paraguay.csv",
+    "product": "NOAA20",
+    "kind": "country",
+    "level": "SP",
+    "coverage": [
+      "2022-01-01",
+      "2022-12-31"
+    ],
+    "n_rows": 122584,
+    "n_in_bbox": 122584,
+    "sha256": "be96b92c389825f52f8c05b849245786f7a774e9828d1685a2951a672efe90d2"
+  },
+  {
+    "source_file": "Data_VIIRS_NOAA-20__2023__viirs-jpss1_2023_Paraguay",
+    "path": "/home/franco_quiroga/Proyecto_NASA/Data_VIIRS_NOAA-20/2023/viirs-jpss1_2023_Paraguay.csv",
+    "product": "NOAA20",
+    "kind": "country",
+    "level": "SP",
+    "coverage": [
+      "2023-01-01",
+      "2023-12-31"
+    ],
+    "n_rows": 115048,
+    "n_in_bbox": 115048,
+    "sha256": "338c9399b3850a0688dbc78512d24f8850a4b2ca08c2008e9210b713e8c2b403"
+  },
+  {
+    "source_file": "Data_VIIRS_NOAA-20__2024__viirs-jpss1_2024_Paraguay",
+    "path": "/home/franco_quiroga/Proyecto_NASA/Data_VIIRS_NOAA-20/2024/viirs-jpss1_2024_Paraguay.csv",
+    "product": "NOAA20",
+    "kind": "country",
+    "level": "SP",
+    "coverage": [
+      "2024-01-01",
+      "2024-12-31"
+    ],
+    "n_rows": 135718,
+    "n_in_bbox": 135718,
+    "sha256": "bbc0b674c6f911e37467c00a6b514c0fff1f30dd382e2aa02c66173def52e590"
+  },
+  {
+    "source_file": "Data_VIIRS_NOAA-20__2025__viirs-jpss1_2025_Paraguay",
+    "path": "/home/franco_quiroga/Proyecto_NASA/Data_VIIRS_NOAA-20/2025/viirs-jpss1_2025_Paraguay.csv",
+    "product": "NOAA20",
+    "kind": "country",
+    "level": "SP",
+    "coverage": [
+      "2025-01-01",
+      "2025-12-31"
+    ],
+    "n_rows": 72110,
+    "n_in_bbox": 72110,
+    "sha256": "7966a3d5b4f80f81402b187a6e20d28b97986003aa2bf9d29657a57364b84b6d"
+  },
+  {
+    "source_file": "Data_VIIRS_NOAA-20__DL_FIRE_J1V-C2_848529__fire_archive_J1V-C2_848529",
+    "path": "/home/franco_quiroga/Proyecto_NASA/Data_VIIRS_NOAA-20/DL_FIRE_J1V-C2_848529/fire_archive_J1V-C2_848529.csv",
+    "product": "NOAA20",
+    "kind": "global",
+    "level": "SP",
+    "coverage": [
+      "2025-04-01",
+      "2026-04-01"
+    ],
+    "n_rows": 17913797,
+    "n_in_bbox": 95570,
+    "sha256": "fd32502af54f037280ca5f941a72b493345694ff9a35cb8215c9384ff9b6fd1b"
+  },
+  {
+    "source_file": "Data_VIIRS_NOAA-20__DL_FIRE_J1V-C2_848538__fire_archive_J1V-C2_848538",
+    "path": "/home/franco_quiroga/Proyecto_NASA/Data_VIIRS_NOAA-20/DL_FIRE_J1V-C2_848538/fire_archive_J1V-C2_848538.csv",
+    "product": "NOAA20",
+    "kind": "global",
+    "level": "SP",
+    "coverage": [
+      "2026-04-02",
+      "2026-07-31"
+    ],
+    "n_rows": 5492001,
+    "n_in_bbox": 19256,
+    "sha256": "e2dd8b00d7f4d1f9b8b5650ece9c62839e9d95873d8bd87266967b619d302df7"
+  },
+  {
+    "source_file": "Data_VIIRS_NOAA-20__DL_FIRE_J1V-C2_848538__fire_nrt_J1V-C2_848538",
+    "path": "/home/franco_quiroga/Proyecto_NASA/Data_VIIRS_NOAA-20/DL_FIRE_J1V-C2_848538/fire_nrt_J1V-C2_848538.csv",
+    "product": "NOAA20",
+    "kind": "global",
+    "level": "NRT",
+    "coverage": [
+      "2026-08-01",
+      "2026-11-14"
+    ],
+    "n_rows": 7478189,
+    "n_in_bbox": 43131,
+    "sha256": "f4dacb40305cf61780b90b4c00468a5f419b32a2c63729122dfb9c365ab259de"
+  },
+  {
+    "source_file": "Data_VIIRS_NOAA-21__DL_FIRE_J2V-C2_848545__fire_archive_J2V-C2_848545",
+    "path": "/home/franco_quiroga/Proyecto_NASA/Data_VIIRS_NOAA-21/DL_FIRE_J2V-C2_848545/fire_archive_J2V-C2_848545.csv",
+    "product": "NOAA21",
+    "kind": "global",
+    "level": "SP",
+    "coverage": [
+      "2023-03-01",
+      "2024-03-01"
+    ],
+    "n_rows": 21164104,
+    "n_in_bbox": 188249,
+    "sha256": "997a72dd486a4abde936db28d98cd882597c9c20cb410b731d9b9b5c048873a4"
+  },
+  {
+    "source_file": "Data_VIIRS_NOAA-21__DL_FIRE_J2V-C2_848546__fire_archive_J2V-C2_848546",
+    "path": "/home/franco_quiroga/Proyecto_NASA/Data_VIIRS_NOAA-21/DL_FIRE_J2V-C2_848546/fire_archive_J2V-C2_848546.csv",
+    "product": "NOAA21",
+    "kind": "global",
+    "level": "SP",
+    "coverage": [
+      "2024-03-02",
+      "2025-03-02"
+    ],
+    "n_rows": 21723833,
+    "n_in_bbox": 249618,
+    "sha256": "9e3e4ea33c3f25f63afc84bb574875477666f70ac6e01a61145d243da82604e1"
+  },
+  {
+    "source_file": "Data_VIIRS_NOAA-21__DL_FIRE_J2V-C2_848551__fire_archive_J2V-C2_848551",
+    "path": "/home/franco_quiroga/Proyecto_NASA/Data_VIIRS_NOAA-21/DL_FIRE_J2V-C2_848551/fire_archive_J2V-C2_848551.csv",
+    "product": "NOAA21",
+    "kind": "global",
+    "level": "SP",
+    "coverage": [
+      "2025-03-03",
+      "2026-03-03"
+    ],
+    "n_rows": 17324856,
+    "n_in_bbox": 103542,
+    "sha256": "191afd35d92296d1d5fa069464d09abddc94247ea39d8e9bc2cff6c601c08464"
+  },
+  {
+    "source_file": "Data_VIIRS_NOAA-21__DL_FIRE_J2V-C2_848553__fire_archive_J2V-C2_848553",
+    "path": "/home/franco_quiroga/Proyecto_NASA/Data_VIIRS_NOAA-21/DL_FIRE_J2V-C2_848553/fire_archive_J2V-C2_848553.csv",
+    "product": "NOAA21",
+    "kind": "global",
+    "level": "SP",
+    "coverage": [
+      "2026-03-04",
+      "2026-07-31"
+    ],
+    "n_rows": 6461112,
+    "n_in_bbox": 23803,
+    "sha256": "ceb6ca54b40eeb69bd5e6dfebdcb27754189195baac4fe6695ad007318b1af64"
+  },
+  {
+    "source_file": "Data_VIIRS_NOAA-21__DL_FIRE_J2V-C2_848553__fire_nrt_J2V-C2_848553",
+    "path": "/home/franco_quiroga/Proyecto_NASA/Data_VIIRS_NOAA-21/DL_FIRE_J2V-C2_848553/fire_nrt_J2V-C2_848553.csv",
+    "product": "NOAA21",
+    "kind": "global",
+    "level": "NRT",
+    "coverage": [
+      "2026-08-01",
+      "2026-11-14"
+    ],
+    "n_rows": 7186305,
+    "n_in_bbox": 40454,
+    "sha256": "7444767108491400bdbeba74ae296dedf772904e5255a6a5c9d90497517f616d"
+  }
+]
