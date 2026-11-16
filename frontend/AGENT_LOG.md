@@ -28,3 +28,9 @@
 - `14:34` — HistoricalAnalyticsSection (11): 132 líneas. KPIs + SVG charts + CSV.
 - `14:35` — App.jsx (12): 47 líneas. Flujo vertical. Eliminados imports legacy.
 - `14:36` — PROJECT_CONTEXT.md (13): Sección 3 con árbol actualizado + Sección 6 fase V2 marcada completada.
+
+---
+
+# AGENT_LOG · Rediseño Command Center (2026-11-15)
+
+**Estado:** ✅ completado. Layout map-first oscuro, MapLibre GL (2D/3D + mapas base NASA GIBS), KPIs en vivo por viewport, drawer con Serie (IC 95 %, tramos low con conteo NASA original, NRT, caídas), Calendario, Comparativa y Satélites (`/outages`). Leaflet reemplazado; componentes legacy eliminados. Ver `PROJECT_CONTEXT.md`.

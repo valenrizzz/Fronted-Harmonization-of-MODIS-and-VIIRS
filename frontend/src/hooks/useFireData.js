@@ -1,102 +1,90 @@
-import { useState, useMemo, useCallback, useEffect } from 'react';
+import { useState, useMemo, useCallback } from 'react';
 import { api } from '../data/api';
 import { regionName } from '../data/constants';
 import { buildRegionData } from '../data/transform';
 import { buildCSV, downloadText } from '../data/csv';
+import { resolveWindow } from '../data/presets';
+import { useQuery } from './useQuery';
 
-const seriesCache = new Map(); // región → datos ya transformados
-
+/**
+ * Estado global del Command Center.
+ *
+ * - `range` (start/end/preset) es la ventana temporal única que alimenta mapa,
+ *   KPIs, calendario y exportación.
+ * - `viewport` lo reporta el mapa: si la vista contiene toda la región se piden
+ *   las series precalculadas (IC exactos); si no, se recorta por `bbox`.
+ */
 export function useFireData() {
-  const [regions, setRegions] = useState([]);
-  const [region, setRegion] = useState(null);
-  const [data, setData] = useState(null);
-  const [year, setYear] = useState(null);
-  const [summary, setSummary] = useState(null);
-  const [status, setStatus] = useState('loading'); // loading | ready | error
-  const [error, setError] = useState(null);
-  const [dateRange, setDateRange] = useState({ from: '', to: '' });
   const [reloadKey, setReloadKey] = useState(0);
+  const [region, setRegionState] = useState(null);
+  const [preset, setPreset] = useState('recent');
+  const [custom, setCustom] = useState(null);
+  const [viewport, setViewport] = useState(null);
 
-  const regionInfo = useMemo(() => regions.find((r) => r.region === region) || null, [regions, region]);
+  const regionsQ = useQuery(`regions:${reloadKey}`, (signal) => api.regions({ signal }));
+  const regions = regionsQ.data || [];
+  const activeRegion = region || regions.find((r) => r.region === 'ARG')?.region || regions[0]?.region || null;
+  const regionInfo = useMemo(() => regions.find((r) => r.region === activeRegion) || null, [regions, activeRegion]);
 
-  // 1) Regiones disponibles en el backend
-  useEffect(() => {
-    const ctl = new AbortController();
-    setStatus('loading');
-    api.regions({ signal: ctl.signal })
-      .then((list) => {
-        setRegions(list);
-        setRegion((cur) => cur || list.find((r) => r.region === 'ARG')?.region || list[0]?.region || null);
-        if (!list.length) throw new Error('El backend no tiene regiones cargadas');
-      })
-      .catch((e) => { if (e.name !== 'AbortError') { setError(e.message); setStatus('error'); } });
-    return () => ctl.abort();
-  }, [reloadKey]);
+  const range = useMemo(
+    () => (regionInfo ? resolveWindow(preset, regionInfo.period, custom) : null),
+    [regionInfo, preset, custom],
+  );
 
-  // 2) Serie diaria completa de la región (una sola petición, ~9.500 días)
-  useEffect(() => {
-    if (!regionInfo) return;
-    const ctl = new AbortController();
-    const done = (d) => {
-      setData(d);
-      const last = d.years[d.years.length - 1];
-      setYear((y) => (y && d.daily[y] ? y : last));
-      setDateRange({ from: regionInfo.period.start.slice(0, 7), to: regionInfo.period.end.slice(0, 7) });
-      setStatus('ready');
-    };
-    if (seriesCache.has(region)) { done(seriesCache.get(region)); return undefined; }
-    setStatus('loading');
-    api.timeseries(region, 'daily', {}, { signal: ctl.signal })
-      .then((ts) => {
-        const d = buildRegionData(ts.points);
-        seriesCache.set(region, d);
-        done(d);
-      })
-      .catch((e) => { if (e.name !== 'AbortError') { setError(e.message); setStatus('error'); } });
-    return () => ctl.abort();
-  }, [region, regionInfo]);
+  // Recorte espacial: solo si la vista NO abarca la región entera
+  const areaBbox = viewport && !viewport.containsRegion ? viewport.bbox.join(',') : undefined;
 
-  // 3) KPIs del año seleccionado (total con IC, interanual, proporción SP/NRT)
-  useEffect(() => {
-    if (!region || !year) return;
-    const ctl = new AbortController();
-    setSummary(null);
-    api.summary(region, { start: `${year}-01-01`, end: `${year}-12-31` }, { signal: ctl.signal })
-      .then(setSummary)
-      .catch(() => {});
-    return () => ctl.abort();
-  }, [region, year]);
+  const summaryQ = useQuery(
+    range ? `summary:${activeRegion}:${range.start}:${range.end}:${areaBbox || ''}` : null,
+    (signal) => api.summary(activeRegion, { start: range.start, end: range.end, bbox: areaBbox }, { signal }),
+  );
 
-  const label = region ? regionName(region) : '';
+  const monthlyQ = useQuery(
+    activeRegion ? `monthly:${activeRegion}:${areaBbox || ''}` : null,
+    (signal) => api.timeseries(activeRegion, 'monthly', { bbox: areaBbox }, { signal }),
+  );
+
+  // Serie diaria de la región completa (calendario, comparativa y CSV)
+  const dailyQ = useQuery(
+    activeRegion ? `daily:${activeRegion}` : null,
+    (signal) => api.timeseries(activeRegion, 'daily', {}, { signal }).then((ts) => buildRegionData(ts.points)),
+  );
+
+  const setRegion = useCallback((code) => { setRegionState(code); setViewport(null); }, []);
+  const setYearWindow = useCallback((y) => setPreset(`year:${y}`), []);
+  const setCustomWindow = useCallback((start, end) => { setCustom({ start, end }); setPreset('custom'); }, []);
+
+  const year = range
+    ? Number(range.preset.startsWith('year:') ? range.preset.slice(5) : range.end.slice(0, 4))
+    : null;
+
+  const label = activeRegion ? regionName(activeRegion) : '';
 
   const downloadCSV = useCallback((level = 'Día') => {
-    if (!data) return;
-    const csv = buildCSV(data, label, level, dateRange);
-    const tag = `${dateRange.from || 'inicio'}_${dateRange.to || 'fin'}`;
-    downloadText(csv, `focos_armonizados_${region}_${level}_${tag}.csv`);
-  }, [data, label, region, dateRange]);
-
-  const scrollToCalendar = useCallback(() => {
-    document.getElementById('calendar-section')?.scrollIntoView({ behavior: 'smooth' });
-  }, []);
+    if (!dailyQ.data || !range) return;
+    const csv = buildCSV(dailyQ.data, label, level, range);
+    downloadText(csv, `focos_armonizados_${activeRegion}_${range.start}_${range.end}.csv`);
+  }, [dailyQ.data, label, activeRegion, range]);
 
   return {
-    status,
-    error,
-    retry: () => { setError(null); setReloadKey((k) => k + 1); },
+    status: regionsQ.error ? 'error' : regionsQ.data ? 'ready' : 'loading',
+    error: regionsQ.error,
+    retry: () => setReloadKey((k) => k + 1),
     regions,
-    region,
+    region: activeRegion,
     setRegion,
     regionInfo,
     locationLabel: label,
+    range,
+    setYearWindow,
+    setCustomWindow,
     year,
-    setYear,
-    data,
-    yearData: data && year ? data.daily[year] || null : null,
-    summary,
-    dateRange,
-    setDateRange,
+    viewport,
+    setViewport,
+    scope: areaBbox ? 'area' : 'region',
+    summary: summaryQ,
+    monthly: monthlyQ,
+    daily: dailyQ,
     downloadCSV,
-    scrollToCalendar,
   };
 }

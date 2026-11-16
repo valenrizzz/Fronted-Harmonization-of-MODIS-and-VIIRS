@@ -32,6 +32,7 @@ export function buildRegionData(points) {
       tier: p.reliability_tier,
       layer: p.layer,
       status: p.status,
+      nasa: noData ? null : p.nasa_detections ?? null,
     });
     if (h > 0) values.push(h);
   }

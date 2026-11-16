@@ -5,6 +5,14 @@ import react from '@vitejs/plugin-react'
 // En producción se usa VITE_API_BASE_URL (ver src/data/api.js).
 export default defineConfig({
   plugins: [react()],
+  build: {
+    rollupOptions: {
+      output: {
+        manualChunks: { maplibre: ['maplibre-gl'], charts: ['recharts'], motion: ['framer-motion'] },
+      },
+    },
+    chunkSizeWarningLimit: 1100,
+  },
   server: {
     port: 5173,
     open: true,
